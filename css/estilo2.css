@@ -28,7 +28,6 @@ article h1 {
 }
 
 article p {
-    text-align: justify;
     margin-bottom: 1rem;
     font-size: 1rem;
 }
@@ -101,7 +100,7 @@ article p img {
     height:inherit;
 }
 
-article nav a {
+article * a {
     display: inline;
     text-decoration: underline;
 }

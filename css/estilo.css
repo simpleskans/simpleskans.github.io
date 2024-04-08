@@ -38,7 +38,6 @@ a {
     display: block;
     color: white;
     text-decoration: none;
-    padding: 0 10px;
 }
 
 .navHeader a.icon {
@@ -65,8 +64,8 @@ a {
 }
 
 .painelNovidades {
-    width: 90%;
-    margin: auto;
+    width: 100%;
+    margin: 0 auto 5rem;
 }
 
 .painelNovidades h2 {
@@ -79,8 +78,19 @@ a {
     padding: 5px 0;
 }
 
+.painelNovidades h3 {
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    color: brown;
+    font-weight: bold;
+    text-align: center;
+    margin: 1rem 0;
+    
+}
+
 .tabelaNovidades {
-    width: 70%;
+    width: 85%;
     display: flex;
     flex-direction: column;
     margin: auto;
@@ -89,7 +99,6 @@ a {
 .itemNovidades {
     width: 100%;
     border: 2px solid #008080;
-    margin: 15px;
 }
 
 .itemNovidades a {
@@ -111,6 +120,7 @@ a {
 .itemNovidades h3 {
     font-weight: bold;
     color: #008080;
+    margin: 0;
 }
 
 .textoNovidades {
@@ -139,7 +149,30 @@ a {
     font-size: 15pt;
     background: #008080;
     padding: 5px;
-    margin: 20px 0;
+    margin: 20px auto;
+    width: 85%;
+}
+
+.outrosProjetos {
+    width: 85%;
+    margin: auto
+}
+
+.outrosProjetos h4 {
+    color: brown;
+    border-bottom: 2px dotted #008080;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 1rem auto 1rem;
+}
+
+.outrosProjetos p::after{
+    display: inline-block;
+    content: "Ver →";
+    color: teal;
+    text-decoration: underline;
+    width: 100%;
+    text-align: right;
 }
 
 .textoFooter {
@@ -147,7 +180,10 @@ a {
     width: 100%;
     background-color: #008080;
     padding: 1px 0;
+    position: fixed;
+    bottom: 0;
 }
+
 
 .textoFooter p {
     margin: 10px;

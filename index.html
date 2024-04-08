@@ -2,14 +2,18 @@
 <html lang="pt-br">
     <head>
         <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-B86VFX7LWG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-B86VFX7LWG"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
 
-  gtag('config', 'G-B86VFX7LWG');
-</script>
+            gtag("config", "G-B86VFX7LWG");
+        </script>
         <script>
             (function (c, l, a, r, i, t, y) {
                 c[a] =
@@ -27,18 +31,20 @@
         <link rel="stylesheet" href="css/reset.css" />
         <link rel="stylesheet" href="css/estilo.css" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta charset="UTF-8" /><meta
+        <meta charset="UTF-8" />
+        <meta
             name="description"
             content="Simple Skans! Localizando conteúdo para que todos possam acessar!" />
         <meta name="author" content="KryFi" />
         <title>Simple Skans - Home</title>
-        
     </head>
     <body>
         <nav class="navHeader">
             <a href="https://simpleskans.github.io">Simple Skans</a>
             <div id="barraLinks">
                 <a href="projetos/index.html">Traduções</a>
+                <a href="outros/index.html">Outros Projetos</a>
+                
                 <a href="contato.html">Contato</a>
                 <a href="links.html">Links Úteis</a>
             </div>
@@ -51,26 +57,35 @@
         </div>
         <div class="painelNovidades">
             <h2>Novidades</h2>
+            <h3>Traduções de ROMs</h3>
             <ul class="tabelaNovidades">
                 <li class="itemNovidades">
                     <a href="projetos/tetsudou_ou.html">
                         <picture
                             ><img src="img/capas/tetsudououcapa.jpg" alt=""
                         /></picture>
-                        <h3>Tetsudo-o</h3>
+                        <h3>Tetsudou-ou</h3>
                         <div class="textoNovidades">
                             <p class="linha1">Plataforma</p>
                             <p class="linha1">Status</p>
                             <p>NES</p>
                             <p>Em andamento</p>
-                            <p class="linha1">Tipo</p>
-                            <p class="linha1"></p>
-                            <p>Patch de ROM</p>
                         </div>
                     </a>
                 </li>
             </ul>
-            <a href="projetos.html" class="botaoVer">Ver Tudo &#8594;</a>
+            <a href="projetos/" class="botaoVer">Ver Tudo &#8594;</a>
+            <div class="outrosProjetos">
+                <h3>Projetos Secundários</h3>
+                <ul>
+                    <li><a href="/outros/tetsudou_ou_manual.html">
+                        <h4>Manual de Tetsudou-ou</h4>
+                        <p>Manual do jogo Tetsudou-ou localizado para PT-BR seguindo as regras de nossa tradução para o jogo!</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <a href="outros/" class="botaoVer">Ver Tudo &#8594;</a>
         </div>
         <div>
             <footer class="textoFooter">

@@ -3,7 +3,7 @@
 }
 
 article {
-    margin: 3rem auto;
+    margin: 3rem auto 5rem;
     width: 85%;
     max-width: 1000px;
 }
@@ -30,7 +30,7 @@ article h1 {
 article p {
     text-align: justify;
     margin-bottom: 1rem;
-    font-size: calc(1rem + 0.1vw);
+    font-size: 1rem;
 }
 
 
@@ -80,7 +80,8 @@ article table tr td:last-child {
 article a {
     color: #008080;
     display: block;
-    line-height: calc(1.3rem + 0.1vw);
+    line-height: 1.3rem;
+    text-decoration: underline;
 }
 
 article ul li {
@@ -88,7 +89,6 @@ article ul li {
     list-style-position: inside;
     color: brown;
     margin-bottom: 10px;
-    font-size: calc(1rem + 0.1vw);
 }
 
 article ul li p{
@@ -101,7 +101,7 @@ article p img {
     height:inherit;
 }
 
-article * a {
+article nav a {
     display: inline;
     text-decoration: underline;
 }

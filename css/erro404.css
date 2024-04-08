@@ -1,0 +1,22 @@
+.erro404 {
+    width: 70%;
+    max-width: 1000px;
+    margin: auto;
+    text-align: right;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.erro404 h2 {
+    font-size: calc(1rem + 7vw);
+    margin: 0 0 0 auto;
+}
+
+.textoFooter {
+    position: fixed;
+    bottom: 0;
+}

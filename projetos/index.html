@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-4RF5XVTHLC"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+
+            gtag("config", "G-4RF5XVTHLC");
+        </script>
+        <!-- Clarity tracking code for https://simpleskans.neocities.org/ -->
+        <script>
+            (function (c, l, a, r, i, t, y) {
+                c[a] =
+                    c[a] ||
+                    function () {
+                        (c[a].q = c[a].q || []).push(arguments);
+                    };
+                t = l.createElement(r);
+                t.async = 1;
+                t.src = "https://www.clarity.ms/tag/" + i + "?ref=bwt";
+                y = l.getElementsByTagName(r)[0];
+                y.parentNode.insertBefore(t, y);
+            })(window, document, "clarity", "script", "lqt7soyxw2");
+        </script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="../css/reset.css" />
+        <link rel="stylesheet" href="../css/estilo.css" />
+        <link rel="stylesheet" href="../css/estilo2.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8" />
+        <title>Simple Skans</title>
+    </head>
+    <body>
+        <nav class="navHeader">
+            <a href="https://simpleskans.github.io">Simple Skans</a>
+            <div id="barraLinks">
+                <a href="projetos/index.html">Traduções</a>
+                <a href="contato.html">Contato</a>
+                <a href="links.html">Links Úteis</a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i
+            ></a>
+        </nav>
+        <div class="painelNovidades">
+            <h2>Todos os Projetos</h2>
+            <ul class="tabelaNovidades">
+                <li class="itemNovidades">
+                    <a href="tetsudou_ou.html">
+                        <picture
+                            ><img src="../img/capas/tetsudououcapa.jpg" alt=""
+                        /></picture>
+                        <h3>Tetsudo-o</h3>
+                        <div class="textoNovidades">
+                            <p class="linha1">Plataforma</p>
+                            <p class="linha1">Status</p>
+                            <p>NES</p>
+                            <p>Em andamento</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <footer class="textoFooter">
+                <!--<p>Visitas: <span id="hitcount"></span></p>-->
+                <p>
+                    Feito com HTML puro por ZerøㄴKryFiㄱ<br />&copy;2024 Simple
+                    Skans
+                </p>
+            </footer>
+        </div>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("barraLinks");
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "block";
+                }
+            }
+        </script>
+    </body>
+</html>

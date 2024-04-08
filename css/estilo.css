@@ -1,0 +1,232 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: consolas;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.navHeader {
+    background: rgb(0, 128, 128);
+    background: linear-gradient(
+        180deg,
+        rgba(0, 128, 128, 1) 0%,
+        rgba(0, 46, 46, 1) 100%
+    );
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    line-height: 3rem;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    transition: 0.5s;
+}
+
+#barraLinks {
+    display: none;
+    transition: 0.5s;
+}
+
+.navHeader a {
+    width: 100%;
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+.navHeader a.icon {
+    width: 10%;
+    display: block;
+    position: fixed;
+    right: 0;
+    top: 0;
+    text-align: center;
+    padding: 0;
+}
+
+.navHeader a:hover {
+    background: rgba(0, 0, 0, 1);
+}
+
+.navHeader a:first-child {
+    border: none;
+}
+
+.homeHeader img {
+    width: 100%;
+    margin-top: 3rem;
+}
+
+.painelNovidades {
+    width: 90%;
+    margin: auto;
+}
+
+.painelNovidades h2 {
+    margin: 10px 0;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    background: #008080;
+    padding: 5px 0;
+}
+
+.tabelaNovidades {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.itemNovidades {
+    width: 100%;
+    border: 2px solid #008080;
+    margin: 15px;
+}
+
+.itemNovidades a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    font-size: 1.7rem;
+    line-height: 1.9rem;
+}
+
+.itemNovidades img {
+    width: 100%;
+    border-bottom: 2px solid #008080;
+}
+
+.itemNovidades h3 {
+    font-weight: bold;
+    color: #008080;
+}
+
+.textoNovidades {
+    width: 100%;
+    font-size: 1.3rem;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.textoNovidades p {
+    display: inline-block;
+    width: 50%;
+    margin: 2px 0;
+}
+
+.linha1 {
+    background: #008080;
+    font-weight: bold;
+}
+
+.botaoVer {
+    text-align: right;
+    display: block;
+    font-size: 15pt;
+    background: #008080;
+    padding: 5px;
+    margin: 20px 0;
+}
+
+.textoFooter {
+    text-align: center;
+    width: 100%;
+    background-color: #008080;
+    padding: 1px 0;
+}
+
+.textoFooter p {
+    margin: 10px;
+}
+
+.textoFooter p:first-child {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+@media (min-width: 800px) {
+    #barraLinks {
+        display: flex;
+        width: 75%;
+        max-width: 750px;
+    }
+
+    .navHeader a.icon {
+        display: none;
+    }
+
+    .navHeader {
+        display: flex;
+        justify-content: center;
+    }
+
+    .navHeader a {
+        display: inline-block;
+        width: 33%;
+        transition: 0.8s;
+    }
+
+    .navHeader a:first-child {
+        width: 25%;
+        max-width: 250px;
+    }
+
+    .homeHeader {
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    .painelNovidades {
+        max-width: 1000px;
+    }
+
+    .tabelaNovidades {
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .itemNovidades {
+        width: 30%;
+        transition: 0.5s;
+    }
+
+    .itemNovidades:hover {
+        transform: scale(1.1);
+        z-index: 3;
+        background: black;
+        border-radius: 15px;
+        overflow: hidden;
+    }
+
+    .botaoVer {
+        padding-right: 15px;
+        transition: 0.5s;
+    }
+    .botaoVer:hover {
+        background: #003030;
+        text-decoration: underline;
+
+        border-radius: 15px;
+        overflow: hidden;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 1040px) {
+    .itemNovidades p {
+        font-size: 0.9rem;
+    }
+}

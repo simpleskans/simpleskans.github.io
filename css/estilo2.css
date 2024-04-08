@@ -30,7 +30,7 @@ article h1 {
 article p {
     text-align: justify;
     margin-bottom: 1rem;
-    font-size: calc(1rem + 0.2vw);
+    font-size: calc(1rem + 0.1vw);
 }
 
 
@@ -43,6 +43,7 @@ article h1 + p {
 }
 
 article h2 {
+    color: brown;
     border-bottom: 2px dotted #008080;
     font-size: 1.5rem;
     font-weight: bold;
@@ -79,5 +80,45 @@ article table tr td:last-child {
 article a {
     color: #008080;
     display: block;
-    line-height: calc(1.3rem + 0.2vw);
+    line-height: calc(1.3rem + 0.1vw);
+}
+
+article ul li {
+    list-style-type: circle;
+    list-style-position: inside;
+    color: brown;
+    margin-bottom: 10px;
+    font-size: calc(1rem + 0.1vw);
+}
+
+article ul li p{
+    text-indent: 1pt;
+    color: white;
+    display: inline;
+}
+
+article p img {
+    height:inherit;
+}
+
+article * a {
+    display: inline;
+    text-decoration: underline;
+}
+
+article h6 {
+    color: mediumaquamarine;
+    font-style: italic;
+    margin-bottom:7px;
+}
+
+article h5 {
+    color: brown;
+    list-style-type: circle;
+    font-weight: bold;
+    font-size: calc(1rem + 0.1vw);
+}
+
+article h5::before {
+    content: "• ";
 }

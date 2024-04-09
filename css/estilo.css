@@ -1,12 +1,11 @@
 body {
     background-color: black;
     color: white;
-    font-family: Consolas,monaco,monospace; 
+    font-family: Consolas, monaco, monospace;
 }
 
 a {
-    text-decoration: none;
-    color: white;
+    color: teal;
 }
 
 .navHeader {
@@ -67,7 +66,6 @@ a {
     width: 100%;
     margin: 0 auto 5rem;
 }
-
 .painelNovidades h2 {
     margin: 10px 0;
     text-transform: uppercase;
@@ -82,11 +80,10 @@ a {
     text-transform: uppercase;
     font-size: 1.4rem;
     line-height: 1.6rem;
-    color: brown;
+    color: teal;
     font-weight: bold;
     text-align: center;
     margin: 1rem 0;
-    
 }
 
 .tabelaNovidades {
@@ -117,7 +114,7 @@ a {
     border-bottom: 2px solid #008080;
 }
 
-.itemNovidades h3 {
+.itemNovidades h4 {
     font-weight: bold;
     color: #008080;
     margin: 0;
@@ -151,28 +148,36 @@ a {
     padding: 5px;
     margin: 20px auto;
     width: 85%;
+    color: white;
+    text-decoration: none;
 }
 
 .outrosProjetos {
     width: 85%;
-    margin: auto
+    margin: auto;
 }
 
 .outrosProjetos h4 {
-    color: brown;
+    color: teal;
     border-bottom: 2px dotted #008080;
     font-size: 1.5rem;
     font-weight: bold;
     margin: 1rem auto 1rem;
 }
 
-.outrosProjetos p::after{
+.outrosProjetos a {
+    color: white;
+    text-decoration: none;
+}
+
+.outrosProjetos p::after {
     display: inline-block;
     content: "Ver →";
     color: teal;
     text-decoration: underline;
     width: 100%;
     text-align: right;
+    margin-top: 1rem;
 }
 
 .textoFooter {
@@ -184,7 +189,6 @@ a {
     bottom: 0;
 }
 
-
 .textoFooter p {
     margin: 10px;
 }
@@ -192,6 +196,12 @@ a {
 .textoFooter p:first-child {
     text-transform: uppercase;
     font-weight: bold;
+}
+
+.contador {
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
 }
 
 @media (min-width: 800px) {

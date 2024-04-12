@@ -80,6 +80,10 @@ article a {
     color: #008080;
     display: block;
     line-height: 1.3rem;
+    text-decoration: none;
+}
+
+article a:hover{
     text-decoration: underline;
 }
 
@@ -102,7 +106,7 @@ article p img {
 
 article * a {
     display: inline;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 article h6 {

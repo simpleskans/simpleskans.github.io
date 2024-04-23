@@ -1,7 +1,6 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="pt_BR">
     <head>
-        <!-- Google tag (gtag.js) -->
         <!-- Google tag (gtag.js) -->
         <script
             async
@@ -15,7 +14,6 @@
 
             gtag("config", "G-B86VFX7LWG");
         </script>
-        <!-- Clarity tracking code for https://simpleskans.neocities.org/ -->
         <script>
             (function (c, l, a, r, i, t, y) {
                 c[a] =
@@ -30,24 +28,69 @@
                 y.parentNode.insertBefore(t, y);
             })(window, document, "clarity", "script", "lqt7soyxw2");
         </script>
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+        <!--Meta Tags-->
+        <!-- HTML Meta Tags -->
+        <title>Projetos | Simple Skans</title>
+        <meta
+            name="description"
+            content="Lista de traduções da Simple Skans!" />
+
+        <!-- Facebook Meta Tags -->
+        <meta
+            property="og:url"
+            content="https://simpleskans.github.io/projetos/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Projetos | Simple Skans" />
+        <meta
+            property="og:description"
+            content="Lista de traduções da Simple Skans!" />
+        <meta property="og:image" content="../img/logo.png" />
+
+        <!-- Twitter Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="simpleskans.github.io" />
+        <meta
+            property="twitter:url"
+            content="https://simpleskans.github.io/projetos/" />
+        <meta name="twitter:title" content="Projetos | Simple Skans" />
+        <meta
+            name="twitter:description"
+            content="Lista de projetos da Simple Skans!" />
+        <meta name="twitter:image" content="../img/logo.png" />
+        <!--Schema Tags-->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org/",
+                "@type": "WebPage",
+                "@id": "#WebPage",
+                "url": "https://simpleskans.github.io/projetos/",
+                "name": "Projetos | Simple Skans"
+            }
+        </script>
+
+        <!--Head tags-->
+
+        <script
+            src="https://kit.fontawesome.com/8767d1d5a5.js"
+            crossorigin="anonymous"></script>
         <link rel="stylesheet" href="../css/reset.css" />
         <link rel="stylesheet" href="../css/estilo.css" />
-        <link rel="stylesheet" href="../css/estilo2.css" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="/img/icon.png" />
         <meta charset="UTF-8" />
-        <meta name="description" content="Lista de projetos da Simple Skans!" />
         <meta name="author" content="KryFi" />
-        <title>Projetos - Simple Skans</title>
     </head>
     <body>
-        <nav class="navHeader">
-            <a href="https://simpleskans.github.io"><h1>Simple Skans</h1></a>
-            <div id="barraLinks">
-                <a href="../projetos/index.html">Traduções</a>
-                <a href="../outros/index.html">Projetos</a>
+        <nav class="barraFlutuante gradienteBase">
+            <div class="imagemSite">
+                <a href="https://simpleskans.github.io">
+                    <img src="../img/logo.png" alt="Simple Skans" />
+                </a>
+            </div>
+            <div id="menuSuperior">
+                <a href="../traducoes/">Traduções</a>
+                <a href="../projetos">Projetos</a>
                 <a href="../contato.html">Contato</a>
                 <a href="../links.html">Links Úteis</a>
             </div>
@@ -55,41 +98,57 @@
                 <i class="fa fa-bars"></i
             ></a>
         </nav>
-        <div class="painelNovidades">
-            <h2>Traduções de ROMs</h2>
-            <ul class="tabelaNovidades">
-                <li class="itemNovidades">
-                    <a href="tetsudou_ou.html">
-                        <picture
-                            ><img src="../img/capas/tetsudououcapa.jpg" alt=""
-                        /></picture>
-                        <h3>Tetsudo-o</h3>
-                        <div class="textoNovidades">
-                            <p class="linha1">Plataforma</p>
-                            <p class="linha1">Status</p>
-                            <p>NES</p>
-                            <p>Em andamento</p>
+        <div class="corpo">
+            <div class="margemGeral">
+                <span id="topo"></span>
+                <section class="traducoesNovas">
+                    <div class="tituloSecao centralizar">
+                        <p class="gradienteBase">
+                            <i class="fa-solid fa-language"></i>
+                        </p>
+                        <h2>Todas as Traduções</h2>
+                    </div>
+                    <a href="/manual_tetsudou_ou.html" class="novidade">
+                        <figure>
+                            <img
+                                src="../img/capas/tetsudououcapa.jpg"
+                                alt="Capa de Tetsudou-ou" />
+                        </figure>
+                        <div>
+                            <h3>Manual de instruções de Tetsudou-ou</h3>
+                            <p>
+                                Manual do jogo Tetsudou-ou localizado para PT-BR
+                                seguindo as regras de nossa tradução para o
+                                jogo!
+                            </p>
                         </div>
                     </a>
-                </li>
-            </ul>
+                </section>
+                <section class="construcao">
+                    <p>🚧 Seção em Construção 🚧</p>
+                </section>
+            </div>
         </div>
-        <div>
-            <footer class="textoFooter">
-                <!--<p>Visitas: <span id="hitcount"></span></p>-->
-                <p>
-                    Feito com HTML puro por ZerøㄴKryFiㄱ<br />&copy;2024 Simple
-                    Skans
-                </p>
-            </footer>
+
+        <div class="paraCima">
+            <a href="#topo" class="gradienteBase"
+                ><i class="fas fa-arrow-up"></i
+            ></a>
         </div>
+        <footer class="textoFooter">
+            <!--<p>Visitas: <span id="hitcount"></span></p>-->
+            <p>
+                Feito com HTML puro por ㄴKryFiㄱ<br />&copy;2024 Simple Skans
+            </p>
+        </footer>
         <script>
             function myFunction() {
-                var x = document.getElementById("barraLinks");
-                if (x.style.display === "block") {
+                var x = document.getElementById("menuSuperior");
+                if (x.style.display === "flex") {
                     x.style.display = "none";
                 } else {
-                    x.style.display = "block";
+                    x.style.display = "flex";
+                    x.classList.add("gradienteBase");
                 }
             }
         </script>

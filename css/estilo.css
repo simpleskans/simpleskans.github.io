@@ -313,6 +313,42 @@ footer {
     margin-top: 3em;
     font-size: 1.2em;
 }
+
+/*------------------*/
+.tabelaLinks table {
+    width: 100%;
+    border: 1px solid #c13a5a;
+    table-layout: fixed;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    margin-bottom: 1em;
+}
+
+.tabelaLinks table tr th {
+    background: #c13a5a;
+    color: #fff;
+    padding: 0.4em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.tabelaLinks table tr td {
+    padding: 0.4rem;    
+    border: 1px solid #c13a5a;
+}
+
+.tabelaLinks table tr td a {
+    color: #c13a5a;
+}
+
+.tabelaLinks table tr th:first-child, .tabelaLinks table tr td:first-child {
+    width: 30%;
+}
+
+.linksGeral a {
+    color: #c13a5a;
+}
+
 /*------------------*/
 @media (min-width: 901px) {
     .corpo {

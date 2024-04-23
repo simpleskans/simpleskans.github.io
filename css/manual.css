@@ -49,6 +49,11 @@
     content: "▸ "
 }
 
+.destaqueTexto {
+    font-style: italic;
+    border-bottom: 1px solid #c13a5a;
+}
+
 .textoManual figure:not(.imgTitulo) {
     width: 100%;
     max-width: 40%;

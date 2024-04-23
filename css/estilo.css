@@ -64,6 +64,13 @@ figure img,
     height: 100%;
 }
 
+a figure {
+    text-align: center;
+}
+a figure img {
+    width: 100%;
+}
+
 #menuSuperior {
     margin-top: 7em;
     width: 100%;

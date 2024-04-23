@@ -8,6 +8,10 @@ a {
     text-decoration: none;
 }
 
+b {
+    font-weight: bold;
+}
+
 .barraFlutuante {
     width: 100%;
     height: 6em;
@@ -279,6 +283,10 @@ sup {
     display: block;
     color: #c13a5a;
 }
+
+.outrosLinks {
+    margin-bottom: 1em;
+}
 /*-------------------------*/
 
 footer {
@@ -334,7 +342,7 @@ footer {
 }
 
 .tabelaLinks table tr td {
-    padding: 0.4rem;    
+    padding: 0.4rem;
     border: 1px solid #c13a5a;
 }
 
@@ -342,14 +350,34 @@ footer {
     color: #c13a5a;
 }
 
-.tabelaLinks table tr th:first-child, .tabelaLinks table tr td:first-child {
-    max-width: fit-content;
+.tabelaLinks table tr th:first-child,
+.tabelaLinks table tr td:first-child {
+    width: 35%;
 }
 
 .linksGeral a {
     color: #c13a5a;
 }
 
+.galeria {
+    width: 100%;
+    text-align: center;
+}
+
+.galeria ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.galeria ul li {
+    display: block;
+    width: 48%;
+}
+
+.galeria ul li img {
+    width: 100%;
+}
 /*------------------*/
 @media (min-width: 901px) {
     .corpo {
@@ -437,12 +465,31 @@ footer {
         grid-column-gap: 10px;
     }
 
-    .fichaTecnica { grid-area: 1 / 4 / 2 / 6; }
+    .fichaTecnica {
+        grid-area: 1 / 4 / 2 / 6;
+    }
 
-    .sobreTraducao { grid-area: 1 / 1 / 3 / 4; }
-    .equipeInfo { grid-area: 2 / 4 / 3 / 6; }
-    
+    .sobreTraducao {
+        grid-area: 1 / 1 / 3 / 4;
+    }
+    .equipeInfo {
+        grid-area: 2 / 4 / 3 / 6;
+    }
+
     .tabelaLinks table {
-    font-size: 1em;
-}
+        font-size: 1em;
+    }
+
+    .galeria ul li {
+        width: 24%;
+    }
+
+    .gridGrande .tabela table tr td:first-child {
+        width: 40%;
+    }
+
+    .tabelaLinks table tr th:first-child,
+    .tabelaLinks table tr td:first-child {
+        width: 25%;
+    }
 }

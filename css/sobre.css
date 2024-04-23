@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap");
+
+.membro {
+    padding: 1em;
+    color: #fff;
+}
+.membro a{
+    color: #fff;
+    text-decoration: underline;
+}
+.socialD {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.socialE {
+    text-align: center;
+}
+
+.socialE img {
+    width: 50%;
+    border-radius: 50%;
+}
+
+.membro .socialE p {
+    line-height: 1.1em;
+    margin: 1em 0;
+}
+
+.membro h3 {
+    font-family: "Leckerli One", cursive;
+    font-weight: bold;
+    font-size: 2em;
+    letter-spacing: 4px;
+    border-bottom: 2px solid #fff;
+}
+
+.listaSocial::before {
+    content: "Sobre";
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 2px solid #fff;
+    display: inline-block;
+    margin-bottom: 0.5em;
+}
+
+.listaSocial li::before {
+    content: "• ";
+}
+
+.social {
+    margin-top: 1em;
+    text-align: right;
+}
+
+.social li {
+    background: #fff;
+    display: inline-block;
+    color: #c13a5a;
+    padding: 0.7em;
+    border-radius: 150px;
+    margin-left: 0.5em;
+}
+
+.social li a,
+.socialBotao {
+    color: #c13a5a;
+    text-align: center;
+}
+
+.social li a i,
+.socialBotao i {
+    min-width: 1.5em;
+    line-height: 1.5em;
+}
+
+.social li a spam,
+.socialBotao spam {
+    margin-left: 0.5em;
+    cursor: default;
+}
+
+.parceiros {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.parceiros .membro {
+    width: 40%;
+    margin-bottom: 1em;
+    font-size: calc(0.5em + 1vw);
+}
+@media (min-width: 499px) {
+    .membro {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .socialE {
+        width: 30%;
+    }
+    .socialE img {
+        width: 100%;
+    }
+    .socialD {
+        width: 60%;
+    }
+
+    .socialE {
+        text-align: left;
+    }
+    .parceiros .membro {
+        font-size: 1em;
+    }
+    .parceiros .socialE {
+        width: 100%;
+        text-align: center;
+    }
+
+    .socialE img {
+        width: 50%;
+    }
+}
+@media (min-width: 679px) {
+    .socialE {
+        max-width: 180px;
+    }
+
+    .parceiros .socialE {
+        max-width: 100%;
+    }
+
+    .parceiros .membro {
+        max-width: 24%;
+    }
+}

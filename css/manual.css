@@ -32,6 +32,11 @@
     font-weight: normal;
 }
 
+.textoManual figure img {
+    max-width: 256px;
+    margin: 0 auto;
+}
+
 .textoManual a {
     color: #c13a5a;
 }
@@ -47,6 +52,14 @@
 
 .textoManual h3::before {
     content: "▸ "
+}
+
+.textoManual * svg {
+    height: 1em;
+}
+
+.textoManual * svg {
+    margin: 0 0.2em;
 }
 
 .destaqueTexto {
@@ -71,3 +84,14 @@
     font-weight: bold;
 }
 
+.tabelaManual {
+    width: 100%;
+}
+
+.tabelaManual table {
+    margin: 0 auto;
+}
+
+.tabelaManual table tr td {
+    
+}

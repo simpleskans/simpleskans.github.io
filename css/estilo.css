@@ -291,9 +291,41 @@ sup {
     margin-bottom: 1em;
 }
 
+.downloads div:not(.downloads div:first-child) {
+    text-align: center;
+    padding: 0.5em;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.linksBaixar {
+    display: flex;
+    justify-content: space-around;
+}
+
+.linksBaixar a {
+    background: #fff;
+    display: inline-block;
+    color: #c13a5a;
+    padding: 0.2em 0.5em;
+    border-radius: 150px;
+    min-width: 1.5em;
+    color: #c13a5a;
+    text-align: center;
+    text-transform: none;
+    font-weight: normal;
+}
+
+.downloads a i {
+    margin-right: 0.5em;
+}
+
 .outrosLinks a {
     display: block;
     color: #c13a5a;
+    font-weight: bold;
+    margin: 0.5em 0;
 }
 
 .outrosLinks {
@@ -362,14 +394,22 @@ footer {
     color: #c13a5a;
 }
 
+
 .tabelaLinks table tr th:first-child,
 .tabelaLinks table tr td:first-child {
     width: 35%;
 }
 
+
+.romInfo table tr td:first-child {
+    width: 15%;
+}
+
 .linksGeral a {
     color: #c13a5a;
 }
+
+/*---------------*/
 
 .galeria {
     width: 100%;
@@ -387,10 +427,41 @@ footer {
     width: 48%;
 }
 
+.galeria figure {
+    flex-direction: column;
+    width: 100%;
+}
+
+.galeria figcaption {
+    width: 100%;
+    color: #fff;
+    height: 2.6em;
+    margin-bottom: 1em;
+    line-height: 1.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .galeria ul li img {
     width: 100%;
 }
 /*------------------*/
+
+.avisoErros {
+    text-indent: none;
+    text-align: center;
+    font-size: 0.8em;
+    font-weight: bold;
+    margin: 2em 0 0 0;
+}
+
+.avisoErros::before {
+    display: block;
+    width: 100%;
+    content: "⚠️";
+}
+
+/*-----------------*/
 @media (min-width: 901px) {
     .corpo {
         max-width: 900px;
@@ -474,7 +545,7 @@ footer {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: repeat(2);
-        grid-column-gap: 10px;
+        grid-column-gap: 1em;
     }
 
     .fichaTecnica {
@@ -495,6 +566,10 @@ footer {
 
     .galeria ul li {
         width: 24%;
+    }
+    
+    .galeria figure {
+        width: 100%;
     }
 
     .gridGrande .tabela table tr td:first-child {

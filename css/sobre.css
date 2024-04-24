@@ -123,6 +123,9 @@
     .socialE img {
         width: 50%;
     }
+    .parceiros h3 {
+        font-size: calc(1em + 1.5vw);
+    }
 }
 @media (min-width: 679px) {
     .socialE {
@@ -135,5 +138,9 @@
 
     .parceiros .membro {
         max-width: 24%;
+    }
+    
+    .parceiros h3 {
+        font-size: 2em;
     }
 }

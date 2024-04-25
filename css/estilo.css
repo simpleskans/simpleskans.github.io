@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap");
 
 body {
     font-family: Poppins;
@@ -27,6 +28,7 @@ b {
     box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.38);
     -webkit-box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.38);
     -moz-box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.38);
+    z-index: 999;
 }
 
 .gradienteBase {
@@ -93,6 +95,9 @@ a figure img {
     line-height: 3em;
     font-weight: bold;
     transition: 1s;
+    box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.38);
+    -webkit-box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.38);
+    -moz-box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.38);
 }
 
 #menuSuperior a {
@@ -109,6 +114,7 @@ a figure img {
     text-transform: uppercase;
     font-size: 1.5em;
     z-index: 99;
+    cursor: pointer;
 }
 
 /* ------------------------------------------------------- */
@@ -129,6 +135,48 @@ a figure img {
 .centralizar {
     display: flex;
     align-items: center;
+}
+
+.bannerProjetos {
+    width: 100%;
+    height: 100px;
+    margin: 3em 0;
+}
+
+.bannerN {
+    width: inherit;
+    height: inherit;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bannerN div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 1em;
+    font-family: "Rubik Mono One", monospace;
+}
+
+.bannerN p {
+    font-size: calc(0.6em + 1vw);
+}
+
+.bannerN span {
+    font-size: calc(1em + 1vw);
+}
+
+.bannerN figure {
+    height: inherit;
+    display: block;
+}
+
+.bannerN img {
+    height: 140%;
+    position: relative;
+    top: -20%;
+    z-index: 0;
 }
 
 .tituloSecao {
@@ -158,7 +206,6 @@ a figure img {
 
 .welcome img {
     width: 100%;
-    margin-bottom: 1em;
 }
 
 .novidade {
@@ -186,6 +233,7 @@ a figure img {
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
+    font-size: 1.5em;
 }
 
 .novidade p {
@@ -394,7 +442,6 @@ footer {
     color: #c13a5a;
 }
 
-
 .tabelaLinks table tr th:first-child,
 .tabelaLinks table tr td:first-child {
     width: 35%;
@@ -460,6 +507,20 @@ footer {
     content: "⚠️";
 }
 
+@media (min-width: 721px) {
+    .bannerProjetos {
+        height: 120px;
+    }
+
+    .bannerN p {
+        font-size: 1.2em;
+    }
+
+    .bannerN span {
+        font-size: 2em;
+    }
+}
+
 /*-----------------*/
 @media (min-width: 901px) {
     .corpo {
@@ -473,6 +534,7 @@ footer {
         position: static;
         font-size: inherit;
         text-align: right;
+        box-shadow: none;
     }
 
     #menuSuperior a {
@@ -566,7 +628,7 @@ footer {
     .galeria ul li {
         width: 24%;
     }
-    
+
     .galeria figure {
         width: 100%;
     }

@@ -769,10 +769,11 @@ footer {
 
     .traducoesNovas {
         grid-area: 3 / 1 / 6 / 4;
+        margin-top: -6em;
     }
     .projetosNovos {
         grid-area: 3 / 4 / 6 / 7;
-        margin-top: 0;
+        margin-top: -6em;
     }
 
     .parceirosProjetos {

@@ -571,7 +571,7 @@ footer {
     content: "⚠️";
 }
 
-@media (min-width: 721px) {
+@media (min-width: 721px) and (max-width: 1365px) {
     .bannerProjetos {
         height: 160px;
     }
@@ -615,24 +615,25 @@ footer {
 
     .novidade {
         width: 100%;
+        min-height: 250px;
+        text-overflow: ellipsis;
         margin-bottom: 1em;
-        color: black;
-        display: flex;
+        color: #000;
+        display: block;
         margin-bottom: 1em;
         border-bottom: 1px solid #c13a5a;
     }
 
     .novidade figure {
         width: 35%;
-        display: inline-block;
-        padding-right: 1em;
+        float: left;
+        margin-right: 1em;
+        clear: both;
     }
 
     .novidade div {
-        display: flex;
-        flex-direction: column;
-        width: 65%;
-        height: inherit;
+        display: block;
+        width: 100%;
     }
     .novidade h3 {
         border-bottom: 1px solid #c13a5a;
@@ -654,12 +655,18 @@ footer {
     }
 
     .novidade img {
-        object-fit: contain;
         max-width: 100%;
         max-height: 100%;
         width: auto;
         height: auto;
     }
+    
+    .parceirosProjetos {
+        margin-top: 2em;
+        border-top: 2em solid #c13a5a;
+        padding-top: 2em;
+    }
+    
     .texto figure {
         width: 40%;
         float: right;
@@ -705,6 +712,71 @@ footer {
     .tabelaLinks table tr th:first-child,
     .tabelaLinks table tr td:first-child {
         width: 25%;
+    }
+}
+@media (min-width: 901px) and (max-width: 1366px) {
+    .novidade {
+        display: flex;
+        margin-bottom: 1em;
+        border-bottom: 1px solid #c13a5a;
+    }
+
+    .novidade figure {
+        width: 35%;
+        display: inline-block;
+    }
+
+    .novidade div {
+        display: flex;
+        flex-direction: column;
+        width: 65%;
+        height: inherit;
+    }
+
+}
+@media (min-width: 1366px) {
+    .corpo:has(.margemGeral):has(.gridInicial) {
+        min-width: 1366px;
+        max-width: 16s00px;
+    }
+
+    .gridInicial {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(6);
+        grid-template-rows: repeat(5);
+        grid-column-gap: 2em;
+    }
+
+    .welcome {
+        grid-area: 1 / 1 / 3 / 5;
+    }
+    .bannerProjetos {
+        grid-area: 1 / 5 / 2 / 7;
+        margin-top: 0;
+    }
+    .bannerN div {
+        height: 100%;
+        top: 0;
+    }
+    .bannerN p:first-child {
+        font-size: 1em;
+    }
+
+    .bannerN p:last-child {
+        font-size: 1.5em;
+    }
+
+    .traducoesNovas {
+        grid-area: 3 / 1 / 6 / 3;
+    }
+    .projetosNovos {
+        grid-area: 3 / 3 / 6 / 5;
+        margin-top: 0;
+    }
+
+    .parceirosProjetos {
+        grid-area: 2 / 5 / 6 / 7;
     }
 }
 

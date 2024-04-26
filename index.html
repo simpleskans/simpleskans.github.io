@@ -132,14 +132,32 @@
                     </h1>
                 </section>
                 <section class="bannerProjetos">
-                    <div class="bannerN gradienteBase">
-                        <div>
-                            <p>Próximo projeto:</p>
-                            <span>Hamtaro: Ham-Ham Heartbreak</span>
-                        </div>
+                    <div class="bannerN">
                         <figure>
                             <img src="/img/capas/hamtarohhhcapa.jpg" alt="" />
                         </figure>
+                        <div class="gradienteBase">
+                            <p>Próximo projeto:</p>
+                            <p>Hamtaro: Ham-Ham Heartbreak</p>
+                        </div>
+                    </div>
+                    <div class="bannerN">
+                        <figure>
+                            <img src="/img/icon.png" alt="" />
+                        </figure>
+                        <div class="gradienteBase">
+                            <p>Próximo projeto:</p>
+                            <p>-</p>
+                        </div>
+                    </div>
+                    <div class="bannerN">
+                        <figure>
+                            <img src="/img/icon.png" alt="" />
+                        </figure>
+                        <div class="gradienteBase">
+                            <p>Próximo projeto:</p>
+                            <p>-</p>
+                        </div>
                     </div>
                 </section>
                 <section class="traducoesNovas">
@@ -196,6 +214,73 @@
                         <a href="/projetos/">Ver todos os projetos →</a>
                     </div>
                 </section>
+                <section class="projetosNovos parceirosProjetos">
+                    <div class="tituloSecao centralizar">
+                        <p class="gradienteBase">
+                            <i class="fa-solid fa-handshake-simple"></i>
+                        </p>
+                        <h2>Projetos recentes de Parceiros</h2>
+                    </div>
+                    <a
+                        href="https://taihendarou.github.io/6502facil/"
+                        class="novidade"
+                        target="_blank">
+                        <figure>
+                            <img
+                                src="/img/parceiros/taihens%20hextinkers.png"
+                                alt="Preview do site Taihen's Hextinkers" />
+                            <figcaption></figcaption>
+                        </figure>
+                        <div>
+                            <h3>Tutorial de Assembly 6502!</h3>
+                            <h4 class="gradienteBase">
+                                by Taihen's Hextinkers
+                            </h4>
+                            <p>
+                                O processador 6502 é usado em consoles como os
+                                da família Atari, PC Engine e o famoso NES. O
+                                SNES também utiliza uma versão modificada desse
+                                processador. Assim, saber programar em Assembly
+                                6502 é útil tanto para depurar esses consoles
+                                quanto para começar a depuração de jogos do
+                                SNES.
+                            </p>
+                        </div>
+                    </a>
+                    <a
+                        href="https://e4t.com.br/downloads/shin-megami-tensei-iv/"
+                        class="novidade"
+                        target="_blank">
+                        <figure>
+                            <img
+                                src="https://e4t.com.br/wp-content/uploads/2024/01/Shin_Megami_Tensei_cover_2-2.webp"
+                                alt="Capa da postagem original" />
+                            <figcaption></figcaption>
+                        </figure>
+                        <div>
+                            <h3>Shin Megami Tensei IV</h3>
+                            <h4 class="gradienteBase">
+                                by Elite dos Quatro Traduções
+                            </h4>
+                            <p>
+                                No Reino Oriental de Mikado, aqueles que
+                                completam 18 anos são submetidos ao Rito da
+                                Manopla, e aqueles que passam no Rito se tornam
+                                protetores do Reino contra ataques de demônios,
+                                os Samurai. Flynn, o protagonista, se torna um
+                                Samurai e descobre um mundo completamente
+                                diferente daquele que viveu por toda sua vida.
+                                Envolvido no meio de uma guerra entre duas
+                                forças ancestrais, anjos e demônios, qual
+                                caminho o Samurai de Mikado irá seguir?
+                            </p>
+                        </div>
+                    </a>
+
+                    <div class="verTudo">
+                        <a href="/projetos/">Ver todos os projetos →</a>
+                    </div>
+                </section>
                 <section class="construcao">
                     <p>🚧 Seção em Construção 🚧</p>
                 </section>
@@ -223,6 +308,35 @@
                     x.classList.add("gradienteBase");
                 }
             }
+        </script>
+        <script>
+            window.onload = function () {
+                var slides = document.getElementsByClassName("bannerN"),
+                    addActive = function (slide) {
+                        slide.classList.add("active");
+                    },
+                    removeActive = function (slide) {
+                        slide.classList.remove("active");
+                    };
+                addActive(slides[0]);
+
+                setInterval(function () {
+                    for (var i = 0; i < slides.length; i++) {
+                        if (i + 1 == slides.length) {
+                            addActive(slides[0]);
+                            slides[0].style.zIndex = 100;
+                            setTimeout(removeActive, 1000, slides[i]); //Doesn't be worked in IE-9
+                            break;
+                        }
+                        if (slides[i].classList.contains("active")) {
+                            slides[i].removeAttribute("style");
+                            setTimeout(removeActive, 1000, slides[i]); //Doesn't be worked in IE-9
+                            addActive(slides[i + 1]);
+                            break;
+                        }
+                    }
+                }, 6000);
+            };
         </script>
     </body>
 </html>

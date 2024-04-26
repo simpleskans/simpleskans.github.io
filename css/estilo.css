@@ -571,7 +571,7 @@ footer {
     content: "⚠️";
 }
 
-@media (min-width: 721px) and (max-width: 1365px) {
+@media (min-width: 721px) and (max-width: 1119px) {
     .bannerProjetos {
         height: 160px;
     }
@@ -714,7 +714,7 @@ footer {
         width: 25%;
     }
 }
-@media (min-width: 901px) and (max-width: 1366px) {
+@media (min-width: 901px) and (max-width: 1119px) {
     .novidade {
         display: flex;
         margin-bottom: 1em;
@@ -734,10 +734,10 @@ footer {
     }
 
 }
-@media (min-width: 1366px) {
+@media (min-width: 1200px) {
     .corpo:has(.margemGeral):has(.gridInicial) {
-        min-width: 1366px;
-        max-width: 16s00px;
+        min-width: 1200px;
+        max-width: 1600px;
     }
 
     .gridInicial {

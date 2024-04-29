@@ -330,6 +330,11 @@ a figure img {
     color: #fff;
 }
 
+.textoFooter {
+    position: absolute;
+    width: 100%;
+    left: 0;
+}
 /*-------------------------*/
 
 .texto figure {
@@ -571,7 +576,7 @@ footer {
     content: "⚠️";
 }
 
-@media (min-width: 721px) and (max-width: 1009px) {
+@media (min-width: 721px) and (max-width: 1099px) {
     .bannerProjetos {
         height: 160px;
     }
@@ -660,13 +665,13 @@ footer {
         width: auto;
         height: auto;
     }
-    
+
     .parceirosProjetos {
         margin-top: 2em;
         border-top: 2em solid #c13a5a;
         padding-top: 2em;
     }
-    
+
     .texto figure {
         width: 40%;
         float: right;
@@ -714,7 +719,7 @@ footer {
         width: 25%;
     }
 }
-@media (min-width: 901px) and (max-width: 1009px) {
+@media (min-width: 901px) and (max-width: 1099px) {
     .novidade {
         display: flex;
         margin-bottom: 1em;
@@ -732,7 +737,6 @@ footer {
         width: 65%;
         height: inherit;
     }
-
 }
 @media (min-width: 1100px) {
     .corpo:has(.margemGeral):has(.gridInicial) {
@@ -754,7 +758,7 @@ footer {
     .bannerProjetos {
         grid-area: 1 / 7 / 2 / 9;
         margin-top: 0;
-min-width:200px;
+        min-width: 200px;
     }
     .bannerN div {
         height: 100%;
@@ -774,13 +778,19 @@ min-width:200px;
     .corpo:has(.margemGeral):has(.gridInicial) .projetosNovos {
         margin-top: -6em;
     }
+    
+    .novidade figure {
+        background: #fff;
+    }
+    
+    .novidade img {
+        max-height: 230px;
+    }
     .traducoesNovas {
         grid-area: 3 / 1 / 6 / 4;
-        
     }
     .projetosNovos {
         grid-area: 3 / 4 / 6 / 7;
-        
     }
 
     .parceirosProjetos {
@@ -790,4 +800,22 @@ min-width:200px;
 
 .ocultar {
     display: none;
+}
+
+/*-----Página 404----*/
+.erro404 {
+    width: 80%;
+    text-align: right;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 3em auto;
+    line-height: 1;
+}
+
+.erro404 p:first-child {
+    font-size: calc(2em + 2vw);
+}
+
+.erro404 p:last-child {
+    font-size: calc(1em + 0.3vw);
 }

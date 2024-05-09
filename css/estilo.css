@@ -25,9 +25,7 @@ b {
     -webkit-transition: top 0.3s;
     -o-transition: top 0.3s;
     transition: top 0.3s;
-    box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.38);
-    -webkit-box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.38);
-    -moz-box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.38);
+    box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.38);
     z-index: 999;
 }
 
@@ -95,9 +93,7 @@ a figure img {
     line-height: 3em;
     font-weight: bold;
     transition: 1s;
-    box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.38);
-    -webkit-box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.38);
-    -moz-box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.38);
+    box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.38);
 }
 
 #menuSuperior a {
@@ -142,15 +138,17 @@ a figure img {
 }
 
 .bannerN {
+    background: #fff;
     position: absolute;
     top: 0;
     left: 100%;
-    width: inherit;
-    height: inherit;
+    height: 100%;
     color: #fff;
     display: flex;
     justify-content: space-between;
     margin: auto 0;
+    width: 100%;
+    cursor: pointer;
 }
 
 .bannerProjetos .bannerN.active {
@@ -181,12 +179,12 @@ a figure img {
 }
 
 .bannerN figure {
-    height: inherit;
-    display: block;
+    height: 100%;
 }
 
 .bannerN img {
     height: 100%;
+    object-fit: contain;
 }
 
 .tituloSecao {
@@ -224,6 +222,12 @@ a figure img {
     margin-bottom: 1em;
     color: black;
     border-bottom: 1px solid #c13a5a;
+}
+
+.novidade h4 {
+    font-size: 0.9em;
+    padding: 0.2em;
+    color: #fff;
 }
 
 .novidade figure {
@@ -282,7 +286,6 @@ a figure img {
 
 .parceirosProjetos .novidade {
     width: 100%;
-    margin-bottom: 1em;
     color: #000;
     display: block;
     margin-bottom: 1em;
@@ -422,7 +425,6 @@ sup {
 .linksBaixar a {
     background: #fff;
     display: inline-block;
-    color: #c13a5a;
     padding: 0.2em 0.5em;
     border-radius: 150px;
     min-width: 1.5em;
@@ -464,6 +466,7 @@ footer {
     position: fixed;
     bottom: 1.5em;
     right: 1.5em;
+    z-index: 33;
 }
 
 .paraCima a {
@@ -622,7 +625,6 @@ footer {
         width: 100%;
         min-height: 250px;
         text-overflow: ellipsis;
-        margin-bottom: 1em;
         color: #000;
         display: block;
         margin-bottom: 1em;
@@ -667,9 +669,8 @@ footer {
     }
 
     .parceirosProjetos {
-        margin-top: 2em;
-        border-top: 2em solid #c13a5a;
-        padding-top: 2em;
+        margin-top: 1em;
+        border-top: 1em solid #c13a5a;
     }
 
     .texto figure {
@@ -773,16 +774,16 @@ footer {
     }
 
     .corpo:has(.margemGeral):has(.gridInicial) .traducoesNovas {
-        margin-top: -6em;
+        margin-top: 1em;
     }
     .corpo:has(.margemGeral):has(.gridInicial) .projetosNovos {
-        margin-top: -6em;
+        margin-top: 1em;
     }
-    
+
     .novidade figure {
         background: #fff;
     }
-    
+
     .novidade img {
         max-height: 230px;
     }

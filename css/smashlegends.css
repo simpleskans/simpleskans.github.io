@@ -32,11 +32,11 @@
 
 /*------------*/
 .webtoonHeader {
-    width: 99.2vw;
+    width: 100%;
+    height: 26vh;
     position: absolute;
     left: 0;
-    top: 0;
-    height: 400px;
+    top: 6em;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -44,11 +44,10 @@
 
 .webtoonHeader img {
     width: 100%;
-    margin-top: -250px;
 }
 
 .webtoonCorpo {
-    margin-top: 350px;
+    margin-top: 29vh;
 }
 
 .webtoonCorpo section {

@@ -600,26 +600,7 @@ footer {
         margin: 0 auto;
     }
 
-    #menuSuperior {
-        margin: 0;
-        display: inline-block;
-        position: static;
-        font-size: inherit;
-        text-align: right;
-        box-shadow: none;
-    }
-
-    #menuSuperior a {
-        display: inline-block;
-        margin: 1em;
-        color: #fff;
-        text-decoration: none;
-        text-transform: uppercase;
-    }
-
-    .icon {
-        display: none;
-    }
+    
 
     .novidade {
         width: 100%;
@@ -737,6 +718,29 @@ footer {
         flex-direction: column;
         width: 65%;
         height: inherit;
+    }
+}
+
+@media (min-width: 1009px) {
+    #menuSuperior {
+        margin: 0;
+        display: inline-block;
+        position: static;
+        font-size: inherit;
+        text-align: right;
+        box-shadow: none;
+    }
+
+    #menuSuperior a {
+        display: inline-block;
+        margin: 1em;
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    .icon {
+        display: none;
     }
 }
 @media (min-width: 1100px) {

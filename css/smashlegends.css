@@ -33,21 +33,30 @@
 /*------------*/
 .webtoonHeader {
     width: 100%;
-    height: 26vh;
+    height: 250px;
     position: absolute;
     left: 0;
-    top: 6em;
+    top: 5.99em;
     overflow: hidden;
-    display: flex;
-    align-items: center;
+}
+
+.webtoonHeader figure {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .webtoonHeader img {
+    object-fit: cover;
     width: 100%;
 }
 
+
 .webtoonCorpo {
-    margin-top: 29vh;
+    margin-top: 300px;
 }
 
 .webtoonCorpo section {
@@ -82,7 +91,7 @@
 .navPosts {
     background: #bbb;
     width: 100%;
-    display:flex;
+    display: flex;
     justify-content: space-between;
     margin: 2em auto;
     max-width: 800px;

@@ -1,71 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-
-  <url>
-       <loc>https://simpleskans.com.br/</loc>
-       <lastmod>2024-05-11T08:53:01+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>1.0000</priority>
-  </url>
-  <url>
-       <loc>https://simpleskans.com.br/traducoes/</loc>
-       <lastmod>2024-05-11T08:53:01+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
-  </url>
-  <url>
-       <loc>https://simpleskans.com.br/projetos/</loc>
-       <lastmod>2024-05-11T08:53:01+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
-  </url>
-  <url>
-       <loc>https://simpleskans.com.br/smash-legends/</loc>
-       <lastmod>2024-05-11T08:53:01+00:00</lastmod>
-       <changefreq>weekly</changefreq>
-       <priority>0.8000</priority>
-  </url>
-  <url>
-       <loc>https://simpleskans.com.br/contato/</loc>
-       <lastmod>2024-05-11T08:53:02+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
-  </url>
-  <url>
-       <loc>https://simpleskans.com.br/links/</loc>
-       <lastmod>2024-05-11T08:53:01+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
-  </url>
-  <url>
-       <loc>https://simpleskans.com.br/traducoes/tetsudou-ou</loc>
-       <lastmod>2024-04-25T00:00:00+00:00</lastmod>
-       <changefreq>never</changefreq>
-       <priority>0.8000</priority>
-  </url>
-  <url>
-       <loc>https://simpleskans.com.br/projetos/manual-tetsudou-ou</loc>
-       <lastmod>2024-05-11T08:53:01+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
-  </url>
-  <url>
-       <loc>https://simpleskans.com.br/smash-legends/webtoonsl/smash-legends-03</loc>
-       <lastmod>2024-05-13T10:59:02+00:00</lastmod>
-       <changefreq>never</changefreq>
-       <priority>0.6400</priority>
-  </url>
-  <url>
-       <loc>https://simpleskans.com.br/smash-legends/webtoonsl/smash-legends-02</loc>
-       <lastmod>2024-05-11T08:53:02+00:00</lastmod>
-       <changefreq>never</changefreq>
-       <priority>0.6400</priority>
-  </url>
-  <url>
-       <loc>https://simpleskans.com.br/smash-legends/webtoonsl/smash-legends-01</loc>
-       <lastmod>2024-05-11T08:53:01+00:00</lastmod>
-       <changefreq>never</changefreq>
-       <priority>0.6400</priority>
-  </url>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  
+      <url>
+        <loc>https://simpleskans.com.br/404.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+       </url>
+  
+  
+  
+      <url>
+        <loc>https://simpleskans.com.br/sobre/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+       </url>
+  
+  
+  
+      <url>
+        <loc>https://simpleskans.com.br/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+       </url>
+  
+  
+  
+      <url>
+        <loc>https://simpleskans.com.br/links/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+       </url>
+  
+  
+  
+      <url>
+        <loc>https://simpleskans.com.br/projetos/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+       </url>
+  
+  
+  
+  
+  
+      <url>
+        <loc>https://simpleskans.com.br/smash-legends/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+       </url>
+  
+  
+  
+      <url>
+        <loc>https://simpleskans.com.br/rom-hacking/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+       </url>
+  
+  
+  
+      <url>
+        <loc>https://simpleskans.com.br/traducoes/tetsudou-ou</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+       </url>
+  
+      <url>
+        <loc>https://simpleskans.com.br/projetos/manual-tetsudou-ou</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+       </url>
+  
+      <url>
+        <loc>https://simpleskans.com.br/smash-legends/webtoonsl/smash-legends-03</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+       </url>
+  
+      <url>
+        <loc>https://simpleskans.com.br/smash-legends/webtoonsl/smash-legends-02</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+       </url>
+  
+      <url>
+        <loc>https://simpleskans.com.br/smash-legends/webtoonsl/smash-legends-01</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+       </url>
+  
+  
 </urlset>

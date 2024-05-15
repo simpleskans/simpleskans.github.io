@@ -1,16 +1,16 @@
 <!doctype html>
 <html lang="pt-BR">
     <head>
-        <title>Nosso Site | Simple Skans</title>
+        <title>Sobre | Simple Skans</title>
         <meta
             name="description"
             content="Aqui você encontra informações sobre os membros da equipe e as formas de entrar em contato conosco!" />
-        <link rel="canonical" href="https://simpleskans.com.br/contato/" />
+        <link rel="canonical" href="https://simpleskans.com.br/sobre/" />
 
         <!-- Facebook Meta Tags -->
-        <meta property="og:url" content="https://simpleskans.com.br/contato/" />
+        <meta property="og:url" content="https://simpleskans.com.br/sobre/" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Nosso Site" />
+        <meta property="og:title" content="Sobre" />
         <meta
             property="og:description"
             content="Aqui você encontra informações sobre os membros da equipe e as formas de entrar em contato conosco!" />
@@ -21,8 +21,8 @@
         <!-- Twitter Meta Tags -->
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:domain" content="simpleskans.com.br" />
-        <meta property="twitter:url" content="https://simpleskans.com.br/contato/" />
-        <meta name="twitter:title" content="Nosso Site" />
+        <meta property="twitter:url" content="https://simpleskans.com.br/sobre/" />
+        <meta name="twitter:title" content="Sobre" />
         <meta
             name="twitter:description"
             content="Aqui você encontra informações sobre os membros da equipe e as formas de entrar em contato conosco!" />
@@ -70,11 +70,11 @@
                 </a>
             </div>
             <div id="menuSuperior">
-                <a href="/traducoes/">Traduções</a>
-                <a href="/projetos/">Projetos</a>
-                <a href="/smash-legends/">Smash Legends</a>
-                <a href="/contato/">Contato</a>
-                <a href="/links/">Links Úteis</a>
+                <a href="/projetos/" title="Todos os Projetos">Projetos</a>
+                <a href="/rom-hacking/" title="Traduções de ROMs">ROM Hacking</a>
+                <a href="/dnd/" title="Tradções de D&D">D&#38;D</a>
+                <a href="/smash-legends/" title="Traduções de Smash Legends">Smash Legends</a>
+                <a href="/sobre/" title="Entre em Contato">Sobre</a>
             </div>
             <span class="icon" onclick="myFunction()">
                 <i class="fa fa-bars"></i
@@ -202,20 +202,13 @@
             
 
 </div>
-
-            <div class="paraCima">
-                <a href="#topo" class="gradienteBase">
-                    <i class="fas fa-arrow-up"></i>
-                </a>
-            </div>
-            <footer class="textoFooter">
-                <p>
-                    Feito com HTML puro por ㄴKryFiㄱ<br />&copy;2024 Simple
-                    Skans
-                </p>
-            </footer>
-        </div>
-        <script>
+  <div class="paraCima"> <a href="#topo" class="gradienteBase"> <i class="fas fa-arrow-up"></i> </a> </div>
+</div>
+<footer class="textoFooter gradienteBase">
+  <p>&copy;2024 Simple Skans<br>
+    Feito com HTML puro por ㄴKryFiㄱ</p>
+</footer>
+<script>
             function myFunction() {
                 var x = document.getElementById("menuSuperior");
                 if (x.style.display === "flex") {
@@ -226,34 +219,5 @@
                 }
             }
         </script>
-        <script>
-            window.onload = function () {
-                var slides = document.getElementsByClassName("bannerN"),
-                    addActive = function (slide) {
-                        slide.classList.add("active");
-                    },
-                    removeActive = function (slide) {
-                        slide.classList.remove("active");
-                    };
-                addActive(slides[0]);
-
-                setInterval(function () {
-                    for (var i = 0; i < slides.length; i++) {
-                        if (i + 1 == slides.length) {
-                            addActive(slides[0]);
-                            slides[0].style.zIndex = 100;
-                            setTimeout(removeActive, 1000, slides[i]); //Doesn't be worked in IE-9
-                            break;
-                        }
-                        if (slides[i].classList.contains("active")) {
-                            slides[i].removeAttribute("style");
-                            setTimeout(removeActive, 1000, slides[i]); //Doesn't be worked in IE-9
-                            addActive(slides[i + 1]);
-                            break;
-                        }
-                    }
-                }, 6000);
-            };
-        </script>
-    </body>
+</body>
 </html>

@@ -110,6 +110,13 @@
     padding: 0 15px;
 }
 
+@media (min-width: 901px) {
+
+    .margemGeral {
+        position: static;
+    }
+}
+
 @media (min-width: 1009px) {
 .webtoonSL {
     width: 32%;

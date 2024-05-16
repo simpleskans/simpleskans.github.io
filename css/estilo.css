@@ -754,7 +754,8 @@ footer img {
     .margemGeral {
         position: relative;
     }
-
+     
+    
     .esquerda {
         width: 70%;
     }
@@ -768,10 +769,9 @@ footer img {
         flex-direction: column;
         justify-content: center;
     }
-.postCaixa4 {
-    width: 100%;
+    .postCaixa4 {
+        width: 100%;
     }
-
 
     .texto figure {
         width: 40%;

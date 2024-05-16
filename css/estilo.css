@@ -127,7 +127,7 @@ a figure img {
 
 .postsDestaque {
     display: grid;
-    grid-template-columns: repeat(3);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2);
     grid-column-gap: 1vw;
     grid-row-gap: 1vw;
@@ -177,7 +177,8 @@ a figure img {
     text-transform: capitalize;
 }
 
-.postTexto {
+.postTexto,
+.postTexto3 {
     padding: 0.5em 1vw;
     background: rgb(0, 0, 0);
     background: linear-gradient(
@@ -186,10 +187,12 @@ a figure img {
         rgba(0, 0, 0, 1) 100%
     );
     color: #fff;
+    width: calc(100% - 1em);
 }
 
 .postTitulo,
-.postTitulo2 {
+.postTitulo2,
+.postTitulo3 {
     font-family: "Jaro", sans-serif;
     font-size: calc(1em + 0.8vw);
     text-overflow: ellipsis;
@@ -271,7 +274,7 @@ a figure img {
     font-size: 0.8em;
     border-radius: 5px;
     width: fit-content;
-    
+
     text-transform: capitalize;
 }
 
@@ -289,7 +292,8 @@ a figure img {
     -webkit-box-orient: vertical;
 }
 
-.postCaixa2:nth-child(1) .postTitulo2 {
+.postCaixa2:nth-child(1) .postTitulo2,
+.postTitulo3 {
     text-overflow: ellipsis;
     overflow: hidden;
     display: -webkit-box;
@@ -297,7 +301,8 @@ a figure img {
     -webkit-box-orient: vertical;
 }
 
-.postCaixa2:nth-child(1) .postDescricao2 {
+.postCaixa2:nth-child(1) .postDescricao2,
+.postDescricao3 {
     text-overflow: ellipsis;
     overflow: hidden;
     display: -webkit-box;
@@ -378,6 +383,48 @@ a figure img {
 }
 
 /*-------------------------*/
+
+.listaSecundaria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.postCaixa3 {
+    width: 32%;
+    aspect-ratio: 1/1;
+    margin-bottom: 1em;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+.postCategoria3 {
+    width: fit-content;
+    position: absolute;
+    top: 0.5em;
+    left: 0.5em;
+    padding: 0.5em;
+    font-weight: bold;
+    font-size: 0.8em;
+    border-radius: 5px;
+    text-transform: capitalize;
+}
+
+.postTexto3 {
+    position: absolute;
+    bottom: 0;
+}
+
+.postDescricao3 {
+    -webkit-line-clamp: 2;
+}
+
+/*--------------------------*/
 .texto figure {
     width: 50%;
     margin: 0 auto;
@@ -471,10 +518,16 @@ sup {
 }
 /*-------------------------*/
 footer {
-    height: 4em;
     line-height: 2em;
     text-align: center;
     color: #fff;
+    padding-bottom: 1em;
+}
+
+footer img {
+    margin-top: 1em;
+    margin-bottom: -0.5em;
+    height: 2em;
 }
 .paraCima {
     width: 3em;
@@ -536,7 +589,6 @@ footer {
 /*---------------*/
 .galeria {
     width: 100%;
-    text-align: center;
 }
 .galeria ul {
     display: flex;
@@ -546,6 +598,7 @@ footer {
 .galeria ul li {
     display: block;
     width: 48%;
+    text-align: center;
 }
 .galeria figure {
     flex-direction: column;
@@ -576,6 +629,31 @@ footer {
     display: block;
     width: 100%;
     content: "⚠️";
+}
+/*-----Aside------*/
+
+.direita {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.postCaixa4 {
+    width: 32%;
+    aspect-ratio: 16/9;
+    margin-bottom: 1em;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+.direita .postTitulo3 {
+    font-size: 14pt;
 }
 /*-----------------*/
 @media (max-width: 600px) {
@@ -639,7 +717,7 @@ footer {
         height: fit-content;
         max-height: fit-content;
     }
-    
+
     .listaParceiros {
         flex-wrap: wrap;
         height: 500px;
@@ -648,20 +726,22 @@ footer {
     .listaParceiros > div {
         flex: 0 0 250px;
     }
-    
-    .listaParceiros > div .dadosParceiro  {
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.6755077031) 0%, rgba(0, 0, 0, 0) 100%);
+
+    .listaParceiros > div .dadosParceiro {
+        background: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.6755077031) 0%,
+            rgba(0, 0, 0, 0) 100%
+        );
         opacity: 1;
         transform: translatey(-5%);
         visibility: visible;
     }
-    
 }
 
 @media (max-width: 479px) {
     .postData {
         display: none;
-        
     }
 }
 
@@ -670,6 +750,29 @@ footer {
         max-width: 900px;
         margin: 0 auto;
     }
+
+    .margemGeral {
+        position: relative;
+    }
+
+    .esquerda {
+        width: 70%;
+    }
+
+    .direita {
+        position: absolute;
+        width: 25%;
+        right: 0;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+.postCaixa4 {
+    width: 100%;
+    }
+
+
     .texto figure {
         width: 40%;
         float: right;
@@ -709,10 +812,16 @@ footer {
         width: 25%;
     }
 }
+
 @media (min-width: 1009px) {
     .corpo {
         max-width: 1008px;
     }
+
+    .postCaixa3:hover {
+        transform: scale(110%);
+    }
+
     #menuSuperior {
         margin: 0;
         display: inline-block;

@@ -19,6 +19,14 @@
   
   
       <url>
+        <loc>https://simpleskans.com.br/dnd/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+       </url>
+  
+  
+  
+      <url>
         <loc>https://simpleskans.com.br/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
@@ -42,6 +50,14 @@
   
   
   
+      <url>
+        <loc>https://simpleskans.com.br/rom-hacking/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+       </url>
+  
+  
+  
   
   
       <url>
@@ -51,26 +67,6 @@
        </url>
   
   
-  
-      <url>
-        <loc>https://simpleskans.com.br/rom-hacking/</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-       </url>
-  
-  
-  
-      <url>
-        <loc>https://simpleskans.com.br/traducoes/tetsudou-ou</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-       </url>
-  
-      <url>
-        <loc>https://simpleskans.com.br/projetos/manual-tetsudou-ou</loc>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-       </url>
   
       <url>
         <loc>https://simpleskans.com.br/smash-legends/webtoonsl/smash-legends-03</loc>
@@ -86,6 +82,18 @@
   
       <url>
         <loc>https://simpleskans.com.br/smash-legends/webtoonsl/smash-legends-01</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+       </url>
+  
+      <url>
+        <loc>https://simpleskans.com.br/rom-hacking/tetsudou-ou</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+       </url>
+  
+      <url>
+        <loc>https://simpleskans.com.br/projetos/manual-tetsudou-ou</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
        </url>

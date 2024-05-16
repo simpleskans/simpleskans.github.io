@@ -1,3 +1,3 @@
 User-agent: *
 Disallow: /404.html
-Sitemap: https://simpleskans.com.br/sitemap.xml
+Sitemap: https://simpleskans.github.io/sitemap.xml

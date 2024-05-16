@@ -1,0 +1,22 @@
+<aside class="direita">
+    <div class="tituloSecao centralizar">
+        <p class="gradienteBase">
+            <i class="fa-solid fa-users"></i>
+        </p>
+        <h2>Outros Posts</h2>
+    </div>
+    {% for post in site.posts | limit: 6 %}
+    <a
+        class="postCaixa4"
+        style="background-image:  url({{ post.capa }});"
+        href="{{ post.url }}"
+        title="{{ post.title }}">
+        <p class="postCategoria3 gradienteBase">
+            {{ post.categories | join: '/' | replace: '-', ' '}}
+        </p>
+        <div class="postTexto3">
+            <h3 class="postTitulo3">{{ post.title }}</h3>
+        </div>
+    </a>
+    {% endfor %}
+</aside>

@@ -1,0 +1,95 @@
+---
+layout: padrao
+title: Sobre
+descricao: Aqui você encontra informações sobre os membros da equipe e as formas de entrar em contato conosco!
+csscustomizado: <link rel="stylesheet" href="/css/sobre.css" />
+permalink: /sobre/
+---
+        
+                <div class="tituloArtigo gradienteBase">
+                    <h1>NOSSO SITE</h1>
+                    <p>Nossa equipe e formas de entrar em contato conosco!</p>
+                </div>
+                <section class="equipe">
+                    <div class="tituloSecao centralizar">
+                        <p class="gradienteBase">
+                            <i class="fa-solid fa-users"></i>
+                        </p>
+                        <h2>Equipe Simple Skans</h2>
+                    </div>
+                    <div class="membro gradienteBase">
+                        <div class="socialE">
+                            <img
+                                src="https://cdn.discordapp.com/avatars/177083428242456577/8072ef4cb40c51d21da8e1769a242b12"
+                                alt="Foto de Perfil de KryFi" />
+                            <h3>KryFi</h3>
+                            <p>Líder da equipe e responsável pelo site</p>
+                        </div>
+                        <div class="socialD">
+                            <div>
+                                <ul class="listaSocial">
+                                    <li>
+                                        Tradutor na
+                                        <a href="https://e4t.com.br"
+                                            >Elite dos 4 Traduções</a
+                                        >
+                                    </li>
+                                    <li>
+                                        ADM do Clã
+                                        <a
+                                            href="https://disboard.org/pt-pt/server/1104630562897014824"
+                                            >Zerø</a
+                                        >
+                                        de Smash Legends
+                                    </li>
+                                    <li>
+                                        Iniciante em ROM Hacking de NES e GBA
+                                    </li>
+                                    <li>
+                                        Conhecimento médio em HTML, porém, sem
+                                        formação alguma na área
+                                    </li>
+                                </ul>
+                            </div>
+                            <ul class="social">
+                                <li>
+                                    <div class="socialBotao" title="Discord">
+                                        <i class="fa-brands fa-discord"></i
+                                        ><spam>0kryfi</spam>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://twitter.com/0kryfi"
+                                        title="X"
+                                        ><i class="fa-brands fa-x-twitter"></i
+                                    ></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="membro"></div>
+                </section>
+                <div class="tituloSecao centralizar">
+                    <p class="gradienteBase">
+                        <i class="fa-solid fa-handshake-simple"></i>
+                    </p>
+                    <h2>Parceiros</h2>
+                </div>
+                <section class="parceiros">
+                    
+                       {% for membro in site.data.parceiros %}
+                       <div class="membro gradienteBase">
+                        <div class="socialE">
+                            <img
+                                src="https://{{ membro.imagem }}"
+                                alt="Foto de Perfil de {{ membro.nome }}" />
+                            <h3>{{ membro.nome }}</h3>
+                            <p>{{ membro.cargo }}</p>
+                        </div>
+                        </div>
+                        {% endfor %}
+                    
+                  
+                </section>
+            

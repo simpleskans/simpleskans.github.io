@@ -1,88 +1,10 @@
-<!doctype html>
-<html lang="pt-BR">
-    <head>
-        <title>Links Úteis | Simple Skans</title>
-        <meta
-            name="description"
-            content="Aqui você pode encontrar links associados ao cenário de Rom Hacking e tradução de jogos, tanto brasileiros como internacionais" />
-        <link rel="canonical" href="https://simpleskans.com.br/links/" />
+---
+layout: padrao
+title: Links Úteis
+descricao: Aqui você pode encontrar links associados ao cenário de Rom Hacking e tradução de jogos, tanto brasileiros como internacionais
+permalink: /links/
+---
 
-        <!-- Facebook Meta Tags -->
-        <meta property="og:url" content="https://simpleskans.com.br/links/" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Links Úteis" />
-        <meta
-            property="og:description"
-            content="Aqui você pode encontrar links associados ao cenário de Rom Hacking e tradução de jogos, tanto brasileiros como internacionais" />
-        <meta
-            property="og:image"
-            content="https://simpleskans.com.br/img/logoColorido.png" />
-
-        <!-- Twitter Meta Tags -->
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="simpleskans.com.br" />
-        <meta property="twitter:url" content="https://simpleskans.com.br/links/" />
-        <meta name="twitter:title" content="Links Úteis" />
-        <meta
-            name="twitter:description"
-            content="Aqui você pode encontrar links associados ao cenário de Rom Hacking e tradução de jogos, tanto brasileiros como internacionais" />
-        <meta
-            name="twitter:image"
-            content="https://simpleskans.com.br/img/logoColorido.png" />
-
-        <!--Schema Tags-->
-       
-        <!--Favicon tags-->
-        <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="/apple-touch-icon.png" />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="/favicon-32x32.png" />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href="/favicon-16x16.png" />
-        <link rel="manifest" href="/site.webmanifest" />
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#c13a5a" />
-        <meta name="msapplication-TileColor" content="#c13a5a" />
-        <meta name="theme-color" content="#c13a5a" />
-        <!--Head tags-->
-
-        <script src="https://kit.fontawesome.com/8767d1d5a5.js" crossorigin="anonymous"></script>
-        
-        <link rel="stylesheet" href="/css/reset.css" />
-        <link rel="stylesheet" href="/css/estilo.css" />
-        
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta charset="UTF-8" />
-        <meta name="author" content="KryFi" />
-    </head>
-    <body>
-        <nav class="barraFlutuante gradienteBase">
-            <div class="imagemSite">
-                <a href="https://simpleskans.com.br">
-                    <img src="/img/logo.png" alt="Simple Skans" />
-                </a>
-            </div>
-            <div id="menuSuperior">
-                <a href="/projetos/" title="Todos os Projetos">Projetos</a>
-                <a href="/rom-hacking/" title="Traduções de ROMs">ROM Hacking</a>
-                <a href="/dnd/" title="Tradções de D&D">D&#38;D</a>
-                <a href="/smash-legends/" title="Traduções de Smash Legends">Smash Legends</a>
-                <a href="/sobre/" title="Entre em Contato">Sobre</a>
-            </div>
-            <span class="icon" onclick="myFunction()">
-                <i class="fa fa-bars"></i
-            ></span>
-        </nav>
-        <span id="topo"></span>
-        <div class="corpo">
-            <div class="margemGeral"> 
 <div class="tituloArtigo gradienteBase">
     <h1>LINKS ÚTEIS</h1>
     <p>Ferramentas e Sites</p>
@@ -101,70 +23,16 @@
                 <th>Site</th>
                 <th>Descrição</th>
             </tr>
-            
+            {% for dado in site.data.linksbr %}
             <tr>
                 <td>
-                    <a href="https://www.romhacking.net.br/index.php" target="_blank">FURT</a>
+                    <a href="{{ dado.link }}" target="_blank">{{ dado.nome }}</a>
                 </td>
                 <td>
-                    Principal fórum onde traduções brasileiras são publicadas atualmente
+                    {{ dado.descricao }}
                 </td>
             </tr>
-            
-            <tr>
-                <td>
-                    <a href="https://e4t.com.br/" target="_blank">Elite dos Quatro</a>
-                </td>
-                <td>
-                    Grupo de tradução focado em Nintendo 3DS e jogos de Pokémon
-                </td>
-            </tr>
-            
-            <tr>
-                <td>
-                    <a href="https://hextinkers.org/" target="_blank">Taihen's Hextinkers</a>
-                </td>
-                <td>
-                    Site do rom hacker Taihen com maior foco em NES e SNES
-                </td>
-            </tr>
-            
-            <tr>
-                <td>
-                    <a href="https://joao13traducoes.com/" target="_blank">João13 Traduções</a>
-                </td>
-                <td>
-                    Site que disponibiliza as mais recentes traduções lançadas para todas as plataformas
-                </td>
-            </tr>
-            
-            <tr>
-                <td>
-                    <a href="https://hyd.neocities.org/" target="_blank">Hyd~ Traduções</a>
-                </td>
-                <td>
-                    Site do rom hacker Hyd~, que traduziu Pokémon Azul, Vermelho e Amarelo
-                </td>
-            </tr>
-            
-            <tr>
-                <td>
-                    <a href="https://romhackers.org/" target="_blank">PO.B.R.E.</a>
-                </td>
-                <td>
-                    Foi por muito tempo um agregador de traduções, tutoriais e ferramentas, mas está abandonado
-                </td>
-            </tr>
-            
-            <tr>
-                <td>
-                    <a href="https://www.brgames.org/" target="_blank">BR GAMES</a>
-                </td>
-                <td>
-                    Provavelmente o site sobre tradução de roms a mais tempo no ar
-                </td>
-            </tr>
-            
+            {% endfor %}
         </table>
     </div>
 </section>
@@ -350,25 +218,3 @@
         <a href="/contato/">contato</a> conosco!
     </p>
 </section>
-
-</div>
-  <div class="paraCima"> <a href="#topo" class="gradienteBase"> <i class="fas fa-arrow-up"></i> </a> </div>
-</div>
-<footer class="textoFooter gradienteBase">
-  <img alt="Endpoint Badge" src="https://img.shields.io/endpoint?url=https%3A%2F%2Fhits.dwyl.com%2Fsimpleskans%2Fsimpleskanscombr.json&style=for-the-badge&label=Visitantes&labelColor=rgba(0%2C%200%2C%200%2C%20%200)&color=rgba(0%2C%200%2C%200%2C%20%200)">
-  <p>&copy;2024 Simple Skans<br/>
-    Feito com HTML puro por ㄴKryFiㄱ</p>
-</footer>
-<script>
-            function myFunction() {
-                var x = document.getElementById("menuSuperior");
-                if (x.style.display === "flex") {
-                    x.style.display = "none";
-                } else {
-                    x.style.display = "flex";
-                    x.classList.add("gradienteBase");
-                }
-            }
-        </script>
-</body>
-</html>

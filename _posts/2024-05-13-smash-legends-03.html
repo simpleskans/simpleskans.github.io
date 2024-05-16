@@ -1,0 +1,68 @@
+---
+layout: padrao
+title: "Cisne, Limpando!"
+descricao: "Tradução da Webtoon de Smash Legends Nº 03 para PT-BR! by Simple Skans"
+categories: smash-legends webtoonSL
+permalink: /:categories/:title
+capa: 'https://oopy.lazyrockets.com/api/v2/notion/image?src=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F308aabe7-5d1e-496a-9bc5-91238b515a51%2FThumbnail.png&blockId=daaa7398-e5e2-49d7-9257-85c3c02cd19f&width=3600'
+csscustomizado: '<link rel="stylesheet" href="/css/smashlegends.css" />'
+---
+
+<div class="webtoonHeader">
+    <figure>
+        <img src="{{ page.capa }}" alt="Imagem de Cabeçalho" style=" object-position: center 48%;"/>
+    </figure>
+</div>
+<article class="webtoonCorpo">
+    <section class="webtoonImgs">
+        <h1 class="gradienteBase tituloSL">
+            {{ page.title | remove: " | Smash Legends" }}
+        </h1>
+        <img src="https://i.ibb.co/4sSb26Z/1.png" alt="1" border="0">
+        <img src="https://i.ibb.co/KLhbg31/2.png" alt="2" border="0">
+        <img src="https://i.ibb.co/5FnxycY/3.png" alt="3" border="0">
+        <img src="https://i.ibb.co/d0zRrcP/4.png" alt="4" border="0">
+        <img src="https://i.ibb.co/9cDjWW5/5.png" alt="5" border="0">
+        <img src="https://i.ibb.co/4gTdY8k/6.png" alt="6" border="0">
+        <img src="https://i.ibb.co/M1L4fRF/7.png" alt="7" border="0">
+        <img src="https://i.ibb.co/zQyRtLY/8.png" alt="8" border="0">
+    </section>
+    <nav class="navPosts">
+        <a href="smash-legends-02" class="gradienteBase" title="Capítulo Anterior"><i class="fa-solid fa-backward-fast"></i></a>
+        <a href="/smash-legends/" class="gradienteBase center"><i class="fa fa-bars"></i> Todos os Capítulos</a>
+        <a href="smash-legends-04" class="gradienteBase" title="Próximo Capítulo"><i class="fa-solid fa-forward-fast"></i></a>
+    </nav>
+    <section class="comentarios">
+        <div class="tituloSecao centralizar">
+            <p class="gradienteBase">
+                <i class="fa-solid fa-comments"></i>
+            </p>
+            <h2>Comentários</h2>
+        </div>
+        <div id="disqus_thread"></div>
+        <script>
+            /**
+             *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+             *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+
+            var disqus_config = function () {
+                this.page.url = "{{ site.url }}{{ page.url }}"; // Replace PAGE_URL with your page's canonical URL variable
+                this.page.identifier = "{{ page.url }}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+            (function () {
+                // DON'T EDIT BELOW THIS LINE
+                var d = document,
+                    s = d.createElement("script");
+                s.src = "https://simple-skans.disqus.com/embed.js";
+                s.setAttribute("data-timestamp", +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript
+            >Please enable JavaScript to view the
+            <a href="https://disqus.com/?ref_noscript"
+                >comments powered by Disqus.</a
+            ></noscript
+        >
+    </section>
+</article>

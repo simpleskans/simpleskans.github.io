@@ -1,88 +1,8 @@
-<!doctype html>
-<html lang="pt-BR">
-    <head>
-        <title>Home | Simple Skans</title>
-        <meta
-            name="description"
-            content="Simple Skans! Localizando conteúdo para que todos possam acessar!" />
-        <link rel="canonical" href="https://simpleskans.com.br/" />
-
-        <!-- Facebook Meta Tags -->
-        <meta property="og:url" content="https://simpleskans.com.br/" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Home" />
-        <meta
-            property="og:description"
-            content="Simple Skans! Localizando conteúdo para que todos possam acessar!" />
-        <meta
-            property="og:image"
-            content="https://simpleskans.com.br/img/logoColorido.png" />
-
-        <!-- Twitter Meta Tags -->
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="simpleskans.com.br" />
-        <meta property="twitter:url" content="https://simpleskans.com.br/" />
-        <meta name="twitter:title" content="Home" />
-        <meta
-            name="twitter:description"
-            content="Simple Skans! Localizando conteúdo para que todos possam acessar!" />
-        <meta
-            name="twitter:image"
-            content="https://simpleskans.com.br/img/logoColorido.png" />
-
-        <!--Schema Tags-->
-       
-        <!--Favicon tags-->
-        <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="/apple-touch-icon.png" />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="/favicon-32x32.png" />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href="/favicon-16x16.png" />
-        <link rel="manifest" href="/site.webmanifest" />
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#c13a5a" />
-        <meta name="msapplication-TileColor" content="#c13a5a" />
-        <meta name="theme-color" content="#c13a5a" />
-        <!--Head tags-->
-
-        <script src="https://kit.fontawesome.com/8767d1d5a5.js" crossorigin="anonymous"></script>
-        
-        <link rel="stylesheet" href="/css/reset.css" />
-        <link rel="stylesheet" href="/css/estilo.css" />
-        
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta charset="UTF-8" />
-        <meta name="author" content="KryFi" />
-    </head>
-    <body>
-        <nav class="barraFlutuante gradienteBase">
-            <div class="imagemSite">
-                <a href="https://simpleskans.com.br">
-                    <img src="/img/logo.png" alt="Simple Skans" />
-                </a>
-            </div>
-            <div id="menuSuperior">
-                <a href="/projetos/" title="Todos os Projetos">Projetos</a>
-                <a href="/rom-hacking/" title="Traduções de ROMs">ROM Hacking</a>
-                <a href="/dnd/" title="Tradções de D&D">D&#38;D</a>
-                <a href="/smash-legends/" title="Traduções de Smash Legends">Smash Legends</a>
-                <a href="/sobre/" title="Entre em Contato">Sobre</a>
-            </div>
-            <span class="icon" onclick="myFunction()">
-                <i class="fa fa-bars"></i
-            ></span>
-        </nav>
-        <span id="topo"></span>
-        <div class="corpo">
-            <div class="margemGeral"> 
+---
+layout: padrao
+title: Home
+descricao: Simple Skans! Localizando conteúdo para que todos possam acessar!
+---
 <div class="ocultar">
       <h1>Simple Skans Traduções</h1>
   </div>
@@ -90,35 +10,17 @@
             <h2>Posts recentes</h2>
         </div>
     <main class="postsDestaque">
-     
-     
-<a class="postCaixa" style="background-image:  url(https://oopy.lazyrockets.com/api/v2/notion/image?src=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F0a2eb928-a583-408a-ab91-d7226aa58ccf%2FSL%EC%9C%A0%EB%A6%AC%EA%B5%AC%EB%91%90%EB%A5%BC_%EC%8B%A0%EC%9D%80_%EB%B0%B0%EB%8B%AC%EB%B6%80%EC%9D%98_%ED%8E%B8%EC%A7%80.png&blockId=234b6150-a5e8-4680-b043-8460e1f004c4&width=3600);" href="/smash-legends/webtoonsl/smash-legends-04" title="Uma Mensagem da Entregadora com Sapatinhos de Cristal">
-            <p class="postCategoria gradienteBase">smash legends/webtoonSL</p>
+     {% assign c = site.posts | slice: 0, 3 %}
+     {% for post in c %}
+<a class="postCaixa" style="background-image:  url({{ post.capa }});" href="{{ post.url }}" title="{{ post.title }}">
+            <p class="postCategoria gradienteBase">{{ post.categories | join: '/' | replace: '-', ' '}}</p>
             <div class="postTexto">
-            <p class="postData"><i class="fa-regular fa-clock"></i> 16/05/2024</p>
-            <h3 class="postTitulo">Uma Mensagem da Entregadora com Sapatinhos de Cristal</h3>
-            <p class="postDescricao"></p>
+            <p class="postData"><i class="fa-regular fa-clock"></i> {{ post.date | date: "%d/%m/%Y"}}</p>
+            <h3 class="postTitulo">{{ post.title }}</h3>
+            <p class="postDescricao">{{ post.resumo }}</p>
           </div>
       </a>
-
-<a class="postCaixa" style="background-image:  url(https://oopy.lazyrockets.com/api/v2/notion/image?src=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F308aabe7-5d1e-496a-9bc5-91238b515a51%2FThumbnail.png&blockId=daaa7398-e5e2-49d7-9257-85c3c02cd19f&width=3600);" href="/smash-legends/webtoonsl/smash-legends-03" title="Cisne, Limpando!">
-            <p class="postCategoria gradienteBase">smash legends/webtoonSL</p>
-            <div class="postTexto">
-            <p class="postData"><i class="fa-regular fa-clock"></i> 13/05/2024</p>
-            <h3 class="postTitulo">Cisne, Limpando!</h3>
-            <p class="postDescricao"></p>
-          </div>
-      </a>
-
-<a class="postCaixa" style="background-image:  url(https://oopy.lazyrockets.com/api/v2/notion/image?src=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F3b5b3d02-36c4-4e61-9c40-b759e4b79325%2FThumbnail.png&blockId=31c6e5f2-74ff-4287-b67b-7752caacd249&width=3600);" href="/smash-legends/webtoonsl/smash-legends-02" title=" Finalmente Iniciado! Smash Legends!">
-            <p class="postCategoria gradienteBase">smash legends/webtoonSL</p>
-            <div class="postTexto">
-            <p class="postData"><i class="fa-regular fa-clock"></i> 13/05/2024</p>
-            <h3 class="postTitulo"> Finalmente Iniciado! Smash Legends!</h3>
-            <p class="postDescricao"></p>
-          </div>
-      </a>
-
+{% endfor %}
       </main>
       <div class="tituloSecao centralizar">
             <p class="gradienteBase">
@@ -127,44 +29,20 @@
             <h2>Outros Posts</h2>
         </div>
       <section class="postsResto">
-      
-     
-     <a class="postCaixa2" href="/smash-legends/webtoonsl/smash-legends-01" title="O Novo Portador da Espada-Gancho">
-        <figure><img src="https://oopy.lazyrockets.com/api/v2/notion/image?src=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F28fe2098-11ce-401c-bb9d-6ff03ec5063c%2FThumbnail.png&blockId=ee7503a3-f69a-4b49-9673-8d530e0a1edf&width=3600" alt="O Novo Portador da Espada-Gancho"/>
+      {% assign c = site.posts | slice: 3, 3 %}
+     {% for post in c %}
+     <a class="postCaixa2" href="{{ post.url }}" title="{{ post.title }}">
+        <figure><img src="{{ post.capa }}" alt="{{ post.title }}"/>
              </figure>
-          <p class="postCategoria2 gradienteBase">smash legends/webtoonSL</p>
+          <p class="postCategoria2 gradienteBase">{{ post.categories | join: '/' | replace: '-', ' '}}</p>
           <div class="postTexto2">
-           <p class="postData2"><i class="fa-regular fa-clock"></i> 13/05/2024</p>
-            <h3 class="postTitulo2">O Novo Portador da Espada-Gancho</h3>
-            <p class="postDescricao2"></p>
+           <p class="postData2"><i class="fa-regular fa-clock"></i> {{ post.date | date: "%d/%m/%Y"}}</p>
+            <h3 class="postTitulo2">{{ post.title }}</h3>
+            <p class="postDescricao2">{{ post.resumo }}</p>
             </div>
      
           </a>
-     
-     <a class="postCaixa2" href="/rom-hacking/tetsudou-ou" title="Tetsudou-ou: Famicom Board Game">
-        <figure><img src="/img/capas/tetsudouou.png" alt="Tetsudou-ou: Famicom Board Game"/>
-             </figure>
-          <p class="postCategoria2 gradienteBase">rom hacking</p>
-          <div class="postTexto2">
-           <p class="postData2"><i class="fa-regular fa-clock"></i> 24/04/2024</p>
-            <h3 class="postTitulo2">Tetsudou-ou: Famicom Board Game</h3>
-            <p class="postDescricao2">"Tetsudou-ou" é um jogo de tabuleiro lançado para Family Computer pela dB-SOFT em 12 de dezembro de 1987.</p>
-            </div>
-     
-          </a>
-     
-     <a class="postCaixa2" href="/projetos/manual-tetsudou-ou" title="Manual de Tetsudou-ou: Famicom Board Game">
-        <figure><img src="/img/capas/tetsudououcapamanual.png" alt="Manual de Tetsudou-ou: Famicom Board Game"/>
-             </figure>
-          <p class="postCategoria2 gradienteBase">projetos</p>
-          <div class="postTexto2">
-           <p class="postData2"><i class="fa-regular fa-clock"></i> 24/04/2024</p>
-            <h3 class="postTitulo2">Manual de Tetsudou-ou: Famicom Board Game</h3>
-            <p class="postDescricao2">Manual do jogo Tetsudou-ou localizado para PT-BR seguindo as regras de nossa tradução para o jogo!</p>
-            </div>
-     
-          </a>
-     
+     {% endfor %}
       </section>
       <div class="tituloSecao centralizar">
             <p class="gradienteBase">
@@ -174,39 +52,15 @@
         </div>
         <section class="parceiros gradienteBase">
       <div class="listaParceiros">
-           
-           <div style="background: url('https://cdn.discordapp.com/avatars/114791500348522501/524a821a9f5fee844706b60cb0b90d81')
+           {% for membro in site.data.membros %}
+           <div style="background: url('{{ membro.imagem }}')
         no-repeat 50% / cover;">
     <div class="dadosParceiro">
-      <h3>Hareon</h3>
-      <span>Líder da E4T</span>
+      <h3>{{ membro.nome }}</h3>
+      <span>{{ membro.cargo }}</span>
     </div>
   </div>
-         
-           <div style="background: url('https://cdn.discordapp.com/avatars/242792936956362752/7d9c0b575a315ddf70731acdf2de9b63')
-        no-repeat 50% / cover;">
-    <div class="dadosParceiro">
-      <h3>Taihen</h3>
-      <span>Expert em NES/SNES</span>
-    </div>
-  </div>
-         
-           <div style="background: url('https://cdn.discordapp.com/avatars/716281606112804904/f739605de2e3774f2c10b74d09f40a5b')
-        no-repeat 50% / cover;">
-    <div class="dadosParceiro">
-      <h3>Breno</h3>
-      <span>Expert em GBA</span>
-    </div>
-  </div>
-         
-           <div style="background: url('https://cdn.discordapp.com/avatars/289510160697917441/e35e89d77e45a84fbc8bf43c6f9e8693')
-        no-repeat 50% / cover;">
-    <div class="dadosParceiro">
-      <h3>RodiRage</h3>
-      <span>Edições Gráficas</span>
-    </div>
-  </div>
-            
+         {% endfor %}   
             </div>
       </section>
 
@@ -221,72 +75,20 @@
         </h1>
     </section>
     <section class="bannerProjetos" style="min-width: 400px;">
-        #
+        #{% for post in site.posts limit:5 %}
            <div
             class="bannerN"
-            onclick="document.location='/smash-legends/webtoonsl/smash-legends-04'"
-            title='Projeto de Uma Mensagem da Entregadora com Sapatinhos de Cristal'>
+            onclick="document.location='{{ post.url }}'"
+            title='Projeto de {{ post.title | remove: " | Smash Legends" }}'>
             <figure>
-                <img src="https://oopy.lazyrockets.com/api/v2/notion/image?src=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F0a2eb928-a583-408a-ab91-d7226aa58ccf%2FSL%EC%9C%A0%EB%A6%AC%EA%B5%AC%EB%91%90%EB%A5%BC_%EC%8B%A0%EC%9D%80_%EB%B0%B0%EB%8B%AC%EB%B6%80%EC%9D%98_%ED%8E%B8%EC%A7%80.png&blockId=234b6150-a5e8-4680-b043-8460e1f004c4&width=3600" alt='Uma Mensagem da Entregadora com Sapatinhos de Cristal' style="max-width: 240px;"/>
+                <img src="{{- post.capa | relative_url -}}" alt='{{ post.title | remove: " | Smash Legends" }}' style="max-width: 240px;"/>
             </figure>
             <div class="gradienteBase">
                 <p>Posts Recentes</p>
-                <p>Uma Mensagem da Entregadora com Sapatinhos de Cristal</p>
+                <p>{{ post.title | remove: " | Smash Legends" }}</p>
             </div>
         </div>
-        #
-           <div
-            class="bannerN"
-            onclick="document.location='/smash-legends/webtoonsl/smash-legends-03'"
-            title='Projeto de Cisne, Limpando!'>
-            <figure>
-                <img src="https://oopy.lazyrockets.com/api/v2/notion/image?src=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F308aabe7-5d1e-496a-9bc5-91238b515a51%2FThumbnail.png&blockId=daaa7398-e5e2-49d7-9257-85c3c02cd19f&width=3600" alt='Cisne, Limpando!' style="max-width: 240px;"/>
-            </figure>
-            <div class="gradienteBase">
-                <p>Posts Recentes</p>
-                <p>Cisne, Limpando!</p>
-            </div>
-        </div>
-        #
-           <div
-            class="bannerN"
-            onclick="document.location='/smash-legends/webtoonsl/smash-legends-02'"
-            title='Projeto de  Finalmente Iniciado! Smash Legends!'>
-            <figure>
-                <img src="https://oopy.lazyrockets.com/api/v2/notion/image?src=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F3b5b3d02-36c4-4e61-9c40-b759e4b79325%2FThumbnail.png&blockId=31c6e5f2-74ff-4287-b67b-7752caacd249&width=3600" alt=' Finalmente Iniciado! Smash Legends!' style="max-width: 240px;"/>
-            </figure>
-            <div class="gradienteBase">
-                <p>Posts Recentes</p>
-                <p> Finalmente Iniciado! Smash Legends!</p>
-            </div>
-        </div>
-        #
-           <div
-            class="bannerN"
-            onclick="document.location='/smash-legends/webtoonsl/smash-legends-01'"
-            title='Projeto de O Novo Portador da Espada-Gancho'>
-            <figure>
-                <img src="https://oopy.lazyrockets.com/api/v2/notion/image?src=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F28fe2098-11ce-401c-bb9d-6ff03ec5063c%2FThumbnail.png&blockId=ee7503a3-f69a-4b49-9673-8d530e0a1edf&width=3600" alt='O Novo Portador da Espada-Gancho' style="max-width: 240px;"/>
-            </figure>
-            <div class="gradienteBase">
-                <p>Posts Recentes</p>
-                <p>O Novo Portador da Espada-Gancho</p>
-            </div>
-        </div>
-        #
-           <div
-            class="bannerN"
-            onclick="document.location='/rom-hacking/tetsudou-ou'"
-            title='Projeto de Tetsudou-ou: Famicom Board Game'>
-            <figure>
-                <img src="/img/capas/tetsudouou.png" alt='Tetsudou-ou: Famicom Board Game' style="max-width: 240px;"/>
-            </figure>
-            <div class="gradienteBase">
-                <p>Posts Recentes</p>
-                <p>Tetsudou-ou: Famicom Board Game</p>
-            </div>
-        </div>
-        #
+        #{% endfor %}
     </section>
     <section class="traducoesNovas">
         <div class="tituloSecao centralizar">
@@ -295,7 +97,23 @@
             </p>
             <h2>Traduções Recentes</h2>
         </div>
+        {% for post in site.categories.traducoes limit:5 %}
         
+        <a href="{{ post.url }}" class="novidade" title="{{ post.title }}">
+            <figure>
+                <img
+                    src="{{- post.capa | relative_url -}}"
+                    alt="Capa de {{ post.title }}" />
+            </figure>
+            <div>
+                <h3>{{ post.title }}</h3>
+                <h4 class="gradienteBase">{{ post.plataforma }}</h4>
+                <p>
+                    {{ post.resumo }}
+                </p>
+            </div>
+        </a>
+   {% endfor %}
         <div class="verTudo">
             <a href="/traducoes/">Ver todas as traduções →</a>
         </div>
@@ -307,23 +125,23 @@
             </p>
             <h2>Projetos recentes e outras novidades</h2>
         </div>
+        {% for post in site.categories.projetos limit:5 %}
         
-        
-        <a href="/projetos/manual-tetsudou-ou" class="novidade">
+        <a href="{{ post.url }}" class="novidade">
             <figure>
                 <img
-                    src="/img/capas/tetsudououcapamanual.png"
-                    alt="Manual de Tetsudou-ou: Famicom Board Game" />
+                    src="{{- post.capa | relative_url -}}"
+                    alt="{{ post.title }}" />
             </figure>
             <div>
-                <h3>Manual de Tetsudou-ou: Famicom Board Game</h3>
-                <h4 class="gradienteBase">24/04/2024</h4>
+                <h3>{{ post.title }}</h3>
+                <h4 class="gradienteBase">{{ post.date | date: "%-d/%m/%Y" }}</h4>
                 <p>
-                    Manual do jogo Tetsudou-ou localizado para PT-BR seguindo as regras de nossa tradução para o jogo!
+                    {{ post.resumo }}
                 </p>
             </div>
         </a>
-   
+   {% endfor %}
         <div class="verTudo">
             <a href="/projetos/">Ver todos os projetos →</a>
         </div>
@@ -340,25 +158,3 @@
     </section>
 </div>
 -->
-
-</div>
-  <div class="paraCima"> <a href="#topo" class="gradienteBase"> <i class="fas fa-arrow-up"></i> </a> </div>
-</div>
-<footer class="textoFooter gradienteBase">
-  <img alt="Endpoint Badge" src="https://img.shields.io/endpoint?url=https%3A%2F%2Fhits.dwyl.com%2Fsimpleskans%2Fsimpleskanscombr.json&style=for-the-badge&label=Visitantes&labelColor=rgba(0%2C%200%2C%200%2C%20%200)&color=rgba(0%2C%200%2C%200%2C%20%200)">
-  <p>&copy;2024 Simple Skans<br/>
-    Feito com HTML puro por ㄴKryFiㄱ</p>
-</footer>
-<script>
-            function myFunction() {
-                var x = document.getElementById("menuSuperior");
-                if (x.style.display === "flex") {
-                    x.style.display = "none";
-                } else {
-                    x.style.display = "flex";
-                    x.classList.add("gradienteBase");
-                }
-            }
-        </script>
-</body>
-</html>

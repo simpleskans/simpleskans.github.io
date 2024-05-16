@@ -1,0 +1,63 @@
+---
+layout: padrao
+title: Smash Legends
+descricao: Lista de traduções de Smash Legends pela Simple Skans!
+permalink: /smash-legends/
+csscustomizado: '<link rel="stylesheet" href="/css/smashlegends.css" />'
+---
+
+<section class="traducoesNovas">
+    <div class="tituloArtigo gradienteBase">
+        <h1>TRADUÇÕES DE SMASH LEGENDS</h1>
+        <p>
+            Todas as Webtoons e Novels traduzidas pela equipe da Simple Skans!
+        </p>
+    </div>
+    <div class="tituloSecao centralizar">
+        <p class="gradienteBase">
+            <i class="fa-solid fa-book-open"></i>
+        </p>
+        <h2>Todas as Webtoons</h2>
+    </div>
+    <div class="novidadeSL">
+        {% assign i = site.categories.webtoonSL | size %}
+        {% for post in site.categories.webtoonSL %}
+        <a href="{{ post.url }}" class="webtoonSL" title='{{ post.title }}'>
+            <figure>
+                <img
+                    src="{{- post.capa  -}}"
+                    alt='Capa de {{ post.title }}' />
+                <figcaption>
+                    <h3 class="gradienteBase">
+                        <span>Capítulo {{i}}</span><br />{{ post.title }}
+                    </h3>
+                </figcaption>
+            </figure>
+        </a>
+        {% assign i = i | minus:1 %} {% endfor %}
+    </div>
+    <div class="tituloSecao centralizar">
+        <p class="gradienteBase">
+            <i class="fa-solid fa-file-lines"></i>
+        </p>
+        <h2>Todas as Novels</h2>
+    </div>
+    {% for post in site.categories.novelSL %}
+
+    <a href="{{ post.url }}" class="novelSL" title="{{ post.title }}">
+        <figure>
+            <img
+                src="{{- post.capa | relative_url -}}"
+                alt="Capa de {{ post.title }}" />
+        </figure>
+        <div>
+            <h3>{{ post.title }}</h3>
+            <h4 class="gradienteBase">{{ post.plataforma }}</h4>
+            <p>{{ post.resumo }}</p>
+        </div>
+    </a>
+    {% endfor %}
+</section>
+<section class="construcao">
+    <p>🚧 Seção em Construção 🚧</p>
+</section>

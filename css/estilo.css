@@ -784,9 +784,9 @@ footer img {
 
     .texto figure {
         width: 40%;
-        float: right;
+        float: left;
         clear: both;
-        margin-left: 1em;
+        margin-right: 1em;
     }
     
     .tabelaLinks table,
@@ -808,9 +808,9 @@ footer img {
     }
 }
 
-@media (min-width: 1009px) {
+@media (min-width: 1101px) {
     .corpo {
-        max-width: 1008px;
+        max-width: 1100px;
     }
 
     .postCaixa3:hover {

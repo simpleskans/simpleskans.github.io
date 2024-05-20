@@ -7,6 +7,16 @@
             content="{{ page.descricao }}" />
         <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-C6Q368P6MR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-C6Q368P6MR');
+</script>
+
         <!-- Facebook Meta Tags -->
         <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
         <meta property="og:type" content="website" />

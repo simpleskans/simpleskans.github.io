@@ -29,7 +29,7 @@ descricao: Simple Skans! Localizando conteúdo para que todos possam acessar!
             <h2>Outros Posts</h2>
         </div>
       <section class="postsResto">
-      {% assign c = site.posts | slice: 3, 3 %}
+      {% assign c = site.posts | slice: 3, 9 %}
      {% for post in c %}
      <a class="postCaixa2" href="{{ post.url }}" title="{{ post.title }}">
         <figure><img src="{{ post.capa }}" alt="{{ post.title }}"/>

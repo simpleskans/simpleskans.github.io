@@ -165,8 +165,8 @@ a figure img {
 
 .postCategoria {
     position: relative;
-    top: 1vw;
-    left: 1vw;
+    top: 0.5em;
+    left: 0.5em;
     display: inline-block;
     padding: 0.5em;
     color: #fff;
@@ -617,6 +617,15 @@ footer img {
 .galeria ul li img {
     width: 100%;
 }
+
+.steamWidget {
+    width: 100%;
+}
+
+.steamWidget iframe {
+    width: 100%;
+    min-height: 200px;
+}
 /*------------------*/
 .avisoErros {
     text-indent: none;
@@ -785,7 +794,7 @@ footer img {
         grid-template-rows: repeat(2);
         grid-column-gap: 1em;
     }
-    .fichaTecnica {
+    fichaTecnica {
         grid-area: 1 / 4 / 2 / 6;
     }
     .sobreTraducao {
@@ -799,7 +808,7 @@ footer img {
         font-size: 1em;
     }
     .galeria ul li {
-        width: 24%;
+        width: 32%;
     }
     .galeria figure {
         width: 100%;

@@ -600,6 +600,14 @@ footer img {
     width: 48%;
     text-align: center;
 }
+
+.galeria ul li:first-child {
+    width: 100%;
+}
+
+.galeria ul li:nth-child(even):last-child {
+    display: none;
+}
 .galeria figure {
     flex-direction: column;
     width: 100%;
@@ -763,8 +771,7 @@ footer img {
     .margemGeral {
         position: relative;
     }
-     
-    
+
     .esquerda {
         width: 70%;
     }
@@ -788,7 +795,7 @@ footer img {
         clear: both;
         margin-right: 1em;
     }
-    
+
     .tabelaLinks table,
     .tabela table tr td {
         font-size: 1em;
@@ -796,6 +803,11 @@ footer img {
     .galeria ul li {
         width: 32%;
     }
+
+    .galeria ul li:last-child {
+        display: block;
+    }
+
     .galeria figure {
         width: 100%;
     }

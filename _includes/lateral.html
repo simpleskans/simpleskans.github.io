@@ -5,7 +5,8 @@
         </p>
         <h2>Outros Posts</h2>
     </div>
-    {% for post in site.posts | limit: 6 %}
+    {% assign c = site.posts | slice: 0, 7 %}
+     {% for post in c %}
     <a
         class="postCaixa4"
         style="background-image:  url({{ post.capa }});"

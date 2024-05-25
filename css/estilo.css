@@ -657,7 +657,7 @@ footer img {
     justify-content: space-between;
 }
 .postCaixa4 {
-    width: 32%;
+    width: 48%;
     aspect-ratio: 16/9;
     margin-bottom: 1em;
     background-repeat: no-repeat;
@@ -804,7 +804,7 @@ footer img {
         width: 32%;
     }
 
-    .galeria ul li:last-child {
+    .galeria ul li:nth-child(even):last-child {
         display: block;
     }
 

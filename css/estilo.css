@@ -391,7 +391,7 @@ a figure img {
 }
 
 .postCaixa3 {
-    width: 32%;
+    width: 48%;
     aspect-ratio: 1/1;
     margin-bottom: 1em;
     background-repeat: no-repeat;
@@ -426,7 +426,7 @@ a figure img {
 
 /*--------------------------*/
 .texto figure {
-    width: 50%;
+    width: 100%;
     margin: 0 auto;
 }
 .texto figure img {
@@ -435,7 +435,7 @@ a figure img {
 .tituloArtigo {
     text-align: center;
     color: #fff;
-    margin: 1em 0;
+    margin-bottom: 1em;
 }
 .tituloArtigo h1 {
     font-size: 1.3em;

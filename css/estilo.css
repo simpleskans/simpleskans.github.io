@@ -649,6 +649,12 @@ footer img {
 }
 /*-----Aside------*/
 
+#breadcrumbs {
+    line-height: 1em;
+    margin: 1em 0;
+    color: #c13a5a;
+}
+
 .direita {
     position: relative;
     width: 100%;

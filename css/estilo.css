@@ -26,21 +26,9 @@ b {
 }
 .gradienteBase {
     background: rgb(193, 58, 90);
-    background: -webkit-linear-gradient(
-        left,
-        rgba(193, 58, 90, 1) 32%,
-        rgba(153, 1, 42, 1) 100%
-    );
-    background: -o-linear-gradient(
-        left,
-        rgba(193, 58, 90, 1) 32%,
-        rgba(153, 1, 42, 1) 100%
-    );
-    background: linear-gradient(
-        to right,
-        rgba(193, 58, 90, 1) 32%,
-        rgba(153, 1, 42, 1) 100%
-    );
+    background: -webkit-linear-gradient(left, rgba(193, 58, 90, 1) 32%, rgba(153, 1, 42, 1) 100%);
+    background: -o-linear-gradient(left, rgba(193, 58, 90, 1) 32%, rgba(153, 1, 42, 1) 100%);
+    background: linear-gradient(to right, rgba(193, 58, 90, 1) 32%, rgba(153, 1, 42, 1) 100%);
 }
 .imagemSite {
     width: 30%;
@@ -181,11 +169,7 @@ a figure img {
 .postTexto3 {
     padding: 0.5em;
     background: rgb(0, 0, 0);
-    background: linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0) 0%,
-        rgba(0, 0, 0, 1) 100%
-    );
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
     color: #fff;
     width: calc(100% - 1em);
 }
@@ -352,11 +336,7 @@ a figure img {
     height: 100%;
     justify-content: flex-end;
     background: #02022e;
-    background: linear-gradient(
-        0deg,
-        rgba(193, 58, 90, 0.6755077031) 0%,
-        rgba(153, 1, 42, 0) 100%
-    );
+    background: linear-gradient(0deg, rgba(193, 58, 90, 0.6755077031) 0%, rgba(153, 1, 42, 0) 100%);
     transition:
         opacity 0.5s ease-in-out,
         transform 0.5s 0.2s;
@@ -553,6 +533,22 @@ footer img {
     font-size: 1.2em;
 }
 /*------------------*/
+.listaNivel {
+    text-transform: uppercase;
+    line-height: 1.6em;
+}
+
+.listaNivel li ul li {
+    text-indent: 1em;
+    text-transform: capitalize;
+}
+
+.listaNivel a {
+    color: #c13a5a;
+    text-decoration: underline;
+}
+
+/*------------------*/
 .tabelaLinks table {
     width: 100%;
     border: 1px solid #c13a5a;
@@ -652,7 +648,17 @@ footer img {
 #breadcrumbs {
     line-height: 1em;
     margin: 1em 0;
+
     color: #c13a5a;
+    text-transform: capitalize;
+}
+
+#breadcrumbs a {
+    color: #c13a5a;
+}
+
+#breadcrumbs a:hover {
+    text-decoration: underline;
 }
 
 .direita {
@@ -751,11 +757,7 @@ footer img {
     }
 
     .listaParceiros > div .dadosParceiro {
-        background: linear-gradient(
-            0deg,
-            rgba(0, 0, 0, 0.6755077031) 0%,
-            rgba(0, 0, 0, 0) 100%
-        );
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.6755077031) 0%, rgba(0, 0, 0, 0) 100%);
         opacity: 1;
         transform: translatey(-5%);
         visibility: visible;
@@ -791,6 +793,15 @@ footer img {
         flex-direction: column;
         justify-content: center;
     }
+
+    .paginaDnD {
+        position: relative;
+    }
+
+    .paginaDnD .direita {
+        top: 4.5em;
+    }
+
     .postCaixa4 {
         width: 100%;
     }

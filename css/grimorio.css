@@ -1,0 +1,61 @@
+.magia {
+    box-shadow: 1px 4px 14px #888888;
+    background-image: url(https://homebrewery.naturalcrit.com/assets/parchmentBackground.jpg);
+    border: 5px solid;
+    font-size: 0.9em;
+    margin-bottom: 2%;
+    border-image: url("https://homebrewery.naturalcrit.com/assets/monsterBorderFancy.png") 14 round;
+}
+
+.negrito {
+    font-weight: bold;
+}
+
+.magia div {
+    padding: 0.5em 1em;
+}
+
+.magia div:not(:last-child) {
+    border-bottom: 2px solid #c0ad6a;
+}
+
+.magiaNome h3 {
+    color: #58180d;
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+
+.magiaNome h4,
+.magiaFonte {
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+.magiaDescricao {
+    background-color: #f2e5b5;
+}
+
+.magiaInfo {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.magiaSuperior {
+    font-style: italic;
+    font-weight: bold;
+}
+
+@media (min-width: 901px) {
+    .listaMagias {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .magia {
+        display: block;
+        width: 46.8%;
+        height: fit-content;
+    }
+}

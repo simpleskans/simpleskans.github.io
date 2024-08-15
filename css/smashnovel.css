@@ -1,8 +1,0 @@
-@media (min-width: 901px) {
-    .texto figure {
-        width: 100%;
-        float:inline-start;
-        clear: both;
-        margin-right: 0;
-    }
-}

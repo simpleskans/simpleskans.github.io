@@ -2,37 +2,54 @@
 layout: padrao
 title: 'Dungeons &#38; Dragons'
 descricao: 'Lista de projetos de D&#38;D da Simple Skans!'
-permalink: /dnd/
+permalink: /DnD/
 capa: 'https://simpleskans.com.br/img/logoColorido.png'
+csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
 ---
-
+{% include breadcrumbs.html %}
+{% assign current_cat = page.url | split: "/" | last %}
 <section class="paginaDnD">
     <div class="tituloArtigo gradienteBase">
-        <h1>Projetos de Dungeons &#38; Dragons</h1>
-        <p>Todos os projetos relacionados a D&#38;D feitos pela Simple Skans</p>
+        <h1 class="capitalizar">{{ current_cat | replace: '-', ' ' | replace: 'rom', 'ROM' }}</h1>
+        <p>Todas as postagens do site incluídas nesta categoria</p>
     </div>
     <div class="esquerda">
         <div class="tituloSecao">
             <p class="gradienteBase">
                 <i class="fa-solid fa-chess-rook"></i>
             </p>
-            <h2>Projetos de D&#38;D</h2>
+            <h2>Categoria {{ current_cat | replace: '-', ' ' | replace: 'rom', 'ROM' }}</h2>
         </div>
-        <div class="listaSecundaria">
-            {% for post in site.categories.DnD %}
+        <div class="categoriaPostsGrid">
+            {% assign c = site.categories[current_cat] | slice: 0, 6 %} {% for post in c %}
             <a
-                class="postCaixa3"
+                class="categoriaCaixa"
                 style="background-image:  url({{ post.capa }});"
                 href="{{ post.url }}"
                 title="{{ post.title }}">
-                <p class="postCategoria3 gradienteBase">{{ post.categories | join: '/' | replace: '-', ' '}}</p>
-                <div class="postTexto3">
-                    <p class="postData3"><i class="fa-regular fa-clock"></i> {{ post.date | date: "%d/%m/%Y"}}</p>
-                    <h3 class="postTitulo3">{{ post.title }}</h3>
-                    <p class="postDescricao3">{{ post.descricao }}</p>
+                <div class="categoriaTexto">
+                    <p class="categoriaData"><i class="fa-regular fa-clock"></i> {{ post.date | date: "%d/%m/%Y"}}</p>
+                    <h3 class="categoriaTitulo">{{ post.title }}</h3>
                 </div>
             </a>
             {% endfor %}
+        </div>
+        <div class="categoriaPostsLista">
+            {% for post in site.categories[current_cat] %} {% unless post == site.categories[current_cat][0] or post ==
+            site.categories[current_cat][1] or post == site.categories[current_cat][2] or post ==
+            site.categories[current_cat][3] or post == site.categories[current_cat][4] or post ==
+            site.categories[current_cat][5] %}
+            <a
+                class="categoriaCaixa"
+                style="background-image:  url({{ post.capa }});"
+                href="{{ post.url }}"
+                title="{{ post.title }}">
+                <div class="categoriaTexto">
+                    <p class="categoriaData"><i class="fa-regular fa-clock"></i> {{ post.date | date: "%d/%m/%Y"}}</p>
+                    <h3 class="categoriaTitulo">{{ post.title }}</h3>
+                </div>
+            </a>
+            {% endunless %} {% endfor %}
         </div>
     </div>
     <aside class="direita">
@@ -47,45 +64,39 @@ capa: 'https://simpleskans.com.br/img/logoColorido.png'
                 <!--&#9656; -->
                 <h3>&#9662; Nível 1 ({{ site.tags.lvl1 | size }})</h3>
                 <ul>
-                    {% assign alfabetica = site.tags.lvl1 | sort_natural %}
-                    {% for post in alfabetica %}
+                    {% assign alfabetica = site.tags.lvl1 | sort_natural %} {% for post in alfabetica %}
                     <li>
                         <a href="{{ post.url }}" title="{{ post.title }}">
                             <h4 class="">&#9656; {{ post.title }}</h4>
                         </a>
                     </li>
-                   {% endfor %}
+                    {% endfor %}
                 </ul>
             </li>
             <li>
                 <h3>&#9662; Nível 2 ({{ site.tags.lvl2 | size }})</h3>
                 <ul>
-                    {% assign alfabetica = site.tags.lvl2 | sort_natural %}
-                    {% for post in alfabetica %}
+                    {% assign alfabetica = site.tags.lvl2 | sort_natural %} {% for post in alfabetica %}
                     <li>
                         <a href="{{ post.url }}" title="{{ post.title }}">
                             <h4 class="">&#9656; {{ post.title }}</h4>
                         </a>
                     </li>
-                   {% endfor %}
+                    {% endfor %}
                 </ul>
             </li>
             <li>
                 <h3>&#9662; Nível 3 ({{ site.tags.lvl3 | size }})</h3>
                 <ul>
-                    {% assign alfabetica = site.tags.lvl3 | sort_natural %}
-                    {% for post in alfabetica %}
+                    {% assign alfabetica = site.tags.lvl3 | sort_natural %} {% for post in alfabetica %}
                     <li>
                         <a href="{{ post.url }}" title="{{ post.title }}">
                             <h4 class="">&#9656; {{ post.title }}</h4>
                         </a>
                     </li>
-                   {% endfor %}
+                    {% endfor %}
                 </ul>
             </li>
         </ul>
     </aside>
-</section>
-<section class="construcao">
-    <p>🚧 Seção em Construção 🚧</p>
 </section>

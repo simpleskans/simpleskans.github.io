@@ -811,7 +811,7 @@ footer img {
     }
 
     .esquerda {
-        width: 70%;
+        width: calc(75% - 1em);
     }
 
     .direita {

@@ -47,6 +47,17 @@ capa: 'https://simpleskans.com.br/img/logoColorido.png'
       </section>
       <div class="tituloSecao centralizar">
             <p class="gradienteBase">
+                <i class="fa-solid fa-tags"></i>
+            </p>
+            <h2>Todas as Categorias</h2>
+        </div>
+        <section class="listaCategorias">
+           {% for categoria in site.categories %}
+            <a href="{{ site.url }}/{{ categoria | first }}/" class="categoriaLink gradienteBase"><h4>{{ categoria | first | replace: '-', ' ' | replace: 'rom', 'ROM' | replace: 'DnD', 'D&#38;D'}}</h4></a>
+            {% endfor %}
+        </section>
+      <div class="tituloSecao centralizar">
+            <p class="gradienteBase">
                 <i class="fa-solid fa-users"></i>
             </p>
             <h2>Parceiros</h2>

@@ -5,7 +5,7 @@
   {% if forloop.last %}
     &gt; {{ page.title }}
   {% else %}
-    &gt; <a href="{{site.url}}/{{ crumb }}">{{ crumb | replace:'-',' ' | replace:'dnd','D&#38;D' | remove:'.html' | capitalize }}</a>
+    &gt; <a href="{{site.url}}/{{ crumb }}/">{{ crumb | replace:'-',' ' | replace:'dnd','D&#38;D' | remove:'.html' | capitalize }}</a>
   {% endif %}
 {% endfor %}
 </div>

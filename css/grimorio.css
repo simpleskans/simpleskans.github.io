@@ -49,13 +49,13 @@
 @media (min-width: 901px) {
     .listaMagias {
         display: flex;
-        justify-content: space-between;
         flex-wrap: wrap;
+        gap: 1em;
     }
 
     .magia {
         display: block;
-        width: 46.8%;
+        flex: 1 1 calc(50% - 2em);
         height: fit-content;
     }
 }

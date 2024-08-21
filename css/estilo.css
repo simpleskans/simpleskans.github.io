@@ -177,8 +177,8 @@ a figure img {
 .postTitulo,
 .postTitulo2,
 .postTitulo3 {
-    font-family: "Jaro", sans-serif;
     font-size: calc(1em + 0.8vw);
+    font-weight: bolder;
     text-overflow: ellipsis;
     overflow: hidden;
     display: -webkit-box;
@@ -212,6 +212,7 @@ a figure img {
     justify-content: space-between;
     color: #000;
     position: relative;
+    background-color: #fff;
 }
 
 .postCaixa2:not(:nth-child(1)) figure {
@@ -842,10 +843,15 @@ footer img {
         max-width: 1100px;
     }
 
-    .postCaixa3:hover {
+    .postCaixa3:hover, .postCaixa:hover, .postCaixa2:hover {
         transform: scale(110%);
+        border-radius: 10px;
     }
 
+    
+    .postCaixa3, .postCaixa, .postCaixa2 {  
+    transition: all 0.8s ease;
+    }
     #menuSuperior {
         margin: 0;
         display: inline-block;

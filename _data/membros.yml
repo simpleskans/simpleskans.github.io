@@ -1,20 +1,20 @@
-#- nome: KryFi
-#  imagem: 'https://cdn.discordapp.com/avatars/177083428242456577/8072ef4cb40c51d21da8e1769a242b12'
-#  cargo: Líder da Simple Skans
+- nome: KryFi
+  imagem: 'img/parceiros/KryFi.png'
+  cargo: Líder da Simple Skans
 
 - nome: Hareon
-  imagem: 'https://cdn.discordapp.com/avatars/114791500348522501/524a821a9f5fee844706b60cb0b90d81'
+  imagem: 'img/parceiros/Hareon.png'
   cargo: Líder da E4T
 
 - nome: Taihen
-  imagem: 'https://cdn.discordapp.com/avatars/242792936956362752/7d9c0b575a315ddf70731acdf2de9b63'
+  imagem: 'img/parceiros/Taihen.png'
   cargo: 'Expert em NES/SNES'
   
 - nome: Breno
-  imagem: 'https://cdn.discordapp.com/avatars/716281606112804904/f739605de2e3774f2c10b74d09f40a5b'
+  imagem: 'img/parceiros/Breno.png'
   cargo: Expert em GBA
   
 - nome: RodiRage
-  imagem: 'https://cdn.discordapp.com/avatars/289510160697917441/e35e89d77e45a84fbc8bf43c6f9e8693'
+  imagem: 'img/parceiros/RodiRAGE.jpg'
   cargo: Edições Gráficas
   

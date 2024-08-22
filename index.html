@@ -14,7 +14,7 @@ capa: 'https://simpleskans.com.br/img/logoColorido.png'
      {% assign c = site.posts | slice: 0, 3 %}
      {% for post in c %}
 <a class="postCaixa" style="background-image:  url({{ post.capa }});" href="{{ post.url }}" title="{{ post.title }}">
-            <p class="postCategoria gradienteBase">{{ post.categories | join: '/' | replace: '-', ' '}}</p>
+            <p class="postCategoria gradienteBase">{{ post.categories | join: '/' | replace: '-', ' ' | replace: 'rom', 'ROM' | replace: 'dnd', 'D&#38;D'}}</p>
             <div class="postTexto">
             <p class="postData"><i class="fa-regular fa-clock"></i> {{ post.date | date: "%d/%m/%Y"}}</p>
             <h3 class="postTitulo">{{ post.title }}</h3>
@@ -35,7 +35,7 @@ capa: 'https://simpleskans.com.br/img/logoColorido.png'
      <a class="postCaixa2" href="{{ post.url }}" title="{{ post.title }}">
         <figure><img src="{{ post.capa }}" alt="{{ post.title }}"/>
              </figure>
-          <p class="postCategoria2 gradienteBase">{{ post.categories | join: '/' | replace: '-', ' '}}</p>
+          <p class="postCategoria2 gradienteBase">{{ post.categories | join: '/' | replace: '-', ' ' | replace: 'rom', 'ROM' | replace: 'dnd', 'D&#38;D'}}</p>
           <div class="postTexto2">
            <p class="postData2"><i class="fa-regular fa-clock"></i> {{ post.date | date: "%d/%m/%Y"}}</p>
             <h3 class="postTitulo2">{{ post.title }}</h3>
@@ -53,7 +53,7 @@ capa: 'https://simpleskans.com.br/img/logoColorido.png'
         </div>
         <section class="listaCategorias">
            {% for categoria in site.categories %}
-            <a href="{{ site.url }}/{{ categoria | first }}/" class="categoriaLink gradienteBase"><h4>{{ categoria | first | replace: '-', ' ' | replace: 'rom', 'ROM' | replace: 'DnD', 'D&#38;D'}}</h4></a>
+            <a href="{{ site.url }}/{{ categoria | first }}/" class="categoriaLink gradienteBase"><h4>{{ categoria | first | replace: '-', ' ' | replace: 'rom', 'ROM' | replace: 'dnd', 'D&#38;D'}}</h4></a>
             {% endfor %}
         </section>
       <div class="tituloSecao centralizar">

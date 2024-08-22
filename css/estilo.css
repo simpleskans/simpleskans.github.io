@@ -177,6 +177,7 @@ a figure img {
 }
 
 .postCategoria {
+    font-family: 'Nodesto';
     position: relative;
     top: 0.5em;
     left: 0.5em;
@@ -184,10 +185,10 @@ a figure img {
     padding: 0.5em;
     color: #fff;
     font-weight: bold;
-    font-size: 0.8em;
+    font-size: 1em;
     border-radius: 5px;
     width: fit-content;
-    text-transform: capitalize;
+    text-transform: uppercase;
 }
 
 .postTexto,
@@ -202,7 +203,7 @@ a figure img {
 .postTitulo,
 .postTitulo3 {
     font-family: 'Nodesto';
-    font-size: calc(1em + 0.8vw);
+    font-size: calc(1.5em + 0.8vw);
     font-weight: bolder;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -274,6 +275,7 @@ a figure img {
 }
 
 .postCaixa2:nth-child(1) .postCategoria2 {
+    font-family: 'Nodesto';
     position: absolute;
     top: 0.5em;
     left: 0.5em;
@@ -281,11 +283,11 @@ a figure img {
     padding: 0.5em;
     color: #fff;
     font-weight: bold;
-    font-size: 0.8em;
+    font-size: 1em;
     border-radius: 5px;
     width: fit-content;
+    text-transform: uppercase;
 
-    text-transform: capitalize;
 }
 
 .postCaixa2:nth-child(1) .postTexto2 {
@@ -420,15 +422,16 @@ a figure img {
 }
 
 .postCategoria3 {
+    font-family: 'Nodesto';
     width: fit-content;
     position: absolute;
     top: 0.5em;
     left: 0.5em;
     padding: 0.5em;
     font-weight: bold;
-    font-size: 0.8em;
+    font-size: 1em;
     border-radius: 5px;
-    text-transform: capitalize;
+    text-transform: uppercase;
 }
 
 .postTexto3 {
@@ -759,7 +762,7 @@ footer img {
 }
 
 .direita .postTitulo3 {
-    font-size: calc(1em + 0.5vw)
+    font-size: calc(1.3em + 0.5vw)
 }
 
 /*-------Categorias Index--------*/
@@ -916,11 +919,11 @@ footer img {
         width: 100%;
     }
 
-    .texto figure {
+    .texto > figure {
         width: 50%;
         float: left;
         clear: both;
-        margin-right: 1em;
+        margin-right: 0.75em;
         margin-bottom: -1em;
     }
 

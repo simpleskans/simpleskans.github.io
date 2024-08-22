@@ -1,14 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+@font-face {
+    font-family: 'Nodesto';
+    src: url('/css/NodestoCapsCondensedRegular.woff2') format('woff2'),
+        url('/css/NodestoCapsCondensedRegular.woff') format('woff');
+    font-display: swap;
+}
+
 body {
     font-family: "Poppins";
 }
+
 a {
     text-decoration: none;
 }
+
 b {
     font-weight: bold;
 }
+
 .barraFlutuante {
     width: 100%;
     height: 6em;
@@ -24,12 +35,14 @@ b {
     box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.38);
     z-index: 999;
 }
+
 .gradienteBase {
     background: rgb(193, 58, 90);
     background: -webkit-linear-gradient(left, rgba(193, 58, 90, 1) 32%, rgba(153, 1, 42, 1) 100%);
     background: -o-linear-gradient(left, rgba(193, 58, 90, 1) 32%, rgba(153, 1, 42, 1) 100%);
     background: linear-gradient(to right, rgba(193, 58, 90, 1) 32%, rgba(153, 1, 42, 1) 100%);
 }
+
 .imagemSite {
     width: 30%;
     height: 100%;
@@ -40,16 +53,20 @@ b {
     display: inline-block;
     height: 100%;
 }
+
 figure img,
 .imagemSite a img {
     height: 100%;
 }
+
 a figure {
     text-align: center;
 }
+
 a figure img {
     width: 100%;
 }
+
 #menuSuperior {
     margin-top: 6em;
     top: 0;
@@ -68,11 +85,13 @@ a figure img {
     transition: 1s;
     box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.38);
 }
+
 #menuSuperior a {
     color: #fff;
     display: block;
     font-size: 1.2em;
 }
+
 .icon {
     display: inline-block;
     margin: 1em;
@@ -83,24 +102,29 @@ a figure img {
     z-index: 99;
     cursor: pointer;
 }
+
 /* ------------------------------------------------------- */
 .corpo {
     width: 100%;
     padding-top: 6em;
 }
+
 .margemGeral {
     margin: 1em;
 }
+
 .tituloSecao {
     width: 100%;
     border-bottom: 1px solid #c13a5a;
     margin-bottom: 1em;
 }
+
 .tituloSecao p,
 .tituloSecao h2 {
     display: inline-block;
     line-height: 2em;
 }
+
 .tituloSecao p {
     height: 2em;
     width: 2em;
@@ -108,6 +132,7 @@ a figure img {
     color: #fff;
     margin-right: 0.5em;
 }
+
 .tituloSecao h2 {
     font-weight: bold;
     text-transform: uppercase;
@@ -176,6 +201,7 @@ a figure img {
 
 .postTitulo,
 .postTitulo3 {
+    font-family: 'Nodesto';
     font-size: calc(1em + 0.8vw);
     font-weight: bolder;
     text-overflow: ellipsis;
@@ -265,9 +291,13 @@ a figure img {
 .postCaixa2:nth-child(1) .postTexto2 {
     margin-top: 0.5em;
 }
+
 .postTitulo2 {
+    font-size: 1.5em;
     font-weight: bold;
+    font-family: 'Nodesto';
 }
+
 .postCaixa2:not(:nth-child(1)) .postTitulo2 {
     text-overflow: ellipsis;
     overflow: hidden;
@@ -302,6 +332,7 @@ a figure img {
 .postCaixa2:not(:nth-child(1)) .postDescricao2 {
     display: none;
 }
+
 /*--------------------------*/
 
 .parceiros {
@@ -316,6 +347,7 @@ a figure img {
     height: 250px;
     gap: 1em;
 }
+
 .listaParceiros > div {
     flex: 0 0 110px;
     border-radius: 0.5rem;
@@ -343,16 +375,19 @@ a figure img {
         transform 0.5s 0.2s;
     visibility: hidden;
 }
+
 .listaParceiros > div .dadosParceiro span {
     display: block;
     margin-top: 5px;
     font-size: 1.2rem;
 }
+
 .listaParceiros > div:hover {
     flex: 0 0 250px;
     box-shadow: 1px 3px 15px #c13a5a;
     transform: scale(105%);
 }
+
 .listaParceiros > div:hover .dadosParceiro {
     opacity: 1;
     transform: translatey(-5%);
@@ -410,28 +445,37 @@ a figure img {
     width: 100%;
     margin: 0 auto;
 }
+
 .texto figure img {
     width: 100%;
 }
+
 .tituloArtigo {
     text-align: center;
     color: #fff;
     margin-bottom: 1em;
+    padding: 0.5em 0;
 }
+
 .tituloArtigo h1 {
-    font-size: 1.3em;
+    font-family: 'Nodesto';
+    font-size: 2em;
     font-weight: bold;
 }
+
 .tituloArtigo p {
     font-style: italic;
 }
+
 .texto2 p:not(.gradienteBase) {
     margin-bottom: 0.5em;
     text-indent: 1em;
 }
+
 .tabela {
     margin-bottom: 1em;
 }
+
 .tabela table {
     width: 100%;
     line-height: 1.2rem;
@@ -440,14 +484,17 @@ a figure img {
     overflow-wrap: break-word;
     word-wrap: break-word;
 }
+
 sup {
     vertical-align: super;
     font-size: small;
 }
+
 .tabela table tr td {
     padding: 0.4rem;
     font-size: calc(0.5em + 1vw);
 }
+
 .tabela table tr td:first-child {
     background: #c13a5a;
     text-align: right;
@@ -455,12 +502,15 @@ sup {
     width: 30%;
     color: #fff;
 }
+
 .tabela table tr td:last-child {
     border-bottom: 1px solid #c13a5a;
 }
+
 .downloads {
     margin-bottom: 1em;
 }
+
 .downloads div:not(.downloads div:first-child) {
     text-align: center;
     padding: 0.5em;
@@ -468,11 +518,13 @@ sup {
     text-transform: uppercase;
     font-weight: bold;
 }
+
 .linksBaixar {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
+
 .linksBaixar a {
     background: #fff;
     display: inline-block;
@@ -485,18 +537,22 @@ sup {
     font-weight: normal;
     margin-bottom: 1em;
 }
+
 .downloads a i {
     margin-right: 0.5em;
 }
+
 .outrosLinks a {
     display: block;
     color: #c13a5a;
     font-weight: bold;
     margin: 0.5em 0;
 }
+
 .outrosLinks {
     margin-bottom: 1em;
 }
+
 /*-------------------------*/
 footer {
     line-height: 2em;
@@ -510,6 +566,7 @@ footer img {
     margin-bottom: -0.5em;
     height: 2em;
 }
+
 .paraCima {
     width: 3em;
     height: 3em;
@@ -518,6 +575,7 @@ footer img {
     right: 1.5em;
     z-index: 33;
 }
+
 .paraCima a {
     display: block;
     color: #fff;
@@ -527,12 +585,14 @@ footer img {
     height: 100%;
     text-align: center;
 }
+
 .construcao {
     width: 100%;
     text-align: center;
     margin-top: 3em;
     font-size: 1.2em;
 }
+
 /*------------------*/
 .listaNivel {
     text-transform: uppercase;
@@ -559,6 +619,7 @@ footer img {
     margin-bottom: 1em;
     font-size: calc(0.5em + 1vw);
 }
+
 .tabelaLinks table tr th {
     background: #c13a5a;
     color: #fff;
@@ -566,32 +627,40 @@ footer img {
     text-transform: uppercase;
     font-weight: bold;
 }
+
 .tabelaLinks table tr td {
     padding: 0.4rem;
     border: 1px solid #c13a5a;
 }
+
 .tabelaLinks table tr td a {
     color: #c13a5a;
 }
+
 .tabelaLinks table tr th:first-child,
 .tabelaLinks table tr td:first-child {
     width: 35%;
 }
+
 .romInfo table tr td:first-child {
     width: 15%;
 }
+
 .linksGeral a {
     color: #c13a5a;
 }
+
 /*---------------*/
 .galeria {
     width: 100%;
 }
+
 .galeria ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
 .galeria ul li {
     display: block;
     width: 48%;
@@ -605,10 +674,12 @@ footer img {
 .galeria ul li:nth-child(even):last-child {
     display: none;
 }
+
 .galeria figure {
     flex-direction: column;
     width: 100%;
 }
+
 .galeria figcaption {
     width: 100%;
     color: #fff;
@@ -619,6 +690,7 @@ footer img {
     justify-content: center;
     align-items: center;
 }
+
 .galeria ul li img {
     width: 100%;
 }
@@ -631,6 +703,7 @@ footer img {
     width: 100%;
     min-height: 200px;
 }
+
 /*------------------*/
 .avisoErros {
     text-indent: none;
@@ -639,11 +712,13 @@ footer img {
     font-weight: bold;
     margin: 2em 0 0 0;
 }
+
 .avisoErros::before {
     display: block;
     width: 100%;
     content: "⚠️";
 }
+
 /*-----Aside------*/
 
 #breadcrumbs {
@@ -669,6 +744,7 @@ footer img {
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
 .postCaixa4 {
     width: 48%;
     aspect-ratio: 16/9;
@@ -683,8 +759,9 @@ footer img {
 }
 
 .direita .postTitulo3 {
-    font-size: 14pt;
+    font-size: calc(1em + 0.5vw)
 }
+
 /*-------Categorias Index--------*/
 
 .listaCategorias {
@@ -732,11 +809,13 @@ footer img {
     .postCaixa:nth-child(3) {
         height: 200px;
     }
+
     .postsResto {
         column-count: auto;
         height: fit-content;
         max-height: fit-content;
     }
+
     .postCaixa2 {
         height: 100px;
     }
@@ -744,6 +823,7 @@ footer img {
     .postCaixa2:nth-child(1) {
         height: fit-content;
     }
+
     .postCaixa2:not(:nth-child(1)) figure {
         width: 25%;
     }
@@ -837,16 +917,18 @@ footer img {
     }
 
     .texto figure {
-        width: 40%;
+        width: 50%;
         float: left;
         clear: both;
         margin-right: 1em;
+        margin-bottom: -1em;
     }
 
     .tabelaLinks table,
     .tabela table tr td {
         font-size: 1em;
     }
+
     .galeria ul li {
         width: 32%;
     }
@@ -858,9 +940,11 @@ footer img {
     .galeria figure {
         width: 100%;
     }
+
     .gridGrande .tabela table tr td:first-child {
         width: 40%;
     }
+
     .tabelaLinks table tr th:first-child,
     .tabelaLinks table tr td:first-child {
         width: 25%;
@@ -882,6 +966,7 @@ footer img {
     .postCaixa2 {
         transition: all 0.8s ease;
     }
+
     #menuSuperior {
         margin: 0;
         display: inline-block;
@@ -890,6 +975,7 @@ footer img {
         text-align: right;
         box-shadow: none;
     }
+
     #menuSuperior a {
         display: inline-block;
         margin: 1em;
@@ -897,13 +983,16 @@ footer img {
         text-decoration: none;
         text-transform: uppercase;
     }
+
     .icon {
         display: none;
     }
 }
+
 .ocultar {
     display: none;
 }
+
 /*-----Página 404----*/
 .erro404 {
     width: 80%;
@@ -913,9 +1002,11 @@ footer img {
     margin: 3em auto;
     line-height: 1;
 }
+
 .erro404 p:first-child {
     font-size: calc(2em + 2vw);
 }
+
 .erro404 p:last-child {
     font-size: calc(1em + 0.3vw);
 }

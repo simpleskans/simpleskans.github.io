@@ -446,7 +446,7 @@ a figure img {
 /*--------------------------*/
 .texto figure {
     width: 100%;
-    margin: 0 auto;
+    margin: 0 auto -0.5em;
 }
 
 .texto figure img {
@@ -531,14 +531,14 @@ sup {
 .linksBaixar a {
     background: #fff;
     display: inline-block;
-    padding: 0.2em 0.5em;
+    padding: 0.5em 1em;
     border-radius: 150px;
     min-width: 1.5em;
     color: #c13a5a;
     text-align: center;
     text-transform: none;
-    font-weight: normal;
     margin-bottom: 1em;
+    font-size: 1.2em;
 }
 
 .downloads a i {

@@ -1,7 +1,7 @@
 ---
 layout: padrao
 title: 'Dungeons &#38; Dragons'
-descricao: 'Lista de projetos de D&#38;D da Simple Skans!'
+descricao: 'Lista de projetos de Dungeons &#38; Dragons da Simple Skans!'
 permalink: /dnd/
 capa: 'https://simpleskans.com.br/img/logoColorido.png'
 csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
@@ -10,7 +10,7 @@ csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
 {% assign current_cat = page.url | split: "/" | last %}
 <section class="paginaDnD">
     <div class="tituloArtigo gradienteBase">
-        <h1 class="capitalizar">{{ current_cat | replace: '-', ' ' | replace: 'rom', 'ROM' }}</h1>
+        <h1 class="capitalizar">Dungeons &#38; Dragons</h1>
         <p>Todas as postagens do site incluídas nesta categoria</p>
     </div>
     <div class="esquerda">
@@ -18,7 +18,7 @@ csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
             <p class="gradienteBase">
                 <i class="fa-solid fa-chess-rook"></i>
             </p>
-            <h2>Categoria {{ current_cat | replace: '-', ' ' | replace: 'rom', 'ROM' }}</h2>
+            <h2>Categoria D&#38;D</h2>
         </div>
         <div class="categoriaPostsGrid">
             {% assign c = site.categories[current_cat] | slice: 0, 6 %} {% for post in c %}
@@ -27,6 +27,9 @@ csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
                 style="background-image:  url({{ post.capa }});"
                 href="{{ post.url }}"
                 title="{{ post.title }}">
+                <div class="categoriaCategoria gradienteBase">
+                <span class="capitalizar">{{ post.autorL }}</span>
+            </div>
                 <div class="categoriaTexto">
                     <p class="categoriaData"><i class="fa-regular fa-clock"></i> {{ post.date | date: "%d/%m/%Y"}}</p>
                     <h3 class="categoriaTitulo">{{ post.title }}</h3>
@@ -52,7 +55,7 @@ csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
             {% endunless %} {% endfor %}
         </div>
     </div>
-    <aside class="direita">
+    <aside class="direita" style="padding-top: 1em">
         <div class="tituloSecao">
             <p class="gradienteBase">
                 <i class="fa-solid fa-arrow-trend-up"></i>
@@ -89,6 +92,30 @@ csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
                 <h3>&#9662; Nível 3 ({{ site.tags.lvl3 | size }})</h3>
                 <ul>
                     {% assign alfabetica = site.tags.lvl3 | sort_natural %} {% for post in alfabetica %}
+                    <li>
+                        <a href="{{ post.url }}" title="{{ post.title }}">
+                            <h4 class="">&#9656; {{ post.title }}</h4>
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </li>
+            <li>
+                <h3>&#9662; Nível 4 ({{ site.tags.lvl4 | size }})</h3>
+                <ul>
+                    {% assign alfabetica = site.tags.lvl4 | sort_natural %} {% for post in alfabetica %}
+                    <li>
+                        <a href="{{ post.url }}" title="{{ post.title }}">
+                            <h4 class="">&#9656; {{ post.title }}</h4>
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </li>
+            <li>
+                <h3>&#9662; Nível 5 ({{ site.tags.lvl5 | size }})</h3>
+                <ul>
+                    {% assign alfabetica = site.tags.lvl5 | sort_natural %} {% for post in alfabetica %}
                     <li>
                         <a href="{{ post.url }}" title="{{ post.title }}">
                             <h4 class="">&#9656; {{ post.title }}</h4>

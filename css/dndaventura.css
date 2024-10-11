@@ -1,0 +1,24 @@
+.gridAventura {
+    display: grid;
+    grid-template-columns: repeat(3);
+    grid-template-rows: repeat(3);
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+}
+
+.galeria {
+    grid-area: 1 / 1 / 4 / 2;
+    aspect-ratio: 8.5/11;
+}
+.equipeInfo {
+    grid-area: 1 / 2 / 3 / 4;
+}
+
+.downloads {
+    grid-area: 3 / 2 / 4 / 4;
+    align-self: flex-end;
+}
+
+.outrosLinks {
+    margin-top: 4em;
+}

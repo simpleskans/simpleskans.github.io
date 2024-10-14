@@ -1,25 +1,47 @@
 ---
-layout: aside
-title: "Na Escuridão - D&#38;D #0"
+layout: padrao
+title: "Na Escuridão"
 descricao: 'Enfrente mortos-vivos, kobolds e Holg Machado-de-Sangue. Use astúcia e coragem para superar desafios e trazer paz à região. A aventura começa agora!'
 categories: dnd repaginando-dnd
 tags: lvl1
 permalink: /:categories/:title
-resumo: 'Disponibilizando a primeira "aventura" traduzida de D&#38;D.'
-capa: 'https://www.mtgpics.com/pics/art/jou/063.jpg'
+resumo: 'Repaginando D&#38;D #0'
+capa: '/img/postcapa/rdd0.jpg'
 autorL: 'Autor Desconhecido'
+csscustomizado: <link rel="stylesheet" href="/css/post.css" />
 ---
-
-<article class="texto esquerda">
-    <figure>
-        <img src="{{ page.capa }}" alt="Capa de {{ page.title }}" />
-    </figure>
-    <div class="tituloArtigo gradienteBase">
-        <h1>{{ page.title }}</h1>
-        <p></p>
+<article>
+    <div class="titulopostagem">
+        <h1 id="secao1">{{ page.title }}</h1>
+        <span>{{ page.resumo }}</span>
+        <div class="breadcrumb">
+            {% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
+            <a href="{{ site.url }}">Home</a>
+            {% for crumb in crumbs offset: 1 %} {% if forloop.last %} &gt; {{ page.title }} {% else %} &gt;
+            <a href="{{site.url}}/{{ crumb }}/"
+                >{{ crumb | replace:'-',' ' | replace:'dnd','D&#38;D' | remove:'.html' | capitalize }}</a
+            >
+            {% endif %} {% endfor %}
+        </div>
+        <div class="localpostagem">
+            <i class="bi bi-tags-fill"></i>
+            {% assign c = page.categories %} {% for a in c %}
+            <a href="{{ site.url }}/{{ a }}/" class="categoriapost"
+                >{{ a | replace: '-', ' ' | replace: 'rom', 'ROM' | replace: 'dnd', 'Dungeons &#38; Dragons' }} </a
+            ><span>, </span>
+            {% endfor %}
+            <br />
+            <i class="bi bi-clock-fill"></i> {{ page.date | date: "%d/%m/%Y"}}
+        </div>
     </div>
-    <section class="texto2">
-        <p>
+
+    <div class="corpo">
+        <div class="ladoE">
+            <div class="texto">
+                <figure class="capapostagem">
+                    <img src="{{ page.capa }}" alt="Imagem de Capa de {{ page.title }}" />
+                </figure>
+                <p>
             Vocês finalmente encontraram a entrada para as ruínas onde o temido bandido Holg e seus seguidores se
             escondem. Após saquear e aterrorizar viajantes na Grande Estrada do Norte, é hora de pôr um fim ao seu
             reinado de terror. Preparem-se para enfrentar mortos-vivos, kobolds traiçoeiros e o próprio Holg
@@ -36,136 +58,130 @@ autorL: 'Autor Desconhecido'
             Por favor, qualquer erro que você encontrar nos reporte pelos nossos meios de contato ou na seção de
             comentários no final desta página.
         </p>
-    </section>
-    <section class="galeria">
-        <div class="tituloSecao centralizar">
-            <p class="gradienteBase">
-                <i class="fa-solid fa-image"></i>
-            </p>
-            <h2>Capa</h2>
         </div>
-        <ul>
-            <li width="100%">
+            <h2 class="secaotitulo" id="secao2"><i class="bi bi-info-circle-fill"></i> Informações da Aventura</h2>
+            <section class="info livro">
                 <figure>
-                    <img loading="lazy" alt="" src="https://i.imgur.com/7MNXJmI.png" />
+                    <img loading="lazy" alt="Capa da Aventura" src="https://i.imgur.com/7MNXJmI.png" />
+                    <figcaption>Capa da Aventura</figcaption>
                 </figure>
-            </li>
-        </ul>
-    </section>
-    <section class="tabela equipeInfo">
-        <div class="tituloSecao centralizar">
-            <p class="gradienteBase">
-                <i class="fa-solid fa-table"></i>
-            </p>
-            <h2>Informações do Documento</h2>
-        </div>
-        <table>
-            <tr>
-                <td>Título</td>
-                <td>Na Escuridão</td>
-            </tr>
-            <tr>
-                <td>Título Original</td>
-                <td>Into the Darkness</td>
-            </tr>
-            <tr>
-                <td>Nível dos Jogadores</td>
-                <td>1º Nível</td>
-            </tr>
-            <tr>
-                <td>Nº do Livro</td>
-                <td>0</td>
-            </tr>
-            <tr>
-                <td>Nº de Páginas</td>
-                <td>8</td>
-            </tr>
-            <tr>
-                <td>Formato</td>
-                <td>PDF</td>
-            </tr>
-        </table>
-    </section>
-    <section class="downloads">
-        <div class="tituloSecao centralizar">
-            <p class="gradienteBase">
-                <i class="fa-solid fa-download"></i>
-            </p>
-            <h2>Download do livro</h2>
-        </div>
-        <div class="gradienteBase">
-            <p>RDD #0 - Na Escuridão</p>
-            <div class="linksBaixar">
-                <a
-                    href="https://www.mediafire.com/file/hxkn6fiyux6k83k/RDD_0_-_Na_Escurid%25C3%25A3o.pdf/file"
-                    target="_blank"
-                    ><i class="fa-solid fa-cloud-arrow-down"></i>Download via MediaFire</a
+                <div class="tabelainfo">
+                    <div class="divTable">
+                        <div class="cell cell-head">Título</div>
+                        <div class="cell">Na Escuridão</div>
+
+                        <div class="cell cell-head">Título Original</div>
+                        <div class="cell"><strong>Into the Darkness</strong></div>
+
+                        <div class="cell cell-head">Autor</div>
+                        <div class="cell">{{ page.autorL }}</div>
+
+                        <div class="cell cell-head">Sistema</div>
+                        <div class="cell">Dungeons &#38; Dragons 5ª Edição</div>
+
+                        <div class="cell cell-head">Nível dos Jogadores</div>
+                        <div class="cell">1º Nível</div>
+
+                        <div class="cell cell-head">Número do Livro</div>
+                        <div class="cell">0</div>
+
+                        <div class="cell cell-head">Nº de Páginas</div>
+                        <div class="cell">8</div>
+
+                        <div class="cell cell-head">Formato</div>
+                        <div class="cell">PDF</div>
+                    </div>
+                </div>
+            </section>
+            <div class="separador"></div>
+
+            <h3 class="secaotitulo" id="secao3"><i class="bi bi-cloud-arrow-down-fill"></i> Downloads</h3>
+
+            <section class="downloads">
+                <a href="https://bit.ly/3Y806bQ" target="_blank" class="botaodownload" id="mediafireD"
+                    ><img src="/img/svg/mediafire.svg" alt="Logo Mediafire" /> Mediafire</a
                 >
                 <!--
-                <a
-                    href="https://drive.google.com/file/d/1dgzm5KZYzBk6Z4EbW925vZZc_AkardEo/view?usp=sharing"
-                    target="_blank"
-                    ><i class="fa-solid fa-cloud-arrow-down"></i>Google Drive</a
+                <a href="" class="botaodownload" id="gdriveD"
+                    ><img src="/img/svg/gdrive.svg" alt="Logo Google Drive" /> Google Drive</a
                 >
-                <a
-                    href="https://www.dropbox.com/scl/fi/eenk93okb42n1py75n5a3/RDD-0-Na-Escurid-o.pdf?rlkey=dhr920585bc1b40gu3irnmurd&st=mxi1p03v&dl=0"
-                    target="_blank"
-                    ><i class="fa-solid fa-cloud-arrow-down"></i>Dropbox</a
+                <a href="" class="botaodownload" id="dropboxD"
+                    ><img src="/img/svg/dropbox.svg" alt="Logo Dropbox" /> Dropbox</a
                 >
                 -->
+            </section>
+
+            <div class="separador"></div>
+            <h4 class="secaotitulo" id="secao4"><i class="bi bi-link-45deg"></i> Links relacionados</h4>
+            <div class="linksrelacionados">
+                                <a target="_blank" href=" https://www.rpgnext.com.br"
+                    >Site do RPG Next (Um site completo recheado de aventuras, contos, bate-papo e muito amor por
+                    RPG)</a
+                >
             </div>
         </div>
-    </section>
-    <section class="outrosLinks">
-        <div class="tituloSecao centralizar">
-            <p class="gradienteBase">
-                <i class="fa-solid fa-link"></i>
-            </p>
-            <h2>Links Relacionados</h2>
-        </div>
-        <a target="_blank" href="https://homebrewery.naturalcrit.com/share/wt4IvIglP5R9"
-            >Página do livro feito no Homebrewery</a
-        >
-        <a target="_blank" href="https://i.imgur.com/2eZn72n.jpeg">Link do mapa da aventura em HD</a>
 
-        <a
-            target="_blank"
-            href="https://web.archive.org/web/20010515114100/http://www.wizards.com/retailer/docs/intothedarkness.pdf"
-            >Link do livro original em inglês (Web Archive)</a
-        >
-        <a target="_blank" href=" https://www.rpgnext.com.br"
-            >Site do RPG Next (Um site completo recheado de aventuras, contos, bate-papo e muito amor por RPG)</a
-        >
-    </section>
-    <section class="comentarios">
-        <div class="tituloSecao centralizar">
-            <p class="gradienteBase">
-                <i class="fa-solid fa-comments"></i>
-            </p>
-            <h2>Comentários</h2>
+        <div class="lateral">
+            <nav class="menulateralrapido">
+                <ul>
+                    <li><a href="#secao1">{{ page.title }}</a></li>
+                    <li><a href="#secao2">Informações da Aventura</a></li>
+                    <li><a href="#secao3">Downloads</a></li>
+                    <li><a href="#secao4">Links Relacionados</a></li>
+                    <li><a href="#secao5">Comentários</a></li>
+                </ul>
+                <div class="separador"></div>
+                <div class="redeslateral">
+                    <p>Compartilhe o post:</p>
+                    {% include compartilhar.html %}
+                </div>
+            </nav>
         </div>
-        <div id="disqus_thread"></div>
-        <script>
-            /**
-             *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-             *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-
-            var disqus_config = function () {
-                this.page.url = "{{ site.url }}{{ page.url }}"; // Replace PAGE_URL with your page's canonical URL variable
-                this.page.identifier = "{{ page.url }}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-            };
-            (function () {
-                // DON'T EDIT BELOW THIS LINE
-                var d = document,
-                    s = d.createElement("script");
-                s.src = "https://simple-skans.disqus.com/embed.js";
-                s.setAttribute("data-timestamp", +new Date());
-                (d.head || d.body).appendChild(s);
-            })();
-        </script>
-        <noscript
-            >Please enable JavaScript to view the
-            <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript
-        >
-    </section>
+    </div>
 </article>
+<div class="corpo corpo2">
+    <div>
+        <div class="separador"></div>
+
+        <section class="comentarios">
+            <h5 class="secaotitulo" id="secao5"><i class="bi bi-chat-dots-fill"></i> Comentários</h5>
+            <div id="disqus_thread"></div>
+            <script>
+                /**
+                 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+
+                var disqus_config = function () {
+                    this.page.url = "{{ site.url }}{{ page.url }}"; // Replace PAGE_URL with your page's canonical URL variable
+                    this.page.identifier = "{{ page.url }}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                };
+                (function () {
+                    // DON'T EDIT BELOW THIS LINE
+                    var d = document,
+                        s = d.createElement("script");
+                    s.src = "https://simple-skans.disqus.com/embed.js";
+                    s.setAttribute("data-timestamp", +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript
+                >Please enable JavaScript to view the
+                <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript
+            >
+        </section>
+    </div>
+
+    <div class="outros">
+        <div class="separador"></div>
+        <h6>Outros Posts</h6>
+        <nav class="outrosposts">
+            {% assign c = site.posts | slice: 0, 8 %} {% for post in c %} {% unless post.title == page.title %}
+            <a href="{{ post.url }}">
+                <figure style="background-image: url({{ post.capa }})"></figure>
+                {{ post.title }}
+            </a>
+
+            {% endunless %} {% endfor %}
+        </nav>
+    </div>
+</div>

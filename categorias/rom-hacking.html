@@ -1,11 +1,73 @@
 ---
-layout: categoria
-title: ROM Hacking
-descricao: 'Lista de traduções de ROMs da Simple Skans!'
+layout: padrao
+title: 'ROM Hacking'
+descricao: 'Lista de projetos de ROM Hacking da Simple Skans!'
 permalink: /rom-hacking/
 capa: 'https://simpleskans.com.br/img/logoColorido.png'
 csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
 ---
 
+{% assign current_cat = page.url | split: "/" | last %}
+<div class="categoriatitulo">
+    <p>Todas as postagens na categoria</p>
+    <h1>{{ current_cat | replace: '-', ' ' | replace: 'rom', 'ROM' | replace: 'dnd', 'Dungeons &#38; Dragons'}}</h1>
+</div>
+<div class="corpo">
+    <div class="ladoE">
+        <nav class="postagensquadro">
+            {% assign c = site.categories[current_cat] | slice: 0, 7 %} {% for post in c %}
+            <a
+                class="postlink"
+                style="background-image:  url({{ post.capa }});"
+                href="{{ post.url }}"
+                title="{{ post.title }}">
+                <span>{{ post.tags | join: '/' | replace: '-', ' ' | replace: 'gba', 'GBA' | replace: 'nes', 'NES' }}</span>
+                <div>
+                    <span>{{ post.title }}</span>
+                    <p>{{ post.resumo }}</p>
+                </div>
+            </a>
 
-
+            {% endfor %}
+        </nav>
+        <div class="separador"></div>
+        <div class="categoriarestantes">
+            {% for post in site.categories[current_cat] %} {% unless post == site.categories[current_cat][0] or post ==
+            site.categories[current_cat][1] or post == site.categories[current_cat][2] or post ==
+            site.categories[current_cat][3] or post == site.categories[current_cat][4] or post ==
+            site.categories[current_cat][5] or post == site.categories[current_cat][6] %}
+            <a class="linkrestante" href="{{ post.url }}" title="{{ post.title }}">
+                <figure style="background-image:  url({{ post.capa }});"></figure>
+                <div>
+                    <span class="titulorestante">{{ post.title }}</span>
+                    <p>{{ post.resumo }}</p>
+                    <span><i>{{ post.autorL }}</i></span>
+                </div>
+            </a>
+            {% endunless %} {% endfor %}
+        </div>
+    </div>
+    <div class="ladoD">
+        <nav class="listatags">
+            <h3>Traduções por Sistema</h3>
+            <ul>
+                <li>
+                    <details open>
+                        <summary>NES ({{ site.tags.nes | size }})</summary>
+                        {% assign alfabetica = site.tags.nes | sort_natural %} {% for post in alfabetica %}
+                        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                        {% endfor %}
+                    </details>
+                </li>
+                <li>
+                    <details open>
+                        <summary>GBA ({{ site.tags.gba | size }})</summary>
+                        {% assign alfabetica = site.tags.gba | sort_natural %} {% for post in alfabetica %}
+                        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                        {% endfor %}
+                    </details>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>

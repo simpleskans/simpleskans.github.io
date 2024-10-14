@@ -1,146 +1,115 @@
-@import url("https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap");
+h1 {
+    font-size: 3rem;
+}
 
-.membro {
-    padding: 1em;
-    color: #fff;
-}
-.membro a{
-    color: #fff;
-    text-decoration: underline;
-}
-.socialD {
+.equipe {
+    margin-top: 1rem;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.socialE {
-    text-align: center;
-}
-
-.socialE img {
-    width: 50%;
-    border-radius: 50%;
-}
-
-.membro .socialE p {
-    line-height: 1.1em;
-    margin: 1em 0;
-}
-
-.membro h3 {
-    font-family: "Leckerli One", cursive;
-    font-weight: bold;
-    font-size: 2em;
-    letter-spacing: 4px;
-    border-bottom: 2px solid #fff;
-}
-
-.listaSocial::before {
-    content: "Sobre";
-    font-weight: bold;
-    text-transform: uppercase;
-    border-bottom: 2px solid #fff;
-    display: inline-block;
-    margin-bottom: 0.5em;
-}
-
-.listaSocial li::before {
-    content: "• ";
-}
-
-.social {
-    margin-top: 1em;
-    text-align: right;
-}
-
-.social li {
-    background: #fff;
-    display: inline-block;
-    color: #c13a5a;
-    padding: 0.7em;
-    border-radius: 150px;
-    margin-left: 0.5em;
-}
-
-.social li a,
-.socialBotao {
-    color: #c13a5a;
-    text-align: center;
-}
-
-.social li a i,
-.socialBotao i {
-    min-width: 1.5em;
-    line-height: 1.5em;
-}
-
-.social li a spam,
-.socialBotao spam {
-    margin-left: 0.5em;
-    cursor: default;
-}
-
-.parceiros {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+    gap: 1rem;
     flex-wrap: wrap;
 }
 
-.parceiros .membro {
-    width: 40%;
-    margin-bottom: 1em;
-    font-size: calc(0.5em + 1vw);
+.membro {
+    display: flex;
+    flex-grow: 1;
+    padding: 1rem;
+    gap: 1rem;
+    
+    border-radius: 10px;
 }
-@media (min-width: 499px) {
-    .membro {
-        display: flex;
-        justify-content: space-around;
-    }
 
-    .socialE {
-        width: 30%;
-    }
-    .socialE img {
-        width: 100%;
-    }
-    .socialD {
-        width: 60%;
-    }
-
-    .socialE {
-        text-align: left;
-    }
-    .parceiros .membro {
-        font-size: 1em;
-    }
-    .parceiros .socialE {
-        width: 100%;
-        text-align: center;
-    }
-
-    .socialE img {
-        width: 50%;
-    }
-    .parceiros h3 {
-        font-size: calc(1em + 1.5vw);
-    }
+.membro figure {
+    height: 10rem;
 }
-@media (min-width: 679px) {
-    .socialE {
-        max-width: 180px;
-    }
 
-    .parceiros .socialE {
-        max-width: 100%;
-    }
+.agradecimentos figure {
+    height: 8rem;
+}
 
-    .parceiros .membro {
-        max-width: 24%;
+.membro figure > img {
+    height: 100%;
+    border-radius: 10px;
+}
+
+.membroinfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.nome {
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+.cargo {
+    font-style: italic;
+}
+
+.membroredes {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.membroredes > a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--corfundo);
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+.membroredes > a > img {
+    height: 1.5rem;
+    color: var(--cortexto);
+}
+
+.parceiros {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.parceiros a {
+    display: flex;    
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    width: calc(20% - .8rem);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.parceiros a figure {
+    width: 100%;
+    aspect-ratio: 1/1;
+    align-content: center;
+    background: var(--corfundo);
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.parceiros a figure img {
+    width: 100%;
+}
+
+@media (max-width: 41.5rem) {
+    .parceiros a {
+        width: calc(50% - 1rem);
+    
     }
     
-    .parceiros h3 {
-        font-size: 2em;
+    .parceiros a:last-child {
+        width: 100%;
+        aspect-ratio: initial;
+    }
+    
+    .parceiros a:last-child figure {
+        width: 50%;
     }
 }

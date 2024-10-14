@@ -1,10 +1,10 @@
 ---
 layout: padrao
-title: 'Repaginando D&#38;D'
-descricao: 'Lista de projetos de Repaginando Dungeons &#38; Dragons da Simple Skans!'
-permalink: /repaginando-dnd/
+title: 'Dungeons &#38; Dragons 2024'
+descricao: 'Lista de projetos de Dungeons &#38; Dragons 2024 da Simple Skans!'
+permalink: /dnd-2024/
 capa: 'https://simpleskans.com.br/img/logoColorido.png'
-csscustomizado: <link rel="stylesheet" href="/css/categoria.css"/>
+csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
 ---
 
 {% assign current_cat = page.url | split: "/" | last %}
@@ -54,46 +54,56 @@ csscustomizado: <link rel="stylesheet" href="/css/categoria.css"/>
                 <li>
                     <details open>
                         <summary>Nível 1</summary>
-                        {% assign alfabetica = site.tags.lvl1 | sort_natural %} {% for post in alfabetica %} {% unless
-                        post.categoria == current_cat %}
+                        {% assign alfabetica = site.tags.lvl1 | sort_natural %} 
+                            {% for post in alfabetica %}
+                                {% unless post.categoria == current_cat %}
                         <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                        {% endunless %} {% endfor %}
+                                {% endunless %}
+                                {% endfor %}
                     </details>
                 </li>
                 <li>
                     <details open>
                         <summary>Nível 2</summary>
-                        {% assign alfabetica = site.tags.lvl2 | sort_natural %} {% for post in alfabetica %} {% unless
-                        post.categoria == current_cat %}
+                        {% assign alfabetica = site.tags.lvl2 | sort_natural %} 
+                        {% for post in alfabetica %}
+                        {% unless post.categoria == current_cat %}
                         <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                        {% endunless %} {% endfor %}
+                        {% endunless %}
+                        {% endfor %}
                     </details>
                 </li>
                 <li>
                     <details open>
                         <summary>Nível 3</summary>
-                        {% assign alfabetica = site.tags.lvl3 | sort_natural %} {% for post in alfabetica %} {% unless
-                        post.categoria == current_cat %}
+                        {% assign alfabetica = site.tags.lvl3 | sort_natural %} 
+                        {% for post in alfabetica %}
+                        {% unless post.categoria == current_cat %}
                         <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                        {% endunless %} {% endfor %}
+                        {% endunless %}
+                        {% endfor %}
                     </details>
                 </li>
                 <li>
                     <details open>
                         <summary>Nível 4</summary>
-                        {% assign alfabetica = site.tags.lvl4 | sort_natural %} {% for post in alfabetica %} {% unless
-                        post.categoria == current_cat %}
+                        {% assign alfabetica = site.tags.lvl4 | sort_natural %} 
+                        {% for post in alfabetica %}
+                        {% unless post.categoria == current_cat %}
                         <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                        {% endunless %} {% endfor %}
+                        {% endunless %}
+                        {% endfor %}
                     </details>
                 </li>
                 <li>
                     <details open>
                         <summary>Nível 5</summary>
-                        {% assign alfabetica = site.tags.lvl5 | sort_natural %} {% for post in alfabetica %} {% unless
-                        post.categoria == current_cat %}
+                        {% assign alfabetica = site.tags.lvl5 | sort_natural %} 
+                        {% for post in alfabetica %}
+                        {% unless post.categoria == current_cat %}
                         <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                        {% endunless %} {% endfor %}
+                        {% endunless %}
+                        {% endfor %}
                     </details>
                 </li>
             </ul>

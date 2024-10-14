@@ -6,124 +6,92 @@ permalink: /dnd/
 capa: 'https://simpleskans.com.br/img/logoColorido.png'
 csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
 ---
-{% include breadcrumbs.html %}
+
 {% assign current_cat = page.url | split: "/" | last %}
-<section class="paginaDnD">
-    <div class="tituloArtigo gradienteBase">
-        <h1 class="capitalizar">Dungeons &#38; Dragons</h1>
-        <p>Todas as postagens do site incluídas nesta categoria</p>
-    </div>
-    <div class="esquerda">
-        <div class="tituloSecao">
-            <p class="gradienteBase">
-                <i class="fa-solid fa-chess-rook"></i>
-            </p>
-            <h2>Categoria D&#38;D</h2>
-        </div>
-        <div class="categoriaPostsGrid">
-            {% assign c = site.categories[current_cat] | slice: 0, 6 %} {% for post in c %}
+<div class="categoriatitulo">
+    <p>Todas as postagens na categoria</p>
+    <h1>{{ current_cat | replace: '-', ' ' | replace: 'rom', 'ROM' | replace: 'dnd', 'Dungeons &#38; Dragons'}}</h1>
+</div>
+<div class="corpo">
+    <div class="ladoE">
+        <nav class="postagensquadro">
+            {% assign c = site.categories[current_cat] | slice: 0, 7 %} {% for post in c %}
             <a
-                class="categoriaCaixa"
+                class="postlink"
                 style="background-image:  url({{ post.capa }});"
                 href="{{ post.url }}"
                 title="{{ post.title }}">
-                <div class="categoriaCategoria gradienteBase">
-                <span class="capitalizar">{{ post.autorL }}</span>
-            </div>
-                <div class="categoriaTexto">
-                    <p class="categoriaData"><i class="fa-regular fa-clock"></i> {{ post.date | date: "%d/%m/%Y"}}</p>
-                    <h3 class="categoriaTitulo">{{ post.title }}</h3>
+                <span>{{ post.autorL }}</span>
+                <div>
+                    <span>{{ post.title }}</span>
+                    <p>{{ post.resumo }}</p>
                 </div>
             </a>
+
             {% endfor %}
-        </div>
-        <div class="categoriaPostsLista">
+        </nav>
+        <div class="separador"></div>
+        <div class="categoriarestantes">
             {% for post in site.categories[current_cat] %} {% unless post == site.categories[current_cat][0] or post ==
             site.categories[current_cat][1] or post == site.categories[current_cat][2] or post ==
             site.categories[current_cat][3] or post == site.categories[current_cat][4] or post ==
-            site.categories[current_cat][5] %}
-            <a
-                class="categoriaCaixa"
-                style="background-image:  url({{ post.capa }});"
-                href="{{ post.url }}"
-                title="{{ post.title }}">
-                <div class="categoriaTexto">
-                    <p class="categoriaData"><i class="fa-regular fa-clock"></i> {{ post.date | date: "%d/%m/%Y"}}</p>
-                    <h3 class="categoriaTitulo">{{ post.title }}</h3>
+            site.categories[current_cat][5] or post == site.categories[current_cat][6] %}
+            <a class="linkrestante" href="{{ post.url }}" title="{{ post.title }}">
+                <figure style="background-image:  url({{ post.capa }});"></figure>
+                <div>
+                    <span class="titulorestante">{{ post.title }}</span>
+                    <p>{{ post.resumo }}</p>
+                    <span><i>{{ post.autorL }}</i></span>
                 </div>
             </a>
             {% endunless %} {% endfor %}
         </div>
     </div>
-    <aside class="direita" style="padding-top: 1em">
-        <div class="tituloSecao">
-            <p class="gradienteBase">
-                <i class="fa-solid fa-arrow-trend-up"></i>
-            </p>
-            <h2>Aventuras por Nível</h2>
-        </div>
-        <ul class="listaNivel">
-            <li>
-                <!--&#9656; -->
-                <h3>&#9662; Nível 1 ({{ site.tags.lvl1 | size }})</h3>
-                <ul>
-                    {% assign alfabetica = site.tags.lvl1 | sort_natural %} {% for post in alfabetica %}
-                    <li>
-                        <a href="{{ post.url }}" title="{{ post.title }}">
-                            <h4 class="">&#9656; {{ post.title }}</h4>
-                        </a>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </li>
-            <li>
-                <h3>&#9662; Nível 2 ({{ site.tags.lvl2 | size }})</h3>
-                <ul>
-                    {% assign alfabetica = site.tags.lvl2 | sort_natural %} {% for post in alfabetica %}
-                    <li>
-                        <a href="{{ post.url }}" title="{{ post.title }}">
-                            <h4 class="">&#9656; {{ post.title }}</h4>
-                        </a>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </li>
-            <li>
-                <h3>&#9662; Nível 3 ({{ site.tags.lvl3 | size }})</h3>
-                <ul>
-                    {% assign alfabetica = site.tags.lvl3 | sort_natural %} {% for post in alfabetica %}
-                    <li>
-                        <a href="{{ post.url }}" title="{{ post.title }}">
-                            <h4 class="">&#9656; {{ post.title }}</h4>
-                        </a>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </li>
-            <li>
-                <h3>&#9662; Nível 4 ({{ site.tags.lvl4 | size }})</h3>
-                <ul>
-                    {% assign alfabetica = site.tags.lvl4 | sort_natural %} {% for post in alfabetica %}
-                    <li>
-                        <a href="{{ post.url }}" title="{{ post.title }}">
-                            <h4 class="">&#9656; {{ post.title }}</h4>
-                        </a>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </li>
-            <li>
-                <h3>&#9662; Nível 5 ({{ site.tags.lvl5 | size }})</h3>
-                <ul>
-                    {% assign alfabetica = site.tags.lvl5 | sort_natural %} {% for post in alfabetica %}
-                    <li>
-                        <a href="{{ post.url }}" title="{{ post.title }}">
-                            <h4 class="">&#9656; {{ post.title }}</h4>
-                        </a>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </li>
-        </ul>
-    </aside>
-</section>
+    <div class="ladoD">
+        <nav class="listatags">
+            <h3>Aventuras por nível</h3>
+            <ul>
+                <li>
+                    <details open>
+                        <summary>Nível 1 ({{ site.tags.lvl1 | size }})</summary>
+                        {% assign alfabetica = site.tags.lvl1 | sort_natural %} {% for post in alfabetica %}
+                        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                        {% endfor %}
+                    </details>
+                </li>
+                <li>
+                    <details open>
+                        <summary>Nível 2 ({{ site.tags.lvl2 | size }})</summary>
+                        {% assign alfabetica = site.tags.lvl2 | sort_natural %} {% for post in alfabetica %}
+                        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                        {% endfor %}
+                    </details>
+                </li>
+                <li>
+                    <details open>
+                        <summary>Nível 3 ({{ site.tags.lvl3 | size }})</summary>
+                        {% assign alfabetica = site.tags.lvl3 | sort_natural %} {% for post in alfabetica %}
+                        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                        {% endfor %}
+                    </details>
+                </li>
+                <li>
+                    <details open>
+                        <summary>Nível 4 ({{ site.tags.lvl4 | size }})</summary>
+                        {% assign alfabetica = site.tags.lvl4 | sort_natural %} {% for post in alfabetica %}
+                        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                        {% endfor %}
+                    </details>
+                </li>
+                <li>
+                    <details open>
+                        <summary>Nível 5 ({{ site.tags.lvl5 | size }})</summary>
+                        {% assign alfabetica = site.tags.lvl5 | sort_natural %} {% for post in alfabetica %}
+                        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                        {% endfor %}
+                    </details>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>

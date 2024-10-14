@@ -2,103 +2,91 @@
 <html lang="pt-BR">
     <head>
         <title>{{ page.title }} | Simple Skans</title>
-        <meta
-            name="description"
-            content="{{ page.descricao }}" />
+        <meta name="description" content="{{ page.descricao }}" />
         <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-C6Q368P6MR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-C6Q368P6MR"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
 
-  gtag('config', 'G-C6Q368P6MR');
-</script>
+            gtag("config", "G-C6Q368P6MR");
+        </script>
 
-      <!-- Clarity tag  -->
-       <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "lqt7soyxw2");
-</script>
+        <!-- Clarity tag  -->
+        <script type="text/javascript">
+            (function (c, l, a, r, i, t, y) {
+                c[a] =
+                    c[a] ||
+                    function () {
+                        (c[a].q = c[a].q || []).push(arguments);
+                    };
+                t = l.createElement(r);
+                t.async = 1;
+                t.src = "https://www.clarity.ms/tag/" + i;
+                y = l.getElementsByTagName(r)[0];
+                y.parentNode.insertBefore(t, y);
+            })(window, document, "clarity", "script", "lqt7soyxw2");
+        </script>
         <!-- Facebook Meta Tags -->
         <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="{{ page.title }}" />
-        <meta
-            property="og:description"
-            content="{{ page.descricao }}" />
-        <meta
-            property="og:image"
-            content="{{ page.capa }}" />
+        <meta property="og:description" content="{{ page.descricao }}" />
+        <meta property="og:image" content="{{ page.capa }}" />
 
         <!-- Twitter Meta Tags -->
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:domain" content="simpleskans.com.br" />
         <meta property="twitter:url" content="{{ site.url }}{{ page.url }}" />
         <meta name="twitter:title" content="{{ page.title }}" />
-        <meta
-            name="twitter:description"
-            content="{{ page.descricao }}" />
-        <meta
-            name="twitter:image"
-            content="{{ page.capa }}" />
+        <meta name="twitter:description" content="{{ page.descricao }}" />
+        <meta name="twitter:image" content="{{ page.capa }}" />
 
-        <!--Schema Tags-->
-       {{page.tagsschema}}
         <!--Favicon tags-->
-        <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="/apple-touch-icon.png" />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="/favicon-32x32.png" />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href="/favicon-16x16.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#c13a5a" />
         <meta name="msapplication-TileColor" content="#c13a5a" />
         <meta name="theme-color" content="#c13a5a" />
+
         <!--Head tags-->
 
-        <script src="https://kit.fontawesome.com/8767d1d5a5.js" crossorigin="anonymous"></script>
-        
         <link rel="stylesheet" href="/css/reset.css" />
-        <link rel="stylesheet" href="/css/estilo.css" />
-        {{page.csscustomizado}}
-        {{page.jscustomizado}}
+        <link rel="stylesheet" href="/css/estilos.css" />
+        {{page.csscustomizado}} {{page.jscustomizado}}
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="UTF-8" />
         <meta name="author" content="KryFi" />
     </head>
     <body>
-        <nav class="barraFlutuante gradienteBase">
-            <div class="imagemSite">
-                <a href="{{ site.url }}">
-                    <img src="/img/logo.png" alt="Simple Skans" />
-                </a>
-            </div>
-            <div id="menuSuperior">
-                <a href="/posts/" title="Todos os Projetos">Posts</a>
-                <a href="/rom-hacking/" title="Traduções de ROMs">ROM Hacking</a>
-                <a href="/dnd/" title="Traduções de D&#38;D">D&#38;D</a>
-                <a href="/links/" title="Links Interessantes">Links</a>
-                <a href="/sobre/" title="Entre em Contato">Sobre</a>
-            </div>
-            <span class="icon" onclick="myFunction()">
-                <i class="fa fa-bars"></i
-            ></span>
-        </nav>
-        <span id="topo"></span>
-        <div class="corpo">
-            <div class="margemGeral">
+        <header class="gradienteBase">
+            <nav class="barraTopo">
+                <div class="logo">
+                    <a href="{{site.url}}"><img src="/img/logo.webp" alt="Home" /></a>
+                </div>
+                <ul class="menuTopo">
+                    <li><a href="/posts/">Posts</a></li>
+                    <li><a href="/dnd/">D&#38;D</a></li>
+                    <li><a href="/rom-hacking/">Rom Hacking</a></li>
+                    <li><a href="/sobre/">Sobre</a></li>
+                </ul>
+                <details class="menutopohamburguer">
+                    <summary><i class="bi bi-list"></i></summary>
+                    <div class="menuTopo2 gradienteBase">
+                        <a href="/posts/">Posts</a>
+                        <a href="/dnd/">D&#38;D</a>
+                        <a href="/rom-hacking/">Rom Hacking</a>
+                        <a href="/sobre/">Sobre</a>
+                    </div>
+                </details>
+            </nav>
+        </header>
+        <div class="separador"></div>
+        <main class="conteudo">

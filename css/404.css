@@ -1,0 +1,25 @@
+.imagemrodape, footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+}
+
+.imagemrodape {
+  margin-bottom: 0;
+}
+
+.erro404 {
+  width: 100%;
+  text-align: right;
+}
+
+.erro404 > p:first-child{
+  font-size: calc(3rem + 1vw);
+  
+}
+
+.erro404 > p:last-child{
+  font-size: calc(1rem + 1vw);
+  
+}

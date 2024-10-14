@@ -1,449 +1,281 @@
 ---
-layout: aside
+layout: padrao
 title: "Tetsudou-ou: Famicom Board Game PT-BR"
 descricao: "Tradução de Tetsudou-ou: Famicon Board Game para PT-BR! by Simple Skans"
 categories: rom-hacking
+tags: nes
 permalink: /:categories/:title
-resumo: '"Tetsudou-ou" é um jogo de tabuleiro lançado para Family Computer pela dB-SOFT em 12 de dezembro de 1987.'
-plataforma: Nintendo Entertainment System
+resumo: 'Nintendo Entertainment System'
 capa: /img/capas/tetsudouou.png
----     
-               
+csscustomizado: <link rel="stylesheet" href="/css/post.css" />
+---
 
-            <!--
-                   <script type="application/ld+json">
-            {
-                "@context": "https://schema.org",
-                "@type": "BlogPosting",
-                "mainEntityOfPage": {
-                    "@type": "WebPage",
-                    "@id": "https://simpleskans.github.io/traducoes/tetsudou_ou.html"
-                },
-                "headline": "Tetsudou-Ou: Famicom Board Game PT-BR | Simple Skans",
-                "description": "Tradução de Tetsudou-ou: Famicon Board Game para PT-BR! by Simple Skans",
-                "image": "https://simpleskans.github.io/img/capas/tetsudououcapa.jpg",
-                "author": {
-                    "@type": "Person",
-                    "name": "KryFi",
-                    "url": "https://simpleskans.github.io/contato.html"
-                },
-                "publisher": {
-                    "@type": "Organization",
-                    "name": "Simple Skans",
-                    "logo": {
-                        "@type": "ImageObject",
-                        "url": "https://simpleskans.github.io/img/logoColorido.png"
-                    }
-                },
-                "datePublished": "2024-04-22",
-                "dateModified": "2024-04-25"
-            }
-        </script>
-        <script type="application/ld+json">
-            {
-                "@context": "https://schema.org/",
-                "@type": "BreadcrumbList",
-                "itemListElement": [
-                    {
-                        "@type": "ListItem",
-                        "position": 1,
-                        "name": "Home",
-                        "item": "https://simpleskans.github.io/"
-                    },
-                    {
-                        "@type": "ListItem",
-                        "position": 2,
-                        "name": "Traduções",
-                        "item": "https://simpleskans.github.io/traducoes/"
-                    },
-                    {
-                        "@type": "ListItem",
-                        "position": 3,
-                        "name": "Tetsudou-Ou: Famicom Board Game em PT-BR",
-                        "item": ""
-                    }
-                ]
-            }
-        </script>
-        <script type="application/ld+json">
-            {
-                "@context": "https://schema.org/",
-                "@type": "WebSite",
-                "name": "Tetsudou-Ou: Famicom Board Game PT-BR",
-                "url": "https://simpleskans.github.io/traducoes/tetsudou_ou.html",
-                "potentialAction": {
-                    "@type": "SearchAction",
-                    "target": "{search_term_string}",
-                    "query-input": "required name=search_term_string"
-                }
-            }
-        </script>
-        -->
-        <article class="texto esquerda">
+<article>
+    <div class="titulopostagem">
+        <h1 id="secao1">{{ page.title }}</h1>
+        <span>{{ page.resumo }}</span>
+        <div class="breadcrumb">
+            {% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
+            <a href="{{ site.url }}">Home</a>
+            {% for crumb in crumbs offset: 1 %} {% if forloop.last %} &gt; {{ page.title }} {% else %} &gt;
+            <a href="{{site.url}}/{{ crumb }}/"
+                >{{ crumb | replace:'-',' ' | replace:'dnd','D&#38;D' | remove:'.html' | capitalize }}</a
+            >
+            {% endif %} {% endfor %}
+        </div>
+        <div class="localpostagem">
+            <i class="bi bi-tags-fill"></i>
+            {% assign c = page.categories %} {% for a in c %}
+            <a href="{{ site.url }}/{{ a }}/" class="categoriapost"
+                >{{ a | replace: '-', ' ' | replace: 'rom', 'ROM' | replace: 'dnd', 'Dungeons &#38; Dragons' }} </a
+            ><span>, </span>
+            {% endfor %}
+            <br />
+            <i class="bi bi-clock-fill"></i> {{ page.date | date: "%d/%m/%Y"}}
+        </div>
+    </div>
+
+    <div class="corpo">
+        <div class="ladoE">
+            <div class="texto">
+                <figure class="capapostagem">
+                    <img src="{{ page.capa }}" alt="Imagem de Capa de {{ page.title }}" />
+                </figure>
+                <p></p>
+                <p>
+                    "Tetsudou-ou" é um jogo de tabuleiro lançado para Family Computer pela dB-SOFT em 12 de dezembro de
+                    1987.
+                </p>
+                <p>
+                    A jogabilidade é semelhante ao padrão da maioria dos jogos de tabuleiro, onde você segue os números
+                    da roleta até o seu destino e, ao chegar, recebe dinheiro e testa suas habilidades de cálculo.
+                </p>
+                <p>
+                    O jogo também incorpora um elemento semelhante a Monopoly de poder comprar ferrovias que já foram
+                    usadas, mas ao contrário de Monopoly não há obrigação de passar por lugares que foram comprados,
+                    então as ferrovias que foram compradas muitas vezes acabam sendo contornadas, resultando em
+                    prejuízo.
+                </p>
+                <p>
+                    Existem algumas cartas em que quanto mais tarde o jogador retira, menos opções ele tem como no
+                    momento de compra e venda de linhas já que os primeiros jogadores podem comprar antes, tornando o
+                    jogo um tanto injusto.
+                </p>
+                <p>
+                    Uma das falhas mais sérias no equilíbrio do jogo é o "evento de troca de ativos", que faz com que
+                    seus ativos (às vezes todos eles) sejam trocados aleatoriamente com outros personagens, o que
+                    significa que se você estiver atrás, pode virar a mesa em um instante.
+                </p>
+                <p>
+                    Devido à natureza lenta da roleta, era fácil escolher o número com os olhos, e muitas pessoas
+                    disseram que este evento só acaba prejudicando significativamente o equilíbrio do jogo e isso está
+                    incluído em todos as versões lançadas.
+                </p>
+                <div class="galeria">
                     <figure>
-                        <img
-                            src="{{- page.capa | relative_url -}}"
-                            alt="Capa de {{ page.title }}" />
+                        <img src="https://i.imgur.com/whCJanv.png" alt="Tela de Título" />
+                        <figcaption class="gradienteBase">Tela de Título</figcaption>
                     </figure>
-                    <div class="tituloArtigo gradienteBase">
-                        <h1>Tetsudou-ou: Famicom Board Game</h1>
-                        <p>Rei da Ferrovia</p>
+                    <figure>
+                        <img src="https://i.imgur.com/i3dtmc2.png" alt="Tela de Regras" />
+                        <figcaption class="gradienteBase">Tela de Regras</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="https://i.imgur.com/uV5bn7z.png" alt="Tela de Nomeação de Jogadores" />
+                        <figcaption class="gradienteBase">Nomeação de Jogadores</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="https://i.imgur.com/uwLr4FM.png" alt="Tela Inicial da Partida" />
+                        <figcaption class="gradienteBase">Tela Inicial da Partida</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="https://i.imgur.com/l5dGIRV.png" alt="Tela do Mapa" />
+                        <figcaption class="gradienteBase">Mapa</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="https://i.imgur.com/KLde2Gs.png" alt="Tela de Seleção de Nova Rota" />
+                        <figcaption class="gradienteBase">Seleção de Nova Rota</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="https://i.imgur.com/ZppqHd1.png" alt="Tela de Carta Retirada" />
+                        <figcaption class="gradienteBase">Carta Retirada</figcaption>
+                    </figure>
+                </div>
+                <p><b>Sobre a tradução</b></p>
+
+                <p>
+                    Todos os acentos foram inseridos e todos os textos foram traduzidos. Tivemos problemas com o nome
+                    das cidades no minimapa, então por ora eles foram removidos, pretendemos adicioná-los depois no
+                    futuro em uma atualização dessa tradução. Os gráficos também foram todos traduzidos. O jogo de
+                    início é difícil de se entender (o Breno sabe bem disso) e planejamos lançar uma tradução do manual.
+                </p>
+                <p>
+                    Agradeço especialmente ao Taihen por me ajudar com o ROM Hacking e ao RodiRAGE pela tradução da tela
+                    inicial.
+                </p>
+                <p class="avisoErros">
+                    Por favor, qualquer erro que você encontrar nos reporte pelos nossos meios de contato ou na seção de
+                    comentários no final desta página.
+                </p>
+            </div>
+            <h2 class="secaotitulo" id="secao2"><i class="bi bi-controller"></i> Informações do Jogo</h2>
+            <section class="info livro">
+                <figure>
+                    <img loading="lazy" alt="Capa da Aventura" src="{{ page.capa }}" />
+                    <figcaption>Capa do Jogo</figcaption>
+                </figure>
+                <div class="tabelainfo">
+                    <div class="divTable">
+                        <div class="cell cell-head">Título</div>
+                        <div class="cell">Rei da Ferrovia</div>
+
+                        <div class="cell cell-head">Título Original <sup>JP</sup></div>
+                        <div class="cell">(鉄道王 - ファミコンボードゲーム)</div>
+
+                        <div class="cell cell-head">Título Original</div>
+                        <div class="cell"><strong>Tetsudou-ou: Famicom Board Game</strong></div>
+
+                        <div class="cell cell-head">Plataforma</div>
+                        <div class="cell">NES/Famicon</div>
+
+                        <div class="cell cell-head">Desenvolvedora</div>
+                        <div class="cell">dB-SOFT</div>
+
+                        <div class="cell cell-head">Gênero</div>
+                        <div class="cell">Jogo de Tabuleiro</div>
+
+                        <div class="cell cell-head">Lançamento</div>
+                        <div class="cell">12/12/1987</div>
                     </div>
-                    <section class="texto2">
-                        <p></p>
-                        <p>
-                           {{ page.resumo }}
-                        </p>
-                        <p>
-                            A jogabilidade é semelhante ao padrão da maioria dos
-                            jogos de tabuleiro, onde você segue os números da
-                            roleta até o seu destino e, ao chegar, recebe
-                            dinheiro e testa suas habilidades de cálculo.
-                        </p>
-                        <p>
-                            O jogo também incorpora um elemento semelhante a
-                            Monopoly de poder comprar ferrovias que já foram
-                            usadas, mas ao contrário de Monopoly não há
-                            obrigação de passar por lugares que foram comprados,
-                            então as ferrovias que foram compradas muitas vezes
-                            acabam sendo contornadas, resultando em prejuízo.
-                        </p>
-                        <p>
-                            Existem algumas cartas em que quanto mais tarde o
-                            jogador retira, menos opções ele tem como no momento
-                            de compra e venda de linhas já que os primeiros
-                            jogadores podem comprar antes, tornando o jogo um
-                            tanto injusto.
-                        </p>
-                        <p>
-                            Uma das falhas mais sérias no equilíbrio do jogo é o
-                            "evento de troca de ativos", que faz com que seus
-                            ativos (às vezes todos eles) sejam trocados
-                            aleatoriamente com outros personagens, o que
-                            significa que se você estiver atrás, pode virar a
-                            mesa em um instante.
-                        </p>
-                        <p>
-                            Devido à natureza lenta da roleta, era fácil
-                            escolher o número com os olhos, e muitas pessoas
-                            disseram que este evento só acaba prejudicando
-                            significativamente o equilíbrio do jogo e isso está
-                            incluído em todos as versões lançadas.
-                        </p>
-                    </section>
-                    <div class="gridGrande">
-                        <section class="tabela 2024-04-24-tetsudou-ou.html">
-                            <div class="tituloSecao centralizar">
-                                <p class="gradienteBase">
-                                    <i class="fa-solid fa-table"></i>
-                                </p>
-                                <h2>Ficha Técnica</h2>
-                            </div>
-                            <table>
-                                <tr>
-                                    <td>Título Original</td>
-                                    <td>Tetsudou-ou: Famicom Board Game</td>
-                                </tr>
-                                <tr>
-                                    <td>Título Original<sup>JP</sup></td>
-                                    <td>(鉄道王 - ファミコンボードゲーム)</td>
-                                </tr>
-                                <tr>
-                                    <td>Título Traduzido</td>
-                                    <td>Rei da Ferrovia</td>
-                                </tr>
-                                <tr>
-                                    <td>Plataforma</td>
-                                    <td>Famicom/NES</td>
-                                </tr>
-                                <tr>
-                                    <td>Desenvolvedora</td>
-                                    <td>dB-SOFT</td>
-                                </tr>
-                                <tr>
-                                    <td>Gênero</td>
-                                    <td>Jogo de Tabuleiro</td>
-                                </tr>
-                                <tr>
-                                    <td>Jogadores</td>
-                                    <td>1-4</td>
-                                </tr>
-                                <tr>
-                                    <td>Lançamento</td>
-                                    <td>12/12/1987</td>
-                                </tr>
-                            </table>
-                        </section>
-                        <section class="texto2 sobreTraducao">
-                            <div class="tituloSecao centralizar">
-                                <p class="gradienteBase">
-                                    <i class="fa-solid fa-circle-info"></i>
-                                </p>
-                                <h2>Sobre a tradução</h2>
-                            </div>
+                </div>
+            </section>
+            <div class="separador"></div>
 
-                            <p>
-                                Todos os acentos foram inseridos e todos os
-                                textos foram traduzidos. Tivemos problemas com o
-                                nome das cidades no minimapa, então por ora eles
-                                foram removidos, pretendemos adicioná-los depois
-                                no futuro em uma atualização dessa tradução. Os
-                                gráficos também foram todos traduzidos.
-                            </p>
-                            <p>
-                                O jogo de início é difícil de se entender (o
-                                Breno sabe bem disso), então recomendamos que
-                                leiam o nosso
-                                <b>Manual de Instruções Traduzido</b>. Você pode
-                                encontrá-lo na seção de links abaixo.
-                            </p>
-                            <p>
-                                Agradeço especialmente ao Taihen por me ajudar
-                                com o ROM Hacking e ao RodiRAGE pela tradução da
-                                tela inicial.
-                            </p>
-                            <p class="avisoErros">
-                                Por favor, qualquer erro que você encontrar nos
-                                reporte pelos nossos meios de contato ou na
-                                seção de comentários no final desta página.
-                            </p>
-                        </section>
-                        <section class="tabela equipeInfo">
-                            <div class="tituloSecao centralizar">
-                                <p class="gradienteBase">
-                                    <i class="fa-solid fa-users"></i>
-                                </p>
-                                <h2>Equipe</h2>
-                            </div>
-                            <table>
-                                <tr>
-                                    <td>Tradução e Acentuação</td>
-                                    <td>KryFi</td>
-                                </tr>
-                                <tr>
-                                    <td>Gráficos</td>
-                                    <td>KryFi e RodiRAGE</td>
-                                </tr>
-                                <tr>
-                                    <td>ROM Hacking</td>
-                                    <td>KryFi e Taihen</td>
-                                </tr>
-                            </table>
-                        </section>
+            <h3 class="secaotitulo" id="secao3"><i class="bi bi-person-vcard-fill"></i> Equipe</h3>
+            <section class="equipe livro">
+                <figure>
+                    <img src="/img/plataformas/nes.png" alt="" />
+                </figure>
+                <div class="tabelainfo">
+                    <div class="divTable">
+                        <div class="cell cell-head">KryFi</div>
+                        <div class="cell">Tradução, Acentuação, Gráficos e ROM Hacking</div>
+
+                        <div class="cell cell-head">RodiRAGE</div>
+                        <div class="cell">Edição Gráficas e Capa do Jogo</div>
+
+                        <div class="cell cell-head">Taihen</div>
+                        <div class="cell">ROM Hacking e Revisão</div>
                     </div>
-                    <section class="galeria">
-                        <div class="tituloSecao centralizar">
-                            <p class="gradienteBase">
-                                <i class="fa-solid fa-image"></i>
-                            </p>
-                            <h2>Galeria</h2>
-                        </div>
-                        <ul>
-                            <li>
-                                <figure>
-                                    <img
-                                        src="https://i.imgur.com/whCJanv.png"
-                                        alt="Tela de Título" />
-                                    <figcaption class="gradienteBase">
-                                        Tela de Título
-                                    </figcaption>
-                                </figure>
-                            </li>
-                            <li>
-                                <figure>
-                                    <img
-                                        src="https://i.imgur.com/i3dtmc2.png"
-                                        alt="Tela de Regras" />
-                                    <figcaption class="gradienteBase">
-                                        Tela de Regras
-                                    </figcaption>
-                                </figure>
-                            </li>
-                            <li>
-                                <figure>
-                                    <img
-                                        src="https://i.imgur.com/uV5bn7z.png"
-                                        alt="Tela de Nomeação de Jogadores" />
-                                    <figcaption class="gradienteBase">
-                                        Nomeação de Jogadores
-                                    </figcaption>
-                                </figure>
-                            </li>
-                            <li>
-                                <figure>
-                                    <img
-                                        src="https://i.imgur.com/uwLr4FM.png"
-                                        alt="Tela Inicial da Partida" />
-                                    <figcaption class="gradienteBase">
-                                        Tela Inicial da Partida
-                                    </figcaption>
-                                </figure>
-                            </li>
-                            <li>
-                                <figure>
-                                    <img
-                                        src="https://i.imgur.com/l5dGIRV.png"
-                                        alt="Tela do Mapa" />
-                                    <figcaption class="gradienteBase">
-                                        Mapa
-                                    </figcaption>
-                                </figure>
-                            </li>
-                            <li>
-                                <figure>
-                                    <img
-                                        src="https://i.imgur.com/KLde2Gs.png"
-                                        alt="Tela de Seleção de Nova Rota" />
-                                    <figcaption class="gradienteBase">
-                                        Seleção de Nova Rota
-                                    </figcaption>
-                                </figure>
-                            </li>
-                            <li>
-                                <figure>
-                                    <img
-                                        src="https://i.imgur.com/ZppqHd1.png"
-                                        alt="Tela de Carta Retirada" />
-                                    <figcaption class="gradienteBase">
-                                        Carta Retirada
-                                    </figcaption>
-                                </figure>
-                            </li>
-                            
-                        </ul>
-                    </section>
-                    <section class="tabela romInfo">
-                        <div class="tituloSecao centralizar">
-                            <p class="gradienteBase">
-                                <i class="fa-solid fa-gamepad"></i>
-                            </p>
-                            <h2>Informações da ROM</h2>
-                        </div>
-                        <table>
-                            <tr>
-                                <td>Nome</td>
-                                <td>
-                                    Tetsudou Ou - Famicom Boardgame (Japan).nes
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>CRC32</td>
-                                <td>2a4a9871</td>
-                            </tr>
-                            <tr>
-                                <td>MD5</td>
-                                <td>4ce65cbd37e9d36c3cb7050bcba4a3fc</td>
-                            </tr>
-                            <tr>
-                                <td>SHA-1</td>
-                                <td>
-                                    af8f624e1ca5bb40f2b5f9c927b713308807302f
-                                </td>
-                            </tr>
-                        </table>
-                    </section>
-                    <section class="downloads">
-                        <div class="tituloSecao centralizar">
-                            <p class="gradienteBase">
-                                <i class="fa-solid fa-download"></i>
-                            </p>
-                            <h2>Download da tradução</h2>
-                        </div>
-                        <div class="gradienteBase">
-                            <p>[NES] Tetsudou Ou PT-BR v0.9.zip</p>
-                            <div class="linksBaixar">
-                                <a
-                                    href="https://www.mediafire.com/file/fmahnxcxhf4qev2/%255BNES%255D_Tetsudou_Ou_PT-BR_v0.9.zip/file"
-                                    target="_blank"
-                                    ><i class="fa-solid fa-cloud-arrow-down"></i
-                                    >MediaFire</a
-                                >
-                                <a
-                                    href="https://www.romhacking.net.br/index.php?action=dlattach;attach=3510"
-                                    target="_blank"
-                                    ><i class="fa-solid fa-cloud-arrow-down"></i
-                                    >FURT (link direto)</a
-                                >
-                                <a
-                                    href="https://www.romhacking.net/download/translations/7279/"
-                                    target="_blank"
-                                    ><i class="fa-solid fa-cloud-arrow-down"></i
-                                    >ROMhacking.net (link direto)</a
-                                >
-                            </div>
-                        </div>
-                    </section>
-                    <section class="outrosLinks">
-                        <div class="tituloSecao centralizar">
-                            <p class="gradienteBase">
-                                <i class="fa-solid fa-link"></i>
-                            </p>
-                            <h2>Links Relacionados</h2>
-                        </div>
-                        <a
-                            target="_blank"
-                            href="https://hextinkers.neocities.org"
-                            >Site de Traduções e ROM Hacking do Taihen (Taihen's
-                            Hextinkers)</a
-                        >
-                        <a
-                            target="_blank"
-                            href="https://www.romhacking.net.br/index.php?topic=2730.0"
-                            >Publicação da Tradução no FURT</a
-                        >
+                </div>
+            </section>
 
-                        <a
-                            target="_blank"
-                            href="https://www.romhacking.net/translations/7279/"
-                            >Publicação da Tradução no ROMhackin.net</a
-                        >
+            <div class="separador"></div>
 
-                        <a
-                            target="_blank"
-                            href="https://gamefaqs.gamespot.com/nes/578524-tetsudou-ou"
-                            >Gamefaqs</a
-                        >
-                        <a
-                            target="_blank"
-                            href="http://setsumei.html.xdomain.jp/famicom/tetsudouou/tetsudouou.html"
-                            >Manual em Japonês</a
-                        >
-                    </section>
-                    <section class="comentarios">
-                        <div class="tituloSecao centralizar">
-                            <p class="gradienteBase">
-                                <i class="fa-solid fa-comments"></i>
-                            </p>
-                            <h2>Comentários</h2>
-                        </div>
-                        <div id="disqus_thread"></div>
-                        <script>
-                            /**
-                             *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                             *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+            <h3 class="secaotitulo" id="secao4"><i class="bi bi-info-circle-fill"></i> Informações da ROM</h3>
+            <section class="rom livro">
+                <figure><img src="/img/plataformas/nesc.png" alt="" /></figure>
+                <div class="tabelainfo">
+                    <div class="divTable">
+                        <div class="cell cell-head">ROM</div>
+                        <div class="cell">Tetsudou Ou - Famicom Boardgame (Japan).nes</div>
 
-                            var disqus_config = function () {
-                                this.page.url =
-                                    "{{ site.url }}{{ page.url }}"; // Replace PAGE_URL with your page's canonical URL variable
-                                this.page.identifier =
-                                    "{{ page.url }}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-                            };
-                            (function () {
-                                // DON'T EDIT BELOW THIS LINE
-                                var d = document,
-                                    s = d.createElement("script");
-                                s.src =
-                                    "https://simple-skans.disqus.com/embed.js";
-                                s.setAttribute("data-timestamp", +new Date());
-                                (d.head || d.body).appendChild(s);
-                            })();
-                        </script>
-                        <noscript
-                            >Please enable JavaScript to view the
-                            <a href="https://disqus.com/?ref_noscript"
-                                >comments powered by Disqus.</a
-                            ></noscript
-                        >
-                    </section>
-                </article>
-        
+                        <div class="cell cell-head">CRC32</div>
+                        <div class="cell">2a4a9871</div>
+
+                        <div class="cell cell-head">MD5</div>
+                        <div class="cell">4ce65cbd37e9d36c3cb7050bcba4a3fc</div>
+
+                        <div class="cell cell-head">SHA-1</div>
+                        <div class="cell">af8f624e1ca5bb40f2b5f9c927b713308807302f</div>
+                    </div>
+                </div>
+            </section>
+            <div class="separador"></div>
+
+            <h3 class="secaotitulo" id="secao5"><i class="bi bi-cloud-arrow-down-fill"></i> Downloads</h3>
+
+            <section class="downloads">
+                <a href="https://bit.ly/3A0zfXf" target="_blank" class="botaodownload" id="mediafireD"
+                    ><img src="/img/svg/mediafire.svg" alt="Logo Mediafire" /> Mediafire</a
+                >
+                <a href="https://bit.ly/3YnLzdu" target="_blank" class="botaodownload">ROMHacking.net</a>
+            </section>
+            <div class="separador"></div>
+            <h4 class="secaotitulo" id="secao6"><i class="bi bi-link-45deg"></i> Links relacionados</h4>
+            <div class="linksrelacionados">
+                <a target="_blank" href="https://www.romhacking.net.br/index.php?topic=2825.0"
+                    >Publicação da Tradução no FURT</a
+                >
+
+                <a target="_blank" href="https://gamefaqs.gamespot.com/gba/932712-lara-croft-tomb-raider-legend"
+                    >Gamefaqs do Jogo</a
+                >
+            </div>
+        </div>
+        <div class="lateral">
+            <nav class="menulateralrapido">
+                <ul>
+                    <li><a href="#secao1">{{ page.title }}</a></li>
+                    <li><a href="#secao2">Informações do Jogo</a></li>
+                    <li><a href="#secao3">Equipe</a></li>
+                    <li><a href="#secao4">Informações da ROM</a></li>
+                    <li><a href="#secao5">Downloads</a></li>
+                    <li><a href="#secao6">Links Relacionados</a></li>
+                    <li><a href="#secao7">Comentários</a></li>
+                </ul>
+                <div class="separador"></div>
+                <div class="redeslateral">
+                    <p>Compartilhe o post:</p>
+                    {% include compartilhar.html %}
+                </div>
+            </nav>
+        </div>
+    </div>
+</article>
+<div class="corpo corpo2">
+    <div>
+        <div class="separador"></div>
+
+        <section class="comentarios">
+            <h5 class="secaotitulo" id="secao7"><i class="bi bi-chat-dots-fill"></i> Comentários</h5>
+            <div id="disqus_thread"></div>
+            <script>
+                /**
+                 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+
+                var disqus_config = function () {
+                    this.page.url = "{{ site.url }}{{ page.url }}"; // Replace PAGE_URL with your page's canonical URL variable
+                    this.page.identifier = "{{ page.url }}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                };
+                (function () {
+                    // DON'T EDIT BELOW THIS LINE
+                    var d = document,
+                        s = d.createElement("script");
+                    s.src = "https://simple-skans.disqus.com/embed.js";
+                    s.setAttribute("data-timestamp", +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript
+                >Please enable JavaScript to view the
+                <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript
+            >
+        </section>
+    </div>
+
+    <div class="outros">
+        <div class="separador"></div>
+        <h6>Outros Posts</h6>
+        <nav class="outrosposts">
+            {% assign c = site.posts | slice: 0, 8 %} {% for post in c %} {% unless post.title == page.title %}
+            <a href="{{ post.url }}">
+                <figure style="background-image: url({{ post.capa }})"></figure>
+                {{ post.title }}
+            </a>
+
+            {% endunless %} {% endfor %}
+        </nav>
+    </div>
+</div>

@@ -14,7 +14,7 @@ h1 {
     flex-grow: 1;
     padding: 1rem;
     gap: 1rem;
-    
+
     border-radius: 10px;
 }
 
@@ -74,13 +74,13 @@ h1 {
 }
 
 .parceiros a {
-    display: flex;    
+    display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     gap: 1rem;
     padding: 1rem;
-    width: calc(20% - .8rem);
+    width: calc(25% - 0.75rem);
     border-radius: 10px;
     text-align: center;
 }
@@ -101,15 +101,5 @@ h1 {
 @media (max-width: 41.5rem) {
     .parceiros a {
         width: calc(50% - 1rem);
-    
-    }
-    
-    .parceiros a:last-child {
-        width: 100%;
-        aspect-ratio: initial;
-    }
-    
-    .parceiros a:last-child figure {
-        width: 50%;
     }
 }

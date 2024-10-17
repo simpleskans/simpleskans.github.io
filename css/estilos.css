@@ -223,31 +223,34 @@ header {
     .destaques {
         grid-template-columns: 1fr 1fr;
         aspect-ratio: initial;
+        max-width: 100%;
     }
 
-    
     .destaques > .postlink:nth-child(1) {
         grid-area: 1 / 1 / 2 / 3;
         aspect-ratio: 5/2;
     }
-    
+
     .destaques > .postlink {
         aspect-ratio: 3/2;
     }
 }
 
-
 @media (max-width: 35rem) {
-    
+    .destaques {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
     .destaques > .postlink:nth-child(1) {
         aspect-ratio: 3/2;
     }
-    
-    .destaques > .postlink {
-        aspect-ratio: 1/1;
-    }
-}    
 
+    .destaques > .postlink {
+        aspect-ratio: 3/1.7;
+        width: 100%;
+    }
+}
 
 /*Outros posts*/
 
@@ -305,10 +308,20 @@ header {
 }
 
 @media (max-width: 35rem) {
-    .listasecundarios > li > a {
-        margin: auto;
+    .listasecundarios {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 1rem 0;
+    }
+    
+    .listasecundarios > li {
+        display: block;
+        aspect-ratio: 3/1.6;
+        width: 100%;
+    }
+    
+    .listasecundarios > li >a {
         aspect-ratio: initial;
-        min-height: 8rem;
         height: 100%;
     }
 }
@@ -337,7 +350,6 @@ header {
 }
 
 /*404*/
-
 
 /*Rodapé*/
 

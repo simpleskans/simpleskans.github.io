@@ -98,7 +98,7 @@
     #share_aside {
         display: block;
     }
-    
+
     .texto .galeria > figure {
         min-width: calc(50% - 1rem);
         margin-top: 1rem;
@@ -110,17 +110,19 @@
     grid-template-columns: 1fr 3fr;
 }
 
-.rom > figure, .equipe > figure {
+.rom > figure,
+.equipe > figure {
     background: var(--corprincipal);
     padding: 1rem;
 }
 
-.rom > figure > img, .equipe > figure > img {
+.rom > figure > img,
+.equipe > figure > img {
     margin: auto;
     background: var(--corfundo);
-    padding: .5rem;
+    padding: 0.5rem;
     border-radius: 10px;
-    width: 170px
+    width: 170px;
 }
 
 .livro > figure {
@@ -169,7 +171,8 @@
 }
 
 @media (max-width: 59.9rem) {
-    .rom .cell:nth-child(6), .rom .cell:nth-child(8) {
+    .rom .cell:nth-child(6),
+    .rom .cell:nth-child(8) {
         word-break: break-all;
     }
 }
@@ -284,8 +287,9 @@
     .outrosposts > a {
         width: 100%;
     }
-    
-    .livro > figure, .livro > figure > figcaption {
+
+    .livro > figure,
+    .livro > figure > figcaption {
         border: none;
     }
 }
@@ -302,6 +306,6 @@
     text-decoration: underline;
 }
 
-.localpostagem span:has(+br) {
+.localpostagem span:has(+ br) {
     display: none;
 }

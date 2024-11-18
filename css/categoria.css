@@ -2,9 +2,17 @@
     padding: 4rem 0;
 }
 
+.categoriatitulo h1 {
+    text-transform: capitalize;
+}
+
 .corpo {
     display: grid;
     grid-template-columns: 3fr 1fr;
+}
+
+.secaotitulo {
+    margin-bottom: 1.5rem;
 }
 
 .postagensquadro {
@@ -147,4 +155,15 @@
         width: 100%;
         aspect-ratio: 1/1;
     }
+}
+
+.acessarcategoria {
+    display: block;
+    width: 100%;
+    color: var(--corprincipal);
+    margin-top: 1rem;
+    text-align: right;
+    text-decoration: underline;
+    font-weight: 700;
+    font-size: 1.5rem;
 }

@@ -1,0 +1,88 @@
+---
+layout: padrao
+title: 'Smash Legends'
+descricao: 'Lista de traduções de Smash Legends da Simple Skans!'
+permalink: /smash-legends/
+capa: 'https://simpleskans.com.br/img/logoColorido.png'
+csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
+---
+
+{% assign current_cat = page.url | split: "/" | last %}
+<div class="categoriatitulo">
+    <p>Todas as webtoons e novels traduzidas de</p>
+    <h1>{{ current_cat | replace: '-', ' ' | replace: 'rom', 'ROM' | replace: 'dnd', 'Dungeons &#38; Dragons'}}</h1>
+</div>
+<div class="corpo"  style="display: block">
+    <div class="ladoE">
+       <h2 id="webtoons" class="secaotitulo"><i class="bi bi-journal-richtext"></i> Webtoons</h2>
+        <nav class="postagensquadro">
+            {% assign c = site.tags.slw | slice: 0, 2 %} {% for post in c %}
+            <a
+                class="postlink"
+                style="background-image:  url({{ post.capa }});"
+                href="{{ post.url }}"
+                title="{{ post.title }}">
+                <span>{{ post.autorL }}</span>
+                <div>
+                    <span>{{ post.title }}</span>
+                    <p>{{ post.resumo }}</p>
+                </div>
+            </a>
+
+            {% endfor %}
+        </nav>
+        <a href="/smash-legends/slw/" class="acessarcategoria">Ver Tudo <i class="bi bi-arrow-right"></i></a>
+        <div class="separador"></div>
+    </div>
+    
+</div>
+
+<div class="corpo"  style="display: block">
+    <div class="ladoE">
+       <h2 id="pass" class="secaotitulo"><i class="bi bi-journal"></i> Smash Pass</h2>
+        <nav class="postagensquadro">
+            {% assign c = site.tags.slsp | slice: 0, 2 %} {% for post in c %}
+            <a
+                class="postlink"
+                style="background-image:  url({{ post.capa }});"
+                href="{{ post.url }}"
+                title="{{ post.title }}">
+                <span>{{ post.autorL }}</span>
+                <div>
+                    <span>{{ post.title }}</span>
+                    <p>{{ post.resumo }}</p>
+                </div>
+            </a>
+
+            {% endfor %}
+        </nav>
+        <a href="/smash-legends/slsp/" class="acessarcategoria">Ver Tudo <i class="bi bi-arrow-right"></i></a>
+        <div class="separador"></div>
+    </div>
+    
+</div>
+
+<div class="corpo" style="display: block">
+    <div class="ladoE">
+       <h2 id="novels" class="secaotitulo"><i class="bi bi-journal-text"></i> Novels</h2>
+        <nav class="postagensquadro">
+            {% assign c = site.tags.sln | slice: 0, 2 %} {% for post in c %}
+            <a
+                class="postlink"
+                style="background-image:  url({{ post.capa }});"
+                href="{{ post.url }}"
+                title="{{ post.title }}">
+                <span>{{ post.autorL }}</span>
+                <div>
+                    <span>{{ post.title }}</span>
+                    <p>{{ post.resumo }}</p>
+                </div>
+            </a>
+
+            {% endfor %}
+        </nav>
+        <a href="/smash-legends/sln/" class="acessarcategoria">Ver Tudo <i class="bi bi-arrow-right"></i></a>
+        <div class="separador"></div>
+    </div>
+    
+</div>

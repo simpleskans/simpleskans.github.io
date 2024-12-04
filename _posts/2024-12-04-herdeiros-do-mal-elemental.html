@@ -1,0 +1,231 @@
+---
+layout: padrao
+title: "Herdeiros do Mal Elemental"
+descricao: 'Tradução de Scions of Elemental Evild para português, trazendo a segunda aventura gratuita do D&#38;D 2024 para a comunidade brasileira.'
+categories: dnd
+tags: lvl4 
+permalink: /:categories/dnd-2024/:title
+resumo: 'Uma aventura para Dungeons &#38; Dragons 2024'
+capa: '/img/postcapa/scoee.png'
+autorL: 'Amanda Hamon'
+csscustomizado: <link rel="stylesheet" href="/css/post.css" />
+---
+
+<article>
+    <div class="titulopostagem">
+        <h1 id="secao1">{{ page.title }}</h1>
+        <span>{{ page.resumo }}</span>
+        <div class="breadcrumb">
+            {% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
+            <a href="{{ site.url }}">Home</a>
+            {% for crumb in crumbs offset: 1 %} {% if forloop.last %} &gt; {{ page.title }} {% else %} &gt;
+            <a href="{{site.url}}/{{ crumb }}/"
+                >{{ crumb | replace:'-',' ' | replace:'dnd','D&#38;D' | remove:'.html' | capitalize }}</a
+            >
+            {% endif %} {% endfor %}
+        </div>
+        <div class="localpostagem">
+            <i class="bi bi-tags-fill"></i>
+            {% assign c = page.categories %} {% for a in c %}
+            <a href="{{ site.url }}/{{ a }}/" class="categoriapost"
+                >{{ a | replace: '-', ' ' | replace: 'rom', 'ROM' | replace: 'dnd', 'Dungeons &#38; Dragons' }} </a
+            ><span>, </span>
+            {% endfor %}
+            <br />
+            <i class="bi bi-clock-fill"></i> {{ page.date | date: "%d/%m/%Y"}}
+        </div>
+    </div>
+
+    <div class="corpo">
+        <div class="ladoE">
+            <div class="texto">
+                <figure class="capapostagem">
+                    <img src="{{ page.capa }}" alt="Imagem de Capa de {{ page.title }}" />
+                </figure>
+                <p>
+                    Sob o Templo do Mal Elemental encontra-se um labirinto de túmulos e câmaras rituais. Durante anos,
+                    essas masmorras permaneceram em ruínas. Agora, almas abandonadas retornam, formando um exército
+                    maligno com o objetivo de destruir o mundo.
+                </p>
+                <p>
+                    Herdeiros do Mal Elemental (<i>Scions of Elemental Evil</i>) é uma aventura one-shot que destaca o mundo de Greyhawk e é compatível
+                    com os Livros Básicos de 2024.
+                </p>
+                                <p>
+                    A trama gira em torno do renascimento de um antigo mal, onde cultistas elementais buscam invocar
+                    forças extraplanares para dominar o mundo. Os jogadores são convocados pela Rainha Yolande de Celene
+                    para impedir que a fanática Ulsedra Vox e sua Aliança Primordial realizem seus planos nefastos. Com
+                    uma mistura de exploração, combate e intriga, "Herdeiros do Mal Elemental" desafia os jogadores a
+                    usarem tanto a força quanto a astúcia para vencer.
+                </p>
+
+                <p>
+                    Um dos grandes atrativos desta aventura é a inclusão de personagens icônicos da série animada
+                    "Caverna do Dragão", como Bobby, Diana, Eric, Hank, Presto e Sheila, agora apresentados como jovens
+                    adultos. Os mestres encontrarão no documento todas as ferramentas necessárias para conduzir a
+                    história, incluindo descrições detalhadas de locais, NPCs e itens mágicos.
+                </p>
+
+                <div class="galeria">
+                    <figure>
+                        <img src="/img/posts/see1.png" alt="Prévia da Página 2" />
+                        <figcaption>Prévia da Página 2</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="/img/posts/see2.png" alt="Prévia da Página 6" />
+                        <figcaption>Prévia da Página 6</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="/img/posts/see3.png" alt="Prévia da Página 12" />
+                        <figcaption>Prévia da Página 12</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="/img/posts/see4.png" alt="Prévia da Página 15" />
+                        <figcaption>Prévia da Página 15</figcaption>
+                    </figure>
+                </div>
+                <p>
+                    A tradução de "Scions of Elemental Evil" para "Herdeiros do Mal Elemental" foi feita com cuidado
+                    para preservar a essência e a qualidade do material original. Os jogadores e mestres brasileiros
+                    agora têm a oportunidade de vivenciar uma das mais recentes aventuras de Dungeons & Dragons em sua
+                    língua nativa.
+                </p>
+
+                <p>Fiquem à vontade para baixar a tradução e mergulhar nessa nova aventura! 🚀</p>
+            </div>
+            <h2 class="secaotitulo" id="secao2"><i class="bi bi-info-circle-fill"></i> Informações da Aventura</h2>
+            <section class="info livro">
+                <figure>
+                    <img loading="lazy" alt="Capa da Aventura" src="/img/capas/scoee.png" />
+                    <figcaption>Capa da Aventura</figcaption>
+                </figure>
+                <div class="tabelainfo">
+                    <div class="divTable">
+                        <div class="cell cell-head">Título</div>
+                        <div class="cell">Herdeiros do Mal Elemental</div>
+
+                        <div class="cell cell-head">Título Original</div>
+                        <div class="cell"><strong>Scions of Elemental Evil</strong></div>
+
+                        <div class="cell cell-head">Autor</div>
+                        <div class="cell">{{ page.autorL }}</div>
+
+                        <div class="cell cell-head">Sistema</div>
+                        <div class="cell">Dungeons &#38; Dragons 2024</div>
+
+                        <div class="cell cell-head">Nível dos Jogadores</div>
+                        <div class="cell">4º nível</div>
+
+                        <div class="cell cell-head">Nº de Páginas</div>
+                        <div class="cell">20</div>
+
+                        <div class="cell cell-head">Formato</div>
+                        <div class="cell">PDF</div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="separador"></div>
+
+            <h3 class="secaotitulo" id="secao3"><i class="bi bi-cloud-arrow-down-fill"></i> Downloads</h3>
+
+            <section class="downloads">
+                <a
+                    href="https://www.mediafire.com/file/inq19gezhgl2st9/Herdeiros_do_Mal_Elemental.pdf/file"
+                    target="_blank"
+                    class="botaodownload"
+                    id="mediafireD"
+                    ><img src="/img/svg/mediafire.svg" alt="Logo Mediafire" /> Mediafire</a
+                >
+                <a
+                    href="https://drive.google.com/file/d/1If1Q1oH9wTez5E-ayRDQrAvjvd471pMS/view?usp=sharing"
+                    class="botaodownload"
+                    id="gdriveD"
+                    target="_blank"
+                    ><img src="/img/svg/gdrive.svg" alt="Logo Google Drive" /> Google Drive</a
+                >
+                <a
+                    href="https://www.dropbox.com/scl/fi/sz97xrdps4iunyo0r7qfi/Herdeiros-do-Mal-Elemental.pdf?rlkey=kog5pi9lgjjtqx0wjow6yjajk&st=4g8fhl6v&dl=0"
+                    class="botaodownload"
+                    id="dropboxD"
+                    target="_blank"
+                    ><img src="/img/svg/dropbox.svg" alt="Logo Dropbox" /> Dropbox</a
+                >
+            </section>
+
+            <div class="separador"></div>
+            <h4 class="secaotitulo" id="secao4"><i class="bi bi-link-45deg"></i> Links relacionados</h4>
+            <div class="linksrelacionados">
+                <a target="_blank" href="https://www.dndbeyond.com/claim/source/scions-of-elemental-evil"
+                    >Página da Aventura no D&#38;D Beyond (em inglês)</a
+                >
+                <a target="_blank" href="https://www.rpgnext.com.br"
+                    >Site do RPG Next (Um site completo recheado de aventuras, contos, bate-papo e muito amor por
+                    RPG)</a
+                >
+            </div>
+        </div>
+        <div class="lateral">
+            <nav class="menulateralrapido">
+                <ul>
+                    <li><a href="#secao1">{{ page.title }}</a></li>
+                    <li><a href="#secao2">Informações da Aventura</a></li>
+                    <li><a href="#secao3">Downloads</a></li>
+                    <li><a href="#secao4">Links Relacionados</a></li>
+                    <li><a href="#secao5">Comentários</a></li>
+                </ul>
+                <div class="separador"></div>
+                <div class="redeslateral">
+                    <p>Compartilhe o post:</p>
+                    {% include compartilhar.html %}
+                </div>
+            </nav>
+        </div>
+    </div>
+</article>
+<div class="corpo corpo2">
+    <div>
+        <div class="separador"></div>
+
+        <section class="comentarios">
+            <h5 class="secaotitulo" id="secao5"><i class="bi bi-chat-dots-fill"></i> Comentários</h5>
+            <div id="disqus_thread"></div>
+            <script>
+                /**
+                 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+
+                var disqus_config = function () {
+                    this.page.url = "{{ site.url }}{{ page.url }}"; // Replace PAGE_URL with your page's canonical URL variable
+                    this.page.identifier = "{{ page.url }}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                };
+                (function () {
+                    // DON'T EDIT BELOW THIS LINE
+                    var d = document,
+                        s = d.createElement("script");
+                    s.src = "https://simple-skans.disqus.com/embed.js";
+                    s.setAttribute("data-timestamp", +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript
+                >Please enable JavaScript to view the
+                <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript
+            >
+        </section>
+    </div>
+
+    <div class="outros">
+        <div class="separador"></div>
+        <h6>Outros Posts</h6>
+        <nav class="outrosposts">
+            {% assign c = site.posts | slice: 0, 8 %} {% for post in c %} {% unless post.title == page.title %}
+            <a href="{{ post.url }}">
+                <figure style="background-image: url({{ post.capa }})"></figure>
+                {{ post.title }}
+            </a>
+
+            {% endunless %} {% endfor %}
+        </nav>
+    </div>
+</div>

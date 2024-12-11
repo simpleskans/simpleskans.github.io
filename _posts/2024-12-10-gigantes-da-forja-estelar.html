@@ -1,0 +1,194 @@
+---
+layout: padrao
+title: "Gigantes da Forja Estelar"
+descricao: 'Tradução de Giants of the Star Forge para português, trazendo a aventura do guia Big para a comunidade brasileira.'
+categories: dnd
+tags: lvl16
+permalink: /:categories/:title
+resumo: 'Uma aventura para Dungeons &#38; Dragons 5e'
+capa: '/img/postcapa/gotsf.png'
+autorL: 'Patrick Renie, James Wyatt'
+csscustomizado: <link rel="stylesheet" href="/css/post.css" />
+---
+
+<article>
+    <div class="titulopostagem">
+        <h1 id="secao1">{{ page.title }}</h1>
+        <span>{{ page.resumo }}</span>
+        <div class="breadcrumb">
+            {% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
+            <a href="{{ site.url }}">Home</a>
+            {% for crumb in crumbs offset: 1 %} {% if forloop.last %} &gt; {{ page.title }} {% else %} &gt;
+            <a href="{{site.url}}/{{ crumb }}/"
+                >{{ crumb | replace:'-',' ' | replace:'dnd','D&#38;D' | remove:'.html' | capitalize }}</a
+            >
+            {% endif %} {% endfor %}
+        </div>
+        <div class="localpostagem">
+            <i class="bi bi-tags-fill"></i>
+            {% assign c = page.categories %} {% for a in c %}
+            <a href="{{ site.url }}/{{ a }}/" class="categoriapost"
+                >{{ a | replace: '-', ' ' | replace: 'rom', 'ROM' | replace: 'dnd', 'Dungeons &#38; Dragons' }} </a
+            ><span>, </span>
+            {% endfor %}
+            <br />
+            <i class="bi bi-clock-fill"></i> {{ page.date | date: "%d/%m/%Y"}}
+        </div>
+    </div>
+
+    <div class="corpo">
+        <div class="ladoE">
+            <div class="texto">
+                <figure class="capapostagem">
+                    <img src="{{ page.capa }}" alt="Imagem de Capa de {{ page.title }}" />
+                </figure>
+                <p>
+                    Em Gigantes da Forja Estelar, o grupo é encarregado de um ousado resgate de um renomado ferreiro. A
+                    aventura de 16º nível é inspirada nos recursos apresentados em Bigby Apresenta: Glória dos Gigantes!
+                </p>
+                <p>
+                    A história central gira em torno de Brimskarda, uma lendária ferreira gigante de fogo que busca
+                    recuperar sua posição na hierarquia dos gigantes. Após uma série de erros que ameaçaram sua posição,
+                    Brimskarda decide criar uma máquina de guerra titânica chamada colosso rúnico. Para isso, ela
+                    sequestra o renomado ferreiro humano Theldin, forçando-o a trabalhar na Forja Estelar, uma fornalha
+                    mítica construída no local onde uma estrela caiu na terra.
+                </p>
+                <p>
+                    Os jogadores são chamados a resgatar Theldin e impedir que Brimskarda complete sua criação
+                    destrutiva. A aventura leva os personagens a enfrentar desafios formidáveis, incluindo a navegação
+                    por um lago ácido, a infiltração na Forja Estelar e o confronto com gigantes de fogo e outras
+                    criaturas elementais.
+                </p>
+            </div>
+            <h2 class="secaotitulo" id="secao2"><i class="bi bi-info-circle-fill"></i> Informações da Aventura</h2>
+            <section class="info livro">
+                <figure>
+                    <img loading="lazy" alt="Capa da Aventura" src="/img/capas/gotsf.png" />
+                    <figcaption>Capa da Aventura</figcaption>
+                </figure>
+                <div class="tabelainfo">
+                    <div class="divTable">
+                        <div class="cell cell-head">Título</div>
+                        <div class="cell">Gigantes da Forja Estelar</div>
+
+                        <div class="cell cell-head">Título Original</div>
+                        <div class="cell"><strong>Giants of the Star Forge</strong></div>
+
+                        <div class="cell cell-head">Autor</div>
+                        <div class="cell">{{ page.autorL }}</div>
+
+                        <div class="cell cell-head">Sistema</div>
+                        <div class="cell">Dungeons &#38; Dragons 5ª Edição</div>
+
+                        <div class="cell cell-head">Nível dos Jogadores</div>
+                        <div class="cell">4º nível</div>
+
+                        <div class="cell cell-head">Nº de Páginas</div>
+                        <div class="cell">15</div>
+
+                        <div class="cell cell-head">Formato</div>
+                        <div class="cell">PDF</div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="separador"></div>
+
+            <h3 class="secaotitulo" id="secao3"><i class="bi bi-cloud-arrow-down-fill"></i> Downloads</h3>
+
+            <section class="downloads">
+                <a
+                    href="https://www.mediafire.com/file/h1957wieurfqblt/Gigantes_da_Forja_Estelar.pdf/file"
+                    target="_blank"
+                    class="botaodownload"
+                    id="mediafireD"
+                    ><img src="/img/svg/mediafire.svg" alt="Logo Mediafire" /> Mediafire</a
+                >
+                <a
+                    href="https://drive.google.com/file/d/1H-MKrCLij41FrLGLGGRWg91STEjwEkl7/view?usp=sharing"
+                    class="botaodownload"
+                    id="gdriveD"
+                    target="_blank"
+                    ><img src="/img/svg/gdrive.svg" alt="Logo Google Drive" /> Google Drive</a
+                >
+                <a
+                    href="https://www.dropbox.com/scl/fi/tddag4qubakb6tyi7v9zt/Gigantes-da-Forja-Estelar.pdf?rlkey=dv5ogpuwiqxxxa7jw0qwd5dvc&st=becf0ndd&dl=0"
+                    class="botaodownload"
+                    id="dropboxD"
+                    target="_blank"
+                    ><img src="/img/svg/dropbox.svg" alt="Logo Dropbox" /> Dropbox</a
+                >
+            </section>
+
+            <div class="separador"></div>
+            <h4 class="secaotitulo" id="secao4"><i class="bi bi-link-45deg"></i> Links relacionados</h4>
+            <div class="linksrelacionados">
+                <a target="_blank" href="https://www.dndbeyond.com/claim/source/giants-of-the-star-forge"
+                    >Página da Aventura no D&#38;D Beyond (em inglês)</a
+                >
+            </div>
+        </div>
+        <div class="lateral">
+            <nav class="menulateralrapido">
+                <ul>
+                    <li><a href="#secao1">{{ page.title }}</a></li>
+                    <li><a href="#secao2">Informações da Aventura</a></li>
+                    <li><a href="#secao3">Downloads</a></li>
+                    <li><a href="#secao4">Links Relacionados</a></li>
+                    <li><a href="#secao5">Comentários</a></li>
+                </ul>
+                <div class="separador"></div>
+                <div class="redeslateral">
+                    <p>Compartilhe o post:</p>
+                    {% include compartilhar.html %}
+                </div>
+            </nav>
+        </div>
+    </div>
+</article>
+<div class="corpo corpo2">
+    <div>
+        <div class="separador"></div>
+
+        <section class="comentarios">
+            <h5 class="secaotitulo" id="secao5"><i class="bi bi-chat-dots-fill"></i> Comentários</h5>
+            <div id="disqus_thread"></div>
+            <script>
+                /**
+                 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+
+                var disqus_config = function () {
+                    this.page.url = "{{ site.url }}{{ page.url }}"; // Replace PAGE_URL with your page's canonical URL variable
+                    this.page.identifier = "{{ page.url }}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                };
+                (function () {
+                    // DON'T EDIT BELOW THIS LINE
+                    var d = document,
+                        s = d.createElement("script");
+                    s.src = "https://simple-skans.disqus.com/embed.js";
+                    s.setAttribute("data-timestamp", +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript
+                >Please enable JavaScript to view the
+                <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript
+            >
+        </section>
+    </div>
+
+    <div class="outros">
+        <div class="separador"></div>
+        <h6>Outros Posts</h6>
+        <nav class="outrosposts">
+            {% assign c = site.posts | slice: 0, 8 %} {% for post in c %} {% unless post.title == page.title %}
+            <a href="{{ post.url }}">
+                <figure style="background-image: url({{ post.capa }})"></figure>
+                {{ post.title }}
+            </a>
+
+            {% endunless %} {% endfor %}
+        </nav>
+    </div>
+</div>

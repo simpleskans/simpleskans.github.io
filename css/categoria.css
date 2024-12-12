@@ -83,10 +83,6 @@
     padding-left: 2rem;
 }
 
-.listatags {
-    position: sticky;
-    top: 10rem;
-}
 
 .listatags > ul {
     padding-left: 0;

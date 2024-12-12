@@ -99,6 +99,14 @@ csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
                         {% endfor %}
                     </details>
                 </li>
+                <li>
+                    <details open>
+                        <summary>Nível 20 ({{ site.tags.lvl20 | size }})</summary>
+                        {% assign alfabetica = site.tags.lvl20 | sort_natural %} {% for post in alfabetica %}
+                        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                        {% endfor %}
+                    </details>
+                </li>
             </ul>
         </nav>
     </div>

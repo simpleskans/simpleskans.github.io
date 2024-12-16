@@ -254,7 +254,6 @@ header {
 
 /*Outros posts*/
 
-.postsecundarios,
 .categorias {
     border: 2px var(--corprincipal) solid;
 }
@@ -262,21 +261,6 @@ header {
 .secaotitulo {
     background: var(--corprincipal);
     padding-left: 0.5rem;
-}
-
-.listasecundarios {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem;
-    list-style: none;
-    padding: 1rem;
-    aspect-ratio: 2/1;
-}
-
-.listasecundarios > li > a {
-    margin: auto;
-    overflow: hidden;
-    aspect-ratio: 12/9;
 }
 
 .vertudo {
@@ -290,40 +274,6 @@ header {
 
 .vertudo::after {
     content: " ➜";
-}
-
-@media (max-width: 66.5rem) {
-    .postsecundarios {
-        border: none;
-    }
-
-    .listasecundarios {
-        grid-template-columns: 1fr 1fr;
-        padding: 1rem 0;
-    }
-
-    .listasecundarios > li:last-child {
-        display: none;
-    }
-}
-
-@media (max-width: 35rem) {
-    .listasecundarios {
-        display: flex;
-        flex-wrap: wrap;
-        padding: 1rem 0;
-    }
-    
-    .listasecundarios > li {
-        display: block;
-        aspect-ratio: 3/1.6;
-        width: 100%;
-    }
-    
-    .listasecundarios > li >a {
-        aspect-ratio: initial;
-        height: 100%;
-    }
 }
 
 /*lista categorias*/
@@ -416,4 +366,63 @@ footer {
 
 .breadcrumb {
     display: none;
+}
+
+/*------Lista---------*/
+
+.lista ul {
+    list-style: none;
+    padding: 0;
+    border-top: 2px solid var(--corprincipal);
+}
+
+.capitulolink {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 2px solid var(--corprincipal);
+    height: 100%;
+}
+
+.capitulolink .imagemcapitulo {
+    width: 100%;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 2px solid var(--corprincipal);
+    aspect-ratio: 1/1;
+}
+
+.capitulolink p {
+    font-weight: 700;
+    display: block;
+    font-size: 1.2rem;
+    align-content: center;
+}
+
+.capitulotexto i {
+    padding: 0.1rem;
+    display: block;
+    text-transform: capitalize;
+    background: var(--corprincipal);
+    text-align: center;
+    font-style: normal;
+}
+
+@media (min-width: 59.9rem) {
+    .lista ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .capitulolink p {
+        font-size: 1.4rem;
+        align-content: flex-start;
+    }
+    
+    .capitulotexto {
+     width: calc(100% - 1rem);
+}
 }

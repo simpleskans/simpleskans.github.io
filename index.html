@@ -4,12 +4,18 @@ title: Home
 descricao: 'Simple Skans! Levando o português ao Brasileiro!'
 capa: '/img/logoColorido.png'
 ---
-<div class="aviso"><a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSd3kmGM6NSVNUDX5khxt5P7h4cTKkRghgxgTta3WpgynGjcdw/viewform?usp=header"><img src="/img/aviso.png" alt=""></a></div>
+
+<div class="aviso">
+    <a
+        target="_blank"
+        href="https://docs.google.com/forms/d/e/1FAIpQLSd3kmGM6NSVNUDX5khxt5P7h4cTKkRghgxgTta3WpgynGjcdw/viewform?usp=header"
+        ><img src="/img/aviso.png" alt=""
+    /></a>
+</div>
 <h1 class="ocultar">Simple Skans! Levando o português ao Brasileiro!</h1>
 <h2 class="ocultar">Destaques</h2>
 <section class="destaques">
-    {% assign c = site.posts | slice: 0, 1 %}
-    {% for post in c %}
+    {% assign c = site.posts | slice: 0, 1 %} {% for post in c %}
     <a
         class="postlink ultimopost"
         style="background-image:  url({{ post.capa }});"
@@ -40,23 +46,19 @@ capa: '/img/logoColorido.png'
 
 <div class="separador"></div>
 
-<section class="postsecundarios">
+<section class="lista">
     <h2 class="secaotitulo"><i class="bi bi-file-post"></i> Mais Postagens</h2>
-    <ul class="listasecundarios">
-        {% assign c = site.posts | slice: 3, 9 %} {% for post in c %}
+    <ul>
+        {% assign c = site.posts | slice: 3, 10 %} {% for post in c %}
         <li>
-            <a
-                class="postlink"
-                style="background-image:  url({{ post.capa }});"
-                href="{{ post.url }}"
-                title="{{ post.title }}"
-                ><span
-                    >{{ post.categories | join: '/' | replace: '-', ' ' | replace: 'rom', 'ROM' | replace: 'dnd',
-                    'Dungeons &#38; Dragons'}}</span
-                >
-                <div>
-                    <span>{{ post.title }}</span>
-                    <p>{{ post.resumo }}</p>
+            <a class="capitulolink" href="{{ post.url }}" title="{{ post.title }}">
+                <span class="imagemcapitulo" style="background-image:  url({{ post.capa }});"></span>
+                <div class="capitulotexto">
+                   <i>{{ post.categories | join: '/' | replace: '-', ' ' | replace: 'rom', 'ROM' | replace: 'dnd', 'Dungeons
+            &#38; Dragons'}}</i>
+                    <p>{{ post.title }}</p>
+                    <span>{{ post.resumo }}<br></span>
+                    
                 </div>
             </a>
         </li>

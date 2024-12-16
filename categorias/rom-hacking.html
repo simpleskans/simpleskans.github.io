@@ -31,20 +31,26 @@ csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
             {% endfor %}
         </nav>
         <div class="separador"></div>
-        <div class="categoriarestantes">
-            {% for post in site.categories[current_cat] %} {% unless post == site.categories[current_cat][0] or post ==
-            site.categories[current_cat][1] or post == site.categories[current_cat][2] or post ==
-            site.categories[current_cat][3] or post == site.categories[current_cat][4] or post ==
-            site.categories[current_cat][5] or post == site.categories[current_cat][6] %}
-            <a class="linkrestante" href="{{ post.url }}" title="{{ post.title }}">
-                <figure style="background-image:  url({{ post.capa }});"></figure>
-                <div>
-                    <span class="titulorestante">{{ post.title }}</span>
-                    <p>{{ post.resumo }}</p>
-                    <span><i>{{ post.autorL }}</i></span>
-                </div>
-            </a>
-            {% endunless %} {% endfor %}
+        <div class="lista">
+            <ul>
+                {% for post in site.categories[current_cat] %} {% unless post == site.categories[current_cat][0] or post
+                == site.categories[current_cat][1] or post == site.categories[current_cat][2] or post ==
+                site.categories[current_cat][3] or post == site.categories[current_cat][4] or post ==
+                site.categories[current_cat][5] or post == site.categories[current_cat][6] %}
+                <li>
+                    <a class="capitulolink" href="{{ post.url }}" title="{{ post.title }}">
+                        <span class="imagemcapitulo" style="background-image:  url({{ post.capa }});"></span>
+                        <div class="capitulotexto">
+                            <i
+                                >{{ post.autorL }}</i
+                            >
+                            <p>{{ post.title }}</p>
+                            <span>{{ post.resumo }}<br /></span>
+                        </div>
+                    </a>
+                </li>
+                {% endunless %} {% endfor %}
+            </ul>
         </div>
     </div>
     <div class="ladoD">

@@ -26,6 +26,7 @@ figure > figcaption {
     gap: 1rem;
     padding: 1rem 0;
     border-bottom: 2px solid var(--corprincipal);
+    height: 100%;
 }
 
 .capitulolink .imagemcapitulo {
@@ -42,6 +43,7 @@ figure > figcaption {
     display: block;
     font-size: 1.2rem;
     align-content: center;
+    font-weight: 700;
 }
 
 @media (min-width: 59.9rem) {
@@ -49,7 +51,7 @@ figure > figcaption {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
-    
+
     .capitulolink p {
         font-size: 1.4rem;
         align-content: flex-start;

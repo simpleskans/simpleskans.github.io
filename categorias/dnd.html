@@ -38,7 +38,7 @@ csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
             <h3>Aventuras por nível</h3>
             <ul>
                 <li>
-                    <details open>
+                    <details>
                         <summary>Nível 1 ({{ site.tags.lvl1 | size }})</summary>
                         {% assign alfabetica = site.tags.lvl1 | sort_natural %} {% for post in alfabetica %}
                         <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
@@ -46,7 +46,7 @@ csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
                     </details>
                 </li>
                 <li>
-                    <details open>
+                    <details>
                         <summary>Nível 2 ({{ site.tags.lvl2 | size }})</summary>
                         {% assign alfabetica = site.tags.lvl2 | sort_natural %} {% for post in alfabetica %}
                         <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
@@ -54,7 +54,7 @@ csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
                     </details>
                 </li>
                 <li>
-                    <details open>
+                    <details>
                         <summary>Nível 3 ({{ site.tags.lvl3 | size }})</summary>
                         {% assign alfabetica = site.tags.lvl3 | sort_natural %} {% for post in alfabetica %}
                         <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
@@ -62,7 +62,7 @@ csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
                     </details>
                 </li>
                 <li>
-                    <details open>
+                    <details>
                         <summary>Nível 4 ({{ site.tags.lvl4 | size }})</summary>
                         {% assign alfabetica = site.tags.lvl4 | sort_natural %} {% for post in alfabetica %}
                         <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
@@ -70,7 +70,7 @@ csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
                     </details>
                 </li>
                 <li>
-                    <details open>
+                    <details>
                         <summary>Nível 5 ({{ site.tags.lvl5 | size }})</summary>
                         {% assign alfabetica = site.tags.lvl5 | sort_natural %} {% for post in alfabetica %}
                         <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
@@ -78,7 +78,47 @@ csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
                     </details>
                 </li>
                 <li>
-                    <details open>
+                    <details>
+                        <summary>Nível 6 ({{ site.tags.lvl6 | size }})</summary>
+                        {% assign alfabetica = site.tags.lvl6 | sort_natural %} {% for post in alfabetica %}
+                        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                        {% endfor %}
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>Nível 7 ({{ site.tags.lvl7 | size }})</summary>
+                        {% assign alfabetica = site.tags.lvl7 | sort_natural %} {% for post in alfabetica %}
+                        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                        {% endfor %}
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>Nível 8 ({{ site.tags.lvl8 | size }})</summary>
+                        {% assign alfabetica = site.tags.lvl8 | sort_natural %} {% for post in alfabetica %}
+                        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                        {% endfor %}
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>Nível 9 ({{ site.tags.lvl9 | size }})</summary>
+                        {% assign alfabetica = site.tags.lvl9 | sort_natural %} {% for post in alfabetica %}
+                        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                        {% endfor %}
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>Nível 10 ({{ site.tags.lvl10 | size }})</summary>
+                        {% assign alfabetica = site.tags.lvl10 | sort_natural %} {% for post in alfabetica %}
+                        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                        {% endfor %}
+                    </details>
+                </li>
+                <li>
+                    <details>
                         <summary>Nível 16 ({{ site.tags.lvl16 | size }})</summary>
                         {% assign alfabetica = site.tags.lvl16 | sort_natural %} {% for post in alfabetica %}
                         <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
@@ -86,7 +126,7 @@ csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
                     </details>
                 </li>
                 <li>
-                    <details open>
+                    <details>
                         <summary>Nível 20 ({{ site.tags.lvl20 | size }})</summary>
                         {% assign alfabetica = site.tags.lvl20 | sort_natural %} {% for post in alfabetica %}
                         <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>

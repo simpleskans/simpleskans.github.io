@@ -18,15 +18,7 @@ csscustomizado: <link rel="stylesheet" href="/css/webtoon.css" />
         </figure>
         <h1>{{ page.title }}</h1>
         <span>{{ page.resumo }}</span>
-        <div class="breadcrumb">
-            {% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
-            <a href="{{ site.url }}">Home</a>
-            {% for crumb in crumbs offset: 1 %} {% if forloop.last %} &gt; {{ page.title }} {% else %} &gt;
-            <a href="{{site.url}}/{{ crumb }}/"
-                >{{ crumb | replace:'-',' ' | replace:'dnd','D&#38;D' | remove:'.html' | capitalize }}</a
-            >
-            {% endif %} {% endfor %}
-        </div>
+        
         <div class="localpostagem">
             <i class="bi bi-tags-fill"></i>
             {% assign c = page.categories %} {% for a in c %}

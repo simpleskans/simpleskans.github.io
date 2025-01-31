@@ -1,0 +1,212 @@
+---
+layout: padrao
+title: "Lamento do Unicórnio"
+descricao: 'Tradução da aventura The Dying Unicorn para português do Brasil!'
+categories: dnd
+tags: lvl2
+permalink: /:categories/beyond/:title
+resumo: 'The Dying Unicorn | D&D 5e'
+capa: '/img/postcapa/ldu.png'
+autorL: 'James Haeck'
+csscustomizado: <link rel="stylesheet" href="/css/post.css" />
+---
+
+<article>
+    <div class="titulopostagem">
+        <h1 id="secao1">{{ page.title }}</h1>
+        <span>{{ page.resumo }}</span>
+
+        <div class="localpostagem">
+            <i class="bi bi-tags-fill"></i>
+            {% assign c = page.categories %} {% for a in c %}
+            <a href="{{ site.url }}/{{ a }}/" class="categoriapost"
+                >{{ a | replace: '-', ' ' | replace: 'rom', 'ROM' | replace: 'dnd', 'Dungeons &#38; Dragons' }} </a
+            ><span>, </span>
+            {% endfor %}
+            <br />
+            <i class="bi bi-clock-fill"></i> {{ page.date | date: "%d/%m/%Y"}}
+        </div>
+    </div>
+
+    <div class="corpo">
+        <div class="ladoE">
+            <div class="texto">
+                <figure class="capapostagem">
+                    <img src="{{ page.capa }}" alt="Imagem de Capa de {{ page.title }}" />
+                </figure>
+
+                <p>
+                    Este encontro é o Lamento do Unicórnio, um desafio de quebra-cabeça de alto risco que pode se
+                    transformar em um combate letal caso os personagens não consigam resolver o enigma a tempo. Falando
+                    como designer e Mestre de Jogo, gosto de criar quebra-cabeças com estados de falha superáveis. Em
+                    jogos de videogame como The Legend of Zelda, é aceitável impedir que o jogador avance pela masmorra
+                    até que ele complete um quebra-cabeça obrigatório. Isso não funciona em um jogo como D&D.
+                    Quebra-cabeças em RPGs de mesa precisam de estados de falha além de “Você sofre 2d6 de dano, e o
+                    quebra-cabeça é reiniciado. Tente novamente.”
+                </p>
+                <p>
+                    Neste encontro, falhar em resolver o quebra-cabeça a tempo resulta em uma crise dupla: um PNJ que
+                    implora por ajuda é morto por uma magia maligna, e essa mesma magia o ressuscita como um monstro,
+                    forçando os personagens a enfrentarem um combate mortal. Espero que este encontro pronto não apenas
+                    proporcione uma ou duas horas de diversão, mas também o inspire a criar desafios de quebra-cabeça
+                    ainda melhores!
+                </p>
+                <p>
+                    Uma nascente sagrada repousa no meio de uma floresta verde esmeralda. Todos os dias, ao amanhecer,
+                    um unicórnio de chifre dourado bebe diretamente das águas cristalinas da nascente e, em seguida,
+                    corre alegremente pela floresta. O unicórnio chama-se Ehlona-Vassorum, pois é o fiel vassalo da
+                    deusa da natureza conhecida pela humanidade como Ehlona. A floresta e todas as suas criaturas estão
+                    sob sua proteção, e ele aplica uma justiça rápida àqueles que derrubam as árvores da floresta ou
+                    massacram seus filhos.
+                </p>
+                <p>
+                    Essa criatura é um obstáculo para aqueles que desejam explorar a Floresta de Vassorum para seus
+                    próprios fins. Suas identidades não são importantes — talvez seja um necromante contratado por um
+                    barão da madeira de uma cidade próxima, uma feiticeira sombria que busca aumentar seus poderes
+                    conectando a fonte ao Sombral ou um poderoso diabo que deseja corromper a nascente sagrada de Ehlona
+                    e transformá-la em um portal para Avernus. Este vilão envenenou a nascente de Ehlona com magia
+                    profana, e o unicórnio Ehlona-Vassorum bebeu inadvertidamente de suas águas corrompidas.
+                </p>
+                <p>
+                    Agora, o unicórnio encontra-se deitado de lado, impotente e lentamente morrendo, junto às margens da
+                    nascente. Tudo o que ele precisa para restaurar seus poderes mágicos e se purificar dessa corrupção
+                    é beber novamente das águas purificadas da fonte de sua deusa, mas ele não possui forças para
+                    restaurar a fonte em seu estado enfraquecido. Os personagens acabam encontrando Vassorum enquanto
+                    vagam pela floresta — talvez em busca da ajuda do unicórnio para outra missão.
+                </p>
+            </div>
+            <h2 class="secaotitulo" id="secao2"><i class="bi bi-info-circle-fill"></i> Informações da Aventura</h2>
+            <section class="info livro">
+                <div class="tabelainfo">
+                    <div class="divTable">
+                        <div class="cell cell-head">Título</div>
+                        <div class="cell">{{ page.title }}</div>
+
+                        <div class="cell cell-head">Título Original</div>
+                        <div class="cell">
+                            <strong>The Dying Unicorn</strong>
+                        </div>
+
+                        <div class="cell cell-head">Autor</div>
+                        <div class="cell">{{ page.autorL }}</div>
+
+                        <div class="cell cell-head">Sistema</div>
+                        <div class="cell">Dungeons &#38; Dragons 5ª Edição</div>
+
+                        <div class="cell cell-head">Nível dos Jogadores</div>
+                        <div class="cell">
+                            {% assign c = page.tags %} {% for a in c %} {{ a | replace: 'lvl', ''}}º Nível {% unless
+                            c.last == a %}, {% endunless %} {% endfor %}
+                        </div>
+
+                        <div class="cell cell-head">Nº de Páginas</div>
+                        <div class="cell">8</div>
+
+                        <div class="cell cell-head">Formato</div>
+                        <div class="cell">PDF</div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="separador"></div>
+
+            <h3 class="secaotitulo" id="secao3"><i class="bi bi-cloud-arrow-down-fill"></i> Downloads</h3>
+
+            <section class="downloads">
+                <a
+                    href="https://www.mediafire.com/file/7bjbzwx9xfcbak9/Lamento_do_Unic%25C3%25B3rnio.pdf/file"
+                    target="_blank"
+                    class="botaodownload"
+                    id="mediafireD"
+                    ><img src="/img/svg/mediafire.svg" alt="Logo Mediafire" /> Mediafire</a
+                >
+                <a
+                    href="https://drive.google.com/file/d/1DJ9OfKZxkPJ3yPOAoArkbPyAGHj55tcv/view?usp=sharing"
+                    class="botaodownload"
+                    id="gdriveD"
+                    target="_blank"
+                    ><img src="/img/svg/gdrive.svg" alt="Logo Google Drive" /> Google Drive</a
+                >
+                <a
+                    href="https://www.dropbox.com/scl/fi/gvxwja8ch8gfyom2mzeu4/Lamento-do-Unic-rnio.pdf?rlkey=xz9twiz0rph8hd8c7u6b28l28&st=n1sh4cvj&dl=0"
+                    class="botaodownload"
+                    id="dropboxD"
+                    target="_blank"
+                    ><img src="/img/svg/dropbox.svg" alt="Logo Dropbox" /> Dropbox</a
+                >
+            </section>
+
+            <div class="separador"></div>
+            <h4 class="secaotitulo" id="secao4"><i class="bi bi-link-45deg"></i> Links relacionados</h4>
+            <div class="linksrelacionados">
+                <a
+                    target="_blank"
+                    href="https://www.dndbeyond.com/posts/402-encounter-of-the-week-the-dying-unicorn"
+                    >Página da aventura The Dying Unicorn no D&#38;D Beyond (em inglês)</a
+                >
+            </div>
+        </div>
+        <div class="lateral">
+            <nav class="menulateralrapido">
+                <ul>
+                    <li><a href="#secao1">{{ page.title }}</a></li>
+                    <li><a href="#secao2">Informações da Aventura</a></li>
+                    <li><a href="#secao3">Downloads</a></li>
+                    <li><a href="#secao4">Links Relacionados</a></li>
+                    <li><a href="#secao5">Comentários</a></li>
+                </ul>
+                <div class="separador"></div>
+                <div class="redeslateral">
+                    <p>Compartilhe o post:</p>
+                    {% include compartilhar.html %}
+                </div>
+            </nav>
+        </div>
+    </div>
+</article>
+<div class="corpo corpo2">
+    <div>
+        <div class="separador"></div>
+
+        <section class="comentarios">
+            <h5 class="secaotitulo" id="secao5"><i class="bi bi-chat-dots-fill"></i> Comentários</h5>
+            <div id="disqus_thread"></div>
+            <script>
+                /**
+                 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+
+                var disqus_config = function () {
+                    this.page.url = "{{ site.url }}{{ page.url }}"; // Replace PAGE_URL with your page's canonical URL variable
+                    this.page.identifier = "{{ page.url }}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                };
+                (function () {
+                    // DON'T EDIT BELOW THIS LINE
+                    var d = document,
+                        s = d.createElement("script");
+                    s.src = "https://simple-skans.disqus.com/embed.js";
+                    s.setAttribute("data-timestamp", +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript
+                >Please enable JavaScript to view the
+                <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript
+            >
+        </section>
+    </div>
+
+    <div class="outros">
+        <div class="separador"></div>
+        <h6>Outros Posts</h6>
+        <nav class="outrosposts">
+            {% assign c = site.posts | slice: 0, 8 %} {% for post in c %} {% unless post.title == page.title %}
+            <a href="{{ post.url }}">
+                <figure style="background-image: url({{ post.capa }})"></figure>
+                {{ post.title }}
+            </a>
+
+            {% endunless %} {% endfor %}
+        </nav>
+    </div>
+</div>

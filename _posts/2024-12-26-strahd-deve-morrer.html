@@ -3,7 +3,7 @@ layout: padrao
 title: "Strahd Deve Morrer"
 descricao: 'Descubra três aventuras one-shot emocionantes para Halloween baseadas na campanha &ldquo;A Maldição de Strahd&rdquo; de Dungeons & Dragons.'
 categories: dnd
-tags: lvl6 lvl8 lvl10 
+tags: lvl6 lvl8 lvl10 e5
 permalink: /:categories/beyond/:title
 resumo: 'Strahd Must Die | D&D 5e'
 capa: '/img/postcapa/sdm.png'
@@ -15,7 +15,7 @@ csscustomizado: <link rel="stylesheet" href="/css/post.css" />
     <div class="titulopostagem">
         <h1 id="secao1">{{ page.title }}</h1>
         <span>{{ page.resumo }}</span>
-       
+
         <div class="localpostagem">
             <i class="bi bi-tags-fill"></i>
             {% assign c = page.categories %} {% for a in c %}
@@ -80,7 +80,6 @@ csscustomizado: <link rel="stylesheet" href="/css/post.css" />
             </div>
             <h2 class="secaotitulo" id="secao2"><i class="bi bi-info-circle-fill"></i> Informações da Aventura</h2>
             <section class="info livro">
-                
                 <div class="tabelainfo">
                     <div class="divTable">
                         <div class="cell cell-head">Título</div>
@@ -99,9 +98,8 @@ csscustomizado: <link rel="stylesheet" href="/css/post.css" />
 
                         <div class="cell cell-head">Nível dos Jogadores</div>
                         <div class="cell">
-                            {% assign c = page.tags %} {% for a in c %} {{ a | replace: 'lvl', ''}}º Nível
-                            {% unless c.last == a %}, 
-                            {% endunless %} {% endfor %}
+                            {% assign c = page.tags %} {% for a in c %} {{ a | replace: 'lvl', ''}}º Nível {% unless
+                            c.last == a %}, {% endunless %} {% endfor %}
                         </div>
 
                         <div class="cell cell-head">Nº de Páginas</div>
@@ -126,7 +124,7 @@ csscustomizado: <link rel="stylesheet" href="/css/post.css" />
                     ><img src="/img/svg/mediafire.svg" alt="Logo Mediafire" /> Mediafire</a
                 >
                 <a
-                    href="https://drive.google.com/file/d/1Oiw4YD9y0RT-lZQtESPH25LSV5i61n5o/view?usp=sharing"
+                    href="https://drive.google.com/file/d/19X-wS21rOsl3Ve74eG_hTeMCwkck0Mu9/view?usp=sharing"
                     class="botaodownload"
                     id="gdriveD"
                     target="_blank"
@@ -144,16 +142,16 @@ csscustomizado: <link rel="stylesheet" href="/css/post.css" />
             <div class="separador"></div>
             <h4 class="secaotitulo" id="secao4"><i class="bi bi-link-45deg"></i> Links relacionados</h4>
             <div class="linksrelacionados">
-                <a target="_blank" href="https://www.dndbeyond.com/posts/359-strahd-must-die-tonight-how-to-play-ravenloft-in-a"
+                <a
+                    target="_blank"
+                    href="https://www.dndbeyond.com/posts/359-strahd-must-die-tonight-how-to-play-ravenloft-in-a"
                     >Página da aventura Strahd Must Die Tonight! no D&#38;D Beyond (em inglês)</a
                 >
 
                 <a target="_blank" href="https://www.dndbeyond.com/posts/647-strahd-must-die-again-and-again-and-again"
                     >Página da aventura Strahd Must Die Again no D&#38;D Beyond (em inglês)</a
                 >
-                <a
-                    target="_blank"
-                    href="https://www.dndbeyond.com/posts/895-strahd-must-die-in-space"
+                <a target="_blank" href="https://www.dndbeyond.com/posts/895-strahd-must-die-in-space"
                     >Página da aventura Strahd Must Die... IN SPACE! no D&#38;D Beyond (em inglês)</a
                 >
             </div>

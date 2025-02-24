@@ -81,11 +81,21 @@ csscustomizado: <link rel="stylesheet" href="/css/post.css" />
                         <div class="cell cell-head">Autor</div>
                         <div class="cell">{{ page.autorL }}</div>
 
+                        <div class="cell cell-head">ID</div>
+                        <div class="cell">DB89</div>
+
                         <div class="cell cell-head">Sistema</div>
-                        <div class="cell">Dungeons &#38; Dragons 5ª Edição</div>
+                        <div class="cell">
+                            {% if page.tags.last == 'e5' %} Dungeons &amp; Dragons 5ª Edição {% endif %} {% if
+                            page.tags.last == 'e55' %} Dungeons &amp; Dragons 2024 {% endif %} {% if page.tags.last ==
+                            'e3' %} Dungeons &amp; Dragons 3ª Edição {% endif %}
+                        </div>
 
                         <div class="cell cell-head">Nível dos Jogadores</div>
-                        <div class="cell">20º nível</div>
+                        <div class="cell">
+                            {% assign c = page.tags %} {% for a in c %} {% unless c.last == a %} {% unless c.first == a
+                            %} - {% endunless %} {{ a | replace: 'lvl', ''}}º Nível {% endunless %} {% endfor %}
+                        </div>
 
                         <div class="cell cell-head">Nº de Páginas</div>
                         <div class="cell">18</div>

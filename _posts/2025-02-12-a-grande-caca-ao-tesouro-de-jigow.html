@@ -1,0 +1,188 @@
+---
+layout: padrao
+title: "A Grande Caça ao Tesouro de Jigow!"
+descricao: 'Tradução da aventura The Great Jigow Scavenger Hunt! para português do Brasil!'
+categories: dnd
+tags: lvl3 e5
+permalink: /:categories/beyond/:title
+resumo: 'The Great Jigow Scavenger Hunt! | D&D 5e'
+capa: '/img/postcapa/gctj.png'
+autorL: 'James Haeck'
+csscustomizado: <link rel="stylesheet" href="/css/post.css" />
+---
+
+<article>
+    <div class="titulopostagem">
+        <h1 id="secao1">{{ page.title }}</h1>
+        <span>{{ page.resumo }}</span>
+
+        <div class="localpostagem">
+            <i class="bi bi-tags-fill"></i>
+            {% assign c = page.categories %} {% for a in c %}
+            <a href="{{ site.url }}/{{ a }}/" class="categoriapost"
+                >{{ a | replace: '-', ' ' | replace: 'rom', 'ROM' | replace: 'dnd', 'Dungeons &#38; Dragons' }} </a
+            ><span>, </span>
+            {% endfor %}
+            <br />
+            <i class="bi bi-clock-fill"></i> {{ page.date | date: "%d/%m/%Y"}}
+        </div>
+    </div>
+
+    <div class="corpo">
+        <div class="ladoE">
+            <div class="texto">
+                <figure class="capapostagem">
+                    <img src="{{ page.capa }}" alt="Imagem de Capa de {{ page.title }}" />
+                </figure>
+
+                <p>
+                    A aventura A Grande Caça ao Tesouro de Jigow, os personagens dos jogadores precisam resolver enigmas
+                    e superar desafios de habilidade para recuperar uma caixa de suprimentos roubada. Essa aventura
+                    gratuita de D&amp;D pode ser jogada como uma aventura independente ou servir como um prólogo para o
+                    primeiro capítulo de Critical Role: Call of the Netherdeep.
+                </p>
+                <p>
+                    <i>A Grande Caça ao Tesouro de Jigow</i> apresenta a cidade de Jigow, diversos PNJs de Call of the
+                    Netherdeep, e inclui um mapa gratuito da cidade. A aventura pode ser concluída em uma a duas horas
+                    por um grupo de três ou quatro personagens de 3º nível usando as regras básicas.
+                </p>
+                <p>
+                    Essa one-shot acontece na véspera do Festival do Mérito, uma celebração anual repleta de competições
+                    de força e astúcia. Enquanto os moradores se preparam para o evento, os personagens descobrem que
+                    uma pequena caixa com prêmios do festival desapareceu—e que alguém deixou pistas sobre sua
+                    localização. Com a missão de recuperar a caixa, os personagens precisarão decifrar enigmas e visitar
+                    diversos locais em Jigow para trazer os prêmios de volta a tempo para o festival.
+                </p>
+                <p>
+                    Os personagens explorarão vários locais na cidade para desvendar enigmas e enfrentar monstros
+                    inesperados enquanto recuperam os itens roubados. Personagens habilidosos em investigação e astúcia
+                    terão um desempenho melhor nesta aventura, enquanto aqueles que sabem ler bem as pessoas podem obter
+                    ajuda extra para completar a missão.
+                </p>
+            </div>
+            <h2 class="secaotitulo" id="secao2"><i class="bi bi-info-circle-fill"></i> Informações da Aventura</h2>
+            <section class="info livro">
+                <div class="tabelainfo">
+                    <div class="divTable">
+                        <div class="cell cell-head">Título</div>
+                        <div class="cell">{{ page.title }}</div>
+
+                        <div class="cell cell-head">Título Original</div>
+                        <div class="cell">
+                            <strong>The Great Jigow Scavenger Hunt!</strong>
+                        </div>
+
+                        <div class="cell cell-head">Autor</div>
+                        <div class="cell">{{ page.autorL }}</div>
+
+                        <div class="cell cell-head">ID</div>
+                        <div class="cell">DB88</div>
+
+                        <div class="cell cell-head">Sistema</div>
+                        <div class="cell">
+                            {% if page.tags.last == 'e5' %} Dungeons &amp; Dragons 5ª Edição {% endif %} {% if
+                            page.tags.last == 'e55' %} Dungeons &amp; Dragons 2024 {% endif %} {% if page.tags.last ==
+                            'e3' %} Dungeons &amp; Dragons 3ª Edição {% endif %}
+                        </div>
+
+                        <div class="cell cell-head">Nível dos Jogadores</div>
+                        <div class="cell">
+                            {% assign c = page.tags %} {% for a in c %} {% unless c.last == a %} {% unless c.first == a
+                            %} - {% endunless %} {{ a | replace: 'lvl', ''}}º Nível {% endunless %} {% endfor %}
+                        </div>
+
+                        <div class="cell cell-head">Nº de Páginas</div>
+                        <div class="cell">10</div>
+
+                        <div class="cell cell-head">Formato</div>
+                        <div class="cell">PDF</div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="separador"></div>
+
+            <h3 class="secaotitulo" id="secao3"><i class="bi bi-cloud-arrow-down-fill"></i> Downloads</h3>
+
+            <section class="downloads">
+                <a
+                    href="https://drive.google.com/file/d/1LAT-AY_tq3-VP8hxzSdB0Dn4IAOdJo2V/view?usp=sharing"
+                    class="botaodownload"
+                    id="gdriveD"
+                    target="_blank"
+                    ><img src="/img/svg/gdrive.svg" alt="Logo Google Drive" /> Google Drive</a
+                >
+            </section>
+
+            <div class="separador"></div>
+            <h4 class="secaotitulo" id="secao4"><i class="bi bi-link-45deg"></i> Links relacionados</h4>
+            <div class="linksrelacionados">
+                <a target="_blank" href="https://www.dndbeyond.com/posts/1194-free-d-d-adventure-retrieve-stolen-festival"
+                    >Página da aventura The Great Jigow Scavenger Hunt! no D&#38;D Beyond (em inglês)</a
+                >
+            </div>
+        </div>
+        <div class="lateral">
+            <nav class="menulateralrapido">
+                <ul>
+                    <li><a href="#secao1">{{ page.title }}</a></li>
+                    <li><a href="#secao2">Informações da Aventura</a></li>
+                    <li><a href="#secao3">Downloads</a></li>
+                    <li><a href="#secao4">Links Relacionados</a></li>
+                    <li><a href="#secao5">Comentários</a></li>
+                </ul>
+                <div class="separador"></div>
+                <div class="redeslateral">
+                    <p>Compartilhe o post:</p>
+                    {% include compartilhar.html %}
+                </div>
+            </nav>
+        </div>
+    </div>
+</article>
+<div class="corpo corpo2">
+    <div>
+        <div class="separador"></div>
+
+        <section class="comentarios">
+            <h5 class="secaotitulo" id="secao5"><i class="bi bi-chat-dots-fill"></i> Comentários</h5>
+            <div id="disqus_thread"></div>
+            <script>
+                /**
+                 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+
+                var disqus_config = function () {
+                    this.page.url = "{{ site.url }}{{ page.url }}"; // Replace PAGE_URL with your page's canonical URL variable
+                    this.page.identifier = "{{ page.url }}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                };
+                (function () {
+                    // DON'T EDIT BELOW THIS LINE
+                    var d = document,
+                        s = d.createElement("script");
+                    s.src = "https://simple-skans.disqus.com/embed.js";
+                    s.setAttribute("data-timestamp", +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript
+                >Please enable JavaScript to view the
+                <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript
+            >
+        </section>
+    </div>
+
+    <div class="outros">
+        <div class="separador"></div>
+        <h6>Outros Posts</h6>
+        <nav class="outrosposts">
+            {% assign c = site.posts | slice: 0, 8 %} {% for post in c %} {% unless post.title == page.title %}
+            <a href="{{ post.url }}">
+                <figure style="background-image: url({{ post.capa }})"></figure>
+                {{ post.title }}
+            </a>
+
+            {% endunless %} {% endfor %}
+        </nav>
+    </div>
+</div>

@@ -1,0 +1,198 @@
+---
+layout: padrao
+title: "Jornada para Faéria"
+descricao: 'Tradução da aventura Journey to the Feywild para português do Brasil!'
+categories: dnd
+tags: lvl1 lvl5 e5
+permalink: /:categories/beyond/:title
+resumo: 'Journey to the Feywild | D&D 5e'
+capa: '/img/postcapa/jpf.png'
+autorL: 'Mike Bernier'
+csscustomizado: <link rel="stylesheet" href="/css/post.css" />
+---
+
+<article>
+    <div class="titulopostagem">
+        <h1 id="secao1">{{ page.title }}</h1>
+        <span>{{ page.resumo }}</span>
+
+        <div class="localpostagem">
+            <i class="bi bi-tags-fill"></i>
+            {% assign c = page.categories %} {% for a in c %}
+            <a href="{{ site.url }}/{{ a }}/" class="categoriapost"
+                >{{ a | replace: '-', ' ' | replace: 'rom', 'ROM' | replace: 'dnd', 'Dungeons &#38; Dragons' }} </a
+            ><span>, </span>
+            {% endfor %}
+            <br />
+            <i class="bi bi-clock-fill"></i> {{ page.date | date: "%d/%m/%Y"}}
+        </div>
+    </div>
+
+    <div class="corpo">
+        <div class="ladoE">
+            <div class="texto">
+                <figure class="capapostagem">
+                    <img src="{{ page.capa }}" alt="Imagem de Capa de {{ page.title }}" />
+                </figure>
+
+                <p>
+                    Faéria é um plano vasto e perigoso, repleto de magia selvagem, criaturas astutas e uma natureza
+                    intocada. Todos esses elementos fazem dele um cenário incrível para a próxima aventura de D&amp;D,
+                    <i>Maravilhas Além do Luz de Bruxa</i>. Mas você não precisa esperar pelo lançamento do livro para
+                    levar seus personagens para Faéria. Aqui estão duas aventuras curtas ambientadas no Plano das Fadas:
+                    “Problemas com Pixies” e “A Barganha com uma Megera”.
+                </p>
+                <p>
+                    <i>Problemas com Pixies: </i>Enquanto estava na Floresta do Arvoredo Ancestral, Arveene atravessou
+                    sem querer uma travessia feérica para a Faéria e encontrou uma clareira onde crescia uma flor
+                    iridescente e curiosa. Ela colheu a flor e, sem problemas, retornou para casa, onde agora mantém a
+                    flor em um vaso na mesa próxima à porta de entrada. Esse ato de vandalismo enfureceu um grupo de
+                    pixies que habitam a clareira. Eles seguiram Arveene até a vila e começaram a atrair crianças para a
+                    Faéria como vingança.
+                </p>
+                <p>
+                    Os pixies, em geral, são bem-intencionados e criaram laços com as crianças que levaram. Eles brincam
+                    de esconde-esconde, comem frutas deliciosas da Faéria e se divertem juntos. Porém, para desespero
+                    dos pais, os pixies têm pouca noção da passagem do tempo no Plano Material. Se as crianças não forem
+                    resgatadas, podem passar anos ou até décadas em Faéria enquanto poucos dias se passam no mundo
+                    mortal.
+                </p>
+                <p>
+                    <i>Barganha com uma Megera:</i> Titia Agnes quer que o grupo se infiltre em uma travessia feérica
+                    próxima, entre em uma clareira protegida por dríades e roube água de sua fonte sagrada. Ela afirma
+                    que a água da fonte é uma excelente base para suas poções e fornece um frasco especial que permite
+                    trazer a água de volta ao Plano Material.
+                </p>
+                <p>
+                    O que ela não conta é que o frasco é, na verdade, uma bolsa cabe tudo modificada, projetada para
+                    absorver toda a água da fonte. A floresta feérica ao redor da fonte depende da magia da água para
+                    permanecer saudável e começará a morrer se a fonte for esgotada. Uma vez cheio, o frasco não pode
+                    absorver mais água e só pode ser esvaziado por Titia Agnes.
+                </p>
+            </div>
+            <h2 class="secaotitulo" id="secao2"><i class="bi bi-info-circle-fill"></i> Informações da Aventura</h2>
+            <section class="info livro">
+                <div class="tabelainfo">
+                    <div class="divTable">
+                        <div class="cell cell-head">Título</div>
+                        <div class="cell">{{ page.title }}</div>
+
+                        <div class="cell cell-head">Título Original</div>
+                        <div class="cell">
+                            <strong>Journey to the Feywild</strong>
+                        </div>
+
+                        <div class="cell cell-head">Autor</div>
+                        <div class="cell">{{ page.autorL }}</div>
+
+                        <div class="cell cell-head">ID</div>
+                        <div class="cell">DB84</div>
+
+                        <div class="cell cell-head">Sistema</div>
+                        <div class="cell">
+                            {% if page.tags.last == 'e5' %} Dungeons &amp; Dragons 5ª Edição {% endif %} {% if
+                            page.tags.last == 'e55' %} Dungeons &amp; Dragons 2024 {% endif %} {% if page.tags.last ==
+                            'e3' %} Dungeons &amp; Dragons 3ª Edição {% endif %}
+                        </div>
+
+                        <div class="cell cell-head">Nível dos Jogadores</div>
+                        <div class="cell">
+                            {% assign c = page.tags %} {% for a in c %} {% unless c.last == a %} {% unless c.first == a
+                            %} - {% endunless %} {{ a | replace: 'lvl', ''}}º Nível {% endunless %} {% endfor %}
+                        </div>
+
+                        <div class="cell cell-head">Nº de Páginas</div>
+                        <div class="cell">6</div>
+
+                        <div class="cell cell-head">Formato</div>
+                        <div class="cell">PDF</div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="separador"></div>
+
+            <h3 class="secaotitulo" id="secao3"><i class="bi bi-cloud-arrow-down-fill"></i> Downloads</h3>
+
+            <section class="downloads">
+                <a
+                    href="https://drive.google.com/file/d/1wYy0XmN_vVcN_Y642o5oOnRq_m731P1F/view?usp=sharing"
+                    class="botaodownload"
+                    id="gdriveD"
+                    target="_blank"
+                    ><img src="/img/svg/gdrive.svg" alt="Logo Google Drive" /> Google Drive</a
+                >
+            </section>
+
+            <div class="separador"></div>
+            <h4 class="secaotitulo" id="secao4"><i class="bi bi-link-45deg"></i> Links relacionados</h4>
+            <div class="linksrelacionados">
+                <a target="_blank" href="https://www.dndbeyond.com/posts/1025-journey-to-the-feywild-with-these-free-adventures"
+                    >Página da aventura The Lost Minotaur no D&#38;D Beyond (em inglês)</a
+                >
+            </div>
+        </div>
+        <div class="lateral">
+            <nav class="menulateralrapido">
+                <ul>
+                    <li><a href="#secao1">{{ page.title }}</a></li>
+                    <li><a href="#secao2">Informações da Aventura</a></li>
+                    <li><a href="#secao3">Downloads</a></li>
+                    <li><a href="#secao4">Links Relacionados</a></li>
+                    <li><a href="#secao5">Comentários</a></li>
+                </ul>
+                <div class="separador"></div>
+                <div class="redeslateral">
+                    <p>Compartilhe o post:</p>
+                    {% include compartilhar.html %}
+                </div>
+            </nav>
+        </div>
+    </div>
+</article>
+<div class="corpo corpo2">
+    <div>
+        <div class="separador"></div>
+
+        <section class="comentarios">
+            <h5 class="secaotitulo" id="secao5"><i class="bi bi-chat-dots-fill"></i> Comentários</h5>
+            <div id="disqus_thread"></div>
+            <script>
+                /**
+                 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+
+                var disqus_config = function () {
+                    this.page.url = "{{ site.url }}{{ page.url }}"; // Replace PAGE_URL with your page's canonical URL variable
+                    this.page.identifier = "{{ page.url }}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                };
+                (function () {
+                    // DON'T EDIT BELOW THIS LINE
+                    var d = document,
+                        s = d.createElement("script");
+                    s.src = "https://simple-skans.disqus.com/embed.js";
+                    s.setAttribute("data-timestamp", +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript
+                >Please enable JavaScript to view the
+                <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript
+            >
+        </section>
+    </div>
+
+    <div class="outros">
+        <div class="separador"></div>
+        <h6>Outros Posts</h6>
+        <nav class="outrosposts">
+            {% assign c = site.posts | slice: 0, 8 %} {% for post in c %} {% unless post.title == page.title %}
+            <a href="{{ post.url }}">
+                <figure style="background-image: url({{ post.capa }})"></figure>
+                {{ post.title }}
+            </a>
+
+            {% endunless %} {% endfor %}
+        </nav>
+    </div>
+</div>

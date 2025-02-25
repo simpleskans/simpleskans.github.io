@@ -1,0 +1,213 @@
+---
+layout: padrao
+title: "Memórias Congeladas"
+descricao: 'Tradução da aventura Frozen Memories para português do Brasil!'
+categories: dnd
+tags: lvl5 e5
+permalink: /:categories/beyond/:title
+resumo: 'Frozen Memories | D&D 5e'
+capa: '/img/postcapa/mc.png'
+autorL: 'James Haeck'
+csscustomizado: <link rel="stylesheet" href="/css/post.css" />
+---
+
+<article>
+    <div class="titulopostagem">
+        <h1 id="secao1">{{ page.title }}</h1>
+        <span>{{ page.resumo }}</span>
+
+        <div class="localpostagem">
+            <i class="bi bi-tags-fill"></i>
+            {% assign c = page.categories %} {% for a in c %}
+            <a href="{{ site.url }}/{{ a }}/" class="categoriapost"
+                >{{ a | replace: '-', ' ' | replace: 'rom', 'ROM' | replace: 'dnd', 'Dungeons &#38; Dragons' }} </a
+            ><span>, </span>
+            {% endfor %}
+            <br />
+            <i class="bi bi-clock-fill"></i> {{ page.date | date: "%d/%m/%Y"}}
+        </div>
+    </div>
+
+    <div class="corpo">
+        <div class="ladoE">
+            <div class="texto">
+                <figure class="capapostagem">
+                    <img src="{{ page.capa }}" alt="Imagem de Capa de {{ page.title }}" />
+                </figure>
+
+                <p>
+                    Esta semana, a série Encontro da Semana oferece uma aventura completa e gratuita que você pode jogar
+                    à medida que os dias ficam curtos e o tempo esfria! Se você não tem tempo para jogar uma campanha
+                    completa de Vale do Vento Gélido, você ainda pode desfrutar dos horrores que esperam por você no
+                    gelo.
+                </p>
+                <p>
+                    Esta aventura se passa em uma vila nevada do norte chamada Brumendell. Populado principalmente por
+                    seres humanos, anões e orcs, esta cidade pode ser encontrada em qualquer ambiente de campanha. Se
+                    você estiver jogando Vale do Vento Gélido: Sob o Frio da Dama Invernal, você pode inserir esta
+                    cidade nos resíduos cobertos de neve do Vale do Vento Gélido com pouca dificuldade. Você também pode
+                    colocar esta aldeia nas Terras Selvagens Greying em Wildemount, as ilhas geladas do norte dos
+                    Principados de Lhazaar em Eberron, ou os vales das Montanhas Oraniad em Theros.
+                </p>
+                <p>
+                    Uma aventureira famosa desapareceu. Elemine Hemlock, uma caçadora de monstros conhecida por viajar
+                    entre vilarejos nos reinos do norte, matando bestas sobrenaturais por moedas, desapareceu após
+                    aceitar um emprego perto de um vilarejo nevado e sem litoral chamado Brumendell. O vilarejo existe
+                    no meio do nada, mas aventureiros da região frequentemente o usam como um lugar para descansar entre
+                    as expedições na natureza congelada. O vilarejo é lar de um comércio próspero de relíquias, poções,
+                    componentes de magia e pousadas confortáveis; todos serviços que os aventureiros acham mais
+                    valiosos.
+                </p>
+                <p>
+                    Elemine Hemlock desapareceu enquanto caçava a Serpe Branca, uma besta mítica dita viver nas
+                    montanhas próximas. Diz-se que seu sangue protege o corpo contra o frio se ingerido, sua pele
+                    reflete magia e seus chifres perfuram aço sólido. Assumiu-se que Hemlock foi morta lutando contra a
+                    besta, mas a verdade é muito mais sombria. A Serpe Branca pode ou não existir - isso depende do
+                    Mestre - mas existe um monstro que realmente está em Brumendell: um oblexo. Os habitantes de
+                    Brumendell sabem que existe uma entrada para a Umbraeterna perto da cidade, mas a maioria desconhece
+                    que um par de oblexs - gosmas psíquicas carmesim que devoram pensamentos criadas por meio de
+                    experimentos dos flagelos mentais - emergiram da Umbraeterna e fizeram sua morada sob a cidade.
+                </p>
+                <p>
+                    Os oblexos criaram sua toca no sistema de esgoto subterrâneo da cidade e começaram a devorar e
+                    substituir as pessoas de Brumendell por cópias. Essas criaturas podem transformar ramificações de
+                    seus corpos amorfos em réplicas físicas quase perfeitas das criaturas cujos pensamentos devoraram, e
+                    suas habilidades psíquicas lhes conferem uma lembrança igualmente perfeita das memórias e
+                    personalidades das vítimas. As únicas pistas são um minúsculo rastro de gosma carmesim que conecta a
+                    réplica do oblexo ao seu corpo original, um cheiro de enxofre e uma aversão a chamas.
+                </p>
+                <p>
+                    Os oblexos copiaram várias figuras-chave na cidade e estão gerando mais oblexos na tentativa de
+                    assumir o controle total da cidade. O desaparecimento de Elemine Hemlock é um contratempo em seus
+                    planos. Eles não sabiam que ela era uma aventureira famosa quando a mataram, mas agora seu
+                    desaparecimento está atraindo aspirantes a heróis de todas as partes do mundo para seu pequeno
+                    refúgio. Essas criaturas estão tentando manter os habitantes da cidade calmos e eliminar quaisquer
+                    intrusos até que possam incubar novos oblexos e assumir o controle da cidade.
+                </p>
+            </div>
+            <h2 class="secaotitulo" id="secao2"><i class="bi bi-info-circle-fill"></i> Informações da Aventura</h2>
+            <section class="info livro">
+                <div class="tabelainfo">
+                    <div class="divTable">
+                        <div class="cell cell-head">Título</div>
+                        <div class="cell">{{ page.title }}</div>
+
+                        <div class="cell cell-head">Título Original</div>
+                        <div class="cell">
+                            <strong>Frozen Memories</strong>
+                        </div>
+
+                        <div class="cell cell-head">Autor</div>
+                        <div class="cell">{{ page.autorL }}</div>
+
+                        <div class="cell cell-head">ID</div>
+                        <div class="cell">DB80</div>
+
+                        <div class="cell cell-head">Sistema</div>
+                        <div class="cell">
+                            {% if page.tags.last == 'e5' %} Dungeons &amp; Dragons 5ª Edição {% endif %} {% if
+                            page.tags.last == 'e55' %} Dungeons &amp; Dragons 2024 {% endif %} {% if page.tags.last ==
+                            'e3' %} Dungeons &amp; Dragons 3ª Edição {% endif %}
+                        </div>
+
+                        <div class="cell cell-head">Nível dos Jogadores</div>
+                        <div class="cell">
+                            {% assign c = page.tags %} {% for a in c %} {% unless c.last == a %} {% unless c.first == a
+                            %} - {% endunless %} {{ a | replace: 'lvl', ''}}º Nível {% endunless %} {% endfor %}
+                        </div>
+
+                        <div class="cell cell-head">Nº de Páginas</div>
+                        <div class="cell">9</div>
+
+                        <div class="cell cell-head">Formato</div>
+                        <div class="cell">PDF</div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="separador"></div>
+
+            <h3 class="secaotitulo" id="secao3"><i class="bi bi-cloud-arrow-down-fill"></i> Downloads</h3>
+
+            <section class="downloads">
+                <a
+                    href="https://drive.google.com/file/d/1-NDDiyaWbcJZnMSRC7a7VPN0gFbbeVeC/view?usp=sharing"
+                    class="botaodownload"
+                    id="gdriveD"
+                    target="_blank"
+                    ><img src="/img/svg/gdrive.svg" alt="Logo Google Drive" /> Google Drive</a
+                >
+            </section>
+
+            <div class="separador"></div>
+            <h4 class="secaotitulo" id="secao4"><i class="bi bi-link-45deg"></i> Links relacionados</h4>
+            <div class="linksrelacionados">
+                <a target="_blank" href="https://www.dndbeyond.com/posts/870-encounter-of-the-week-frozen-memories"
+                    >Página da aventura Frozen Memories no D&#38;D Beyond (em inglês)</a
+                >
+            </div>
+        </div>
+        <div class="lateral">
+            <nav class="menulateralrapido">
+                <ul>
+                    <li><a href="#secao1">{{ page.title }}</a></li>
+                    <li><a href="#secao2">Informações da Aventura</a></li>
+                    <li><a href="#secao3">Downloads</a></li>
+                    <li><a href="#secao4">Links Relacionados</a></li>
+                    <li><a href="#secao5">Comentários</a></li>
+                </ul>
+                <div class="separador"></div>
+                <div class="redeslateral">
+                    <p>Compartilhe o post:</p>
+                    {% include compartilhar.html %}
+                </div>
+            </nav>
+        </div>
+    </div>
+</article>
+<div class="corpo corpo2">
+    <div>
+        <div class="separador"></div>
+
+        <section class="comentarios">
+            <h5 class="secaotitulo" id="secao5"><i class="bi bi-chat-dots-fill"></i> Comentários</h5>
+            <div id="disqus_thread"></div>
+            <script>
+                /**
+                 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+
+                var disqus_config = function () {
+                    this.page.url = "{{ site.url }}{{ page.url }}"; // Replace PAGE_URL with your page's canonical URL variable
+                    this.page.identifier = "{{ page.url }}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                };
+                (function () {
+                    // DON'T EDIT BELOW THIS LINE
+                    var d = document,
+                        s = d.createElement("script");
+                    s.src = "https://simple-skans.disqus.com/embed.js";
+                    s.setAttribute("data-timestamp", +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript
+                >Please enable JavaScript to view the
+                <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript
+            >
+        </section>
+    </div>
+
+    <div class="outros">
+        <div class="separador"></div>
+        <h6>Outros Posts</h6>
+        <nav class="outrosposts">
+            {% assign c = site.posts | slice: 0, 8 %} {% for post in c %} {% unless post.title == page.title %}
+            <a href="{{ post.url }}">
+                <figure style="background-image: url({{ post.capa }})"></figure>
+                {{ post.title }}
+            </a>
+
+            {% endunless %} {% endfor %}
+        </nav>
+    </div>
+</div>

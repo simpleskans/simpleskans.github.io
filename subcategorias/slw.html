@@ -18,14 +18,13 @@ csscustomizado: <link rel="stylesheet" href="/css/listacapitulos.css" />
     <div class="separador"></div>
     <nav class="lista">
         <ul>
-            {% assign i = 1 %} {% assign c = site.tags.slw %} {% for post in c reversed %}
+             {% assign c = site.tags.slw %} {% for post in c reversed %}
 
             <li>
                 <a class="capitulolink" href="{{ post.url }}">
                     <span class="imagemcapitulo" style="background-image:  url({{ post.capa }});"></span>
-                    <p>{{ i }}. {{ post.title }}</p>
+                    <p>{{ post.numero }}. {{ post.title }}</p>
                 </a>
-                {% capture i %}{{ i | plus:1 }}{% endcapture %}
             </li>
             {% endfor %}
         </ul>

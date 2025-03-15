@@ -1,5 +1,8 @@
 <section class="navegarcaps">
                 <nav>
+                                 
+                
+                  
                    {% for post in site.tags.slw %}
                         {% if post.url == page.url %}
                             {% assign post_index0 = forloop.index0 %}
@@ -15,7 +18,7 @@
                         {% endif %}
                     {% endfor %}
                      {% if prev_post %}
-                        <a href="{{ prev_post }}"><i class="bi bi-arrow-90deg-left"></i> Capítulo Anterior</a>
+                        <a href="{{ prev_post }}"><i class="bi bi-arrow-90deg-left"></i>  Capítulo Anterior</a>
                     {% endif %}
                     
                     
@@ -27,6 +30,6 @@
                     {% if next_post %}
                         <a href="{{ next_post }}"><i class="bi bi-arrow-90deg-right"></i> Próximo Capítulo</a>
                     {% endif %}
-                    <!--<a href="{{ site.url }}/smash-legends/slw-capitulo-3"><i class="bi bi-arrow-90deg-right"></i> Capítulo 3</a>-->
+                   
                 </nav>
             </section>

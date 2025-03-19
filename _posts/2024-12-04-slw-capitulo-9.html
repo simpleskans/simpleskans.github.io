@@ -1,21 +1,21 @@
 ---
 layout: padrao
-title: "[S3] Encrenqueiros, Saiam!"
-descricao: 'Tradução do Capítulo 02 do Smash Pass de Smash Legends para português'
+title: "A Vingadora da Torre Arruinada"
+descricao: 'Tradução do Capítulo 09 da Webtoon de Smash Legends para português'
 categories: smash-legends
-tags: slsp flare
+tags: slw rapunzel
 permalink: /:categories/:title
-resumo: 'Capítulo 2 | Smash Pass'
-capa: '/img/postcapa/slsp2.png'
-autorL: 'Season 3'
+resumo: 'Capítulo 9 | Webtoon'
+capa: '/img/postcapa/slw9.png'
+autorL: 'Jan Young/Ryu Ho Sung'
 csscustomizado: <link rel="stylesheet" href="/css/webtoon.css" />
-numero: 2
+numero: 9
 ---
 
 <article>
     <div class="topowebtoon">
         <figure>
-        <img src="{{ page.capa }}" alt="Capa de {{ page.title }}" style="object-position: center 10%;" />
+            <img src="{{ page.capa }}" alt="Capa de {{ page.title }}" style="object-position: center 50%" />
         </figure>
         <h1>{{ page.title }}</h1>
         <span>{{ page.resumo }}</span>
@@ -33,15 +33,31 @@ numero: 2
     </div>
     <div class="corpo">
         <div class="ladoE">
-           {% include capnav.html %} 
-           <div class="separador"></div>
+            {% include capnav.html %} 
+            <div class="separador"></div>
             <section class="galeriawebtoon">
                 <figure>
-                    <img loading="lazy" src="https://i.imgur.com/i6JscZY.png" alt="{{ page.resumo }} - Página 1" />
+                    <img loading="lazy" src="https://i.imgur.com/7rT4YKQ.png" alt="{{ page.resumo }} - Página 1" />
                 </figure>
                 <figure>
-                    <img loading="lazy" src="https://i.imgur.com/lY7Sias.png" alt="{{ page.resumo }} - Página 2" />
+                    <img loading="lazy" src="https://i.imgur.com/qHbx0G0.jpg" alt="{{ page.resumo }} - Página de Créditos" />
                 </figure>
+                <figure>
+                    <img loading="lazy" src="https://i.imgur.com/RcDkAW6.png" alt="{{ page.resumo }} - Página 2" />
+                </figure>
+                <figure>
+                    <img loading="lazy" src="https://i.imgur.com/mtrrkpv.png" alt="{{ page.resumo }} - Página 3" />
+                </figure>
+                <figure>
+                    <img loading="lazy" src="https://i.imgur.com/EYqP3uS.png" alt="{{ page.resumo }} - Página 4" />
+                </figure>
+                <figure>
+                    <img loading="lazy" src="https://i.imgur.com/MckZZKL.png" alt="{{ page.resumo }} - Página 5" />
+                </figure>
+                <figure>
+                    <img loading="lazy" src="https://i.imgur.com/DDfFNm9.png" alt="{{ page.resumo }} - Página 6" />
+                </figure>
+                
             </section>
             <div class="separador"></div>
             {% include capnav.html %} 
@@ -49,15 +65,12 @@ numero: 2
         <div class="outros lateralcaps">
             <h6>Capítulos Recentes</h6>
             <nav class="outrosposts">
-                {% assign c = site.tags.slsp | slice: 0, 10 %}
-                 {% for post in c %} 
-                 {% unless post.title == page.title %}
+                {% assign c = site.tags.slw | slice: 0, 10 %} {% for post in c %} {% unless post.title == page.title %}
                 <a href="{{ post.url }}">
                     <figure style="background-image: url({{ post.capa }})"></figure>
                     {{ post.title }}
                 </a>
-                {% endunless %}
-                {% endfor %}
+                {% endunless %} {% endfor %}
             </nav>
             <div class="separador"></div>
             <div class="redeslateral menulateralrapido">

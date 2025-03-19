@@ -1,0 +1,35 @@
+<section class="navegarcaps">
+                <nav>
+                                 
+                
+                  
+                   {% for post in site.tags.slsp %}
+                        {% if post.url == page.url %}
+                            {% assign post_index0 = forloop.index0 %}
+                            {% assign post_index1 = forloop.index %}
+                        {% endif %}
+                    {% endfor %}
+                    {% for post in site.tags.slsp %}
+                        {% if post_index0 == forloop.index %}
+                            {% assign next_post = post.url %}
+                        {% endif %}
+                        {% if post_index1 == forloop.index0 %}
+                            {% assign prev_post = post.url %}
+                        {% endif %}
+                    {% endfor %}
+                     {% if prev_post %}
+                        <a href="{{ prev_post }}"><i class="bi bi-arrow-90deg-left"></i>  Capítulo Anterior</a>
+                    {% endif %}
+                    
+                    
+                    {% assign c = page.tags %}     
+                    <a href="/smash-legends/{{ c.[0] }}/"><i class="bi bi-menu-button-wide-fill"></i> Todos os Capítulos</a>
+                    
+                    
+                    
+                    {% if next_post %}
+                        <a href="{{ next_post }}"><i class="bi bi-arrow-90deg-right"></i> Próximo Capítulo</a>
+                    {% endif %}
+                   
+                </nav>
+            </section>

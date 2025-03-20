@@ -55,6 +55,34 @@
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#c13a5a" />
         <meta name="msapplication-TileColor" content="#c13a5a" />
         <meta name="theme-color" content="#c13a5a" />
+        
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "{{ site.url }}{{ page.url }}"
+          },
+          "headline": "{{ page.title }}",
+          "description": "{{ page.descricao }}",
+          "image": "{{ site.url }}{{ page.capa }}",
+          "author": {
+            "@type": "Person",
+            "name": "KryFi",
+            "url": "https://simpleskans.com.br/sobre/"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Simple Skans",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://simpleskans.com.br/img/logoColorido.png"
+            }
+          },
+          "datePublished": "{{ page.date | date: '%Y-%m-%d' }}"
+        }
+        </script>
 
         <!--Head tags-->
 

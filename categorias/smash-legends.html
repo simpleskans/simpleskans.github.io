@@ -12,9 +12,30 @@ csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
     <p>Todas as webtoons e novels traduzidas de</p>
     <h1>{{ current_cat | replace: '-', ' ' | replace: 'rom', 'ROM' | replace: 'dnd', 'Dungeons &#38; Dragons'}}</h1>
 </div>
+<section class="categorias">
+    <h2 class="secaotitulo"><i class="bi bi-tags-fill"></i> Sub-Categorias</h2>
+    <ul class="listacategorias">
+        <li>
+            <a href="/smash-legends/slw/" class="gradienteBase"
+                >Webtoons/HQs</a
+            >
+        </li>
+        <li>
+            <a href="/smash-legends/slsp/" class="gradienteBase"
+                >Smash Passes</a
+            >
+        </li>
+        <li>
+            <a href="/smash-legends/sln/" class="gradienteBase"
+                >Novels</a
+            >
+        </li>
+    </ul>
+</section>
+<div class="separador"></div>
 <div class="corpo"  style="display: block">
     <div class="ladoE">
-       <h2 id="webtoons" class="secaotitulo"><i class="bi bi-journal-richtext"></i> Webtoons</h2>
+       <h3 id="webtoons" class="secaotitulo"><i class="bi bi-journal-richtext"></i> Webtoons</h3>
         <nav class="postagensquadro">
             {% assign c = site.tags.slw | slice: 0, 2 %} {% for post in c %}
             <a
@@ -39,7 +60,7 @@ csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
 
 <div class="corpo"  style="display: block">
     <div class="ladoE">
-       <h2 id="pass" class="secaotitulo"><i class="bi bi-journal"></i> Smash Pass</h2>
+       <h3 id="pass" class="secaotitulo"><i class="bi bi-journal"></i> Smash Pass</h3>
         <nav class="postagensquadro">
             {% assign c = site.tags.slsp | slice: 0, 2 %} {% for post in c %}
             <a
@@ -64,7 +85,7 @@ csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
 
 <div class="corpo" style="display: block">
     <div class="ladoE">
-       <h2 id="novels" class="secaotitulo"><i class="bi bi-journal-text"></i> Novels</h2>
+       <h3 id="novels" class="secaotitulo"><i class="bi bi-journal-text"></i> Novels</h3>
         <nav class="postagensquadro">
             {% assign c = site.tags.sln | slice: 0, 2 %} {% for post in c %}
             <a

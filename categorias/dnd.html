@@ -12,6 +12,27 @@ csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
     <p>Todas as postagens na categoria</p>
     <h1>{{ current_cat | replace: '-', ' ' | replace: 'rom', 'ROM' | replace: 'dnd', 'Dungeons &#38; Dragons'}}</h1>
 </div>
+<section class="categorias">
+    <h3 class="secaotitulo"><i class="bi bi-tags-fill"></i> Sub-Categorias</h3>
+    <ul class="listacategorias">
+        <li>
+            <a href="/dnd/5e/" class="gradienteBase"
+                >D&amp;D 5ª Edição</a
+            >
+        </li>
+        <li>
+            <a href="/dnd/2024/" class="gradienteBase"
+                >D&amp;D 2024</a
+            >
+        </li>
+        <li>
+            <a href="" class="gradienteBase"
+                >D&amp;D 3ª Edição</a
+            >
+        </li>
+    </ul>
+</section>
+<div class="separador"></div>
 <div class="corpo" style="display: block">
     <div class="ladoE">
         <h2 id="webtoons" class="secaotitulo"><i class="bi bi-dice-5"></i> 5ª Edição</h2>
@@ -38,7 +59,7 @@ csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
 
 <div class="corpo" style="display: block">
     <div class="ladoE">
-        <h2 id="pass" class="secaotitulo"><i class="bi bi-dice-6"></i> D&#38;D 2024</h2>
+        <h3 id="pass" class="secaotitulo"><i class="bi bi-dice-6"></i> D&#38;D 2024</h3>
         <nav class="postagensquadro">
             {% assign c = site.tags.e55 | slice: 0, 2 %} {% for post in c %}
             <a
@@ -62,7 +83,7 @@ csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
 
 <div class="corpo" style="display: block">
     <div class="ladoE">
-        <h2 id="novels" class="secaotitulo"><i class="bi bi-dice-3"></i> 3ª Edição</h2>
+        <h3 id="novels" class="secaotitulo"><i class="bi bi-dice-3"></i> 3ª Edição</h3>
         <nav class="postagensquadro">
             {% assign c = site.tags.e3 | slice: 0, 2 %} {% for post in c %}
             <a
@@ -79,7 +100,7 @@ csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
 
             {% endfor %}
         </nav>
-        <a href="/smash-legends/sln/" class="acessarcategoria">Ver Tudo <i class="bi bi-arrow-right"></i></a>
+        <a href="" class="acessarcategoria">Ver Tudo <i class="bi bi-arrow-right"></i></a>
         <div class="separador"></div>
     </div>
 </div>

@@ -5,13 +5,6 @@ descricao: 'Simple Skans! Levando o português ao Brasileiro!'
 capa: '/img/logoColorido.png'
 ---
 
-<div class="aviso">
-    <a
-        target="_blank"
-        href="https://docs.google.com/forms/d/e/1FAIpQLSd3kmGM6NSVNUDX5khxt5P7h4cTKkRghgxgTta3WpgynGjcdw/viewform?usp=header"
-        ><img src="/img/aviso.png" alt=""
-    /></a>
-</div>
 <h1 class="ocultar">Simple Skans! Levando o português ao Brasileiro!</h1>
 <h2 class="ocultar">Destaques</h2>
 <section class="destaques">
@@ -69,16 +62,3 @@ capa: '/img/logoColorido.png'
 
 <div class="separador"></div>
 
-<section class="categorias">
-    <h2 class="secaotitulo"><i class="bi bi-tags-fill"></i> Categorias</h2>
-    <ul class="listacategorias">
-        {% for categoria in site.categories %}
-        <li>
-            <a href="{{ site.url }}/{{ categoria | first }}/" class="gradienteBase"
-                >{{ categoria | first | replace: '-', ' ' | replace: 'rom', 'ROM' | replace: 'dnd', 'Dungeons &#38;
-                Dragons'}} ({{ categoria | last | size }})</a
-            >
-        </li>
-        {% endfor %}
-    </ul>
-</section>

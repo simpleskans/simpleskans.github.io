@@ -9,44 +9,43 @@ csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
 
 <div class="categoriatitulo">
     <p>Todas as postagens de</p>
-    <h1>Dungeons &#38; Dragons 2024 Edição</h1>
+    <h1>Dungeons &#38; Dragons 2024</h1>
 </div>
 <div class="corpo" style="display: block">
     <div class="ladoE">
-        <nav class="postagensquadro">
-            {% assign c = site.tags.e55 | slice: 0, 7 %} {% for post in c %}
-            <a
-                class="postlink"
-                style="background-image:  url({{ post.capa }});"
-                href="{{ post.url }}"
-                title="{{ post.title }}">
-                <span>{{ post.autorL }}</span>
-                <div>
-                    <span>{{ post.title }}</span>
-                    <p>{{ post.resumo }}</p>
-                </div>
-            </a>
-
+       
+       <h2 class="secaotitulo"><i class="bi bi-person-fill-up"></i> Filtrar por Nível:</h2>
+        <div class="level-filters">
+            <label class="filter-option">
+                <input type="radio" name="level-filter" value="todos" checked />
+                <span>Todos</span>
+            </label>
+            {% for i in (1..20) %}
+            <label class="filter-option">
+                <input type="radio" name="level-filter" value="lvl{{i}}" />
+                <span>{{i}}º Nível</span>
+            </label>
             {% endfor %}
-        </nav>
-        <div class="separador"></div>
+        </div>
+
+        <!-- Lista de posts (modificada) -->
+        <div class="lista">
+            <ul id="posts-container">
+                {% for post in site.tags.e55 %}
+                <li class="post-item" data-tags="{{ post.tags | join: ',' }}">
+                    <a class="capitulolink" href="{{ post.url }}" title="{{ post.title }}">
+                        <span class="imagemcapitulo" style="background-image: url({{ post.capa }});"></span>
+                        <div class="capitulotexto">
+                            <i>{{ post.autorL }}</i>
+                            <p>{{ post.title }}</p>
+                            <span>{{ post.resumo }}<br /></span>
+                        </div>
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <script src="/js/filtro.js"></script>
     </div>
-</div>
-<div class="lista">
-    <ul>
-        {% for post in site.tags.e55 %} {% unless post == site.tags.e55[0] or post == site.tags.e55[1] or post ==
-        site.tags.e55[2] or post == site.tags.e55[3] or post == site.tags.e55[4] or post == site.tags.e55[5] or post ==
-        site.tags.e55[6] %}
-        <li>
-            <a class="capitulolink" href="{{ post.url }}" title="{{ post.title }}">
-                <span class="imagemcapitulo" style="background-image:  url({{ post.capa }});"></span>
-                <div class="capitulotexto">
-                    <i>{{ post.autorL }}</i>
-                    <p>{{ post.title }}</p>
-                    <span>{{ post.resumo }}<br /></span>
-                </div>
-            </a>
-        </li>
-        {% endunless %} {% endfor %}
-    </ul>
 </div>

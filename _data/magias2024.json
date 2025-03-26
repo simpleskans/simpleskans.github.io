@@ -1,0 +1,18 @@
+{
+  "nome": "Acalmar Emoções",
+  "id": 1,
+  "original": "Calm Emotions",
+  "nivel": 2,
+  "escola": "Encantamento",
+  "tempo": "Uma ação",
+  "alcance": "18m [60 ft.]",
+  "componentes": "V,S",
+  "materiaispagos": false,
+  "duracao": "Até 1 minuto",
+  "concentracao": true,
+  "ritual": false,
+  "classes": "Bardo, Clérigo",
+  "descricao": "Você tenta suprimir emoções fortes em um grupo de criaturas. Cada humanoide dentro de uma esfera de 6 metros de raio [20-foot-radius sphere] centrada em um ponto dentro do alcance da magia deve fazer uma salvaguarda de Carisma; uma criatura pode escolher falhar nesta salvaguarda, caso deseje. Se uma criatura falhar na salvaguarda, escolha um dos dois efeitos a seguir.<br>&emsp;Você pode suprimir qualquer efeito que cause a um alvo as condições enfeitiçado ou amedrontado. Quando esta magia termina, qualquer efeito suprimido retorna, caso a duração não tenha expirado nesse meio-tempo.<br>&emsp;Como alternativa, você pode tornar o alvo indiferente a criaturas, à sua escolha, contra as quais o alvo era hostil. Tal indiferença termina se o alvo for atacado ou ferido por uma magia, ou se testemunhar quaisquer de seus próprios amigos sendo feridos. Quando a magia termina, a criatura torna-se hostil novamente, a menos que o DM decida de outra forma.",
+  "fonte": "Livro do Jogador (PHB)",
+  "pagina": "211 (221)"
+}

@@ -13,7 +13,7 @@ csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
     <h1>{{ current_cat | replace: '-', ' ' | replace: 'rom', 'ROM' | replace: 'dnd', 'Dungeons &#38; Dragons'}}</h1>
 </div>
 <section class="categorias">
-    <h3 class="secaotitulo"><i class="bi bi-tags-fill"></i> Sub-Categorias</h3>
+    <h2 class="secaotitulo"><i class="bi bi-tags-fill"></i> Edições</h2>
     <ul class="listacategorias">
         <li>
             <a href="/dnd/5e/" class="gradienteBase"
@@ -35,7 +35,7 @@ csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
 <div class="separador"></div>
 <div class="corpo" style="display: block">
     <div class="ladoE">
-        <h2 id="webtoons" class="secaotitulo"><i class="bi bi-dice-5"></i> 5ª Edição</h2>
+        <h3 id="webtoons" class="secaotitulo"><i class="bi bi-dice-5"></i> Destaques 5ª Edição</h3>
         <nav class="postagensquadro">
             {% assign c = site.tags.e5 | slice: 0, 2 %} {% for post in c %}
             <a
@@ -59,7 +59,7 @@ csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
 
 <div class="corpo" style="display: block">
     <div class="ladoE">
-        <h3 id="pass" class="secaotitulo"><i class="bi bi-dice-6"></i> D&#38;D 2024</h3>
+        <h3 id="pass" class="secaotitulo"><i class="bi bi-dice-6"></i> Destaques D&#38;D 2024</h3>
         <nav class="postagensquadro">
             {% assign c = site.tags.e55 | slice: 0, 2 %} {% for post in c %}
             <a
@@ -83,7 +83,7 @@ csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
 
 <div class="corpo" style="display: block">
     <div class="ladoE">
-        <h3 id="novels" class="secaotitulo"><i class="bi bi-dice-3"></i> 3ª Edição</h3>
+        <h3 id="novels" class="secaotitulo"><i class="bi bi-dice-3"></i> Destaques 3ª Edição</h3>
         <nav class="postagensquadro">
             {% assign c = site.tags.e3 | slice: 0, 2 %} {% for post in c %}
             <a
@@ -104,20 +104,4 @@ csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
         <div class="separador"></div>
     </div>
 </div>
-<h2 id="tudo" class="secaotitulo"><i class="bi bi-dice-1"></i> Todas as postagens de D&#38;D</h2>
-<div class="lista">
-    <ul>
-        {% for post in site.categories[current_cat] %}
-        <li>
-            <a class="capitulolink" href="{{ post.url }}" title="{{ post.title }}">
-                <span class="imagemcapitulo" style="background-image:  url({{ post.capa }});"></span>
-                <div class="capitulotexto">
-                    <i>{{ post.autorL }}</i>
-                    <p>{{ post.title }}</p>
-                    <span>{{ post.resumo }}<br /></span>
-                </div>
-            </a>
-        </li>
-        {% endfor %}
-    </ul>
-</div>
+

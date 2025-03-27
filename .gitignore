@@ -4,9 +4,8 @@ _site
 .jekyll-metadata
 vendor
 /_drafts
-_data/magias1.yml
-css/grimorio.css
-grimorio/magias.json
-js/grimorio.js
-css/grimorio.css
-/grimorio2024.html
+_data/magias2024.json
+busca.html
+/js/filtro.js
+/grimorios/grimorio2024.html
+_data/magias2024.json

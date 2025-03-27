@@ -1,0 +1,164 @@
+.titulopostagem {
+    padding: 5rem 0;
+}
+
+.titulopostagem h1 {
+    font-size: calc(1.7rem + 1vw);
+}
+
+.texto figure {
+    width: 75%;
+    margin: auto;
+}
+
+.magias-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 0.5rem;
+}
+
+.grid-magias {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.carta-magia {
+    width: 100%;
+    border: 2px solid var(--corprincipal);
+    padding: 1rem;
+    height: fit-content;
+
+    h2 {
+        color: var(--corprincipal);
+        font-variant: small-caps;
+        font-weight: bold;
+        margin: -0.5rem 0;
+    }
+
+    .ingles {
+        font-variant: small-caps;
+    }
+
+    .magia-metadados {
+        .nivel-escola {
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .tags {
+            margin-bottom: 1rem;
+
+            .negrito {
+                font-weight: bold;
+            }
+        }
+    }
+
+    .magia-fonte {
+        margin-top: 1rem;
+        font-style: italic;
+    }
+}
+
+.grudar {
+    position: static;
+}
+
+.filtros-magias {
+    padding-right: 0.5rem;
+    position: sticky;
+    top: 10rem;
+
+    .titulo-filtros {
+        background: var(--corprincipal);
+        padding: 0.5rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+    }
+
+    .subfiltro {
+        width: 100%;
+        padding: 0 0 0.5rem;
+    }
+
+    .filtros-selecionaveis {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        margin-bottom: 0.5rem;
+    }
+
+    .filtro-input {
+        width: 100%;
+        border: 1px solid var(--corprincipal);
+        margin-bottom: 0.5rem;
+        height: 2rem;
+        padding-left: 0.5rem;
+    }
+
+    .filtro-select {
+        height: 2rem;
+        background: var(--corprincipal);
+        color: #fff;
+        flex-grow: 1;
+        padding-left: 0.3rem;
+
+        option {
+            background: var(--corprincipal);
+            border: 1px solid #fff;
+        }
+    }
+
+    .filtro-booleano,
+    .filtro-componentes {
+        width: 100%;
+        display: flex;
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+        flex-wrap: wrap;
+
+        label {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            background: var(--corprincipal);
+            flex-grow: 1;
+            padding: 0.2rem 0.5rem;
+        }
+    }
+
+    .ordenacao {
+        .filtro-select {
+            width: 100%;
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    button {
+        height: 2.5rem;
+        width: calc(50% - 0.25rem);
+        border: none;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 48.49rem) {
+    .categoriatitulo h1 {
+        font-size: 1.8rem;
+    }
+
+    .magias-container, .grid-magias {
+        display: block;
+    }
+    
+    .grid-magias {
+        margin-top: 1rem;
+        
+        .carta-magia {
+            margin-bottom: 1rem;
+        }
+    }
+
+}

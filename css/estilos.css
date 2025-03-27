@@ -78,6 +78,12 @@ header {
     padding-inline: var(--espacamentocorpo);
 }
 
+.gcse-searchbox-only {
+    position: absolute;
+    top:0;
+    left:0;
+}
+
 .barraTopo {
     height: 5rem;
     display: flex;

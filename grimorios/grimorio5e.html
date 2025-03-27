@@ -1,0 +1,136 @@
+---
+layout: padrao
+title: "Lista de Magias D&amp;D 5ª Edição"
+descricao: 'Lista de Todas as Magias de Dungeons &amp; Dragons 5ª Edição para consulta e buscas'
+permalink: /dnd/5e/magias
+resumo: 'Lista de Todas as Magias de Dungeons &amp; Dragons 5ª Edição para consulta e buscas'
+capa: '/img/postcapa/grimorio.jpg'
+autorL: ''
+csscustomizado: <link rel="stylesheet" href="/css/grimorio.css" />
+---
+
+<article>
+    <div class="titulopostagem">
+        <h1 id="secao1">{{ page.title }}</h1>
+        <span>{{ page.resumo }}</span>
+    </div>
+
+    <div class="corpo">
+        <div class="magias-container">
+            <!-- Filtros -->
+
+            <div class="grudar">
+                <div class="filtros-magias">
+                    <p class="titulo-filtros">Filtros:</p>
+                    <input type="text" id="busca" placeholder="Buscar por nome ou descrição..." class="filtro-input" />
+                    <div class="filtros-selecionaveis">
+                        <select id="filtro-nivel" class="filtro-select">
+                            <option value="">Círculos</option>
+                            {% for i in (0..9) %} {% if i == 0 %}
+                            <option value="{{i}}">Truque</option>
+                            {% else %}
+                            <option value="{{i}}">{{i}}º Círculo</option>
+                            {% endif %} {% endfor %}
+                        </select>
+
+                        <select id="filtro-escola" class="filtro-select">
+                            <option value="">Escolas</option>
+                            {% assign escolas = site.data.magias5e | map: 'escola' | uniq | sort %} {% for escola in
+                            escolas %}
+                            <option value="{{escola}}">{{escola}}</option>
+                            {% endfor %}
+                        </select>
+
+                        <select id="filtro-classe" class="filtro-select">
+                            <option value="">Classes</option>
+                            {% assign todas_classes = "" | split: "," %} {% for magia in site.data.magias5e %} {% assign
+                            classes_magia = magia.classes | split: "," %} {% for classe in classes_magia %} {% assign
+                            classe_trim = classe | strip %} {% unless todas_classes contains classe_trim %} {% assign
+                            todas_classes = todas_classes | push: classe_trim %} {% endunless %} {% endfor %} {% endfor
+                            %} {% assign classes_ordenadas = todas_classes | sort %} {% for classe in classes_ordenadas
+                            %}
+                            <option value="{{ classe }}">{{ classe }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <!-- Filtros booleanos -->
+                    <p class="subfiltro">Condição Especial:</p>
+                    <div class="filtro-booleano">
+                        <label><input type="checkbox" id="filtro-ritual" /> Ritual</label>
+                        <label><input type="checkbox" id="filtro-concentracao" /> Concentração</label>
+                    </div>
+
+                    <!-- Componentes -->
+                    <p class="subfiltro">Componentes:</p>
+                    <div class="filtro-componentes">
+                        <label><input type="checkbox" class="componente" value="V" /> Verbal</label>
+                        <label><input type="checkbox" class="componente" value="S" /> Somático</label>
+                        <label><input type="checkbox" class="componente" value="M" /> Material</label>
+                    </div>
+
+                    <!-- Ordenação -->
+                    <p class="subfiltro">Ordenar:</p>
+                    <div class="ordenacao">
+                        <select id="ordenar-por" class="filtro-select">
+                            <option value="nome-asc">A-Z (Português)</option>
+                            <option value="nome-desc">Z-A (Português)</option>
+                            <option value="original-asc">A-Z (Inglês)</option>
+                            <option value="original-desc">Z-A (Inglês)</option>
+                            <option value="nivel-asc">Nível (Crescente)</option>
+                            <option value="nivel-desc">Nível (Decrescente)</option>
+                        </select>
+                    </div>
+
+                    <button id="limpar-filtros" class="botao-limpar">Limpar Filtros</button>
+                </div>
+            </div>
+
+            <!-- Lista de Magias -->
+            <div class="rodapemagia">
+                <div id="lista-magias" class="grid-magias">
+                    {% for magia in site.data.magias5e %}
+                    <div
+                        class="carta-magia"
+                        data-nome="{{ magia.nome | downcase }}"
+                        data-original="{{ magia.original | downcase }}"
+                        data-nivel="{{ magia.nivel }}"
+                        data-escola="{{ magia.escola }}"
+                        data-ritual="{{ magia.ritual }}"
+                        data-concentracao="{{ magia.concentracao }}"
+                        data-componentes="{{ magia.componentes }}"
+                        data-classes="{{ magia.classes | downcase }}"
+                        data-alcance="{{ magia.alcance | downcase }}"
+                        data-tempo="{{ magia.tempo | downcase }}">
+                        <h2>{{ magia.nome }}</h2>
+                        <span class="ingles">{{ magia.original }}</span>
+                        <div class="magia-metadados">
+                            <span class="nivel-escola"
+                                ><i>
+                                    {% if magia.nivel == 0 %} Truque{% else %} {{ magia.nivel }}º Círculo{% endif %}, {{
+                                    magia.escola }} ({{ magia.classes }})</i
+                                >
+                            </span>
+                            <div class="tags">
+                                <p>
+                                    <span class="negrito">Tempo de Conjuração:</span> {{ magia.tempo }} {% if
+                                    magia.ritual %} ou Ritual {% endif %}
+                                </p>
+                                <p><span class="negrito">Alcance: </span> {{ magia.alcance }}</p>
+                                <p><span class="negrito">Componentes: </span> {{ magia.componentes }}</p>
+                                <p>
+                                    <span class="negrito">Duração: </span> {% if magia.concentracao %}Concentração, {%
+                                    endif %} {{ magia.duracao }}
+                                </p>
+                            </div>
+                        </div>
+                        <p class="magia-descricao">{{ magia.descricao }}</p>
+                        <div class="magia-fonte">{{ magia.fonte }}, p. {{ magia.pagina }}</div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <script src="/js/grimorio.js"></script>
+        </div>
+    </div>
+</article>

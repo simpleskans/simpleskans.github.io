@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function scrollParaTopo() {
         if (primeiraCarga) return;
         
-        const listaMagias = document.getElementById("lista-magias");
+        const listaMagias = document.getElementById("filtros");
         const remToPx = parseFloat(getComputedStyle(document.documentElement).fontSize);
         const offset = ALTURA_CABECALHO * remToPx;
         

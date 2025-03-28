@@ -238,9 +238,61 @@ document.addEventListener("DOMContentLoaded", function () {
     // ============= INICIALIZAÇÃO =============
     inicializar();
 
-    // ========== BOTÃO DE IMPRESSÃO SIMPLES ==========
-    document.getElementById("btn-imprimir")?.addEventListener("click", function () {
-        window.print(); // Única função do JS
+    // ========== BOTÃO DE IMPRESSÃO DEFINITIVO ==========
+    document.getElementById("btn-imprimir")?.addEventListener("click", async function () {
+        // 1. Salvar estado atual
+        const estadoOriginal = {
+            indiceAtual: indiceAtual,
+            carregando: carregando,
+            magiasExibidas: document.querySelectorAll('.carta-magia[style="display: block;"]').length
+        };
+
+        // 2. Forçar carregamento completo
+        indiceAtual = 0;
+        carregando = false;
+        elementos.listaMagias.innerHTML = "";
+
+        // 3. Carregar todas de uma vez (sem limite)
+        while (indiceAtual < magiasFiltradas.length) {
+            const fragment = document.createDocumentFragment();
+            const fim = magiasFiltradas.length; // Carrega todas
+
+            for (let i = indiceAtual; i < fim; i++) {
+                const clone = magiasFiltradas[i].cloneNode(true);
+                clone.style.display = "block";
+                fragment.appendChild(clone);
+            }
+
+            elementos.listaMagias.appendChild(fragment);
+            indiceAtual = fim;
+
+            // Pequeno delay para renderização
+            await new Promise((resolve) => setTimeout(resolve, 50));
+        }
+
+        // 4. Preparar para impressão
+        document.documentElement.classList.add("modo-impressao");
+
+        // 5. Esperar renderização completa
+        await new Promise((resolve) => setTimeout(resolve, 300));
+
+        // 6. Imprimir
+        window.print();
+
+        // 7. Restaurar estado original
+        document.documentElement.classList.remove("modo-impressao");
+        elementos.listaMagias.innerHTML = "";
+        indiceAtual = 0;
+        carregando = false;
+
+        // Recarregar o estado original
+        for (let i = 0; i < estadoOriginal.magiasExibidas && i < magiasFiltradas.length; i++) {
+            const clone = magiasFiltradas[i].cloneNode(true);
+            clone.style.display = "block";
+            elementos.listaMagias.appendChild(clone);
+        }
+
+        indiceAtual = estadoOriginal.magiasExibidas;
+        carregando = estadoOriginal.carregando;
     });
-    // ========== FIM DO CÓDIGO ==========
 });

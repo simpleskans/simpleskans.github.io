@@ -4,6 +4,13 @@
 
 .titulopostagem h1 {
     font-size: calc(1.7rem + 1vw);
+
+    + span {
+        a {
+            color: var(--corprincipal);
+            text-decoration: underline;
+        }
+    }
 }
 
 .texto figure {
@@ -29,11 +36,12 @@
     padding: 1rem;
     height: fit-content;
 
-    h2 {
-        color: var(--corprincipal);
+    h4 {
         font-variant: small-caps;
+        color: var(--corprincipal);
         font-weight: bold;
         margin: -0.5rem 0;
+        font-size: 1.5rem;
     }
 
     .ingles {
@@ -53,6 +61,10 @@
                 font-weight: bold;
             }
         }
+    }
+
+    .magia-descricao p:not(:first-child) {
+        text-indent: 1rem;
     }
 
     .magia-fonte {
@@ -138,9 +150,31 @@
 
     button {
         height: 2.5rem;
-        width: calc(50% - 0.25rem);
+        width: calc(50% - 0.38rem);
         border: none;
         cursor: pointer;
+        display: inline-block;
+        margin-right: 0.5rem;
+    }
+
+    .controles-impressao {
+        display: inline-block;
+        width: calc(50% - 0.38rem);
+
+        .botao-imprimir {
+            height: 2.5rem;
+            width: 100%;
+            border: none;
+            cursor: pointer;
+        }
+    }
+}
+
+.credito {
+    display: none;
+    a {
+        color: var(--corprincipal);
+        text-decoration: underline;
     }
 }
 
@@ -149,16 +183,103 @@
         font-size: 1.8rem;
     }
 
-    .magias-container, .grid-magias {
+    .magias-container,
+    .grid-magias {
         display: block;
     }
-    
+
     .grid-magias {
         margin-top: 1rem;
-        
+
         .carta-magia {
             margin-bottom: 1rem;
         }
     }
+}
 
+@media print {
+    body {
+        margin: 0;
+        padding: 0;
+        column-gap: 1cm;
+        background: white !important;
+        color: black !important;
+    }
+
+    header,
+    .grudar,
+    .titulopostagem span,
+    .imagemrodape,
+    footer,
+    .separador {
+        display: none !important;
+    }
+
+    .titulopostagem {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .grid-magias {
+        width: 100%;
+        column-count: 2;
+        column-fill: auto;
+    }
+
+    .carta-magia {
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 15px;
+        border: none;
+        padding: 0 !important;
+        box-sizing: border-box;
+
+        h4 {
+            color: #6f1f11 !important;
+            font-size: 1.3rem !important;
+            line-height: 0.658cm;
+            break-inside: avoid;
+            margin: 0 !important;
+            display: inline-block;
+        }
+
+        .ingles {
+            &::before {
+                content: " (";
+                display: inline;
+            }
+
+            &::after {
+                content: ")";
+                display: inline;
+            }
+        }
+
+        .magia-cabecalho {
+            break-inside: avoid;
+
+            .nivel-escola,
+            .tags {
+                margin-bottom: 0.5rem !important;
+            }
+        }
+
+        .magia-descricao {
+            orphans: 3;
+            widows: 3;
+        }
+
+        .magia-fonte {
+            border-bottom: 2px solid #d3b885;
+        }
+    }
+
+    .credito {
+        display: block !important;
+    }
+
+    @page {
+        size: auto;
+        margin: 1cm;
+    }
 }

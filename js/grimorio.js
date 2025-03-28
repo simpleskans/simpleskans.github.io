@@ -1,8 +1,21 @@
 // assets/js/filtros-magias.js
 document.addEventListener("DOMContentLoaded", function () {
-    // 1. Seleção de elementos
-    const magias = document.querySelectorAll(".carta-magia");
-    const filtros = {
+    // ============= CONFIGURAÇÕES =============
+    const MAGIAS_POR_CARGA = 30;
+    const ALTURA_CABECALHO = 10; // 10rem
+    const DEBOUNCE_TIME = 300; // ms
+
+    // ============= ESTADO =============
+    let todasMagias = [];
+    let magiasFiltradas = [];
+    let indiceAtual = 0;
+    let carregando = false;
+    let primeiraCarga = true;
+
+    // ============= ELEMENTOS DOM =============
+    const elementos = {
+        listaMagias: document.getElementById("lista-magias"),
+        scrollTrigger: document.getElementById("scroll-trigger"),
         busca: document.getElementById("busca"),
         nivel: document.getElementById("filtro-nivel"),
         escola: document.getElementById("filtro-escola"),
@@ -14,27 +27,65 @@ document.addEventListener("DOMContentLoaded", function () {
         limpar: document.getElementById("limpar-filtros")
     };
 
-    let primeiraCarga = true;
-    const ALTURA_CABECALHO = 10; // em rem
+    // ============= FUNÇÕES PRINCIPAIS =============
 
-    // 2. Função principal de filtragem (MODIFICADA)
+    // 1. Inicialização
+    function inicializar() {
+        carregarBaseMagias();
+        configurarObservador();
+        configurarEventListeners();
+        aplicarFiltros();
+        primeiraCarga = false;
+    }
+
+    // 2. Carrega todas as magias uma vez
+    function carregarBaseMagias() {
+        todasMagias = Array.from(document.querySelectorAll(".carta-magia"));
+        todasMagias.forEach((m) => (m.style.display = "none"));
+        ordenarOpcoesSelect();
+    }
+
+    // 3. Carregamento progressivo automático
+    function carregarMagias() {
+        if (carregando || indiceAtual >= magiasFiltradas.length) return;
+
+        carregando = true;
+        mostrarLoader(true);
+
+        // Simula um pequeno delay para melhor UX
+        setTimeout(() => {
+            const fragment = document.createDocumentFragment();
+            const fim = Math.min(indiceAtual + MAGIAS_POR_CARGA, magiasFiltradas.length);
+
+            for (let i = indiceAtual; i < fim; i++) {
+                const clone = magiasFiltradas[i].cloneNode(true);
+                clone.style.display = "block";
+                fragment.appendChild(clone);
+            }
+
+            elementos.listaMagias.appendChild(fragment);
+            indiceAtual = fim;
+            carregando = false;
+            mostrarLoader(false);
+        }, 150);
+    }
+
+    // 4. Filtragem otimizada
     function aplicarFiltros() {
-        // Obter valores dos filtros
-        const termoBusca = filtros.busca.value.toLowerCase();
-        const nivelSelecionado = filtros.nivel.value;
-        const escolaSelecionada = filtros.escola.value;
-        const ritualAtivo = filtros.ritual.checked;
-        const concentracaoAtiva = filtros.concentracao.checked;
-        const classeSelecionada = filtros.classe.value;
+        const termoBusca = elementos.busca.value.toLowerCase();
+        const nivelSelecionado = elementos.nivel.value;
+        const escolaSelecionada = elementos.escola.value;
+        const ritualAtivo = elementos.ritual.checked;
+        const concentracaoAtiva = elementos.concentracao.checked;
+        const classeSelecionada = elementos.classe.value;
 
-        const componentesSelecionados = Array.from(filtros.componentes)
+        const componentesSelecionados = Array.from(elementos.componentes)
             .filter((c) => c.checked)
             .map((c) => c.value);
 
-        // Aplicar filtros
-        magias.forEach((magia) => {
-            const nome = magia.dataset.nome;
-            const original = magia.dataset.original;
+        magiasFiltradas = todasMagias.filter((magia) => {
+            const nome = magia.dataset.nome.toLowerCase();
+            const original = magia.dataset.original.toLowerCase();
             const nivel = magia.dataset.nivel;
             const escola = magia.dataset.escola;
             const ritual = magia.dataset.ritual === "true";
@@ -42,45 +93,34 @@ document.addEventListener("DOMContentLoaded", function () {
             const componentes = magia.dataset.componentes;
             const classesMagia = magia.dataset.classes.split(",").map((c) => c.trim().toLowerCase());
 
-            // Critérios de filtro (MODIFICADO - removido magia.textContent)
-            const correspondeBusca = termoBusca === "" || 
-                                  nome.includes(termoBusca) || 
-                                  original.includes(termoBusca);
-            const correspondeNivel = !nivelSelecionado || nivel === nivelSelecionado;
-            const correspondeEscola = !escolaSelecionada || escola === escolaSelecionada;
-            const correspondeRitual = !ritualAtivo || ritual;
-            const correspondeConcentracao = !concentracaoAtiva || concentracao;
-            const correspondeComponentes =
-                componentesSelecionados.length === 0 || componentesSelecionados.every((c) => componentes.includes(c));
-            const correspondeClasse = !classeSelecionada || classesMagia.includes(classeSelecionada.toLowerCase());
-
-            // Exibir/ocultar
-            if (
-                correspondeBusca &&
-                correspondeNivel &&
-                correspondeEscola &&
-                correspondeRitual &&
-                correspondeConcentracao &&
-                correspondeComponentes &&
-                correspondeClasse
-            ) {
-                magia.style.display = "block";
-            } else {
-                magia.style.display = "none";
-            }
+            return (
+                (termoBusca === "" || nome.includes(termoBusca) || original.includes(termoBusca)) &&
+                (nivelSelecionado === "" || nivel === nivelSelecionado) &&
+                (escolaSelecionada === "" || escola === escolaSelecionada) &&
+                (!ritualAtivo || ritual) &&
+                (!concentracaoAtiva || concentracao) &&
+                (componentesSelecionados.length === 0 ||
+                    componentesSelecionados.every((c) => componentes.includes(c))) &&
+                (classeSelecionada === "" || classesMagia.includes(classeSelecionada.toLowerCase()))
+            );
         });
 
+        // Reseta a paginação
+        elementos.listaMagias.innerHTML = "";
+        indiceAtual = 0;
+
+        // Ordena e carrega a primeira página
         ordenarMagias();
-        scrollParaTopo();
+        carregarMagias();
+
+        if (!primeiraCarga) scrollParaTopo();
     }
 
-    // 3. Função de ordenação (mantida igual)
+    // 5. Ordenação
     function ordenarMagias() {
-        const ordenacao = filtros.ordenar.value;
-        const container = document.getElementById("lista-magias");
-        const magiasVisiveis = Array.from(magias).filter((m) => m.style.display !== "none");
+        const ordenacao = elementos.ordenar.value;
 
-        magiasVisiveis.sort((a, b) => {
+        magiasFiltradas.sort((a, b) => {
             switch (ordenacao) {
                 case "nome-asc":
                     return a.dataset.nome.localeCompare(b.dataset.nome);
@@ -98,54 +138,109 @@ document.addEventListener("DOMContentLoaded", function () {
                     return 0;
             }
         });
-
-        // Reorganizar no DOM
-        magiasVisiveis.forEach((magia) => {
-            container.appendChild(magia);
-        });
     }
 
-    // 4. Função para scroll ao topo (mantida igual)
+    // ============= FUNÇÕES AUXILIARES =============
+
     function scrollParaTopo() {
-        if (primeiraCarga) return;
-        
-        const listaMagias = document.getElementById("filtros");
         const remToPx = parseFloat(getComputedStyle(document.documentElement).fontSize);
         const offset = ALTURA_CABECALHO * remToPx;
-        
+
         window.scrollTo({
-            top: listaMagias.offsetTop - offset,
+            top: elementos.listaMagias.offsetTop - offset,
             behavior: "smooth"
         });
     }
 
-    // 5. Limpar filtros (mantida igual)
-    function limparFiltros() {
-        filtros.busca.value = "";
-        filtros.nivel.value = "";
-        filtros.escola.value = "";
-        filtros.ritual.checked = false;
-        filtros.concentracao.checked = false;
-        filtros.classe.value = "";
-        filtros.ordenar.value = "nome-asc";
-
-        filtros.componentes.forEach((c) => (c.checked = false));
-
-        aplicarFiltros();
+    function mostrarLoader(mostrar) {
+        elementos.scrollTrigger.innerHTML = mostrar ? '<div class="loading">Carregando mais magias...</div>' : "";
     }
 
-    // 6. Event listeners (mantidos iguais)
-    filtros.busca.addEventListener("input", aplicarFiltros);
-    filtros.nivel.addEventListener("change", aplicarFiltros);
-    filtros.escola.addEventListener("change", aplicarFiltros);
-    filtros.ritual.addEventListener("change", aplicarFiltros);
-    filtros.concentracao.addEventListener("change", aplicarFiltros);
-    filtros.componentes.forEach((c) => c.addEventListener("change", aplicarFiltros));
-    filtros.classe.addEventListener("change", aplicarFiltros);
-    filtros.ordenar.addEventListener("change", ordenarMagias);
-    filtros.limpar.addEventListener("click", limparFiltros);
+    function ordenarOpcoesSelect() {
+        const select = elementos.classe;
+        const options = Array.from(select.options);
+        const valoresUnicos = new Set();
 
-    // 7. Inicialização (mantida igual)
-    aplicarFiltros();
-    primeiraCarga = false;
+        // Remove duplicatas e espaços
+        for (let i = options.length - 1; i >= 0; i--) {
+            const value = options[i].value.trim();
+            if (value === "") continue;
+
+            if (valoresUnicos.has(value)) {
+                select.remove(i);
+            } else {
+                options[i].value = value;
+                options[i].textContent = value;
+                valoresUnicos.add(value);
+            }
+        }
+
+        // Ordena alfabeticamente
+        const [firstOpt, ...restOpts] = Array.from(select.options);
+        const sorted = restOpts.sort((a, b) => a.text.localeCompare(b.text, "pt-BR"));
+
+        select.innerHTML = "";
+        select.add(firstOpt);
+        sorted.forEach((opt) => select.add(opt));
+    }
+
+    // ============= OBSERVADOR DE SCROLL =============
+    function configurarObservador() {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                if (entries[0].isIntersecting && !carregando) {
+                    carregarMagias();
+                }
+            },
+            {
+                rootMargin: "100px",
+                threshold: 0.1
+            }
+        );
+
+        observer.observe(elementos.scrollTrigger);
+    }
+
+    // ============= EVENT LISTENERS =============
+    function configurarEventListeners() {
+        // Debounce para busca
+        let timeoutBusca;
+        elementos.busca.addEventListener("input", () => {
+            clearTimeout(timeoutBusca);
+            timeoutBusca = setTimeout(aplicarFiltros, DEBOUNCE_TIME);
+        });
+
+        // Filtros imediatos
+        elementos.nivel.addEventListener("change", aplicarFiltros);
+        elementos.escola.addEventListener("change", aplicarFiltros);
+        elementos.ritual.addEventListener("change", aplicarFiltros);
+        elementos.concentracao.addEventListener("change", aplicarFiltros);
+        elementos.classe.addEventListener("change", aplicarFiltros);
+        elementos.ordenar.addEventListener("change", aplicarFiltros);
+
+        // Componentes
+        elementos.componentes.forEach((c) => c.addEventListener("change", aplicarFiltros));
+
+        // Limpar filtros
+        elementos.limpar.addEventListener("click", function () {
+            elementos.busca.value = "";
+            elementos.nivel.value = "";
+            elementos.escola.value = "";
+            elementos.ritual.checked = false;
+            elementos.concentracao.checked = false;
+            elementos.classe.value = "";
+            elementos.ordenar.value = "nome-asc";
+            elementos.componentes.forEach((c) => (c.checked = false));
+            aplicarFiltros();
+        });
+    }
+
+    // ============= INICIALIZAÇÃO =============
+    inicializar();
+
+    // ========== BOTÃO DE IMPRESSÃO SIMPLES ==========
+    document.getElementById("btn-imprimir")?.addEventListener("click", function () {
+        window.print(); // Única função do JS
+    });
+    // ========== FIM DO CÓDIGO ==========
 });

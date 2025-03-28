@@ -80,8 +80,8 @@ header {
 
 .gcse-searchbox-only {
     position: absolute;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
 }
 
 .barraTopo {
@@ -358,6 +358,7 @@ footer {
 .rodapetexto > div > p > a {
     font-weight: 700;
 }
+
 .rodapetexto > div a > .bi {
     font-size: 0.6rem;
     vertical-align: middle;
@@ -424,13 +425,13 @@ footer {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
-    
+
     .capitulolink p {
         font-size: 1.4rem;
         align-content: flex-start;
     }
-    
+
     .capitulotexto {
-     width: calc(100% - 1rem);
-}
+        width: calc(100% - 1rem);
+    }
 }

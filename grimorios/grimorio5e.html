@@ -82,11 +82,16 @@ csscustomizado: <link rel="stylesheet" href="/css/grimorio.css" />
                     </div>
 
                     <button id="limpar-filtros" class="botao-limpar">Limpar Filtros</button>
+                    <div class="controles-impressao">
+                        <button id="btn-imprimir" class="botao-imprimir">🖨️ Imprimir</button>
+                    </div>
+                    <p class="subfiltro">*Para imprimir todas as magias, é necessário primeiramente carregá-las na tela.</p>
                 </div>
             </div>
 
             <!-- Lista de Magias -->
             <div class="rodapemagia">
+               <p class="credito">Documento gerado pela <a href="https://simpleskans.com.br">Simple Skans</a></p>
                 <div id="lista-magias" class="grid-magias">
                     {% for magia in site.data.magias5e %}
                     <div
@@ -101,33 +106,37 @@ csscustomizado: <link rel="stylesheet" href="/css/grimorio.css" />
                         data-classes="{{ magia.classes | downcase }}"
                         data-alcance="{{ magia.alcance | downcase }}"
                         data-tempo="{{ magia.tempo | downcase }}">
-                        <h2>{{ magia.nome }}</h2>
-                        <span class="ingles">{{ magia.original }}</span>
-                        <div class="magia-metadados">
-                            <span class="nivel-escola"
-                                ><i>
-                                    {% if magia.nivel == 0 %} Truque{% else %} {{ magia.nivel }}º Círculo{% endif %}, {{
-                                    magia.escola }} ({{ magia.classes }})</i
-                                >
-                            </span>
-                            <div class="tags">
-                                <p>
-                                    <span class="negrito">Tempo de Conjuração:</span> {{ magia.tempo }} {% if
-                                    magia.ritual %} ou Ritual {% endif %}
-                                </p>
-                                <p><span class="negrito">Alcance: </span> {{ magia.alcance }}</p>
-                                <p><span class="negrito">Componentes: </span> {{ magia.componentes }}</p>
-                                <p>
-                                    <span class="negrito">Duração: </span> {% if magia.concentracao %}Concentração, {%
-                                    endif %} {{ magia.duracao }}
-                                </p>
+                        <div class="magia-cabecalho">
+                            <h4>{{ magia.nome }}</h4>
+                            <span class="ingles">{{ magia.original }}</span>
+                            <div class="magia-metadados">
+                                <span class="nivel-escola"
+                                    ><i>
+                                        {% if magia.nivel == 0 %} Truque{% else %} {{ magia.nivel }}º Círculo{% endif
+                                        %}, {{ magia.escola }} ({{ magia.classes }})</i
+                                    >
+                                </span>
+                                <div class="tags">
+                                    <p>
+                                        <span class="negrito">Tempo de Conjuração:</span> {{ magia.tempo }} {% if
+                                        magia.ritual %} ou Ritual {% endif %}
+                                    </p>
+                                    <p><span class="negrito">Alcance: </span> {{ magia.alcance }}</p>
+                                    <p><span class="negrito">Componentes: </span> {{ magia.componentes }}</p>
+                                    <p>
+                                        <span class="negrito">Duração: </span> {% if magia.concentracao %}Concentração,
+                                        {% endif %} {{ magia.duracao }}
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                        <p class="magia-descricao">{{ magia.descricao }}</p>
+                        
+                        <div class="magia-descricao">{{ magia.descricao }}</div>
                         <div class="magia-fonte">{{ magia.fonte }}, p. {{ magia.pagina }}</div>
                     </div>
                     {% endfor %}
                 </div>
+                <div id="scroll-trigger" style="height: 50px"></div>
             </div>
 
             <script src="/js/grimorio.js"></script>

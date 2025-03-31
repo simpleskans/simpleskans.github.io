@@ -85,13 +85,16 @@ csscustomizado: <link rel="stylesheet" href="/css/grimorio.css?v=4" />
                     <div class="controles-impressao">
                         <button id="btn-imprimir" class="botao-imprimir">🖨️ Imprimir*</button>
                     </div>
-                    <p class="subfiltro">*Atualmente, apenas o Chrome consegue imprimir todas as magias filtradas. Em outros navegadores é necessário carregar todas as magias primeiro navegando até o final da página.</p>
+                    <p class="subfiltro">
+                        *Atualmente, apenas o Chrome consegue imprimir todas as magias filtradas. Em outros navegadores
+                        é necessário carregar todas as magias primeiro navegando até o final da página.
+                    </p>
                 </div>
             </div>
 
             <!-- Lista de Magias -->
             <div class="rodapemagia">
-               <p class="credito">Documento gerado pela <a href="https://simpleskans.com.br">Simple Skans</a></p>
+                <p class="credito">Documento gerado pela <a href="https://simpleskans.com.br">Simple Skans</a></p>
                 <div id="lista-magias" class="grid-magias">
                     {% for magia in site.data.magias5e %}
                     <div
@@ -112,8 +115,8 @@ csscustomizado: <link rel="stylesheet" href="/css/grimorio.css?v=4" />
                             <div class="magia-metadados">
                                 <span class="nivel-escola"
                                     ><i>
-                                        {% if magia.nivel == 0 %} Truque{% else %} {{ magia.nivel }}º Círculo{% endif
-                                        %}, {{ magia.escola }} ({{ magia.classes }})</i
+                                        {% if magia.nivel == 0 %} Truque de {% else %} {{ magia.nivel }}º Círculo,{%
+                                        endif %} {{ magia.escola }} ({{ magia.classes }})</i
                                     >
                                 </span>
                                 <div class="tags">
@@ -130,8 +133,13 @@ csscustomizado: <link rel="stylesheet" href="/css/grimorio.css?v=4" />
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="magia-descricao">{{ magia.descricao }}</div>
+                        {% if magia.upcast %}
+                        <div class="magia-upcast">
+                            <span class="magia-upcast-descricao">Em Níveis Superiores.</span> {{ magia.upcast }}
+                        </div>
+                        {% endif %}
                         <div class="magia-fonte">{{ magia.fonte }}, p. {{ magia.pagina }}</div>
                     </div>
                     {% endfor %}

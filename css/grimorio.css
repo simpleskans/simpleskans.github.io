@@ -67,9 +67,145 @@
         text-indent: 1rem;
     }
 
+    .magia-upcast p {
+        display: inline;
+    }
+
+    .magia-upcast-descricao {
+        font-weight: bold;
+        font-style: italic;
+        text-indent: 1rem;
+        display: inline-block;
+    }
+
     .magia-fonte {
         margin-top: 1rem;
         font-style: italic;
+    }
+
+    .monstro {
+        margin-top: 1rem;
+        border: 3px double var(--corprincipal);
+        border-radius: 10px !important;
+        padding: 0.5rem;
+
+        p {
+            text-indent: 0 !important;
+            font-size: 0.9rem;
+        }
+
+        .monstro-nome {
+            font-size: 1.3rem;
+            font-weight: bold;
+            font-variant: small-caps;
+            color: var(--corprincipal);
+            border-bottom: 1px solid var(--corprincipal);
+            line-height: 1.1rem;
+        }
+
+        .monstro-tipo {
+            font-style: italic;
+            margin-bottom: 0.5rem;
+        }
+
+        table {
+            font-size: 0.8rem;
+            margin-bottom: 0.5rem;
+            tbody tr:nth-child(odd) {
+                background-color: unset;
+            }
+        }
+
+        th {
+            color: #fff !important;
+            font-weight: normal;
+            font-size: 8px;
+            line-height: 0.8em;
+        }
+
+        tr td {
+            padding: 0.3mm 0.5mm;
+            border-width: 1px 0 !important;
+            text-align: center;
+            color: #fff;
+
+            &:nth-of-type(4n + 1) {
+                font-weight: bold;
+                font-variant: small-caps;
+            }
+            &:nth-of-type(4n + 2) {
+                width: 8%;
+            }
+            &:nth-of-type(4n + 4) {
+                width: 10%;
+            }
+
+            &:nth-of-type(4),
+            &:nth-of-type(8) {
+                clip-path: polygon(-1px 0, 90% 0, 90% 100%, -1px 100%);
+                padding-right: 1.5mm;
+                width: 100px;
+            }
+            &:nth-of-type(5),
+            &:nth-of-type(9) {
+                clip-path: polygon(10% 0, 102% 0, 102% 100%, 10% 100%);
+                padding-left: 1.5mm;
+            }
+        }
+
+        tr:nth-of-type(odd) {
+            td:nth-of-type(4n + 1),
+            td:nth-of-type(4n + 2) {
+                background-color: var(--corprincipal);
+            }
+            td:nth-of-type(4n),
+            td:nth-of-type(4n-1) {
+                background-color: var(--corsecundaria);
+            }
+        }
+        tr:nth-of-type(even) {
+            td:nth-of-type(4n + 1),
+            td:nth-of-type(4n + 2) {
+                background-color: var(--corprincipal);
+            }
+            td:nth-of-type(4n),
+            td:nth-of-type(4n-1) {
+                background-color: var(--corsecundaria);
+            }
+        }
+        .monstro-acao {
+            font-variant: small-caps;
+            font-size: 1.2rem;
+            color: var(--corprincipal);
+            border-bottom: 1px solid var(--corprincipal);
+        }
+    }
+
+    .magia-tabela {
+        break-inside: avoid;
+        width: 100%;
+        font-size: 0.8rem;
+        margin: 0.5rem 0;
+
+        .tabela-titulo {
+            font-variant: small-caps;
+            font-size: 0.9rem;
+        }
+        table {
+            width: 100%;
+            tbody tr {
+                background-color: var(--corprincipal);
+                &:nth-child(odd) {
+                    background-color: var(--corsecundaria);
+                }
+                td {
+                    padding: 0.65mm 1mm;
+                }
+            }
+            thead th {
+                padding: 0.65mm 1mm;
+            }
+        }
     }
 }
 
@@ -81,6 +217,9 @@
     padding-right: 0.5rem;
     position: sticky;
     top: 10rem;
+    max-height: 70svh;
+    overflow: scroll;
+    overflow-x: hidden;
 
     .titulo-filtros {
         background: var(--corprincipal);
@@ -233,6 +372,7 @@
         border: none;
         padding: 0 !important;
         box-sizing: border-box;
+        font-size: 0.8rem;
 
         h4 {
             color: #6f1f11 !important;
@@ -264,9 +404,116 @@
             }
         }
 
-        .magia-descricao {
+        .magia-descricao,
+        .magia-upcast {
             orphans: 3;
             widows: 3;
+
+            .monstro {
+                padding: 8px 7px;
+                background-image: none;
+                background-color: #f4f0eb;
+                border-image: none;
+                border: 3px double #888;
+                border-radius: 10px;
+                box-shadow: 3px 3px 5px -2px rgba(136, 136, 136, 0.6);
+                margin: 0.5rem -6px 0;
+                width: calc(100% + 12px);
+                break-inside: avoid;
+
+                .monstro-nome {
+                    font-size: 1.3rem;
+                    font-weight: bold;
+                    font-variant: small-caps;
+                    color: #6f1f11;
+                    border-bottom: 1px solid #6f1f11;
+                    line-height: 1.1rem;
+                }
+
+                .monstro-tipo {
+                    font-style: italic;
+                    margin-bottom: 0.5rem;
+                    color: #67665f;
+                }
+
+                .monstro-tag {
+                    strong {
+                        color: #58180d;
+                    }
+                }
+
+                table {
+                    font-size: 0.6rem !important;
+                    margin-bottom: 0.5rem;
+                    tbody tr:nth-child(odd) {
+                        background-color: unset;
+                    }
+                }
+
+                th {
+                    color: #67665f !important;
+                    font-weight: normal;
+                    font-size: 8px;
+                    line-height: 0.8em;
+                }
+
+                tr td {
+                    padding: 0.3mm 0.5mm;
+                    border: solid white;
+                    border-width: 1px 0;
+                    text-align: center;
+                    color: #58180d;
+                }
+
+                tr:nth-of-type(odd) {
+                    td:nth-of-type(4n + 1),
+                    td:nth-of-type(4n + 2) {
+                        background-color: #e8e2d6;
+                    }
+                    td:nth-of-type(4n),
+                    td:nth-of-type(4n-1) {
+                        background-color: #d9d0ca;
+                    }
+                }
+                tr:nth-of-type(even) {
+                    td:nth-of-type(4n + 1),
+                    td:nth-of-type(4n + 2) {
+                        background-color: #d2d6ce;
+                    }
+                    td:nth-of-type(4n),
+                    td:nth-of-type(4n-1) {
+                        background-color: #cbc6c8;
+                    }
+                }
+
+                .monstro-acao {
+                    color: #6f1f11;
+                    border-bottom: 1px solid #6f1f11;
+                }
+            }
+        }
+
+        .magia-tabela {
+            font-size: 0.7rem;
+            min-width: 100% !important;
+            .tabela-titulo {
+                font-size: 0.8rem;
+            }
+            
+            table {
+                tbody tr {
+                    background-color: #f4f9fa;
+                    &:nth-child(odd) {
+                        background-color: #dae8ed;
+                    }
+                    td {
+                        padding: 0.65mm 1mm;
+                    }
+                }
+                thead th {
+                    padding: 0.65mm 1mm;
+                }
+            }
         }
 
         .magia-fonte {

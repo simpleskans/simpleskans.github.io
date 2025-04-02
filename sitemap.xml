@@ -1,5 +1,6 @@
 ---
-layout: 
+layout: null
+sitemap_exclude: yes
 ---
 
 <?xml version="1.0" encoding="UTF-8"?>
@@ -7,27 +8,46 @@ layout:
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  {% for page in site.pages %} {% if page.url contains '.xml' or page.url contains '404' %}{% else %}
-  <url>
-    <loc>{{ site.url }}{{ page.url }}</loc>
-    {% if page.date %}
-    <lastmod>{{ page.date | date: "%Y-%m-%d" }}</lastmod>
-    {% else %}
-    <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
-    {% endif %}
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  {% endif %} {% endfor %} {% for page in site.posts %}
-  <url>
-    <loc>{{ site.url }}{{ page.url | replace: 'index.html', '' }}</loc>
-    {% if page.date %}
-    <lastmod>{{ page.date | date: "%Y-%m-%d" }}</lastmod>
-    {% else %}
-    <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
-    {% endif %}
-    <changefreq>never</changefreq>
-    <priority>0.8</priority>
-  </url>
+  
+  <!-- Páginas estáticas -->
+  {% for page in site.pages %}
+    {% unless page.sitemap.exclude == true or page.url contains '.xml' 
+            or page.url contains '404' or page.url contains '/teste'
+            or page.url contains '/admin' or page.url contains '/private' %}
+    <url>
+      <loc>{{ site.url }}{{ page.url | remove: 'index.html' }}</loc>
+      <lastmod>{% if page.last_modified %}{{ page.last_modified | date: "%Y-%m-%d" }}{% elsif page.date %}{{ page.date | date: "%Y-%m-%d" }}{% else %}{{ site.time | date: "%Y-%m-%d" }}{% endif %}</lastmod>
+      <changefreq>{% if page.changefreq %}{{ page.changefreq }}{% else %}monthly{% endif %}</changefreq>
+      <priority>{% if page.priority %}{{ page.priority }}{% else %}0.7{% endif %}</priority>
+    </url>
+    {% endunless %}
+  {% endfor %}
+
+  <!-- Posts do blog -->
+  {% for post in site.posts %}
+    {% unless post.sitemap.exclude == true %}
+    <url>
+      <loc>{{ site.url }}{{ post.url | remove: 'index.html' }}</loc>
+      <lastmod>{{ post.date | date: "%Y-%m-%d" }}</lastmod>
+      <changefreq>{% if post.changefreq %}{{ post.changefreq }}{% else %}never{% endif %}</changefreq>
+      <priority>{% if post.priority %}{{ post.priority }}{% else %}0.8{% endif %}</priority>
+    </url>
+    {% endunless %}
+  {% endfor %}
+
+  <!-- Coleções customizadas -->
+  {% for collection in site.collections %}
+    {% unless collection.label == 'posts' %}
+      {% for item in site[collection.label] %}
+        {% unless item.sitemap.exclude == true %}
+        <url>
+          <loc>{{ site.url }}{{ item.url | remove: 'index.html' }}</loc>
+          <lastmod>{% if item.last_modified %}{{ item.last_modified | date: "%Y-%m-%d" }}{% elsif item.date %}{{ item.date | date: "%Y-%m-%d" }}{% else %}{{ site.time | date: "%Y-%m-%d" }}{% endif %}</lastmod>
+          <changefreq>{% if item.changefreq %}{{ item.changefreq }}{% else %}monthly{% endif %}</changefreq>
+          <priority>{% if item.priority %}{{ item.priority }}{% else %}0.6{% endif %}</priority>
+        </url>
+        {% endunless %}
+      {% endfor %}
+    {% endunless %}
   {% endfor %}
 </urlset>

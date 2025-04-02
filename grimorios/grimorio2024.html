@@ -1,0 +1,149 @@
+---
+layout: padrao
+title: "Lista de Magias D&amp;D 2024 Alfa 17"
+descricao: 'Lista de Todas as Magias de Dungeons &amp; Dragons 2024 para consulta e buscas'
+permalink: /teste
+resumo: 'Lista de Todas as Magias de Dungeons &amp; Dragons 2024 para consulta e buscas | Tradução realizada pelos <a href="https://sites.google.com/view/heroisanonimos/ldj-2024">Heróis Anônimos</a>'
+capa: '/img/postcapa/grimorio.jpg'
+autorL: ''
+csscustomizado: <link rel="stylesheet" href="/css/grimorio.css" />
+---
+
+<!--permalink: /dnd/2024/magias-->
+
+<article>
+    <div class="titulopostagem">
+        <h1 id="secao1">{{ page.title }}</h1>
+        <span>{{ page.resumo }}<br>Deixe seu feedback no nosso <a href="https://discord.gg/DDtNuaWsSK" target="_blank">Discord</a>!</span>
+    </div>
+
+    <div class="corpo">
+        <div class="magias-container">
+            <!-- Filtros -->
+
+            <div class="grudar">
+                <div id="filtros" class="filtros-magias">
+                    <p class="titulo-filtros">Filtros:</p>
+                    <input type="text" id="busca" placeholder="Buscar por nome ou descrição..." class="filtro-input" />
+                    <div class="filtros-selecionaveis">
+                        <select id="filtro-nivel" class="filtro-select">
+                            <option value="">Círculos</option>
+                            {% for i in (0..9) %} {% if i == 0 %}
+                            <option value="{{i}}">Truque</option>
+                            {% else %}
+                            <option value="{{i}}">{{i}}º Círculo</option>
+                            {% endif %} {% endfor %}
+                        </select>
+
+                        <select id="filtro-escola" class="filtro-select">
+                            <option value="">Escolas</option>
+                            {% assign escolas = site.data.magias2024 | map: 'escola' | uniq | sort %} {% for escola in
+                            escolas %}
+                            <option value="{{escola}}">{{escola}}</option>
+                            {% endfor %}
+                        </select>
+
+                        <select id="filtro-classe" class="filtro-select">
+                            <option value="">Classes</option>
+                            {% assign todas_classes = "" | split: "," %} {% for magia in site.data.magias2024 %} {%
+                            assign classes_magia = magia.classes | split: "," %} {% for classe in classes_magia %} {%
+                            assign classe_trim = classe | strip %} {% unless todas_classes contains classe_trim %} {%
+                            assign todas_classes = todas_classes | push: classe_trim %} {% endunless %} {% endfor %} {%
+                            endfor %} {% assign classes_ordenadas = todas_classes | sort %} {% for classe in
+                            classes_ordenadas %}
+                            <option value="{{ classe }}">{{ classe }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <!-- Filtros booleanos -->
+                    <p class="subfiltro">Condição Especial:</p>
+                    <div class="filtro-booleano">
+                        <label><input type="checkbox" id="filtro-ritual" /> Ritual</label>
+                        <label><input type="checkbox" id="filtro-concentracao" /> Concentração</label>
+                    </div>
+
+                    <!-- Componentes -->
+                    <p class="subfiltro">Componentes:</p>
+                    <div class="filtro-componentes">
+                        <label><input type="checkbox" class="componente" value="V" /> Verbal</label>
+                        <label><input type="checkbox" class="componente" value="S" /> Somático</label>
+                        <label><input type="checkbox" class="componente" value="M" /> Material</label>
+                    </div>
+
+                    <!-- Ordenação -->
+                    <p class="subfiltro">Ordenar:</p>
+                    <div class="ordenacao">
+                        <select id="ordenar-por" class="filtro-select">
+                            <option value="nome-asc">A-Z (Português)</option>
+                            <option value="nome-desc">Z-A (Português)</option>
+                            <option value="original-asc">A-Z (Inglês)</option>
+                            <option value="original-desc">Z-A (Inglês)</option>
+                            <option value="nivel-asc">Círculo (0-9)</option>
+                            <option value="nivel-desc">Círculo (9-0)</option>
+                        </select>
+                    </div>
+
+                    <button id="limpar-filtros" class="botao-limpar">Limpar Filtros</button>
+                    <div class="controles-impressao">
+                        <button id="btn-imprimir" class="botao-imprimir">🖨️ Imprimir*</button>
+                    </div>
+                    <p class="subfiltro">
+                        *Atualmente, apenas o Chrome consegue imprimir todas as magias filtradas. Em outros navegadores
+                        é necessário carregar todas as magias primeiro navegando até o final da página.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Lista de Magias -->
+            <div class="rodapemagia">
+                <p class="credito">Documento gerado pela <a href="https://simpleskans.com.br">Simple Skans</a> | Tradução realizada pelos <a href="https://sites.google.com/view/heroisanonimos/ldj-2024">Heróis Anônimos</a></p>
+                <div id="lista-magias" class="grid-magias">
+                    {% for magia in site.data.magias2024 %}
+                    <div
+                        class="carta-magia"
+                        data-nome="{{ magia.nome | downcase }}"
+                        data-original="{{ magia.original | downcase }}"
+                        data-nivel="{{ magia.nivel }}"
+                        data-escola="{{ magia.escola }}"
+                        data-ritual="{{ magia.ritual }}"
+                        data-concentracao="{{ magia.concentracao }}"
+                        data-componentes="{{ magia.componentes }}"
+                        data-classes="{{ magia.classes | downcase }}"
+                        data-alcance="{{ magia.alcance | downcase }}"
+                        data-tempo="{{ magia.tempo | downcase }}">
+                        <div class="magia-cabecalho">
+                            <p class="magia-nome">{{ magia.nome }}</p>
+                            <span class="ingles">{{ magia.original }}</span>
+                            <div class="magia-metadados">
+                                <span class="nivel-escola"
+                                    ><i>
+                                        {% if magia.nivel == 0 %} Truque de {% else %} {{ magia.nivel }}º Círculo,{% endif
+                                        %} {{ magia.escola }} ({{ magia.classes }})</i
+                                    >
+                                </span>
+                                <div class="tags">
+                                    <p>
+                                        <span class="negrito">Tempo de Conjuração:</span> {{ magia.tempo }} {% if
+                                        magia.ritual %} ou Ritual {% endif %}
+                                    </p>
+                                    <p><span class="negrito">Alcance: </span> {{ magia.alcance }}</p>
+                                    <p><span class="negrito">Componentes: </span> {{ magia.componentes }}</p>
+                                    <p>
+                                        <span class="negrito">Duração: </span> {% if magia.concentracao %}Concentração,
+                                        {% endif %} {{ magia.duracao }}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="magia-descricao">{{ magia.descricao }}</div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div id="scroll-trigger" style="height: 50px"></div>
+            </div>
+
+            <script src="/js/grimorio.js?v=4"></script>
+        </div>
+    </div>
+</article>

@@ -46,6 +46,7 @@
 
     .ingles {
         font-variant: small-caps;
+        text-transform: capitalize;
     }
 
     .magia-metadados {
@@ -172,6 +173,10 @@
             color: var(--corprincipal);
             border-bottom: 1px solid var(--corprincipal);
             margin-top: 0.5rem;
+        }
+
+        .monstro-acao-descricao {
+            margin-bottom: 0.5rem;
         }
     }
 
@@ -512,7 +517,7 @@
             font-size: 0.7rem;
             min-width: 100% !important;
             break-inside: auto;
-            
+
             .tabela-titulo {
                 font-size: 0.8rem;
             }

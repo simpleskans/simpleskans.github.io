@@ -365,7 +365,7 @@
   },
   {
     "nome": "Aura de Vida",
-    "original": " ",
+    "original": "Aura of Life",
     "nivel": 4,
     "escola": "Abjuração",
     "classes": "Clérigo, Paladino",
@@ -883,7 +883,7 @@
   },
   {
     "nome": "Comando",
-    "original": " ",
+    "original": "command",
     "nivel": 1,
     "escola": "Encantamento",
     "classes": "Bardo, Clérigo, Paladino",
@@ -1779,7 +1779,7 @@
   },
   {
     "nome": "Dominar Monstro",
-    "original": " ",
+    "original": "dominate monster",
     "nivel": 8,
     "escola": "Encantamento",
     "classes": "Bardo, Bruxo, Feiticeiro, Mago",
@@ -2003,7 +2003,7 @@
   },
   {
     "nome": "Esfera Congelante de Otiluke",
-    "original": " ",
+    "original": "Otiluke's Freezing Sphere",
     "nivel": 6,
     "escola": "Evocação",
     "classes": "Feiticeiro, Mago",
@@ -2815,7 +2815,7 @@
   },
   {
     "nome": "Invocar Morto-Vivo",
-    "original": " ",
+    "original": "Summon Undead",
     "nivel": 3,
     "escola": "Necromancia",
     "classes": "Bruxo, Mago",
@@ -2825,7 +2825,7 @@
     "componentes": "V, S, M (um crânio dourado no valor de 300 ou mais PO)",
     "duracao": "até 1 hora",
     "concentracao": true,
-    "descricao": "<p>Você invoca um Espírito Morto-Vivo. Ele se manifesta em um espaço desocupado à sua vista e no alcance da magia e usa o bloco de estatísticas do <strong>Espírito Morto-vivo</strong>. Ao conjurar a magia, escolha a forma da criatura: Esquelético, Fantasmagórico ou Pútrido. O espírito se assemelha a uma criatura Morta-viva com a forma escolhida, o que determina certos detalhes no bloco de estatísticas da criatura. A criatura desaparece ao ser reduzida a 0 Pontos de Vida ou quando a magia termina.</p> <p>A criatura é uma aliada sua e de seus aliados. Em combate, ela compartilha sua contagem de Iniciativa, mas o turno dela é imediatamente após o seu. Ele obedece aos seus comandos verbais (nenhuma ação é necessária). Se você não emitir nenhum, ela executa a ação Esquivar e usa o movimento dela para evitar o perigo.</p> <p><strong>Usando um Espaço de Magia de Círculo Superior.</strong> Use o círculo do espaço de magia para o círculo da magia no bloco de estatísticas.</p> <h3 id=\"esp-rito-morto-vivo\">Espírito Morto-Vivo</h3> <p><em>Morto-vivo Médio, Neutro</em></p> <p><strong>CA</strong> 11 + o círculo da magia</p> <p><strong>PV</strong> 30 (apenas Fantasmagórico e Pútrido) ou 20 (apenas Esquelético) + 10 para cada círculo de magia acima de 3</p> <p><strong>Deslocamento</strong> 9 m; Voo 12 m (pairar; apenas Fantasmagórico)</p> <table> <thead> <tr> <th></th> <th></th> <th><strong>Mod</strong></th> <th><strong>SG</strong></th> <th></th> <th></th> <th><strong>Mod</strong></th> <th><strong>SG</strong></th> <th></th> <th></th> <th><strong>Mod</strong></th> <th><strong>SG</strong></th> </tr> </thead> <tbody> <tr> <td><strong>For</strong></td> <td>12</td> <td>+1</td> <td>+1</td> <td><strong>Des</strong></td> <td>16</td> <td>+3</td> <td>+3</td> <td><strong>Con</strong></td> <td>15</td> <td>+2</td> <td>+2</td> </tr> <tr> <td><strong>Int</strong></td> <td>4</td> <td>-3</td> <td>-3</td> <td><strong>Sab</strong></td> <td>10</td> <td>+0</td> <td>+0</td> <td><strong>Car</strong></td> <td>9</td> <td>-1</td> <td>-1</td> </tr> </tbody> </table> <p><strong>Imunidades</strong> Necrótico, Venenoso; Amedrontado, Envenenado, Exaustão, Paralisado</p> <p><strong>Sentidos</strong> Visão no Escuro 18 m, Percepção Passiva 10</p> <p><strong>Idiomas</strong> Compreende os idiomas que você fala</p> <p><strong>ND</strong> Nenhum (XP 0; BP é igual ao seu Bônus de Proficiência)</p> <p>Traços</p> <p><strong>Aura Purulenta (Apenas Pútrido).</strong> <em>Salvaguarda de Constituição:</em> CD é igual a CD para evitar sua magia, qualquer criatura (exceto você) que inicie o turno dentro de uma Emanação de 1,5 metro originada a partir do espírito. <em>Falha:</em> A criatura tem a condição Envenenado até o início de seu próximo turno.</p> <p><strong>Passagem Incorpórea (Apenas Fantasmagórico).</strong> O espírito pode se mover através de outras criaturas e objetos como se fossem Terreno Difícil. Se ele terminar o turno dentro de um objeto, ele é desviado para o espaço desocupado mais próximo e sofre 1d10 pontos de dano Energético por cada 1,5 metro percorrido.</p> <p>Ações</p> <p><strong>Ataques Múltiplos.</strong> O espírito realiza um número de ataques igual à metade do círculo da magia (arredondado para baixo).</p> <p><strong>Garra Podre (Apenas Pútrido).</strong> <em>Jogada de Ataque Corpo a Corpo:</em> Bônus é igual ao seu modificador de ataque mágico, alcance 1,5 m. <em>Dano:</em> 1d6 + 3 + o círculo da magia em pontos de dano Cortante. Se o alvo tem a condição Envenenado, ele tem a condição Paralisado até o final do próximo turno dele.</p> <p><strong>Raio da Cova (Somente Esquelético).</strong> <em>Jogada de Ataque à Distância:</em> Bônus é igual ao seu modificador de ataque mágico, alcance 45 m. <em>Dano:</em> 2d4 + 3 + o círculo da magia em pontos de dano Necrótico.</p> <p><strong>Toque Mortal (Apenas Fantasmagórico).</strong> <em>Jogada de Ataque Corpo a Corpo:</em> Bônus é igual ao seu modificador de ataque mágico, alcance 1,5 m. <em>Dano:</em> 1d8 + 3 + o círculo da magia em pontos de dano Necrótico, e o alvo tem a condição Amedrontado até o final do próximo turno dele.</p>"
+    "descricao": "<p>Você invoca um Espírito Morto-Vivo. Ele se manifesta em um espaço desocupado à sua vista e no alcance da magia e usa o bloco de estatísticas do <strong>Espírito Morto-vivo</strong>. Ao conjurar a magia, escolha a forma da criatura: Esquelético, Fantasmagórico ou Pútrido. O espírito se assemelha a uma criatura Morta-viva com a forma escolhida, o que determina certos detalhes no bloco de estatísticas da criatura. A criatura desaparece ao ser reduzida a 0 Pontos de Vida ou quando a magia termina.</p> <p>A criatura é uma aliada sua e de seus aliados. Em combate, ela compartilha sua contagem de Iniciativa, mas o turno dela é imediatamente após o seu. Ele obedece aos seus comandos verbais (nenhuma ação é necessária). Se você não emitir nenhum, ela executa a ação Esquivar e usa o movimento dela para evitar o perigo.</p> <p><strong>Usando um Espaço de Magia de Círculo Superior.</strong> Use o círculo do espaço de magia para o círculo da magia no bloco de estatísticas.</p> <h3 id=\\\"esp-rito-morto-vivo\\\">Espírito Morto-Vivo</h3> <p><em>Morto-vivo Médio, Neutro</em></p> <p><strong>CA</strong> 11 + o círculo da magia</p> <p><strong>PV</strong> 30 (apenas Fantasmagórico e Pútrido) ou 20 (apenas Esquelético) + 10 para cada círculo de magia acima de 3</p> <p><strong>Deslocamento</strong> 9 m; Voo 12 m (pairar; apenas Fantasmagórico)</p> <table> <thead> <tr> <th></th> <th></th> <th><strong>Mod</strong></th> <th><strong>SG</strong></th> <th></th> <th></th> <th><strong>Mod</strong></th> <th><strong>SG</strong></th> <th></th> <th></th> <th><strong>Mod</strong></th> <th><strong>SG</strong></th> </tr> </thead> <tbody> <tr> <td><strong>For</strong></td> <td>12</td> <td>+1</td> <td>+1</td> <td><strong>Des</strong></td> <td>16</td> <td>+3</td> <td>+3</td> <td><strong>Con</strong></td> <td>15</td> <td>+2</td> <td>+2</td> </tr> <tr> <td><strong>Int</strong></td> <td>4</td> <td>-3</td> <td>-3</td> <td><strong>Sab</strong></td> <td>10</td> <td>+0</td> <td>+0</td> <td><strong>Car</strong></td> <td>9</td> <td>-1</td> <td>-1</td> </tr> </tbody> </table> <p><strong>Imunidades</strong> Necrótico, Venenoso; Amedrontado, Envenenado, Exaustão, Paralisado</p> <p><strong>Sentidos</strong> Visão no Escuro 18 m, Percepção Passiva 10</p> <p><strong>Idiomas</strong> Compreende os idiomas que você fala</p> <p><strong>ND</strong> Nenhum (XP 0; BP é igual ao seu Bônus de Proficiência)</p> <p>Traços</p> <p><strong>Aura Purulenta (Apenas Pútrido).</strong> <em>Salvaguarda de Constituição:</em> CD é igual a CD para evitar sua magia, qualquer criatura (exceto você) que inicie o turno dentro de uma Emanação de 1,5 metro originada a partir do espírito. <em>Falha:</em> A criatura tem a condição Envenenado até o início de seu próximo turno.</p> <p><strong>Passagem Incorpórea (Apenas Fantasmagórico).</strong> O espírito pode se mover através de outras criaturas e objetos como se fossem Terreno Difícil. Se ele terminar o turno dentro de um objeto, ele é desviado para o espaço desocupado mais próximo e sofre 1d10 pontos de dano Energético por cada 1,5 metro percorrido.</p> <p>Ações</p> <p><strong>Ataques Múltiplos.</strong> O espírito realiza um número de ataques igual à metade do círculo da magia (arredondado para baixo).</p> <p><strong>Garra Podre (Apenas Pútrido).</strong> <em>Jogada de Ataque Corpo a Corpo:</em> Bônus é igual ao seu modificador de ataque mágico, alcance 1,5 m. <em>Dano:</em> 1d6 + 3 + o círculo da magia em pontos de dano Cortante. Se o alvo tem a condição Envenenado, ele tem a condição Paralisado até o final do próximo turno dele.</p> <p><strong>Raio da Cova (Somente Esquelético).</strong> <em>Jogada de Ataque à Distância:</em> Bônus é igual ao seu modificador de ataque mágico, alcance 45 m. <em>Dano:</em> 2d4 + 3 + o círculo da magia em pontos de dano Necrótico.</p> <p><strong>Toque Mortal (Apenas Fantasmagórico).</strong> <em>Jogada de Ataque Corpo a Corpo:</em> Bônus é igual ao seu modificador de ataque mágico, alcance 1,5 m. <em>Dano:</em> 1d8 + 3 + o círculo da magia em pontos de dano Necrótico, e o alvo tem a condição Amedrontado até o final do próximo turno dele.</p>"
   },
   {
     "nome": "Invocar Saraivada",
@@ -3907,7 +3907,7 @@
   },
   {
     "nome": "Pele-Casca",
-    "original": " ",
+    "original": "Barkskin",
     "nivel": 2,
     "escola": "Transmutação",
     "classes": "Druida, Guardião",
@@ -4873,7 +4873,7 @@
   },
   {
     "nome": "Simulacro",
-    "original": " ",
+    "original": "simulacrum",
     "nivel": 7,
     "escola": "Ilusão",
     "classes": "Mago",

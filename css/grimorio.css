@@ -110,7 +110,10 @@
 
         table {
             font-size: 0.8rem;
-            margin-bottom: 0.5rem;
+            margin: 0.5rem 0;
+            border-collapse: collapse;
+            width: 100%;
+
             tbody tr:nth-child(odd) {
                 background-color: unset;
             }
@@ -121,6 +124,8 @@
             font-weight: normal;
             font-size: 8px;
             line-height: 0.8em;
+            text-align: center;
+            padding: 0 0 0.2rem;
         }
 
         tr td {
@@ -138,18 +143,6 @@
             }
             &:nth-of-type(4n + 4) {
                 width: 10%;
-            }
-
-            &:nth-of-type(4),
-            &:nth-of-type(8) {
-                clip-path: polygon(-1px 0, 90% 0, 90% 100%, -1px 100%);
-                padding-right: 1.5mm;
-                width: 100px;
-            }
-            &:nth-of-type(5),
-            &:nth-of-type(9) {
-                clip-path: polygon(10% 0, 102% 0, 102% 100%, 10% 100%);
-                padding-left: 1.5mm;
             }
         }
 
@@ -178,6 +171,7 @@
             font-size: 1.2rem;
             color: var(--corprincipal);
             border-bottom: 1px solid var(--corprincipal);
+            margin-top: 0.5rem;
         }
     }
 
@@ -193,6 +187,8 @@
         }
         table {
             width: 100%;
+            border-collapse: collapse;
+
             tbody tr {
                 background-color: var(--corprincipal);
                 &:nth-child(odd) {
@@ -200,10 +196,25 @@
                 }
                 td {
                     padding: 0.65mm 1mm;
+
+                    &:first-child {
+                        width: 1px;
+                        max-width: fit-content; /* Valor mínimo possível */
+                        white-space: nowrap;
+                        text-align: center;
+                    }
                 }
             }
             thead th {
                 padding: 0.65mm 1mm;
+                text-align: left;
+
+                &:first-child {
+                    width: 1px;
+                    max-width: fit-content; /* Valor mínimo possível */
+                    white-space: nowrap;
+                    text-align: center;
+                }
             }
         }
     }
@@ -373,7 +384,7 @@
         padding: 0 0 15px !important;
         box-sizing: border-box;
         font-size: 0.8rem;
-        line-height: 0.85rem;
+        line-height: 0.88rem;
         border-bottom: 2px solid #d3b885;
 
         .magia-nome {
@@ -422,6 +433,7 @@
                 margin: 0.5rem -6px 0;
                 width: calc(100% + 12px);
                 break-inside: avoid;
+                line-height: 1rem !important;
 
                 .monstro-nome {
                     font-size: 1.3rem;
@@ -429,7 +441,7 @@
                     font-variant: small-caps;
                     color: #6f1f11;
                     border-bottom: 1px solid #6f1f11;
-                    line-height: 1.1rem;
+                    line-height: 1.15rem;
                 }
 
                 .monstro-tipo {
@@ -445,7 +457,7 @@
                 }
 
                 table {
-                    font-size: 0.6rem !important;
+                    font-size: 0.7rem !important;
                     margin-bottom: 0.5rem;
                     tbody tr:nth-child(odd) {
                         background-color: unset;
@@ -491,6 +503,7 @@
                 .monstro-acao {
                     color: #6f1f11;
                     border-bottom: 1px solid #6f1f11;
+                    line-height: 1.2rem;
                 }
             }
         }
@@ -498,10 +511,12 @@
         .magia-tabela {
             font-size: 0.7rem;
             min-width: 100% !important;
+            break-inside: auto;
+            
             .tabela-titulo {
                 font-size: 0.8rem;
             }
-            
+
             table {
                 tbody tr {
                     background-color: #f4f9fa;
@@ -521,6 +536,10 @@
 
     .credito {
         display: block !important;
+    }
+
+    .scroll-trigger {
+        display: none;
     }
 
     @page {

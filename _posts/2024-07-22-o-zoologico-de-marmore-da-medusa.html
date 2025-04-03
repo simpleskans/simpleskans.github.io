@@ -1,0 +1,196 @@
+---
+layout: padrao
+title: "O Zoológico de Mármore da Medusa"
+descricao: 'Tradução da aventura Medusa’s Marble Menagerie para português do Brasil, uma aventura de D&D 5e'
+categories: dnd
+tags: lvl7 e5
+permalink: /:categories/beyond/:title
+resumo: 'Medusa’s Marble Menagerie | D&D 5e'
+capa: '/img/postcapa/zmm.png'
+autorL: 'James Haeck'
+csscustomizado: <link rel="stylesheet" href="/css/post.css" />
+---
+
+<article>
+    <div class="titulopostagem">
+        <h1 id="secao1">{{ page.title }}</h1>
+        <span>{{ page.resumo }}</span>
+
+        <div class="localpostagem">
+            <i class="bi bi-tags-fill"></i>
+            {% assign c = page.categories %} {% for a in c %}
+            <a href="{{ site.url }}/{{ a }}/" class="categoriapost"
+                >{{ a | replace: '-', ' ' | replace: 'rom', 'ROM' | replace: 'dnd', 'Dungeons &#38; Dragons' }} </a
+            ><span>, </span>
+            {% endfor %}
+            <br />
+            <i class="bi bi-clock-fill"></i> {{ page.date | date: "%d/%m/%Y"}}
+        </div>
+    </div>
+
+    <div class="corpo">
+        <div class="ladoE">
+            <div class="texto">
+                <figure class="capapostagem">
+                    <img src="{{ page.capa }}" alt="Imagem de Capa de {{ page.title }}" />
+                </figure>
+
+                <p>
+                    O Zoológico de Mármore da Medusa é um encontro de exploração com oportunidades tanto para combate
+                    quanto para interpretação, dependendo das ações dos jogadores. A maioria dos aventureiros sabe que
+                    deve ficar em alerta ao avistar estátuas incrivelmente realistas, mas eles precisam adivinhar que
+                    tipo de criatura poderia tê-las criado. Uma medusa? Um basilisco? Talvez até uma górgona ou um
+                    cocatrice? Acontece que pode ser todas essas criaturas.
+                </p>
+                <p>
+                    Uma medusa espreita nas ruínas de uma vila campestre outrora majestosa. Ela já foi uma mulher
+                    chamada Filomela, e sua história tem semelhanças com o conto da primeira mulher a carregar o nome de
+                    Medusa. Jogadores interessados em uma experiência de interpretação profunda descobrirão que sua
+                    história é uma narrativa trágica e que ela é um “monstro” digno de compreensão e ajuda, apesar de
+                    sua amargura e agressividade exterior. Por outro lado, jogadores interessados puramente em
+                    exploração e combate encontrarão na Medusa e em seu zoológico de criaturas petrificadass uma coleção
+                    de inimigos verdadeiramente aterrorizantes.
+                </p>
+                <p>
+                    As ruínas dilapidadas de uma magnífica vila estão situadas no topo de uma colina, cercadas por uma
+                    vasta área de natureza selvagem arborizada. Essa região já foi um jardim exuberante, repleto de
+                    esplêndidas estatuárias e um zoológico de feras exóticas. A própria vila pertencia a Filomela, a
+                    Amada, uma estrela dos palcos conhecida por sua beleza radiante, por sua habilidade como intérprete
+                    de canções e teatro poético e — talvez acima de tudo — por sua marcante presença fora dos palcos.
+                    [...]
+                </p>
+                <p>
+                    [...] Décadas se passaram desde aquela noite trágica. Grandes festivais e bailes de máscaras já não
+                    são mais realizados na vila em ruínas de Filomela, e a natureza selvagem há muito tomou os jardins.
+                    Mas, dentro dos jardins tomados pelo mato, vagam incontáveis criaturas. Feras petrificantes.
+                    Estátuas de mármore animadas por espíritos inquietos. A própria medusa Filomela. E até mesmo os
+                    agentes demoníacos de Graz’zt, que ainda procuram uma maneira de subverter a intervenção de Waukeen
+                    e reivindicar a alma da medusa para seu paciente mestre.
+                </p>
+            </div>
+            <h2 class="secaotitulo" id="secao2"><i class="bi bi-info-circle-fill"></i> Informações da Aventura</h2>
+            <section class="info livro">
+                <div class="tabelainfo">
+                    <div class="divTable">
+                        <div class="cell cell-head">Título</div>
+                        <div class="cell">{{ page.title }}</div>
+
+                        <div class="cell cell-head">Título Original</div>
+                        <div class="cell">
+                            <strong>Medusa’s Marble Menagerie</strong>
+                        </div>
+
+                        <div class="cell cell-head">Autor</div>
+                        <div class="cell">{{ page.autorL }}</div>
+
+                        <div class="cell cell-head">ID</div>
+                        <div class="cell">DB10</div>
+
+                        <div class="cell cell-head">Sistema</div>
+                        <div class="cell">
+                            {% if page.tags.last == 'e5' %} Dungeons &amp; Dragons 5ª Edição {% endif %} {% if
+                            page.tags.last == 'e55' %} Dungeons &amp; Dragons 2024 {% endif %} {% if page.tags.last ==
+                            'e3' %} Dungeons &amp; Dragons 3ª Edição {% endif %}
+                        </div>
+
+                        <div class="cell cell-head">Nível dos Jogadores</div>
+                        <div class="cell">
+                            {% assign c = page.tags %} {% for a in c %} {% unless c.last == a %} {% unless c.first == a
+                            %} - {% endunless %} {{ a | replace: 'lvl', ''}}º Nível {% endunless %} {% endfor %}
+                        </div>
+
+                        <div class="cell cell-head">Nº de Páginas</div>
+                        <div class="cell">7</div>
+
+                        <div class="cell cell-head">Formato</div>
+                        <div class="cell">PDF</div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="separador"></div>
+
+            <h3 class="secaotitulo" id="secao3"><i class="bi bi-cloud-arrow-down-fill"></i> Downloads</h3>
+
+            <section class="downloads">
+                <a
+                    href="https://drive.google.com/file/d/1NKewFRsoM3uXHETJeigetlhfdT1aB4jy/view"
+                    class="botaodownload"
+                    id="gdriveD"
+                    target="_blank"
+                    ><img src="/img/svg/gdrive.svg" alt="Logo Google Drive" /> Google Drive</a
+                >
+            </section>
+
+            <div class="separador"></div>
+            <h4 class="secaotitulo" id="secao4"><i class="bi bi-link-45deg"></i> Links relacionados</h4>
+            <div class="linksrelacionados">
+                <a target="_blank" href="https://www.dndbeyond.com/posts/870-encounter-of-the-week-frozen-memories"
+                    >Página da aventura Medusa’s Marble Menagerie no D&#38;D Beyond (em inglês)</a
+                >
+            </div>
+        </div>
+        <div class="lateral">
+            <nav class="menulateralrapido">
+                <ul>
+                    <li><a href="#secao1">{{ page.title }}</a></li>
+                    <li><a href="#secao2">Informações da Aventura</a></li>
+                    <li><a href="#secao3">Downloads</a></li>
+                    <li><a href="#secao4">Links Relacionados</a></li>
+                    <li><a href="#secao5">Comentários</a></li>
+                </ul>
+                <div class="separador"></div>
+                <div class="redeslateral">
+                    <p>Compartilhe o post:</p>
+                    {% include compartilhar.html %}
+                </div>
+            </nav>
+        </div>
+    </div>
+</article>
+<div class="corpo corpo2">
+    <div>
+        <div class="separador"></div>
+
+        <section class="comentarios">
+            <h5 class="secaotitulo" id="secao5"><i class="bi bi-chat-dots-fill"></i> Comentários</h5>
+            <div id="disqus_thread"></div>
+            <script>
+                /**
+                 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+
+                var disqus_config = function () {
+                    this.page.url = "{{ site.url }}{{ page.url }}"; // Replace PAGE_URL with your page's canonical URL variable
+                    this.page.identifier = "{{ page.url }}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                };
+                (function () {
+                    // DON'T EDIT BELOW THIS LINE
+                    var d = document,
+                        s = d.createElement("script");
+                    s.src = "https://simple-skans.disqus.com/embed.js";
+                    s.setAttribute("data-timestamp", +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript
+                >Please enable JavaScript to view the
+                <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript
+            >
+        </section>
+    </div>
+
+    <div class="outros">
+        <div class="separador"></div>
+        <h6>Outros Posts</h6>
+        <nav class="outrosposts">
+            {% assign c = site.posts | slice: 0, 8 %} {% for post in c %} {% unless post.title == page.title %}
+            <a href="{{ post.url }}">
+                <figure style="background-image: url({{ post.capa }})"></figure>
+                {{ post.title }}
+            </a>
+
+            {% endunless %} {% endfor %}
+        </nav>
+    </div>
+</div>

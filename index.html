@@ -42,7 +42,7 @@ capa: '/img/logoColorido.png'
 <section class="lista">
     <h2 class="secaotitulo"><i class="bi bi-file-post"></i> Mais Postagens</h2>
     <ul>
-        {% assign c = site.posts | slice: 3, 10 %} {% for post in c %}
+        {% assign c = site.posts | slice: 3, 20 %} {% for post in c %}
         <li>
             <a class="capitulolink" href="{{ post.url }}" title="{{ post.title }}">
                 <span class="imagemcapitulo" style="background-image:  url({{ post.capa }});"></span>

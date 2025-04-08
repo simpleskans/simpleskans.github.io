@@ -1,0 +1,195 @@
+---
+layout: padrao
+title: "Santuário da Deusa Réptil"
+descricao: 'Tradução da aventura Sanctum of the Reptile God para português do Brasil, uma aventura de D&D 5e'
+categories: dnd
+tags: lvl9 lvl10 lvl11 e5
+permalink: /:categories/beyond/:title
+resumo: 'Sanctum of the Reptile God | D&D 5e'
+capa: '/img/postcapa/sdr.png'
+autorL: 'James Haeck'
+csscustomizado: <link rel="stylesheet" href="/css/post.css" />
+---
+
+<article>
+    <div class="titulopostagem">
+        <h1 id="secao1">{{ page.title }}</h1>
+        <span>{{ page.resumo }}</span>
+
+        <div class="localpostagem">
+            <i class="bi bi-tags-fill"></i>
+            {% assign c = page.categories %} {% for a in c %}
+            <a href="{{ site.url }}/{{ a }}/" class="categoriapost"
+                >{{ a | replace: '-', ' ' | replace: 'rom', 'ROM' | replace: 'dnd', 'Dungeons &#38; Dragons' }} </a
+            ><span>, </span>
+            {% endfor %}
+            <br />
+            <i class="bi bi-clock-fill"></i> {{ page.date | date: "%d/%m/%Y"}}
+        </div>
+    </div>
+
+    <div class="corpo">
+        <div class="ladoE">
+            <div class="texto">
+                <figure class="capapostagem">
+                    <img src="{{ page.capa }}" alt="Imagem de Capa de {{ page.title }}" />
+                </figure>
+
+                <p>
+                    O encontro Santuário da Deusa Réptil é uma luta total de vida ou morte até o fim. Neste encontro, os
+                    personagens devem derrotar Explictica Defilus, uma naga espiritual cujo mal ecoou através da lenda
+                    por gerações. Ajudando a chamada “Deusa Réptil” estão seus fiéis cultistas, que usaram seus poderes
+                    místicos para criar uma maldição alquímica que pretendem espalhar por toda a terra. O preço do
+                    fracasso é mais do que apenas a morte—se o culto revivido da Deusa Réptil puder infectar a terra com
+                    sua praga mística, todos os seres vivos em todo o reino poderiam ser transformados em abominações em
+                    escala
+                </p>
+                <p>
+                    Um templo esconderijo para um monstro cruel e calculista é escondido em algum lugar no deserto. Um
+                    culto se reuniu ao redor do templo, adorando seu misterioso mestre como uma Deusa Réptil
+                    todapoderosa. A mestra do templo oculto já foi chamada assim antes, embora ela não seja uma deusa.
+                    Explictica Defilus, uma naga espiritual de crueldade e ódio insondáveis, já foi adorada como uma
+                    divindade em eras passadas, mas seu culto foi esmagado por um grupo de aventureiros. Mas uma naga
+                    tão poderosa quanto Explictica Defilus não pode ser morta por meros aventureiros. Embora seu culto
+                    tenha sido esmagado, seu espírito renasceu em questão de dias, e ela começou a trabalhar novamente.
+                </p>
+                <p>
+                    Ela curvou as pessoas más à sua vontade, mas com o tempo foi derrotada novamente. E de novo e de
+                    novo, e de novo o trabalho da naga foi desfeito por seres mortais. Explictica, imortal e fervilhante
+                    de ódio por toda a vida mortal, reuniu um novo culto ao povo-lagarto —e humanos dispostos a se
+                    tornar parte de sua “raça superior e escalada”. Ela é adorada como a Deusa Réptil novamente, e
+                    alegou falsamente conceder imortalidade a seus seguidores humanoides, ao preço de se tornar um dos
+                    reptantes. Com a ajuda de seus seguidores, a naga preparou uma mistura que poderia ser usada para
+                    envenenar todos os cursos de água do reino—e todos os que bebem a maldita bebida logo sucumbirão à
+                    Maldição das Escamas e se tornarão reptantes, assim como os tolos que voluntariamente beberam a
+                    bebida.
+                </p>
+            </div>
+            <h2 class="secaotitulo" id="secao2"><i class="bi bi-info-circle-fill"></i> Informações da Aventura</h2>
+            <section class="info livro">
+                <div class="tabelainfo">
+                    <div class="divTable">
+                        <div class="cell cell-head">Título</div>
+                        <div class="cell">{{ page.title }}</div>
+
+                        <div class="cell cell-head">Título Original</div>
+                        <div class="cell">
+                            <strong>Sanctum of the Reptile God</strong>
+                        </div>
+
+                        <div class="cell cell-head">Autor</div>
+                        <div class="cell">{{ page.autorL }}</div>
+
+                        <div class="cell cell-head">ID</div>
+                        <div class="cell">DB11</div>
+
+                        <div class="cell cell-head">Sistema</div>
+                        <div class="cell">
+                            {% if page.tags.last == 'e5' %} Dungeons &amp; Dragons 5ª Edição {% endif %} {% if
+                            page.tags.last == 'e55' %} Dungeons &amp; Dragons 2024 {% endif %} {% if page.tags.last ==
+                            'e3' %} Dungeons &amp; Dragons 3ª Edição {% endif %}
+                        </div>
+
+                        <div class="cell cell-head">Nível dos Jogadores</div>
+                        <div class="cell">
+                            {% assign c = page.tags %} {% for a in c %} {% unless c.last == a %} {% unless c.first == a
+                            %} - {% endunless %} {{ a | replace: 'lvl', ''}}º Nível {% endunless %} {% endfor %}
+                        </div>
+
+                        <div class="cell cell-head">Nº de Páginas</div>
+                        <div class="cell">6</div>
+
+                        <div class="cell cell-head">Formato</div>
+                        <div class="cell">PDF</div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="separador"></div>
+
+            <h3 class="secaotitulo" id="secao3"><i class="bi bi-cloud-arrow-down-fill"></i> Downloads</h3>
+
+            <section class="downloads">
+                <a
+                    href="https://drive.google.com/file/d/1-Aht4VZQv2jR2OCNkrE6Vic2CWIQ1BJq/view"
+                    class="botaodownload"
+                    id="gdriveD"
+                    target="_blank"
+                    ><img src="/img/svg/gdrive.svg" alt="Logo Google Drive" /> Google Drive</a
+                >
+            </section>
+
+            <div class="separador"></div>
+            <h4 class="secaotitulo" id="secao4"><i class="bi bi-link-45deg"></i> Links relacionados</h4>
+            <div class="linksrelacionados">
+                <a
+                    target="_blank"
+                    href="https://www.dndbeyond.com/posts/435-encounter-of-the-week-sanctum-of-the-reptile-god"
+                    >Página da aventura Sanctum of the Reptile God no D&#38;D Beyond (em inglês)</a
+                >
+            </div>
+        </div>
+        <div class="lateral">
+            <nav class="menulateralrapido">
+                <ul>
+                    <li><a href="#secao1">{{ page.title }}</a></li>
+                    <li><a href="#secao2">Informações da Aventura</a></li>
+                    <li><a href="#secao3">Downloads</a></li>
+                    <li><a href="#secao4">Links Relacionados</a></li>
+                    <li><a href="#secao5">Comentários</a></li>
+                </ul>
+                <div class="separador"></div>
+                <div class="redeslateral">
+                    <p>Compartilhe o post:</p>
+                    {% include compartilhar.html %}
+                </div>
+            </nav>
+        </div>
+    </div>
+</article>
+<div class="corpo corpo2">
+    <div>
+        <div class="separador"></div>
+
+        <section class="comentarios">
+            <h5 class="secaotitulo" id="secao5"><i class="bi bi-chat-dots-fill"></i> Comentários</h5>
+            <div id="disqus_thread"></div>
+            <script>
+                /**
+                 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+
+                var disqus_config = function () {
+                    this.page.url = "{{ site.url }}{{ page.url }}"; // Replace PAGE_URL with your page's canonical URL variable
+                    this.page.identifier = "{{ page.url }}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                };
+                (function () {
+                    // DON'T EDIT BELOW THIS LINE
+                    var d = document,
+                        s = d.createElement("script");
+                    s.src = "https://simple-skans.disqus.com/embed.js";
+                    s.setAttribute("data-timestamp", +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript
+                >Please enable JavaScript to view the
+                <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript
+            >
+        </section>
+    </div>
+
+    <div class="outros">
+        <div class="separador"></div>
+        <h6>Outros Posts</h6>
+        <nav class="outrosposts">
+            {% assign c = site.posts | slice: 0, 8 %} {% for post in c %} {% unless post.title == page.title %}
+            <a href="{{ post.url }}">
+                <figure style="background-image: url({{ post.capa }})"></figure>
+                {{ post.title }}
+            </a>
+
+            {% endunless %} {% endfor %}
+        </nav>
+    </div>
+</div>

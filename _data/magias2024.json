@@ -2124,7 +2124,7 @@
     "componentes": "V, S",
     "duracao": "Instantânea",
     "concentracao": false,
-    "descricao": "<p><strong>Componente:</strong> V, S</p> <p>Você dispara energia arcana contra uma criatura ou objeto no alcance da magia. Realize uma jogada de ataque à distância contra o alvo. Em caso de acerto, o alvo sofre 1d8 pontos de dano de um tipo à sua escolha: Ácido, Elétrico, Gélido, Ígneo, Psíquico, Trovejante ou Venenoso.</p> <p>Se você tirar um 8 no d8 para esta magia, pode jogar outro d8 e adicionar ao dano. Ao conjurar essa magia, o número máximo de d8 adicionais que você pode somar ao dano da magia é igual ao seu modificador de atributo de conjuração.</p> <p><strong>Aprimoramento de Truque.</strong> O dano aumenta em 1d8 quando você atinge os níveis 5 (2d8), 11 (3d8) e 17 (4d8).</p>"
+    "descricao": "<p>Você dispara energia arcana contra uma criatura ou objeto no alcance da magia. Realize uma jogada de ataque à distância contra o alvo. Em caso de acerto, o alvo sofre 1d8 pontos de dano de um tipo à sua escolha: Ácido, Elétrico, Gélido, Ígneo, Psíquico, Trovejante ou Venenoso.</p> <p>Se você tirar um 8 no d8 para esta magia, pode jogar outro d8 e adicionar ao dano. Ao conjurar essa magia, o número máximo de d8 adicionais que você pode somar ao dano da magia é igual ao seu modificador de atributo de conjuração.</p> <p><strong>Aprimoramento de Truque.</strong> O dano aumenta em 1d8 quando você atinge os níveis 5 (2d8), 11 (3d8) e 17 (4d8).</p>"
   },
 {
     "nome": "Explosão Solar",

@@ -5358,7 +5358,7 @@
         "componentes": "V, S",
         "duracao": "Instantânea",
         "concentracao": false,
-        "descricao": "<p><strong>Componente:</strong> V, S</p> <p>Você usa sua energia vital para se curar. Jogue um ou dois de seus Dados de Pontos de Vida não gastos e recupera um número de Pontos de Vida igual ao total do teste mais seu modificador de atributo de conjuração. Esses dados são, então, gastos.</p> <p><strong>Usando um Espaço de Magia de Círculo Superior.</strong> O número de Dados de Vida não gastos que você pode jogar aumenta em um para cada círculo de espaço de magia acima de 2.</p>"
+        "descricao": "<p>Você usa sua energia vital para se curar. Jogue um ou dois de seus Dados de Pontos de Vida não gastos e recupera um número de Pontos de Vida igual ao total do teste mais seu modificador de atributo de conjuração. Esses dados são, então, gastos.</p> <p><strong>Usando um Espaço de Magia de Círculo Superior.</strong> O número de Dados de Vida não gastos que você pode jogar aumenta em um para cada círculo de espaço de magia acima de 2.</p>"
   },
     {
         "nome": "Vínculo de Proteção",
@@ -5394,7 +5394,7 @@
         "nivel": 6,
         "escola": "Adivinhação",
         "classes": "Bardo, Bruxo, Clérigo, Feiticeiro, Mago",
-        "tempo": "1 ação",
+        "tempo": "Ação",
         "ritual": false,
         "alcance": "Toque",
         "componentes": "V, S, M (cogumelo em pó no valor de 25 ou mais PO, que a magia consome)",

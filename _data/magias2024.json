@@ -4480,7 +4480,7 @@
   },
     {
         "nome": "Regeneração",
-        "original": "Regeneration",
+        "original": "Regenerate",
         "nivel": 7,
         "escola": "Transmutação",
         "classes": "Bardo, Clérigo, Druida",
@@ -5148,7 +5148,7 @@
         "componentes": "V, S, M (uma pitada de fósforo)",
         "duracao": "até 1 minuto",
         "concentracao": true,
-        "descricao": "<p><strong>Componente:</strong> V, S, M (uma pitada de fósforo)</p> <p>Você desencadeia uma tempestade de luz intermitente e trovões furiosos em um Cilindro de 3 metros de raio e 12 metros de altura centrado em um ponto à sua vista e no alcance da magia. Enquanto estiverem nesta área, criaturas têm as condições Cego e Surdo, e não podem conjurar magias com um componente Verbal.</p> <p>Quando a tempestade aparece, cada criatura dentro dela realiza uma salvaguarda de Constituição, sofrendo 2d10 pontos de dano Radiante e 2d10 pontos de dano Trovejante se falhar, ou metade desse dano em caso de sucesso. Uma criatura também realiza essa salvaguarda quando entra na área da magia pela primeira vez em um turno ou termina o turno dela nela. Uma criatura realiza essa salvaguarda apenas uma vez por turno.</p> <p><strong>Usando um Espaço de Magia de Círculo Superior.</strong> O dano Radiante e Trovejante aumentam em 1d10 para cada círculo de espaço de magia acima de 5.</p>"
+        "descricao": "<p>Você desencadeia uma tempestade de luz intermitente e trovões furiosos em um Cilindro de 3 metros de raio e 12 metros de altura centrado em um ponto à sua vista e no alcance da magia. Enquanto estiverem nesta área, criaturas têm as condições Cego e Surdo, e não podem conjurar magias com um componente Verbal.</p> <p>Quando a tempestade aparece, cada criatura dentro dela realiza uma salvaguarda de Constituição, sofrendo 2d10 pontos de dano Radiante e 2d10 pontos de dano Trovejante se falhar, ou metade desse dano em caso de sucesso. Uma criatura também realiza essa salvaguarda quando entra na área da magia pela primeira vez em um turno ou termina o turno dela nela. Uma criatura realiza essa salvaguarda apenas uma vez por turno.</p> <p><strong>Usando um Espaço de Magia de Círculo Superior.</strong> O dano Radiante e Trovejante aumentam em 1d10 para cada círculo de espaço de magia acima de 5.</p>"
   },
     {
         "nome": "Tentáculos Negros de Evard",

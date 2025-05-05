@@ -1,8 +1,41 @@
 <!doctype html>
 <html lang="pt-BR">
     <head>
-        <title>{{ page.title }} | Simple Skans</title>
-        <meta name="description" content="{{ page.descricao }}" />
+        <title>
+  {% if page.title %}
+    {{ page.title }}
+    {% comment %} Lógica para D&D {% endcomment %}
+    {% if page.categories contains 'dnd' %}
+      PT-BR |
+      {% if page.tags contains 'e5' %}D&D 5e
+      {% elsif page.tags contains 'e55' %}D&D 2024
+      {% elsif page.tags contains 'e3' %}D&D 3e
+      {% else %}D&D{% endif %}
+
+    {% comment %} Lógica para Smash Legends {% endcomment %}
+    {% elsif page.categories contains 'smash-legends' %}
+      |
+      {% if page.tags contains 'slw' %}Smash Legends
+      {% elsif page.tags contains 'slsp' %}Passe Smash
+      {% elsif page.tags contains 'sln' %}Smash Legends Novel
+      {% else %}Smash Legends{% endif %}
+      {% if page.numero %} Capítulo {{ page.numero }} PT-BR{% endif %}
+
+    {% comment %} Lógica para ROM Hacking {% endcomment %}
+    {% elsif page.categories contains 'rom-hacking' %}
+      PT-BR |
+      {% if page.tags contains 'gba' %}GBA
+      {% elsif page.tags contains 'nes' %}NES
+      {% else %}ROM Hacking{% endif %}
+
+    {% comment %} Padrão para todas as outras páginas {% endcomment %}
+    {% endif %}
+    | Simple Skans
+  {% else %}
+    Simple Skans
+  {% endif %}
+</title>
+        <meta name="description" content="{{ page.resumo }} PT-BR | {{ page.descricao }}" />
         <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
 
         <!-- Google tag (gtag.js) -->
@@ -35,7 +68,7 @@
         <!-- Facebook Meta Tags -->
         <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="{{ page.title }}" />
+        <meta property="og:title" content="{% if page.title %} {{ page.title }}{% if page.categories contains 'dnd' %} PT-BR | {% if page.tags contains 'e5' %}D&D 5e{% elsif page.tags contains 'e55' %}D&D 2024 {% elsif page.tags contains 'e3' %}D&D 3e {% else %}D&D{% endif %} {% elsif page.categories contains 'smash-legends' %} | {% if page.tags contains 'slw' %}Smash Legends{% elsif page.tags contains 'slsp' %}Passe Smash {% elsif page.tags contains 'sln' %}Smash Legends Novel {% else %}Smash Legends{% endif %} {% if page.numero %}Capítulo {{ page.numero }} PT-BR{% endif %} {% elsif page.categories contains 'rom-hacking' %} PT-BR | {% if page.tags contains 'gba' %}GBA{% elsif page.tags contains 'nes' %}NES{% else %}ROM Hacking{% endif %} {% endif %}| Simple Skans {% else %} Simple Skans {% endif %}" />
         <meta property="og:description" content="{{ page.descricao }}" />
         <meta property="og:image" content="{{ site.url }}{{ page.capa }}" />
 
@@ -43,7 +76,7 @@
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:domain" content="simpleskans.com.br" />
         <meta property="twitter:url" content="{{ site.url }}{{ page.url }}" />
-        <meta name="twitter:title" content="{{ page.title }}" />
+        <meta name="twitter:title" content="{% if page.title %} {{ page.title }}{% if page.categories contains 'dnd' %} PT-BR | {% if page.tags contains 'e5' %}D&D 5e{% elsif page.tags contains 'e55' %}D&D 2024 {% elsif page.tags contains 'e3' %}D&D 3e {% else %}D&D{% endif %} {% elsif page.categories contains 'smash-legends' %} | {% if page.tags contains 'slw' %}Smash Legends{% elsif page.tags contains 'slsp' %}Passe Smash {% elsif page.tags contains 'sln' %}Smash Legends Novel {% else %}Smash Legends{% endif %} {% if page.numero %}Capítulo {{ page.numero }} PT-BR{% endif %} {% elsif page.categories contains 'rom-hacking' %} PT-BR | {% if page.tags contains 'gba' %}GBA{% elsif page.tags contains 'nes' %}NES{% else %}ROM Hacking{% endif %} {% endif %}| Simple Skans {% else %} Simple Skans {% endif %}" />
         <meta name="twitter:description" content="{{ page.descricao }}" />
         <meta name="twitter:image" content="{{ site.url }}{{ page.capa }}" />
 

@@ -435,3 +435,8 @@ footer {
         width: calc(100% - 1rem);
     }
 }
+
+
+#disqus_thread {
+    margin-top: 1rem;
+}

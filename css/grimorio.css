@@ -366,7 +366,8 @@
     .titulopostagem span,
     .imagemrodape,
     footer,
-    .separador {
+    .separador,
+    .avisomagia {
         display: none !important;
     }
 

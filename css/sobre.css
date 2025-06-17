@@ -11,15 +11,16 @@ h1 {
 
 .membro {
     display: flex;
-    flex-grow: 1;
+    flex: 1;
     padding: 1rem;
-    gap: 1rem;
-
-    border-radius: 10px;
+    gap: 1em;
+    border-radius: 5px;
+    justify-content: flex-start;
 }
 
 .membro figure {
-    height: 10rem;
+    height: 7rem;
+    aspect-ratio: 1/1;
 }
 
 .agradecimentos figure {
@@ -28,13 +29,14 @@ h1 {
 
 .membro figure > img {
     height: 100%;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .membroinfo {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    min-width: 7rem;
 }
 
 .nome {
@@ -80,8 +82,8 @@ h1 {
     align-items: center;
     gap: 1rem;
     padding: 1rem;
-    width: calc(25% - 0.75rem);
-    border-radius: 10px;
+    width: calc(20% - 0.8rem);
+    border-radius: 5px;
     text-align: center;
 }
 
@@ -102,4 +104,8 @@ h1 {
     .parceiros a {
         width: calc(50% - 1rem);
     }
+}
+
+.secaotitulo {
+    border-radius: 5px;
 }

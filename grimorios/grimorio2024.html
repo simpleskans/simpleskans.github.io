@@ -16,7 +16,12 @@ csscustomizado: <link rel="stylesheet" href="/css/grimorio.css" />
         <h1 id="secao1">{{ page.title }}</h1>
         <span
             >{{ page.resumo }}<br />Deixe seu feedback ou reporte erros no nosso
-            <a href="https://discord.gg/DDtNuaWsSK" target="_blank">Discord</a>!</span
+            <a href="https://discord.gg/DDtNuaWsSK" target="_blank">Discord</a>! | Tradução realizada pelos
+            <a href="https://sites.google.com/view/heroisanonimos/ldj-2024" target="_blank">Heróis Anônimos</a> |
+            Corrigido com as Erratas de
+            <a href="https://sites.google.com/view/heroisanonimos/corre%C3%A7%C3%B5es#h.etkqu9xg3u20" target="_blank"
+                >17/06/2025</a
+            ></span
         >
     </div>
 
@@ -138,7 +143,16 @@ csscustomizado: <link rel="stylesheet" href="/css/grimorio.css" />
                                         <span class="negrito">Tempo de Conjuração:</span> {{ magia.tempo }} {% if
                                         magia.ritual %} ou Ritual {% endif %}
                                     </p>
-                                    <p><span class="negrito">Alcance: </span> {{ magia.alcance }}</p>
+                                    {% assign alcance_num = magia.alcance | times: 1 %}
+
+                                    <p>
+                                        <span class="negrito">Alcance: </span>
+                                        {% if alcance_num != 0 or magia.alcance == 0 %} {% assign quadrados =
+                                        magia.alcance | divided_by: 1.5 %} {{ magia.alcance | replace: ".", "," }}
+                                        metros ({{ quadrados | round }} Quadrados) {% else %} {{ magia.alcance }} {%
+                                        endif %}
+                                    </p>
+
                                     <p><span class="negrito">Componentes: </span> {{ magia.componentes }}</p>
                                     <p>
                                         <span class="negrito">Duração: </span> {% if magia.concentracao %}Concentração,

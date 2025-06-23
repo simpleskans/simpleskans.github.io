@@ -145,13 +145,21 @@ csscustomizado: <link rel="stylesheet" href="/css/grimorio.css" />
                                     </p>
                                     {% assign alcance_num = magia.alcance | times: 1 %}
 
-                                    <p>
-                                        <span class="negrito">Alcance: </span>
-                                        {% if alcance_num != 0 or magia.alcance == 0 %} {% assign quadrados =
-                                        magia.alcance | divided_by: 1.5 %} {{ magia.alcance | replace: ".", "," }}
-                                        metros ({{ quadrados | round }} Quadrados) {% else %} {{ magia.alcance }} {%
-                                        endif %}
-                                    </p>
+<p>
+    <span class="negrito">Alcance: </span>
+    {% if alcance_num != 0 or magia.alcance == 0 %}
+        {% assign quadrados = magia.alcance | divided_by: 1.5 %}
+
+        {% if alcance_num >= 500 %}
+            {% assign km = alcance_num | divided_by: 1000 %}
+            {{ km | round: 1 | replace: ".", "," }} km ({{ quadrados | round }}Q)
+        {% else %}
+            {{ alcance_num | replace: ".", "," }} metros ({{ quadrados | round }}Q)
+        {% endif %}
+    {% else %}
+        {{ magia.alcance }}
+    {% endif %}
+</p>
 
                                     <p><span class="negrito">Componentes: </span> {{ magia.componentes }}</p>
                                     <p>

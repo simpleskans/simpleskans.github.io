@@ -36,6 +36,10 @@
     padding-top: 0.3rem;
 }
 
+.texto hr {
+    margin: 0.5rem 0;
+}
+
 .texto .galeria {
     width: 100%;
     display: flex;

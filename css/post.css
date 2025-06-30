@@ -29,6 +29,10 @@
     text-decoration: underline;
 }
 
+.corpo h2, .corpo h3, .corpo h4, .corpo h5, .corpo h6 {
+    font-size: 1.3rem !important;
+}
+
 .texto .capapostagem {
     float: left;
     width: 45%;
@@ -83,6 +87,34 @@
     flex-wrap: wrap;
     gap: 0.5rem;
     margin-top: 0.5rem;
+}
+
+.livro {
+    display: flex;
+}
+
+.livro > figure {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 1px var(--cortexto) solid;
+    border-top: 1px var(--cortexto) solid;
+    flex: 1;
+}
+
+.livro > figure > img {
+    margin: auto;
+}
+
+.livro > figure > figcaption {
+    text-align: center;
+    padding: 0.25rem;
+    background: var(--corprincipal);
+}
+
+.livro > .tabelainfo {
+    flex: 2;
 }
 
 @media (max-width: 41.5rem) {
@@ -141,7 +173,6 @@
 }
 
 @media (max-width: 59.9rem) {
-
     .rom .cell:nth-child(6),
     .rom .cell:nth-child(8) {
         word-break: break-all;
@@ -251,6 +282,16 @@
     }
 
     .outrosposts > a {
+        width: 100%;
+    }
+
+    .livro > figure,
+    .livro > figure > figcaption {
+        border: none;
+    }
+
+    .livro {
+        display: block;
         width: 100%;
     }
 }

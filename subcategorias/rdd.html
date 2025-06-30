@@ -1,15 +1,15 @@
 ---
 layout: padrao
-title: 'Dungeons &#38; Dragons 2024'
-descricao: 'Lista de projetos de Dungeons &#38; Dragons 2024 da Simple Skans!'
-permalink: /dnd/2024/
+title: 'Repaginando Dungeons &#38; Dragons'
+descricao: 'Lista de projetos de Repaginando Dungeons &#38; Dragons da Simple Skans!'
+permalink: /dnd/rdd/
 capa: 'img/logoColorido.png'
 csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
 ---
 
 <div class="categoriatitulo">
     <p>Todas as postagens de</p>
-    <h1>Dungeons &#38; Dragons 2024</h1>
+    <h1>Repaginando Dungeons &#38; Dragons</h1>
 </div>
 <div class="corpo" style="display: block">
     <div class="ladoE">
@@ -31,7 +31,7 @@ csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
         <!-- Lista de posts (modificada) -->
         <div class="lista">
             <ul id="posts-container">
-                {% for post in site.tags.e55 %}
+                {% for post in site.categories.rdd %}
                 <li class="post-item" data-tags="{{ post.tags | join: ',' }}">
                     <a class="capitulolink" href="{{ post.url }}" title="{{ post.title }}">
                         <span class="imagemcapitulo" style="background-image: url({{ post.capa }});"></span>

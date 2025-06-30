@@ -296,7 +296,7 @@ header {
 
 .listacategorias > li {
     text-align: center;
-    flex-grow: 1;
+    flex: 1;
     margin: 0.5rem;
 }
 

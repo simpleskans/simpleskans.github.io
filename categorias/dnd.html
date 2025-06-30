@@ -16,97 +16,94 @@ csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
     <h2 class="secaotitulo"><i class="bi bi-tags-fill"></i> Acesso Rápido</h2>
     <ul class="listacategorias">
         <li>
-            <a href="/dnd/5e/" class="gradienteBase"
-                >D&amp;D 5ª Edição</a
-            >
+            <a href="/dnd/5e/" class="gradienteBase">D&amp;D 5ª Edição</a>
         </li>
         <li>
-            <a href="/dnd/2024/" class="gradienteBase"
-                >D&amp;D 2024</a
-            >
+            <a href="/dnd/2024/" class="gradienteBase">D&amp;D 2024</a>
         </li>
         <li>
-            <a href="/dnd/5e/magias" class="gradienteBase"
-                >Lista de Magias 5e</a
-            >
+            <a href="/dnd/beyond/" class="gradienteBase">Beyond</a>
         </li>
         <li>
-            <a href="/dnd/2024/magias" class="gradienteBase"
-                >Lista de Magias 2024</a
-            >
+            <a href="/dnd/rdd/" class="gradienteBase">Repaginando D&amp;D</a>
         </li>
     </ul>
 </section>
+
 <div class="separador"></div>
 <div class="corpo" style="display: block">
     <div class="ladoE">
-        <h3 id="webtoons" class="secaotitulo"><i class="bi bi-dice-5"></i> Destaques 5ª Edição</h3>
-        <nav class="postagensquadro">
-            {% assign c = site.tags.e5 | slice: 0, 2 %} {% for post in c %}
+        <h2 class="secaotitulo"><i class="bi bi-magic"></i> Listas de Magias</h2>
+        <nav class="listagrimorios">
+            {% assign grimorios = site.pages | where_exp: "page", "page.path contains 'grimorios/'" %} {% for page in
+            grimorios %}
             <a
                 class="postlink"
-                style="background-image:  url({{ post.capa }});"
-                href="{{ post.url }}"
-                title="{{ post.title }}">
-                <span>{{ post.autorL }}</span>
+                style="background-image:  url({{ page.capa }});"
+                href="{{ page.url }}"
+                title="{{ page.title }}">
                 <div>
-                    <span>{{ post.title }}</span>
-                    <p>{{ post.resumo }}</p>
+                    <span>{{ page.title }}</span>
                 </div>
             </a>
 
             {% endfor %}
         </nav>
-        <a href="/dnd/5e/" class="acessarcategoria">Ver Tudo <i class="bi bi-arrow-right"></i></a>
-        <div class="separador"></div>
     </div>
 </div>
+<div class="separador"></div>
+<div class="lado-a-lado">
+    <div class="corpo" style="display: block">
+        <div class="ladoE">
+            <h3 id="webtoons" class="secaotitulo"><i class="bi bi-dice-5"></i> 5ª Edição - Recentes</h3>
+            <nav class="lista">
+                <ul>
+                    {% assign c = site.tags.e5 | slice: 0, 4 %} {% for post in c %}
+                    <li>
+                        <a class="capitulolink" href="{{ post.url }}" title="{{ post.title }}">
+                            <span class="imagemcapitulo" style="background-image:  url({{ post.capa }});"></span>
+                            <div class="capitulotexto">
+                                <i
+                                    >{{ post.categories | join: '/' | replace: '-', ' ' | replace: 'rom', 'ROM' |
+                                    replace: 'dnd', 'Dungeons &#38; Dragons'}}</i
+                                >
+                                <p>{{ post.title }}</p>
+                                <span>{{ post.resumo }}<br /></span>
+                            </div>
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </nav>
+            <a href="/dnd/5e/" class="acessarcategoria">Ver Tudo <i class="bi bi-arrow-right"></i></a>
+            <div class="separador"></div>
+        </div>
+    </div>
 
-<div class="corpo" style="display: block">
-    <div class="ladoE">
-        <h3 id="pass" class="secaotitulo"><i class="bi bi-dice-6"></i> Destaques D&#38;D 2024</h3>
-        <nav class="postagensquadro">
-            {% assign c = site.tags.e55 | slice: 0, 2 %} {% for post in c %}
-            <a
-                class="postlink"
-                style="background-image:  url({{ post.capa }});"
-                href="{{ post.url }}"
-                title="{{ post.title }}">
-                <span>{{ post.autorL }}</span>
-                <div>
-                    <span>{{ post.title }}</span>
-                    <p>{{ post.resumo }}</p>
-                </div>
-            </a>
-
-            {% endfor %}
-        </nav>
-        <a href="/dnd/2024/" class="acessarcategoria">Ver Tudo <i class="bi bi-arrow-right"></i></a>
-        <div class="separador"></div>
+    <div class="corpo" style="display: block">
+        <div class="ladoE">
+            <h3 id="pass" class="secaotitulo"><i class="bi bi-dice-5"></i> 2024 - Recentes</h3>
+            <nav class="lista">
+                <ul>
+                    {% assign c = site.tags.e55 | slice: 0, 4 %} {% for post in c %}
+                    <li>
+                        <a class="capitulolink" href="{{ post.url }}" title="{{ post.title }}">
+                            <span class="imagemcapitulo" style="background-image:  url({{ post.capa }});"></span>
+                            <div class="capitulotexto">
+                                <i
+                                    >{{ post.categories | join: '/' | replace: '-', ' ' | replace: 'rom', 'ROM' |
+                                    replace: 'dnd', 'Dungeons &#38; Dragons'}}</i
+                                >
+                                <p>{{ post.title }}</p>
+                                <span>{{ post.resumo }}<br /></span>
+                            </div>
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </nav>
+            <a href="/dnd/2024/" class="acessarcategoria">Ver Tudo <i class="bi bi-arrow-right"></i></a>
+            <div class="separador"></div>
+        </div>
     </div>
 </div>
-
-<div class="corpo" style="display: block">
-    <div class="ladoE">
-        <h3 id="novels" class="secaotitulo"><i class="bi bi-dice-3"></i> Destaques 3ª Edição</h3>
-        <nav class="postagensquadro">
-            {% assign c = site.tags.e3 | slice: 0, 2 %} {% for post in c %}
-            <a
-                class="postlink"
-                style="background-image:  url({{ post.capa }});"
-                href="{{ post.url }}"
-                title="{{ post.title }}">
-                <span>{{ post.autorL }}</span>
-                <div>
-                    <span>{{ post.title }}</span>
-                    <p>{{ post.resumo }}</p>
-                </div>
-            </a>
-
-            {% endfor %}
-        </nav>
-        <a href="" class="acessarcategoria">Ver Tudo <i class="bi bi-arrow-right"></i></a>
-        <div class="separador"></div>
-    </div>
-</div>
-

@@ -11,56 +11,9 @@ csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
     <p>Todas as postagens da</p>
     <h1>Simple Skans</h1>
 </div>
-<div class="corpo" style="display: block">
-    <div class="ladoE" >
-        <nav class="postagensquadro">
-            {% assign c = site.posts | slice: 0, 7 %} {% for post in c %}
-            <a
-                class="postlink"
-                style="background-image:  url({{ post.capa }});"
-                href="{{ post.url }}"
-                title="{{ post.title }}">
-                <span
-                    >{{ post.categories | join: '/' | replace: '-', ' ' | replace: 'rom', 'ROM' | replace: 'dnd',
-                    'Dungeons &#38; Dragons'}}</span
-                >
-                <div>
-                    <span>{{ post.title }}</span>
-                    <p>{{ post.resumo }}</p>
-                </div>
-            </a>
-
-            {% endfor %}
-        </nav>
-        <div class="separador"></div>
-    </div>
-    <!--
-    <div class="ladoD">
-        <nav class="listatags">
-            <h3>Postagens por Categoria</h3>
-            <ul>
-                {% for categoria in site.categories %}
-                <li>
-                    <details>
-                        <summary>
-                            {{ categoria | first | replace: '-', ' ' | replace: 'rom', 'ROM' | replace: 'dnd', 'Dungeons
-                            &#38; Dragons'}} ({{ categoria | last | size }})
-                        </summary>
-                        {% for post in categoria.last %}
-                        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                        {% endfor %}
-                    </details>
-                </li>
-                {% endfor %}
-            </ul>
-        </nav>
-    </div>
-    -->
-</div>
 <div class="lista">
     <ul>
-        {% for post in site.posts %} {% unless post == site.posts[0] or post == site.posts[1] or post == site.posts[2]
-        or post == site.posts[3] or post == site.posts[4] or post == site.posts[5] or post == site.posts[6] %}
+        {% for post in site.posts %}
         <li>
             <a class="capitulolink" href="{{ post.url }}" title="{{ post.title }}">
                 <span class="imagemcapitulo" style="background-image:  url({{ post.capa }});"></span>
@@ -73,7 +26,6 @@ csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
                     <span>{{ post.resumo }}<br /></span>
                 </div>
             </a>
-        </li>
-        {% endunless %} {% endfor %}
+        </li>{% endfor %}
     </ul>
 </div>

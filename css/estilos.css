@@ -432,10 +432,18 @@ footer {
     }
 
     .capitulotexto {
-        width: calc(100% - 1rem);
+        padding-right: 0.5rem;
+    }
+
+    .lista ul li:nth-of-type(even) {
+        .capitulolink {
+            padding-left: 0.5rem;
+        }
+        .capitulotexto {
+            padding-right: 0;
+        }
     }
 }
-
 
 #disqus_thread {
     margin-top: 1rem;

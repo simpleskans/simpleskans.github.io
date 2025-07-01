@@ -10,6 +10,7 @@ csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
 <div class="categoriatitulo">
     <p>Todas as postagens de</p>
     <h1>Traduções Beyond</h1>
+    <p>Em ordem de ID</p>
 </div>
 <div class="corpo" style="display: block">
     <div class="ladoE">
@@ -31,14 +32,15 @@ csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
         <!-- Lista de posts (modificada) -->
         <div class="lista">
             <ul id="posts-container">
-                {% for post in site.categories.beyond %}
+               {% assign posts_beyond = site.categories.beyond | sort: "date" %}
+                {% for post in posts_beyond %}
                 <li class="post-item" data-tags="{{ post.tags | join: ',' }}">
                     <a class="capitulolink" href="{{ post.url }}" title="{{ post.title }}">
                         <span class="imagemcapitulo" style="background-image: url({{ post.capa }});"></span>
                         <div class="capitulotexto">
                             <i>{{ post.autorL }}</i>
                             <p>{{ post.title }}</p>
-                            <span>{{ post.resumo }}<br /></span>
+                            <span>{{ post.resumo }}<br />&#91;{{ post.idt }}&#93;</span>
                         </div>
                     </a>
                 </li>

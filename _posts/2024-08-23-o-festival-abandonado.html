@@ -33,36 +33,65 @@ idt: 'DB05'
         <div class="ladoE">
             <div class="texto">
                 <figure class="capapostagem">
-                    <img src="{{ page.capa }}" alt="Imagem de Capa de {{ page.title }}" />
+                    <img src="{{ page.capa }}" alt="Imagem de Capa de {{ page.title }}"  class="zoom-img"/>
                 </figure>
 
                 <p>
-                    Se você está procurando por um encontro emocionante para adicionar à sua campanha de D&#38;D, não
-                    procure mais! O "Encontro da Semana: O Festival Abandonado" é a escolha perfeita para capturar a
-                    atenção dos seus jogadores e adicionar um toque de mistério e perigo à sua aventura.
+                    <strong>Quando as Estrelas Caem em Fúria</strong> — Um festival é onde mortais tentam tocar o
+                    sublime — com luzes, risos e encantamentos. Mas em <em>O Festival Abandonado</em>, esse toque se
+                    torna um rasgo na realidade. Ideal para aventuras que misturam caos arcano, combate infernal e
+                    mistério alquímico, esta história mergulha os jogadores em um cenário carbonizado onde o espetáculo
+                    virou massacre... e a única saída está nas chamas.
+                </p>
+                <hr />
+                <p>
+                    <strong>Premissa da Aventura:</strong><br />Os personagens encontram os restos do Festum Annua — o
+                    mais grandioso festival de Ano Novo da região, agora reduzido a cinzas, silêncio e fuligem. No
+                    centro da praça, uma estátua que deveria iluminar os céus com magia explode em fúria arcana após ser
+                    sabotada por um aprendiz invejoso. Três demônios — representações vivas dos componentes da pólvora
+                    (salitre, carvão e enxofre) — emergem para atacar. A única forma de encerrar o caos e libertar a
+                    alma aprisionada da pirotécnica Song Ling-i é derrotar os demônios e lançá-los nas chamas da estátua
+                    na ordem exata que forma a pólvora negra.
+                </p>
+                <hr />
+                <p><strong>Ganchos para Aventuras Futuras:</strong></p>
+                <ul>
+                    <li>
+                        Os personagens podem ser caçados por servos dos Nove Infernos, que consideram o exorcismo uma
+                        violação da magia pactuada.
+                    </li>
+                    <li>
+                        Pergaminhos arcanos do festival podem conter magias alquímicas únicas, atraindo magos renegados
+                        e colecionadores arcanistas.
+                    </li>
+                    <li>
+                        Song Ling-i, libertada, pode retornar como espírito guia ou patrona feérica ligada à magia dos
+                        fogos e celebrações.
+                    </li>
+                    <li>
+                        O ritual de sabotagem pode ter sido influenciado por cultos infernais ou entidades como
+                        Dispater, sugerindo uma guerra silenciosa entre planos.
+                    </li>
+                </ul>
+                <hr />
+                <p>
+                    <em
+                        >“Nem todo espetáculo termina em aplausos. Às vezes, ele clama por almas... em meio às
+                        chamas.”</em
+                    >
                 </p>
                 <p>
-                    Os personagens chegam a um terreno de festival abandonado e chamuscado, onde encontram uma estátua
-                    de uma mulher de nove pés de altura, feita de tiras de papel entrelaçadas. Algo deu terrivelmente
-                    errado durante a celebração do Ano Novo, e agora o local está deserto e marcado por um incêndio
-                    devastador.
+                    Vai desvendar o enigma e acender um último fogo de esperança — ou deixar o festival selar seu final
+                    com estalos infernais?
                 </p>
-                <p>
-                    Ao examinar a estátua, ela se anima, fala um enigma curto e explode em chamas. Três demônios emergem
-                    e atacam, representando enxofre, carvão e salitre. Os personagens devem derrotar os demônios e
-                    resolver o enigma para restaurar a paz no festival.
-                </p>
-                <p>
-                    Os personagens encontram várias tendas e barracas de comida queimadas, e o cheiro de enxofre está no
-                    ar. Não há corpos queimados, mas marcas de queimaduras no chão em forma de pessoas podem ser vistas,
-                    aumentando o mistério do que aconteceu ali.
-                </p>
+                <hr />
+                <div class="separador"></div>
             </div>
             <h2 class="secaotitulo" id="secao2"><i class="bi bi-info-circle-fill"></i> Informações da Aventura</h2>
             <section class="info livro">
-               <figure>
-                   <img src="/img/capalivreto/fa.jpg" alt="Capa do Livreto">
-               </figure>
+                <figure>
+                    <img src="/img/capalivreto/fa.jpg" alt="Capa do Livreto"  class="zoom-img"/>
+                </figure>
                 <div class="tabelainfo">
                     <div class="divTable">
                         <div class="cell cell-head">Título</div>
@@ -91,9 +120,6 @@ idt: 'DB05'
                             {% assign c = page.tags %} {% for a in c %} {% unless c.last == a %} {% unless c.first == a
                             %} - {% endunless %} {{ a | replace: 'lvl', ''}}º Nível {% endunless %} {% endfor %}
                         </div>
-
-                        <div class="cell cell-head">Nº de Páginas</div>
-                        <div class="cell">7</div>
 
                         <div class="cell cell-head">Formato</div>
                         <div class="cell">PDF</div>

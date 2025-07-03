@@ -33,47 +33,62 @@ idt: 'DB89'
         <div class="ladoE">
             <div class="texto">
                 <figure class="capapostagem">
-                    <img src="{{ page.capa }}" alt="Imagem de Capa de {{ page.title }}" />
+                    <img src="{{ page.capa }}" alt="Imagem de Capa de {{ page.title }}" class="zoom-img" />
                 </figure>
+                <p><strong>Onde o Conhecimento Atrai o Mal</strong> —</p>
                 <p>
-                    <i
-                        >O arquilich Vecna é um dos vilões mais icônicos da tradição de Dungeons &#38; Dragons. E agora
-                        você pode testemunhar sua magia necromântica com O Dossiê de Vecna + Não Diga Vecna. Este
-                        suplemento emocionante detalha o legado e as estatísticas do próprio Rei Imortal!</i
+                    Algumas verdades deveriam permanecer enterradas. <em>Não Diga Vecna</em> é um compilado mortal que
+                    une lore profundo e uma aventura de terror de alto nível, ideal para sessões únicas ou como clímax
+                    de campanhas cósmicas. O conteúdo gira em torno do temível arquilich Vecna, com regras expandidas,
+                    artefatos icônicos, estatísticas devastadoras e uma aventura ambientada em Limbo, onde os estudiosos
+                    ousaram aprender demais... e pagaram caro.
+                </p>
+                <hr />
+                <p>
+                    <strong>Premissa da Aventura:</strong><br />Ao investigar o desaparecimento da Torre Cientia, os
+                    personagens — todos no 20º nível — descobrem que três estudiosos foram arrastados ao plano do Limbo
+                    por Vecna, após se aprofundarem em segredos proibidos. A torre agora flutua, isolada por tentáculos
+                    mágicos, e abriga armadilhas letais, ecos psíquicos de sofrimento, e um portal selado que leva ao
+                    próprio Vecna. Os jogadores devem explorar os aposentos distorcidos, recuperar as três chaves que
+                    revelam o santuário do arquilich e enfrentar sua fúria — tudo isso sem pronunciar seu nome. Falar
+                    &quot;Vecna&quot; ativa uma maldição psíquica crescente, dificultando ainda mais a missão.
+                </p>
+                <hr />
+                <p><strong>Ganchos para Aventuras Futuras:</strong></p>
+                <ul>
+                    <li>
+                        A maldição de nome proibido pode se espalhar para outros planos, obrigando silêncio absoluto
+                        quando se trata de certos vilões.
+                    </li>
+                    <li>
+                        O <em>Livro da Escuridão Vil</em> pode corromper um dos personagens, servindo como foco de
+                        futuras campanhas sombrias e guerras entre clérigos e liches.
+                    </li>
+                    <li>
+                        Fragmentos da torre podem conter rituais de necromancia ou pistas sobre outros artefatos
+                        perdidos, como a Espada de Kas.
+                    </li>
+                    <li>
+                        Vecna, mesmo derrotado, sempre retorna. Ele pode renascer em um novo corpo, surgindo como
+                        antagonista recorrente — ou como patrono perverso de um vilão inesperado.
+                    </li>
+                </ul>
+                <hr />
+                <p>
+                    <em
+                        >“Não diga o nome. Não escreva o nome. Cada sílaba dele... chama algo que nunca deveria ouvir
+                        você.”</em
                     >
                 </p>
-                <p>
-                    "Não Diga Vecna!" é uma aventura gratuita de Dungeons &#38; Dragons para personagens de nível 20,
-                    onde os jogadores são encarregados de investigar a misteriosa torre de um mago que desapareceu do
-                    Plano Material. Durante a exploração, eles descobrem os segredos proibidos que três estudiosos
-                    desenterraram e os destinos trágicos que os aguardavam. Esta aventura caseira utiliza informações do
-                    Dossiê de Vecna e culmina em um confronto mortal contra o arquilich Vecna. A aventura pode ser
-                    concluída em cerca de duas a três horas e requer apenas o Dossiê de Vecna para ser executada.
-                </p>
-
-                <p>
-                    A torre, conhecida como Torre Cientia, pertencia a três estudiosos - Kalene, Aden e Brin - que
-                    estavam pesquisando sobre Vecna. Quando suas investigações chamaram a atenção do arquilich, Vecna
-                    transportou a torre para Limbo, um plano de caos, onde aprisionou e atormentou os estudiosos até
-                    suas mortes prematuras. Agora, Vecna usa a torre para atrair e matar aqueles que ousam aprender mais
-                    sobre ele. A torre contém armadilhas mortais, conhecimentos proibidos sobre Vecna e um portal para o
-                    próprio santuário do arquilich.
-                </p>
-
-                <p>
-                    Os jogadores têm como objetivos investigar a Torre Cientia, recuperar os segredos descobertos sobre
-                    Vecna, encontrar as três chaves para abrir o Portal Cruel e derrotar Vecna. A torre é protegida por
-                    defesas mágicas e amaldiçoada pelos atos vis de Vecna. Qualquer criatura que pronuncie o nome
-                    "Vecna" dentro da torre sofre dano psíquico e pode ser amaldiçoada, impedindo-a de falar por um
-                    período de tempo. Além disso, a torre possui características únicas, como paredes que se reconstroem
-                    automaticamente e tentáculos negros que protegem portas e janelas.
-                </p>
+                <p>Vai enfrentar Vecna — ou se tornar mais uma nota apagada em seu livro de horrores?</p>
+                <hr />
+                <div class="separador"></div>
             </div>
             <h2 class="secaotitulo" id="secao2"><i class="bi bi-info-circle-fill"></i> Informações da Aventura</h2>
             <section class="info livro">
-               <figure>
-                   <img src="/img/capalivreto/ndv.jpg" alt="Capa do Livreto">
-               </figure>
+                <figure>
+                    <img src="/img/capalivreto/ndv.jpg" alt="Capa do Livreto" class="zoom-img" />
+                </figure>
                 <div class="tabelainfo">
                     <div class="divTable">
                         <div class="cell cell-head">Título</div>
@@ -100,9 +115,6 @@ idt: 'DB89'
                             {% assign c = page.tags %} {% for a in c %} {% unless c.last == a %} {% unless c.first == a
                             %} - {% endunless %} {{ a | replace: 'lvl', ''}}º Nível {% endunless %} {% endfor %}
                         </div>
-
-                        <div class="cell cell-head">Nº de Páginas</div>
-                        <div class="cell">18</div>
 
                         <div class="cell cell-head">Formato</div>
                         <div class="cell">PDF</div>

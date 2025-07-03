@@ -33,43 +33,62 @@ idt: 'DB09'
         <div class="ladoE">
             <div class="texto">
                 <figure class="capapostagem">
-                    <img src="{{ page.capa }}" alt="Imagem de Capa de {{ page.title }}" />
+                    <img src="{{ page.capa }}" alt="Imagem de Capa de {{ page.title }}"  class="zoom-img"/>
                 </figure>
 
                 <p>
-                    O encontro Um Conto Longo Demais, é um encontro social com um dragão de cobre disfarçado de bardo
-                    viajante. Enquanto a maioria dos aventureiros ficaria feliz em receber os presentes de um dragão
-                    metálico, esta poderosa serpe é mais problemática do que vale a pena. O bardo convida os personagens
-                    a se juntarem a ele e trocarem histórias ao redor da fogueira, e ele é um anfitrião gracioso e
-                    amigável com um pacote cheio de comida deliciosa. Qual é o problema? O dragão não deixará os
-                    personagens pararem de contar histórias, contar piadas e entretê-lo—até mesmo impedindo-os de
-                    adormecer para satisfazer sua fome de entretenimento.
+                    <strong>Quando Entreter um Dragão Pode Ser Fatal</strong> — O caminho de volta para casa deveria ser
+                    tranquilo. Uma trilha empoeirada, o pôr do sol suave, o cansaço de uma aventura bem-sucedida… até o
+                    cheiro irresistível de comida levar os heróis à fogueira de Zemmy — um bardo amigável, faminto por
+                    histórias. Literalmente.<br /><em>Um Conto Longo Demais</em> é uma aventura social em que o perigo
+                    não vem de garras ou magia destrutiva, mas do carisma insaciável de um dragão de cobre disfarçado.
+                    Aqui, contar uma história pode ser a única chave para escapar — ou para ser mantido como prisioneiro
+                    de um anfitrião gracioso... demais.
                 </p>
+                <hr />
                 <p>
-                    Embora este dragão não deseje nenhum mal a seus convidados, ele ignora perigosamente o mal que está
-                    causando a seus convidados. Apenas o conhecimento dos personagens os tirará dessa situação—para que
-                    não se comprometam a lutar contra um dragão muito mais poderoso do que eles. Cada grupo terá uma
-                    solução diferente para esse problema, e esse encontro é responsável por todos eles.
+                    <strong>Premissa da Aventura:</strong> Ao atravessar uma estrada esquecida ao anoitecer, os
+                    aventureiros são atraídos por uma refeição irresistível e por Zemidriath — um dragão de cobre
+                    juvenil que assume a forma de um bardo sedutor em busca de narrativas épicas. Ele convida o grupo a
+                    compartilhar histórias, oferecendo comida, música e atenção. Mas à medida que a noite avança, fica
+                    claro que Zemmy não aceitará um simples “boa noite”. Ele exige mais histórias. E mais. E mais.<br />Fugir,
+                    confrontá-lo ou impressioná-lo é o único caminho para a liberdade… mas como convencer um dragão que
+                    vê cada narrativa como parte de seu tesouro pessoal?
                 </p>
+                <hr />
+                <p><strong>Ganchos para Aventuras Futuras:</strong></p>
+                <ul>
+                    <li>
+                        Zemidriath pode retornar com fome por novas histórias — como aliado enigmático ou vilão
+                        recorrente.
+                    </li>
+                    <li>
+                        O alaúde mágico do dragão carrega memórias dos contos contados, revelando segredos esquecidos ou
+                        atraindo caçadores de relíquias.
+                    </li>
+                    <li>
+                        O comportamento obsessivo de Zemmy pode ser parte de uma maldição maior imposta por forças
+                        extraplanares ou de um desequilíbrio entre os dragões metálicos.
+                    </li>
+                    <li>
+                        Cidades vizinhas podem começar a relatar bardos misteriosos que não deixam ninguém partir… e o
+                        grupo já sabe como isso termina.
+                    </li>
+                </ul>
+                <hr />
+                <p><em>“Todo dragão precisa de um tesouro. O meu… é feito de palavras.”</em></p>
                 <p>
-                    Esta estrada, que serpenteia pelo interior de um grande reino ou cidade-estado, vê muitos
-                    aventureiros retornando do deserto carregados não apenas de tesouros, mas de histórias. Um dragão de
-                    cobre chamado Zemidriath acabou de deixar o ninho de seus pais e está ansioso para começar a
-                    construir seu tesouro de histórias e piadas, e percorreu esta estrada para encontrar alguns
-                    aventureiros dispostos a compartilhar uma história.
+                    Vai entreter Zemmy com histórias incríveis — ou viver a aventura de fugir de um anfitrião encantador
+                    demais para dizer adeus?
                 </p>
-                <p>
-                    Quando a noite cai em algum lugar ao longo de uma estrada desgastada, os personagens sentem o cheiro
-                    de uma deliciosa refeição flutuando em direção a eles na brisa, depois observam uma fogueira
-                    brilhando na floresta logo além do caminho. Assim como isca em um anzol, o dragão em forma humana
-                    sentado ao lado da fogueira espera atrair aventureiros com histórias para contar ao seu acampamento.
-                </p>
+                <hr />
+                <div class="separador"></div>
             </div>
             <h2 class="secaotitulo" id="secao2"><i class="bi bi-info-circle-fill"></i> Informações da Aventura</h2>
             <section class="info livro">
-               <figure>
-                   <img src="/img/capalivreto/cld.jpg" alt="Capa do Livreto">
-               </figure>
+                <figure>
+                    <img src="/img/capalivreto/cld.jpg" alt="Capa do Livreto"  class="zoom-img"/>
+                </figure>
                 <div class="tabelainfo">
                     <div class="divTable">
                         <div class="cell cell-head">Título</div>
@@ -99,9 +118,6 @@ idt: 'DB09'
                             %} - {% endunless %} {{ a | replace: 'lvl', ''}}º Nível {% endunless %} {% endfor %}
                         </div>
 
-                        <div class="cell cell-head">Nº de Páginas</div>
-                        <div class="cell">6</div>
-
                         <div class="cell cell-head">Formato</div>
                         <div class="cell">PDF</div>
                     </div>
@@ -125,9 +141,7 @@ idt: 'DB09'
             <div class="separador"></div>
             <h4 class="secaotitulo" id="secao4"><i class="bi bi-link-45deg"></i> Links relacionados</h4>
             <div class="linksrelacionados">
-                <a
-                    target="_blank"
-                    href="https://www.dndbeyond.com/posts/419-encounter-of-the-week-a-tale-too-far"
+                <a target="_blank" href="https://www.dndbeyond.com/posts/419-encounter-of-the-week-a-tale-too-far"
                     >Página da aventura A Tale Too Far no D&#38;D Beyond (em inglês)</a
                 >
             </div>

@@ -33,49 +33,63 @@ idt: 'DB06'
         <div class="ladoE">
             <div class="texto">
                 <figure class="capapostagem">
-                    <img src="{{ page.capa }}" alt="Imagem de Capa de {{ page.title }}" />
+                    <img src="{{ page.capa }}" alt="Imagem de Capa de {{ page.title }}"  class="zoom-img"/>
                 </figure>
-
                 <p>
-                    Este encontro é o Lamento do Unicórnio, um desafio de quebra-cabeça de alto risco que pode se
-                    transformar em um combate letal caso os personagens não consigam resolver o enigma a tempo. 
+                    <strong>Quando Um Enigma Decide o Destino da Floresta</strong> — Às vezes, o silêncio de uma
+                    nascente é o que grita mais alto. <em>Lamento do Unicórnio</em> é uma aventura de quebra-cabeça onde
+                    a falha pode levar à ruína de uma criatura sagrada — ou à ascensão de uma entidade infernal. Ideal
+                    para campanhas com temas de redenção, natureza corrompida e dilemas éticos difíceis, essa aventura
+                    convida os jogadores a resolver um enigma ancestral com tempo limitado... e consequências
+                    definitivas.
                 </p>
+                <hr />
                 <p>
-                    Neste encontro, falhar em resolver o quebra-cabeça a tempo resulta em uma crise dupla: um PNJ que
-                    implora por ajuda é morto por uma magia maligna, e essa mesma magia o ressuscita como um monstro,
-                    forçando os personagens a enfrentarem um combate mortal. Espero que este encontro pronto não apenas
-                    proporcione uma ou duas horas de diversão, mas também o inspire a criar desafios de quebra-cabeça
-                    ainda melhores!
+                    <strong>Premissa da Aventura:</strong><br />Os aventureiros chegam ao Bosque de Vassorum, uma
+                    floresta protegida pelo unicórnio dourado <strong>Ehlona-Vassorum</strong>, servo da deusa da
+                    natureza. Eles encontram a criatura caído à beira de uma fonte poluída por magia profana: sem
+                    forças, o unicórnio precisa que mortais realizem o ritual de purificação deixado por antigos
+                    seguidores de Ehlona. O ritual envolve decifrar uma fábula druídica e usar três jarros em um
+                    quebra-cabeça lógico — tudo isso antes que a corrupção consuma o guardião e o transforme em uma
+                    versão flamejante e aterrorizante de si mesmo.
                 </p>
+                <hr />
+                <p><strong>Ganchos para Aventuras Futuras:</strong></p>
+                <ul>
+                    <li>
+                        O unicórnio, se salvo, pode se tornar um guia espiritual em campanhas ligadas à defesa de
+                        nascentes sagradas e à restauração de florestas contaminadas.
+                    </li>
+                    <li>
+                        A corrupção da fonte pode ser apenas a primeira etapa de um plano maior de invasão dos Nove
+                        Infernos, liderado por narzugons e agentes de Avernus.
+                    </li>
+                    <li>
+                        Os personagens podem buscar outros artefatos ligados à deusa Ehlona, como fragmentos de vida
+                        elemental ou flechas sagradas escondidas em regiões devastadas.
+                    </li>
+                    <li>
+                        Caso o ritual falhe, o surgimento do narzugon cria um inimigo recorrente que acredita que o
+                        grupo desrespeitou uma profecia infernal — iniciando uma campanha planar de perseguição e
+                        confronto.
+                    </li>
+                </ul>
+                <hr />
                 <p>
-                    Uma nascente sagrada repousa no meio de uma floresta verde esmeralda. Todos os dias, ao amanhecer,
-                    um unicórnio de chifre dourado bebe diretamente das águas cristalinas da nascente e, em seguida,
-                    corre alegremente pela floresta. O unicórnio chama-se Ehlona-Vassorum, pois é o fiel vassalo da
-                    deusa da natureza conhecida pela humanidade como Ehlona. A floresta e todas as suas criaturas estão
-                    sob sua proteção, e ele aplica uma justiça rápida àqueles que derrubam as árvores da floresta ou
-                    massacram seus filhos.
+                    <em
+                        >“Este não é um quebra-cabeça de pedras e água. É um teste de esperança, fé — e da coragem de
+                        tentar quando tudo parece perdido.”</em
+                    >
                 </p>
-                <p>
-                    Essa criatura é um obstáculo para aqueles que desejam explorar a Floresta de Vassorum para seus
-                    próprios fins. Suas identidades não são importantes — talvez seja um necromante contratado por um
-                    barão da madeira de uma cidade próxima, uma feiticeira sombria que busca aumentar seus poderes
-                    conectando a fonte ao Sombral ou um poderoso diabo que deseja corromper a nascente sagrada de Ehlona
-                    e transformá-la em um portal para Avernus. Este vilão envenenou a nascente de Ehlona com magia
-                    profana, e o unicórnio Ehlona-Vassorum bebeu inadvertidamente de suas águas corrompidas.
-                </p>
-                <p>
-                    Agora, o unicórnio encontra-se deitado de lado, impotente e lentamente morrendo, junto às margens da
-                    nascente. Tudo o que ele precisa para restaurar seus poderes mágicos e se purificar dessa corrupção
-                    é beber novamente das águas purificadas da fonte de sua deusa, mas ele não possui forças para
-                    restaurar a fonte em seu estado enfraquecido. Os personagens acabam encontrando Vassorum enquanto
-                    vagam pela floresta — talvez em busca da ajuda do unicórnio para outra missão.
-                </p>
+                <p>Vai salvar o guardião da floresta — ou testemunhar sua queda em chamas e trevas?</p>
+                <hr />
+                <div class="separador"></div>
             </div>
             <h2 class="secaotitulo" id="secao2"><i class="bi bi-info-circle-fill"></i> Informações da Aventura</h2>
             <section class="info livro">
-               <figure>
-                   <img src="/img/capalivreto/ldu.jpg" alt="Capa do Livreto">
-               </figure>
+                <figure>
+                    <img src="/img/capalivreto/ldu.jpg" alt="Capa do Livreto"  class="zoom-img"/>
+                </figure>
                 <div class="tabelainfo">
                     <div class="divTable">
                         <div class="cell cell-head">Título</div>
@@ -105,8 +119,6 @@ idt: 'DB06'
                             %} - {% endunless %} {{ a | replace: 'lvl', ''}}º Nível {% endunless %} {% endfor %}
                         </div>
 
-                        <div class="cell cell-head">Nº de Páginas</div>
-                        <div class="cell">8</div>
 
                         <div class="cell cell-head">Formato</div>
                         <div class="cell">PDF</div>

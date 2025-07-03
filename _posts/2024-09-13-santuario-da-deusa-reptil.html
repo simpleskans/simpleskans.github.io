@@ -33,44 +33,50 @@ idt: 'DB11'
         <div class="ladoE">
             <div class="texto">
                 <figure class="capapostagem">
-                    <img src="{{ page.capa }}" alt="Imagem de Capa de {{ page.title }}" />
+                    <img src="{{ page.capa }}" alt="Imagem de Capa de {{ page.title }}"  class="zoom-img"/>
                 </figure>
 
                 <p>
-                    O encontro Santuário da Deusa Réptil é uma luta total de vida ou morte até o fim. Neste encontro, os
-                    personagens devem derrotar Explictica Defilus, uma naga espiritual cujo mal ecoou através da lenda
-                    por gerações. Ajudando a chamada “Deusa Réptil” estão seus fiéis cultistas, que usaram seus poderes
-                    místicos para criar uma maldição alquímica que pretendem espalhar por toda a terra. O preço do
-                    fracasso é mais do que apenas a morte—se o culto revivido da Deusa Réptil puder infectar a terra com
-                    sua praga mística, todos os seres vivos em todo o reino poderiam ser transformados em abominações em
-                    escala
+                    <strong>O Preço Escamoso da Imortalidade</strong> — Há lendas que deveriam permanecer enterradas...
+                    mas Explictica Defilus sempre retorna. <em>Santuário da Deusa Réptil</em> apresenta uma ameaça
+                    ancestral renascida em meio ao deserto: uma naga espiritual adorada como deusa por um culto mutante,
+                    que vê na corrupção alquímica a chave para transformar o reino inteiro em um império de escamas e
+                    submissão.
                 </p>
+                <hr />
                 <p>
-                    Um templo esconderijo para um monstro cruel e calculista é escondido em algum lugar no deserto. Um
-                    culto se reuniu ao redor do templo, adorando seu misterioso mestre como uma Deusa Réptil
-                    todapoderosa. A mestra do templo oculto já foi chamada assim antes, embora ela não seja uma deusa.
-                    Explictica Defilus, uma naga espiritual de crueldade e ódio insondáveis, já foi adorada como uma
-                    divindade em eras passadas, mas seu culto foi esmagado por um grupo de aventureiros. Mas uma naga
-                    tão poderosa quanto Explictica Defilus não pode ser morta por meros aventureiros. Embora seu culto
-                    tenha sido esmagado, seu espírito renasceu em questão de dias, e ela começou a trabalhar novamente.
+                    <strong>Premissa da Aventura:</strong> Em um templo escondido entre dunas e ruínas esquecidas,
+                    Explictica restabeleceu seu culto. O plano? Infestar os cursos d’água com uma Praga Mística que
+                    transforma qualquer criatura viva em reptantes subservientes. A “deusa” promete poder, família e
+                    eternidade — se você estiver disposto a sacrificar sua carne, sua vontade… e sua humanidade.
                 </p>
+                <hr />
+                <p><strong>Ganchos Prováveis:</strong></p>
+                <ul>
+                    <li>Personagens são enviados por aldeões preocupados com águas contaminadas.</li>
+                    <li>Encontro aleatório durante exploração de regiões desérticas.</li>
+                    <li>Último desafio em uma campanha de corrupção sobrenatural.</li>
+                    <li>
+                        Conexão com aventuras como <em>Tumba da Aniquilação</em>, adaptando Explictica como vilã
+                        principal.
+                    </li>
+                </ul>
+                <hr />
                 <p>
-                    Ela curvou as pessoas más à sua vontade, mas com o tempo foi derrotada novamente. E de novo e de
-                    novo, e de novo o trabalho da naga foi desfeito por seres mortais. Explictica, imortal e fervilhante
-                    de ódio por toda a vida mortal, reuniu um novo culto ao povo-lagarto —e humanos dispostos a se
-                    tornar parte de sua “raça superior e escalada”. Ela é adorada como a Deusa Réptil novamente, e
-                    alegou falsamente conceder imortalidade a seus seguidores humanoides, ao preço de se tornar um dos
-                    reptantes. Com a ajuda de seus seguidores, a naga preparou uma mistura que poderia ser usada para
-                    envenenar todos os cursos de água do reino—e todos os que bebem a maldita bebida logo sucumbirão à
-                    Maldição das Escamas e se tornarão reptantes, assim como os tolos que voluntariamente beberam a
-                    bebida.
+                    <em
+                        >“Ela não exige lealdade... ela molda você em algo que não pode negar. O santuário escama,
+                        seduz, e sempre vigia.”</em
+                    >
                 </p>
+                <p>Vai desafiar a naga — ou deixar que sua bênção rastejante se espalhe pelas veias do mundo?</p>
+                <hr />
+                <div class="separador"></div>
             </div>
             <h2 class="secaotitulo" id="secao2"><i class="bi bi-info-circle-fill"></i> Informações da Aventura</h2>
             <section class="info livro">
-               <figure>
-                   <img src="/img/capalivreto/sdr.jpg" alt="Capa do Livreto">
-               </figure>
+                <figure>
+                    <img src="/img/capalivreto/sdr.jpg" alt="Capa do Livreto"  class="zoom-img"/>
+                </figure>
                 <div class="tabelainfo">
                     <div class="divTable">
                         <div class="cell cell-head">Título</div>
@@ -99,9 +105,6 @@ idt: 'DB11'
                             {% assign c = page.tags %} {% for a in c %} {% unless c.last == a %} {% unless c.first == a
                             %} - {% endunless %} {{ a | replace: 'lvl', ''}}º Nível {% endunless %} {% endfor %}
                         </div>
-
-                        <div class="cell cell-head">Nº de Páginas</div>
-                        <div class="cell">6</div>
 
                         <div class="cell cell-head">Formato</div>
                         <div class="cell">PDF</div>

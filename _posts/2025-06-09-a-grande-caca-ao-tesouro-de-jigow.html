@@ -2,13 +2,14 @@
 layout: padrao
 title: "A Grande Caça ao Tesouro de Jigow!"
 descricao: 'Tradução da aventura The Great Jigow Scavenger Hunt! para português do Brasil!'
-categories: dnd
+categories: dnd beyond
 tags: lvl3 e5
-permalink: /:categories/beyond/:title
+permalink: /:categories/:title
 resumo: 'The Great Jigow Scavenger Hunt! | D&D 5e'
 capa: '/img/postcapa/gctj.png'
 autorL: 'Michael Galvis'
 csscustomizado: <link rel="stylesheet" href="/css/post.css" />
+idt: 'DB88'
 ---
 
 <article>
@@ -32,39 +33,60 @@ csscustomizado: <link rel="stylesheet" href="/css/post.css" />
         <div class="ladoE">
             <div class="texto">
                 <figure class="capapostagem">
-                    <img src="{{ page.capa }}" alt="Imagem de Capa de {{ page.title }}" />
+                    <img src="{{ page.capa }}" alt="Imagem de Capa de {{ page.title }}" class="zoom-img" />
                 </figure>
 
                 <p>
-                    A aventura A Grande Caça ao Tesouro de Jigow, os personagens dos jogadores precisam resolver enigmas
-                    e superar desafios de habilidade para recuperar uma caixa de suprimentos roubada. Essa aventura
-                    gratuita de D&amp;D pode ser jogada como uma aventura independente ou servir como um prólogo para o
-                    primeiro capítulo de Critical Role: Call of the Netherdeep.
+                    <strong>Onde O Enigma Vira Celebração</strong> — Algumas aventuras começam com profecias. Outras com
+                    fogueiras e monstros. Esta começa com um bilhete pregado numa hospedaria... e a promessa de
+                    diversão. <em>A Grande Caça ao Tesouro de Jigow!</em> é uma jornada leve e vibrante que leva os
+                    personagens pelas costas de tartarugas gigantes, campos alagados e competições goblinoides. Ideal
+                    para sessões rápidas ou como prólogo para <em>O Chamado de Netherdeep</em>, esta aventura testa a
+                    astúcia, a curiosidade e a disposição de brincar.
                 </p>
+                <hr />
                 <p>
-                    <i>A Grande Caça ao Tesouro de Jigow</i> apresenta a cidade de Jigow, diversos PNJs de Call of the
-                    Netherdeep, e inclui um mapa gratuito da cidade. A aventura pode ser concluída em uma a duas horas
-                    por um grupo de três ou quatro personagens de 3º nível usando as regras básicas.
+                    <strong>Premissa da Aventura:</strong><br />Na véspera do Festival do Mérito, os habitantes de Jigow
+                    descobrem que os prêmios do festival desapareceram — mas um bilhete misterioso revela que não houve
+                    roubo, e sim o início de uma caça ao tesouro. Os personagens decifram enigmas para explorar campos
+                    de arroz, conduzir tartarugas horizonte, vencer uma competição de bebida, nadar no rio Ifolon e
+                    impressionar kobolds com dança e acrobacias. Tudo isso leva ao verdadeiro “ladrão”: o excêntrico
+                    Ancião Colbu Kaz, que organizou a brincadeira para testar o espírito festivo da cidade.
                 </p>
+                <hr />
+                <p><strong>Ganchos para Aventuras Futuras:</strong></p>
+                <ul>
+                    <li>
+                        A relação com Colbu Kaz pode render novas oportunidades, especialmente durante o Festival do
+                        Mérito em <em>O Chamado de Netherdeep</em>.
+                    </li>
+                    <li>
+                        A cidade de Jigow, com sua arquitetura viva sobre tartarugas, pode se tornar um centro
+                        recorrente de encontros sociais, disputas festivas ou missões diplomáticas.
+                    </li>
+                    <li>
+                        Os desafios enfrentados — como lidar com elementais, draconatos e criaturas mágicas — servem
+                        como introdução a antagonistas e aliados futuros.
+                    </li>
+                    <li>
+                        Os moradores que testemunharam a caça ao tesouro reagem ao grupo com respeito, oferecendo
+                        vantagens em interações e eventos posteriores.
+                    </li>
+                </ul>
+                <hr />
+                <p><em>“Cada pista seguida é mais que um passo... é uma dança entre desafio e celebração.”</em></p>
                 <p>
-                    Essa one-shot acontece na véspera do Festival do Mérito, uma celebração anual repleta de competições
-                    de força e astúcia. Enquanto os moradores se preparam para o evento, os personagens descobrem que
-                    uma pequena caixa com prêmios do festival desapareceu—e que alguém deixou pistas sobre sua
-                    localização. Com a missão de recuperar a caixa, os personagens precisarão decifrar enigmas e visitar
-                    diversos locais em Jigow para trazer os prêmios de volta a tempo para o festival.
+                    Vai caçar os prêmios por diversão — ou descobrir que os enigmas de Jigow escondem muito mais que
+                    tortas e medalhas?
                 </p>
-                <p>
-                    Os personagens explorarão vários locais na cidade para desvendar enigmas e enfrentar monstros
-                    inesperados enquanto recuperam os itens roubados. Personagens habilidosos em investigação e astúcia
-                    terão um desempenho melhor nesta aventura, enquanto aqueles que sabem ler bem as pessoas podem obter
-                    ajuda extra para completar a missão.
-                </p>
+                <hr />
+                <div class="separador"></div>
             </div>
             <h2 class="secaotitulo" id="secao2"><i class="bi bi-info-circle-fill"></i> Informações da Aventura</h2>
             <section class="info livro">
-               <figure>
-                   <img src="/img/capalivreto/gctj.jpg" alt="Capa do Livreto">
-               </figure>
+                <figure>
+                    <img src="/img/capalivreto/gctj.jpg" alt="Capa do Livreto" class="zoom-img" />
+                </figure>
                 <div class="tabelainfo">
                     <div class="divTable">
                         <div class="cell cell-head">Título</div>
@@ -94,9 +116,6 @@ csscustomizado: <link rel="stylesheet" href="/css/post.css" />
                             %} - {% endunless %} {{ a | replace: 'lvl', ''}}º Nível {% endunless %} {% endfor %}
                         </div>
 
-                        <div class="cell cell-head">Nº de Páginas</div>
-                        <div class="cell">10</div>
-
                         <div class="cell cell-head">Formato</div>
                         <div class="cell">PDF</div>
                     </div>
@@ -120,7 +139,9 @@ csscustomizado: <link rel="stylesheet" href="/css/post.css" />
             <div class="separador"></div>
             <h4 class="secaotitulo" id="secao4"><i class="bi bi-link-45deg"></i> Links relacionados</h4>
             <div class="linksrelacionados">
-                <a target="_blank" href="https://www.dndbeyond.com/posts/1194-free-d-d-adventure-retrieve-stolen-festival"
+                <a
+                    target="_blank"
+                    href="https://www.dndbeyond.com/posts/1194-free-d-d-adventure-retrieve-stolen-festival"
                     >Página da aventura The Great Jigow Scavenger Hunt! no D&#38;D Beyond (em inglês)</a
                 >
             </div>

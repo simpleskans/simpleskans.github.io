@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const modalImg = modal.querySelector("img");
 
     document.querySelectorAll(".zoom-img").forEach(img => {
-        img.style.cursor = "zoom-in";
+        img.style.cursor = "pointer";
         img.addEventListener("click", () => {
             modal.style.display = "flex";
             modalImg.src = img.src;

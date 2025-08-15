@@ -13,27 +13,27 @@
 }
 
 h1 {
-    font-size: calc(1rem + 0.9svw);
+    font-size: calc(2rem);
 }
 
 h2 {
-    font-size: calc(1rem + 0.75svw);
+    font-size: calc(1.75rem);
 }
 
 h3 {
-    font-size: calc(1rem + 0.6svw);
+    font-size: calc(1.6rem);
 }
 
 h4 {
-    font-size: calc(1rem + 0.45svw);
+    font-size: calc(1.45rem);
 }
 
 h5 {
-    font-size: calc(1rem + 0.3svw);
+    font-size: calc(1.3rem);
 }
 
 h6 {
-    font-size: calc(1rem + 0.15svw);
+    font-size: calc(1.15rem);
 }
 
 * {

@@ -1,0 +1,31 @@
+---
+layout: padrao
+title: 'Biblioteca'
+descricao: 'Todos os Livros traduzidos pela Simple Skans em versão WEB'
+permalink: /biblioteca
+capa: 'img/logoColorido.png'
+csscustomizado: '<link rel="stylesheet" href="/css/categoria.css" /> <link rel="stylesheet" href="/css/biblioteca.css" />'
+---
+
+<div class="categoriatitulo">
+    <h1>Biblioteca SS</h1>
+    <p>Todos os Livros traduzidos pela Simple Skans em versão WEB</p>
+</div>
+<div class="corpo" style="display: block">
+    <h2 class="secaotitulo"><i class="bi bi-tags-fill"></i> Acesso Rápido</h2>
+    <nav class="listagrimorios">
+        {% assign grimorios = site.pages | where_exp: "page", "page.path contains 'biblioteca/'" %} {% for page in
+        grimorios %}
+        <a
+            class="postlink"
+            style="background-image:  url({{ page.capa }});"
+            href="{{ page.url }}"
+            title="{{ page.title }}">
+            <div>
+                <span>{{ page.title }}</span>
+            </div>
+        </a>
+
+        {% endfor %}
+    </nav>
+</div>

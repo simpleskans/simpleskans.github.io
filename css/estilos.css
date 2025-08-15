@@ -17,15 +17,15 @@ h1 {
 }
 
 h2 {
-    font-size: calc(1rem + 0.6svw);
+    font-size: calc(1rem + 0.75svw);
 }
 
 h3 {
-    font-size: calc(1rem + 0.5svw);
+    font-size: calc(1rem + 0.6svw);
 }
 
 h4 {
-    font-size: calc(1rem + 0.4svw);
+    font-size: calc(1rem + 0.45svw);
 }
 
 h5 {
@@ -33,7 +33,7 @@ h5 {
 }
 
 h6 {
-    font-size: calc(1rem + 0.2svw);
+    font-size: calc(1rem + 0.15svw);
 }
 
 * {
@@ -466,6 +466,7 @@ footer {
     max-height: 90%;
     border: 4px solid var(--corprincipal);
     border-radius: 5px;
+    background-color: #fff;
 }
 #img-modal.closeable {
     cursor: pointer;

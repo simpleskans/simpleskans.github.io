@@ -1,4 +1,5 @@
 User-agent: *
 Disallow: /404/
 Disallow: /teste/
+Disallow: /biblioteca/*
 Sitemap: https://simpleskans.com.br/sitemap.xml

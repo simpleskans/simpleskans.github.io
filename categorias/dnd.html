@@ -14,6 +14,21 @@ csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
 </div>
 <section class="categorias">
     <h2 class="secaotitulo"><i class="bi bi-tags-fill"></i> Acesso Rápido</h2>
+    <nav class="listagrimorios">
+        {% assign grimorios = site.pages | where_exp: "page", "page.path contains 'grimorios/'" %} {% for page in
+        grimorios %}
+        <a
+            class="postlink"
+            style="background-image:  url({{ page.capa }});"
+            href="{{ page.url }}"
+            title="{{ page.title }}">
+            <div>
+                <span>{{ page.title }}</span>
+            </div>
+        </a>
+
+        {% endfor %}
+    </nav>
     <ul class="listacategorias">
         <li>
             <a href="/dnd/5e/" class="gradienteBase">D&amp;D&nbsp;5ª&nbsp;Edição</a>
@@ -30,27 +45,6 @@ csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
     </ul>
 </section>
 
-<div class="separador"></div>
-<div class="corpo" style="display: block">
-    <div class="ladoE">
-        <h2 class="secaotitulo"><i class="bi bi-magic"></i> Listas de Magias</h2>
-        <nav class="listagrimorios">
-            {% assign grimorios = site.pages | where_exp: "page", "page.path contains 'grimorios/'" %} {% for page in
-            grimorios %}
-            <a
-                class="postlink"
-                style="background-image:  url({{ page.capa }});"
-                href="{{ page.url }}"
-                title="{{ page.title }}">
-                <div>
-                    <span>{{ page.title }}</span>
-                </div>
-            </a>
-
-            {% endfor %}
-        </nav>
-    </div>
-</div>
 <div class="separador"></div>
 <div class="lado-a-lado">
     <div class="corpo" style="display: block">

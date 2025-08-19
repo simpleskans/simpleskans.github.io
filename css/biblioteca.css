@@ -319,6 +319,35 @@
     background-size: cover;
 }
 
+.downloads {
+    display: flex;
+    border: 2px var(--corprincipal) solid;
+    padding: 1rem 0.5rem;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.botaodownload {
+    width: calc(33% - 1rem);
+    background: var(--corprincipal);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+#gdriveD {
+    background: #2ea250;
+}
+
+.botaodownload > img {
+    height: 1.5rem;
+    display: inline;
+    margin-right: 1rem;
+}
+
 @media (max-width: 41.5rem) {
     .lateralcaps > h6,
     .lateralcaps > nav {
@@ -340,7 +369,7 @@
         max-width: initial;
         margin: 0 1rem;
     }
-    
+
     .creditos {
         display: block;
         div {
@@ -413,6 +442,16 @@
         overflow: hidden;
         height: 100vh;
     }
+
+    .downloads {
+        display: block;
+        padding: 1rem 1rem 0;
+    }
+
+    .botaodownload {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
 }
 
 #livro h1,
@@ -422,4 +461,17 @@
 #livro h5,
 #livro h6 {
     scroll-margin-top: 6rem; /* altura do cabeçalho fixo */
+}
+
+.listagrimorios {
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .postlink {
+        max-width: 25%;
+
+        span {
+            font-size: 1.2rem;
+        }
+    }
 }

@@ -12,21 +12,59 @@ csscustomizado: '<link rel="stylesheet" href="/css/categoria.css" /> <link rel="
     <p>Todos os Livros traduzidos pela Simple Skans em versão WEB</p>
 </div>
 <div class="corpo" style="display: block">
+    <div class="filtro-letras"></div>
     <nav class="listalivros">
         {% assign biblioteca_pages = site.pages | where_exp:"p","p.path contains 'livros/'" %} {% for page in
         biblioteca_pages %}
 
-        <a
-            class="livrolink"
-            href="{{ page.url }}"
-            title="{{ page.title }}">
-            <img src="/img/capalivreto/fa.jpg" alt="">
+        <a class="livrolink" href="{{ page.url }}" title="{{ page.title }}">
+            <img src="{{ page.capa }}" alt="" />
             <div>
                 <span>{{ page.title }}</span>
             </div>
         </a>
 
         {% endfor %}
-
     </nav>
+
+    <script>
+        const containerFiltro = document.querySelector(".filtro-letras");
+        const livros = document.querySelectorAll(".livrolink");
+
+        // Função para extrair a letra inicial (ignora artigos)
+        function getLetraInicial(titulo) {
+            titulo = titulo.trim().toUpperCase();
+            const artigos = ["O ", "A ", "OS ", "AS "];
+            for (let art of artigos) {
+                if (titulo.startsWith(art)) {
+                    titulo = titulo.substring(art.length);
+                    break;
+                }
+            }
+            return titulo.charAt(0);
+        }
+
+        // Coletar todas as letras únicas
+        const letras = [
+            ...new Set(Array.from(livros).map((l) => getLetraInicial(l.querySelector("span").textContent)))
+        ].sort();
+
+        // Criar botões dinamicamente
+        containerFiltro.innerHTML =
+            `<button data-letra="all">Todos</button>` +
+            letras.map((l) => `<button data-letra="${l}">${l}</button>`).join("");
+
+        // Evento de filtro
+        containerFiltro.addEventListener("click", (e) => {
+            if (e.target.tagName !== "BUTTON") return;
+            const letra = e.target.dataset.letra;
+
+            livros.forEach((livro) => {
+                const titulo = livro.querySelector("span").textContent;
+                const inicial = getLetraInicial(titulo);
+
+                livro.style.display = letra === "all" || inicial === letra ? "block" : "none";
+            });
+        });
+    </script>
 </div>

@@ -12,21 +12,21 @@ csscustomizado: '<link rel="stylesheet" href="/css/categoria.css" /> <link rel="
     <p>Todos os Livros traduzidos pela Simple Skans em versão WEB</p>
 </div>
 <div class="corpo" style="display: block">
-    <nav class="listagrimorios">
-        {% assign biblioteca_pages = site.pages | where_exp:"p","p.path contains 'livros/'" %}
-  {% for page in biblioteca_pages %}
-        
+    <nav class="listalivros">
+        {% assign biblioteca_pages = site.pages | where_exp:"p","p.path contains 'livros/'" %} {% for page in
+        biblioteca_pages %}
 
         <a
-            class="postlink"
-            style="background-image:  url({{ page.capa }});"
+            class="livrolink"
             href="{{ page.url }}"
             title="{{ page.title }}">
+            <img src="/img/capalivreto/fa.jpg" alt="">
             <div>
                 <span>{{ page.title }}</span>
             </div>
         </a>
 
         {% endfor %}
+
     </nav>
 </div>

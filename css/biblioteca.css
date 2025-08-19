@@ -463,15 +463,27 @@
     scroll-margin-top: 6rem; /* altura do cabeçalho fixo */
 }
 
-.listagrimorios {
+.listalivros {
+    display: flex;
+    justify-content: space-around;
     flex-wrap: wrap;
-    justify-content: space-between;
+    gap: 1rem;
 
-    .postlink {
-        max-width: 25%;
+    .livrolink {
+        width: calc(20% - 1rem);
+
+        img {
+            aspect-ratio: 17/22;
+        }
 
         span {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
+            text-align: center;
+            display: block;
+        }
+
+        &:hover {
+            border: 2px solid var(--corsecundaria);
         }
     }
 }

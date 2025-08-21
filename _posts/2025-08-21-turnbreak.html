@@ -1,0 +1,249 @@
+---
+layout: padrao
+title: "TurnBreak"
+descricao: "Tradução de TurnBreak para PT-BR! by Simple Skans"
+categories: jogos
+tags: pc
+permalink: /:categories/:title
+resumo: 'PC'
+capa: /img/postcapa/tb.png
+csscustomizado: <link rel="stylesheet" href="/css/post.css" />
+---
+
+<article>
+    <div class="titulopostagem">
+        <h1 id="secao1">{{ page.title }}</h1>
+        <span>{{ page.resumo }}</span>
+
+        <div class="localpostagem">
+            <i class="bi bi-tags-fill"></i>
+            {% assign c = page.categories %} {% for a in c %}
+            <a href="{{ site.url }}/{{ a }}/" class="categoriapost"
+                >{{ a | replace: '-', ' ' | replace: 'rom', 'ROM' | replace: 'dnd', 'Dungeons &#38; Dragons' }} </a
+            ><span>, </span>
+            {% endfor %}
+            <br />
+            <i class="bi bi-clock-fill"></i> {{ page.date | date: "%d/%m/%Y"}}
+        </div>
+    </div>
+
+    <div class="corpo">
+        <div class="ladoE">
+            <div class="texto">
+                <figure class="capapostagem">
+                    <img src="{{ page.capa }}" alt="Imagem de Capa de {{ page.title }}" class="zoom-img" />
+                </figure>
+                <p>
+                    No campo da localização, cada projeto representa um desafio único. Nossa equipe descobriu
+                    <strong>TurnBreak</strong>, uma gema do universo indie, e, após nos engajarmos com o seu gameplay,
+                    entramos em contato com o desenvolvedor para iniciar a sua localização. Este trabalho não se resume
+                    à tradução; é uma imersão completa para garantir que cada aspecto do jogo ressoe com o público
+                    brasileiro.
+                </p>
+                <h2 id="o-que-turnbreak">O que é TurnBreak</h2>
+                <p>
+                    <strong>TurnBreak</strong> é um roguelite vibrante recém-chegado à Steam em acesso antecipado
+                    (lançado em 15 de agosto de 2025). Desenvolvido pela Dapper Dog Digital, o jogo combina coleta de
+                    criaturas e construção de deck com táticas baseadas em elementos. Você forma e evolui uma equipe de
+                    feras únicas — desde ursos de pelúcia necrosados até marsupiais mutantes — explorando suas fraquezas
+                    elementais para desencadear jogadas devastadoras e movimentar a partida a seu favor. Uma jogada
+                    final (o “TurnBreak”) pode reformular completamente o rumo do combate, enquanto versões sombreadas
+                    de seu próprio personagem (Echoes) testam sua evolução entre as runs. Com visual colorido, combate
+                    tático baseado em turnos, conceitos de deckbuilding e até interatividade com chat via Twitch,
+                    TurnBreak oferece partidas curtas, intensas e altamente estratégicas — tudo isso temperado por uma
+                    proposta roguelite empolgante.
+                </p>
+                <p>
+                    <img src="/img/posts/telatitulo.png" alt="Tela de Título" class="zoom-img" />
+                </p>
+                <h4 id="decis-es-de-nomenclatura-e-consist-ncia">Decisões de Nomenclatura e Consistência</h4>
+                <p>
+                    Nossa primeira decisão foi manter a nomenclatura original dos termos centrais. O nome do jogo,
+                    <strong>TurnBreak</strong>, foi mantido, pois se refere à sua mecânica principal e é a forma como o
+                    título será buscado na Steam. Da mesma forma, o termo <strong>Breaker</strong>, que designa os
+                    jogadores, foi preservado para manter a coesão da identidade do jogo. Por consistência, também
+                    optamos por não traduzir o termo <strong>Overkill</strong>, uma mecânica que define um alto valor de
+                    dano.
+                </p>
+
+                <h4 id="desafios-gramaticais-e-solu-es-criativas">Desafios Gramaticais e Soluções Criativas</h4>
+                <p>
+                    A tradução de diálogos e textos exigiu atenção especial, principalmente ao lidar com pronome neutro,
+                    que não possui um equivalente direto e simples em português. Para garantir a naturalidade das
+                    frases, adaptamos construções gramaticais. Por exemplo, a frase &quot;It lands in their favor!&quot;
+                    (que indica que o lançamento de uma moeda foi favorável ao jogador) foi localizada como &quot;Ficou
+                    a seu favor!&quot;, mantendo a fluidez da frase e sua neutralidade de gênero.
+                </p>
+                <p>
+                    O locutor das partidas, com seu tom casual e uso de gírias, também apresentou um desafio. Era
+                    crucial que sua fala soasse autêntica para o público brasileiro sem perder o sentido das falas
+                    originais, além de nos mantermos dentro do limite de caracteres da interface.
+                </p>
+                <p>
+                    <img src="/img/posts/combate.png" alt="Tela de Combate" class="zoom-img" />
+                </p>
+                <h4 id="a-localiza-o-de-termos-e-efeitos">A Localização de Termos e Efeitos</h4>
+                <p>
+                    Um dos aspectos mais criativos da localização foi a adaptação das frases de vitória e derrota das
+                    Feras. Cada elemento possui um conjunto de três frases que refletem sua natureza. Por exemplo, uma
+                    Fera do tipo Flora pode ter uma vitória anunciada como &quot;Vitória Enraizada!&quot;, ou uma
+                    derrota como &quot;Derrota Vegetativa!&quot;. A escolha de termos como &quot;Vitória
+                    Abrasadora!&quot; para o elemento Sol ou &quot;Triunfo das Marés!&quot; para o Aqua demonstra o
+                    cuidado em vincular o vocabulário à essência dos elementos.
+                </p>
+                <p>
+                    Outras mecânicas também foram adaptadas. O efeito <strong>Shield</strong>, por exemplo, foi
+                    localizado como <strong>Proteger</strong>, uma ação direta para o jogador. Dessa forma, a tradução
+                    se alinha com a funcionalidade e o contexto de uso, como na frase &quot;PROTEGE uma Fera aliada
+                    aleatória&quot;.
+                </p>
+                <h4 id="status-do-projeto-e-pr-ximos-passos">Status do Projeto e Próximos Passos</h4>
+                <p>
+                    A localização de <em>TurnBreak</em> ainda está em andamento, acompanhando o desenvolvimento do jogo
+                    em Acesso Antecipado. Estamos atualmente focados na tradução dos nomes e epítetos dos
+                    <em>Breakers</em> que o jogador enfrenta. Quanto aos nomes das Feras, a discussão sobre a
+                    localização continua. A probabilidade é que sigamos o mesmo caminho de outros títulos no Brasil,
+                    como Pokémon, mantendo os nomes originais.
+                </p>
+                <p>
+                    Nossa experiência com <em>TurnBreak</em> tem sido extremamente recompensadora, permitindo-nos
+                    aplicar nossa expertise e participar ativamente de um projeto em desenvolvimento, superando desafios
+                    técnicos de adaptação e mantendo a fidelidade à obra original.
+                </p>
+                <hr />
+                <div class="galeria">
+                    <figure>
+                        <img src="/img/posts/mapa.png" alt="Mapa" class="zoom-img" />
+                        <figcaption class="gradienteBase">Mapa</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="/img/posts/feradesc.png" alt="Descrição de Fera" class="zoom-img" />
+                        <figcaption class="gradienteBase">Descrição de Fera</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="/img/posts/bestiario.png" alt="Bestiário" class="zoom-img" />
+                        <figcaption class="gradienteBase">Bestiário</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="/img/posts/inventario.png" alt="Inventário" class="zoom-img" />
+                        <figcaption class="gradienteBase">Inventário</figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="separador"></div>
+            <h2 class="secaotitulo" id="secao2"><i class="bi bi-controller"></i> Informações do Jogo</h2>
+            <section class="info livro">
+                <div class="tabelainfo">
+                    <div class="divTable">
+                        <div class="cell cell-head">Título</div>
+                        <div class="cell">TurnBreak</div>
+
+                        <div class="cell cell-head">Plataforma</div>
+                        <div class="cell">Windows / Linux</div>
+
+                        <div class="cell cell-head">Desenvolvedora</div>
+                        <div class="cell">Dapper Dog Digital</div>
+
+                        <div class="cell cell-head">Gênero</div>
+                        <div class="cell">Roguelite</div>
+
+                        <div class="cell cell-head">Lançamento</div>
+                        <div class="cell">15 de Agosto de 2025</div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="separador"></div>
+
+            <h3 class="secaotitulo" id="secao5"><i class="bi bi-cloud-arrow-down-fill"></i> Downloads</h3>
+
+            <section class="downloads">
+                <iframe
+                    src="https://store.steampowered.com/widget/3532720/?t=TurnBreak%20%C3%A9%20um%20jogo%20rogue-like%20de%20estrat%C3%A9gia%20por%20turnos%20onde%20jogadores%20se%20enfrentam%20em%20duelos%20mentais%20de%20alto%20risco.%20Com%20uma%20mec%C3%A2nica%20de%20combate%20inovadora%20baseada%20em%20cartas%20e%20mais%20de%2060%20feras%20%C3%BAnicas%20com%20habilidades%20distintas."
+                    frameborder="0"
+                    width="100%"
+                    height="190"
+                    title="Link do Jogo"></iframe>
+            </section>
+            <div class="separador"></div>
+            <h4 class="secaotitulo" id="secao6"><i class="bi bi-link-45deg"></i> Links relacionados</h4>
+            <div class="linksrelacionados">
+                <a
+                    target="_blank"
+                    href="https://www.kickstarter.com/projects/dapperdogdigi/turnbreak-a-roguelite-monster-collecting-card-battler"
+                    >Página no Kickstarter</a
+                >
+                <a target="_blank" href="https://x.com/DapperDogDigi">Perfil da Dapper Dog Digital no X</a>
+
+                <a target="_blank" href="https://www.youtube.com/@dapperdogdigital6902/videos"
+                    >Canal da Dapper Dog Digital no YouTube</a
+                >
+                <a target="_blank" href="https://discord.gg/kXAxdyfPZ7">Servidor do Discord da Dapper Dog Digital</a>
+            </div>
+        </div>
+        <div class="lateral">
+            <nav class="menulateralrapido">
+                <ul>
+                    <li><a href="#secao1">{{ page.title }}</a></li>
+                    <li><a href="#secao2">Informações do Jogo</a></li>
+                    <li><a href="#secao3">Equipe</a></li>
+                    <li><a href="#secao4">Informações da ROM</a></li>
+                    <li><a href="#secao5">Downloads</a></li>
+                    <li><a href="#secao6">Links Relacionados</a></li>
+                    <li><a href="#secao7">Comentários</a></li>
+                </ul>
+                <div class="separador"></div>
+                <div class="redeslateral">
+                    <p>Compartilhe o post:</p>
+                    {% include compartilhar.html %}
+                </div>
+            </nav>
+        </div>
+    </div>
+</article>
+<div class="corpo corpo2">
+    <div>
+        <div class="separador"></div>
+
+        <section class="comentarios">
+            <h5 class="secaotitulo" id="secao7"><i class="bi bi-chat-dots-fill"></i> Comentários</h5>
+            <div id="disqus_thread"></div>
+            <script>
+                /**
+                 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+
+                var disqus_config = function () {
+                    this.page.url = "{{ site.url }}{{ page.url }}"; // Replace PAGE_URL with your page's canonical URL variable
+                    this.page.identifier = "{{ page.url }}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                };
+                (function () {
+                    // DON'T EDIT BELOW THIS LINE
+                    var d = document,
+                        s = d.createElement("script");
+                    s.src = "https://simple-skans.disqus.com/embed.js";
+                    s.setAttribute("data-timestamp", +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript
+                >Please enable JavaScript to view the
+                <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript
+            >
+        </section>
+    </div>
+
+    <div class="outros">
+        <div class="separador"></div>
+        <h6>Outros Posts</h6>
+        <nav class="outrosposts">
+            {% assign c = site.posts | slice: 0, 8 %} {% for post in c %} {% unless post.title == page.title %}
+            <a href="{{ post.url }}">
+                <figure style="background-image: url({{ post.capa }})"></figure>
+                {{ post.title }}
+            </a>
+
+            {% endunless %} {% endfor %}
+        </nav>
+    </div>
+</div>

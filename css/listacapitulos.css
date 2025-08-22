@@ -7,6 +7,11 @@
     text-align: center;
 }
 
+.imagemcapa {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
 figure > figcaption {
     text-align: center;
     font-weight: 700;

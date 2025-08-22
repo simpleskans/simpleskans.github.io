@@ -4,6 +4,7 @@
 
 .titulopostagem h1 {
     font-size: calc(1.7rem + 1vw);
+    padding-top: 14rem;
 }
 
 .texto figure {
@@ -14,6 +15,27 @@
 .corpo {
     display: grid;
     grid-template-columns: 3fr 1fr;
+}
+
+.capapostagem + p {
+    text-indent: 0;
+
+    &::first-line {
+        font-variant: small-caps;
+        font-weight: 500;
+    }
+
+    &::first-letter {
+        font-weight: bold;
+        float: left;
+        font-size: 5rem;
+        line-height: 4.5rem;
+        padding: 0 0.5rem 0 0;
+    }
+}
+
+.texto {
+    text-align: justify;
 }
 
 .texto p {
@@ -29,15 +51,39 @@
     text-decoration: underline;
 }
 
-.corpo h2, .corpo h3, .corpo h4, .corpo h5, .corpo h6 {
+.corpo h2,
+.corpo h3,
+.corpo h4,
+.corpo h5,
+.corpo h6 {
     font-size: 1.3rem !important;
 }
 
 .texto .capapostagem {
-    float: left;
-    width: 45%;
-    margin-right: 1rem;
-    padding-top: 0.3rem;
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    height: 18rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+.texto .capapostagem img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    object-position: center 50%;
+}
+
+p img {
+    border-radius: 10px;
 }
 
 .texto hr {
@@ -48,12 +94,16 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 1rem;
+    justify-content: space-between;
+    margin: 1rem 0;
+    gap: 1rem;
 }
 
 .texto .galeria > figure {
-    width: calc(25% - 1rem);
-    margin-top: 1rem;
+    flex: 1;
+    min-width: 40%;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .texto .galeria figure figcaption {
@@ -61,6 +111,10 @@
     text-align: center;
     padding: 0.25rem;
     font-style: italic;
+}
+
+.secaotitulo:has(+ section) {
+    border-radius: 10px 10px 0 0;
 }
 
 .menulateralrapido {
@@ -115,6 +169,10 @@
 
 .livro > .tabelainfo {
     flex: 2;
+}
+
+.comentarios .secaotitulo {
+    border-radius: 10px;
 }
 
 @media (max-width: 41.5rem) {
@@ -186,16 +244,19 @@
     align-items: center;
     gap: 1rem;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .botaodownload {
-    width: calc(33% - 1rem);
+    white-space: nowrap;
+    flex: 1;
     background: var(--corprincipal);
     padding: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 700;
+    border-radius: 10px;
 }
 
 #mediafireD {
@@ -216,13 +277,21 @@
     margin-right: 1rem;
 }
 
+.linksrelacionados {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
 .linksrelacionados a {
-    display: block;
-    margin: 0.6rem 0;
-    color: var(--corprincipal);
+    flex: 1;
+    min-width: 10rem;
+    background: var(--gradiente);
     font-weight: 700;
-    text-decoration: underline;
-    width: fit-content;
+    padding: 0.5rem;
+    border-radius: 10px;
 }
 
 .outros {
@@ -245,6 +314,8 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 @media (max-width: 59.9rem) {

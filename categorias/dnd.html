@@ -28,6 +28,15 @@ csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
         </a>
 
         {% endfor %}
+        <a
+            class="postlink"
+            style="background-image: url(/img/postcapa/biblioteca.jpg)"
+            href="/biblioteca/"
+            title="Biblioteca SS">
+            <div>
+                <span>Biblioteca SS</span>
+            </div>
+        </a>
     </nav>
     <ul class="listacategorias">
         <li>
@@ -57,7 +66,7 @@ csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
                         <a class="capitulolink" href="{{ post.url }}" title="{{ post.title }}">
                             <span class="imagemcapitulo" style="background-image:  url({{ post.capa }});"></span>
                             <div class="capitulotexto">
-                                <i
+                                <i class="gradienteBase"
                                     >{{ post.categories | join: '/' | replace: '-', ' ' | replace: 'rom', 'ROM' |
                                     replace: 'dnd', 'Dungeons &#38; Dragons'}}</i
                                 >
@@ -84,7 +93,7 @@ csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
                         <a class="capitulolink" href="{{ post.url }}" title="{{ post.title }}">
                             <span class="imagemcapitulo" style="background-image:  url({{ post.capa }});"></span>
                             <div class="capitulotexto">
-                                <i
+                                <i class="gradienteBase"
                                     >{{ post.categories | join: '/' | replace: '-', ' ' | replace: 'rom', 'ROM' |
                                     replace: 'dnd', 'Dungeons &#38; Dragons'}}</i
                                 >

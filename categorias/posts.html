@@ -18,7 +18,7 @@ csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
             <a class="capitulolink" href="{{ post.url }}" title="{{ post.title }}">
                 <span class="imagemcapitulo" style="background-image:  url({{ post.capa }});"></span>
                 <div class="capitulotexto">
-                    <i
+                    <i class="gradienteBase"
                         >{{ post.categories | join: '/' | replace: '-', ' ' | replace: 'rom', 'ROM' | replace: 'dnd',
                         'Dungeons &#38; Dragons'}}</i
                     >
@@ -26,6 +26,7 @@ csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
                     <span>{{ post.resumo }}<br /></span>
                 </div>
             </a>
-        </li>{% endfor %}
+        </li>
+        {% endfor %}
     </ul>
 </div>

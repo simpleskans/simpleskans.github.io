@@ -97,13 +97,6 @@
     }
 }
 
-@media (max-width: 59.9rem) {
-    .postlink:nth-child(n) {
-        width: 100%;
-        aspect-ratio: 1/1;
-    }
-}
-
 .acessarcategoria {
     display: block;
     width: 100%;
@@ -131,6 +124,7 @@
     font-size: 1rem;
     transition: all 0.2s;
     flex: 1;
+    border-radius: 10px;
 }
 
 .filter-option input {
@@ -159,6 +153,13 @@
 }
 
 .listagrimorios a {
-   flex: 1;
+    flex: 1;
     max-height: 200px;
+}
+
+@media (max-width: 59.9rem) {
+    .postlink:nth-child(n) {
+        min-width: 100%;
+        aspect-ratio: 1/1;
+    }
 }

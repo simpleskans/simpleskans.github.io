@@ -14,7 +14,7 @@ h1 {
     flex: 1;
     padding: 1rem;
     gap: 1em;
-    border-radius: 5px;
+    border-radius: 10px;
     justify-content: flex-start;
 }
 
@@ -29,7 +29,7 @@ h1 {
 
 .membro figure > img {
     height: 100%;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .membroinfo {
@@ -83,7 +83,7 @@ h1 {
     gap: 1rem;
     padding: 1rem;
     width: calc(20% - 0.8rem);
-    border-radius: 5px;
+    border-radius: 10px;
     text-align: center;
 }
 
@@ -107,5 +107,5 @@ h1 {
 }
 
 .secaotitulo {
-    border-radius: 5px;
+    border-radius: 10px;
 }

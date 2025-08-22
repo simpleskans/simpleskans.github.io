@@ -22,7 +22,11 @@
 
 .topolivro h1 {
     font-size: calc(1.7rem + 1vw);
-    padding-top: 18rem;
+    padding-top: 18rem !important;
+}
+
+.topolivro + .categoriatitulo {
+    padding-top: 18rem !important;
 }
 
 .corpo {
@@ -343,6 +347,8 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .downloads {
@@ -523,7 +529,7 @@
         color: #fff;
         background-color: var(--corprincipal);
         border: none;
-        border-radius: 5px;
+        border-radius: 10px;
         padding: 0.5rem;
         font-size: 1rem;
         flex: 1;
@@ -533,4 +539,9 @@
 
 .downloads {
     display: none;
+}
+
+#secao5 {
+    border-radius: 10px;
+    overflow: hidden;
 }

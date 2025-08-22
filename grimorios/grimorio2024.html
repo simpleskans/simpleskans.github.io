@@ -14,14 +14,16 @@ categories: grimorios
 
 <article>
     <div class="titulopostagem">
+        <figure>
+            <img src="{{ page.capa }}" alt="Capa de {{ page.title }}" style="object-position: center 50%" />
+        </figure>
         <h1 id="secao1">{{ page.title }}</h1>
         <span
-            >{{ page.resumo }}<br />Deixe seu feedback ou reporte erros no nosso
-            <a href="https://discord.gg/DDtNuaWsSK" target="_blank">Discord</a>! | Tradução realizada pelos
+            >{{ page.resumo }}<br /> Tradução realizada pelos
             <a href="https://sites.google.com/view/heroisanonimos/ldj-2024" target="_blank">Heróis Anônimos</a> |
             Corrigido com as Erratas de
             <a href="https://sites.google.com/view/heroisanonimos/corre%C3%A7%C3%B5es#h.etkqu9xg3u20" target="_blank"
-                >17/06/2025</a
+                >12.08.2025</a
             ></span
         >
     </div>
@@ -146,21 +148,14 @@ categories: grimorios
                                     </p>
                                     {% assign alcance_num = magia.alcance | times: 1 %}
 
-<p>
-    <span class="negrito">Alcance: </span>
-    {% if alcance_num != 0 or magia.alcance == 0 %}
-        {% assign quadrados = magia.alcance | divided_by: 1.5 %}
-
-        {% if alcance_num >= 500 %}
-            {% assign km = alcance_num | divided_by: 1000 %}
-            {{ km | round: 1 | replace: ".", "," }} km ({{ quadrados | round }}Q)
-        {% else %}
-            {{ alcance_num | replace: ".", "," }} metros ({{ quadrados | round }}Q)
-        {% endif %}
-    {% else %}
-        {{ magia.alcance }}
-    {% endif %}
-</p>
+                                    <p>
+                                        <span class="negrito">Alcance: </span>
+                                        {% if alcance_num != 0 or magia.alcance == 0 %} {% assign quadrados =
+                                        magia.alcance | divided_by: 1.5 %} {% if alcance_num >= 1000 %} {% assign km =
+                                        alcance_num | times: 0.001 %} {{ km | replace: ".", "," }} km {% else %} {{
+                                        alcance_num | replace: ".", "," }} metros ({{ quadrados | round }}) {% endif %}
+                                        {% else %} {{ magia.alcance }} {% endif %}
+                                    </p>
 
                                     <p><span class="negrito">Componentes: </span> {{ magia.componentes }}</p>
                                     <p>

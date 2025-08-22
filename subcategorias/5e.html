@@ -13,8 +13,7 @@ csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
 </div>
 <div class="corpo" style="display: block">
     <div class="ladoE">
-       
-       <h2 class="secaotitulo"><i class="bi bi-person-fill-up"></i> Filtrar por Nível:</h2>
+        <h2 class="secaotitulo"><i class="bi bi-person-fill-up"></i> Filtrar por Nível:</h2>
         <div class="level-filters">
             <label class="filter-option">
                 <input type="radio" name="level-filter" value="todos" checked />
@@ -36,7 +35,7 @@ csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
                     <a class="capitulolink" href="{{ post.url }}" title="{{ post.title }}">
                         <span class="imagemcapitulo" style="background-image: url({{ post.capa }});"></span>
                         <div class="capitulotexto">
-                            <i>{{ post.autorL }}</i>
+                            <i class="gradienteBase">{{ post.autorL }}</i>
                             <p>{{ post.title }}</p>
                             <span>{{ post.resumo }}<br /></span>
                         </div>

@@ -64,6 +64,11 @@
     text-align: center;
     background-color: var(--corprincipal);
     padding: 1rem;
+    border-radius: 10px;
+}
+
+#secao5 {
+    border-radius: 10px;
 }
 
 .quote {
@@ -103,6 +108,8 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 @media (max-width: 41.5rem) {

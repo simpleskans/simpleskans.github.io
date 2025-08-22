@@ -104,16 +104,14 @@ header {
 
 .menuTopo {
     display: flex;
-    justify-content: space-between;
     gap: 0.5rem;
-    align-items: center;
     list-style: none;
+    align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
 .menuTopo li {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     padding: 0 1rem;
 }
 
@@ -123,43 +121,55 @@ header {
 
 .menuTopo a {
     display: block;
-    height: 100%;
     line-height: 3rem;
     color: #fff;
     font-weight: 700;
     font-size: 1.3rem;
+    text-decoration: none;
 }
 
-.menutopohamburguer {
+.hamburger {
     display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
 }
 
+/* ===== MOBILE ===== */
 @media (max-width: 56.8rem) {
-    .menuTopo {
-        display: none;
-    }
-
-    .menutopohamburguer {
+    .hamburger {
         display: block;
-        font-weight: 700;
-        font-size: 1.3rem;
     }
 
-    .menuTopo2 {
+    .menuTopo {
+        display: none; /* escondido por padrão */
+        flex-direction: column;
         position: absolute;
         top: 5rem;
-        width: 100%;
         right: 0;
+        width: 100%;
+        background: #c13a5a;
+        background: -webkit-linear-gradient(left, #c13a5aff 32%, #99012aff 100%);
+        background: -o-linear-gradient(left, #c13a5aff 32%, #99012aff 100%);
+        background: linear-gradient(to right, #c13a5aff 32%, #99012aff 100%);
+        z-index: 1000; /* garante que fica acima do conteúdo */
     }
 
-    .menuTopo2 a {
+    .menuTopo.open {
+        display: flex; /* aparece ao abrir */
+    }
+
+    .menuTopo li {
+        padding: 0;
+        width: 100%;
+    }
+
+    .menuTopo a {
         display: block;
-        padding: 0.5rem 1.5rem;
+        padding: 0.75rem 1.5rem;
         text-align: right;
-    }
-
-    .menutopohamburguer summary::marker {
-        content: "";
     }
 }
 
@@ -188,7 +198,9 @@ header {
     background-position: center;
     background-size: cover;
     color: var(--cortexto);
-    border: 2px var(--corprincipal) solid;
+    border: 2px solid var(--corprincipal);
+    border-radius: 10px;
+    overflow: hidden; /* garante que o conteúdo e o background respeitem o border-radius */
 }
 
 .postlink > span {
@@ -200,7 +212,6 @@ header {
 }
 
 .postlink > div {
-    background: #222;
     background: linear-gradient(180deg, #22222200 0%, #222222ff 100%);
     padding: 0.5rem;
 }
@@ -264,11 +275,17 @@ header {
 
 .categorias {
     border: 2px var(--corprincipal) solid;
+    border-radius: 10px;
 }
 
 .secaotitulo {
     background: var(--gradiente);
     padding-left: 0.5rem;
+    border-radius: 10px;
+}
+
+section > .secaotitulo {
+    border-radius: 0;
 }
 
 .vertudo {
@@ -278,6 +295,7 @@ header {
     padding: 1rem;
     font-weight: 700;
     margin: 0 0 0 auto;
+    border-radius: 0 0 10px 10px;
 }
 
 .vertudo::after {
@@ -305,6 +323,7 @@ header {
     padding: 0.5rem;
     font-weight: 700;
     text-transform: capitalize;
+    border-radius: 10px;
 }
 
 /*404*/
@@ -382,7 +401,6 @@ footer {
 .lista ul {
     list-style: none;
     padding: 0;
-    border-top: 2px solid var(--corprincipal);
 }
 
 .capitulolink {
@@ -402,6 +420,8 @@ footer {
     background-size: cover;
     border: 2px solid var(--corprincipal);
     aspect-ratio: 1/1;
+
+    border-radius: 10px;
 }
 
 .capitulolink p {
@@ -415,9 +435,9 @@ footer {
     padding: 0.1rem;
     display: block;
     text-transform: capitalize;
-    background: var(--corprincipal);
     text-align: center;
     font-style: normal;
+    border-radius: 10px;
 }
 
 @media (min-width: 59.9rem) {

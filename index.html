@@ -47,7 +47,7 @@ capa: '/img/logoColorido.png'
             <a class="capitulolink" href="{{ post.url }}" title="{{ post.title }}">
                 <span class="imagemcapitulo" style="background-image:  url({{ post.capa }});"></span>
                 <div class="capitulotexto">
-                   <i>{{ post.categories | join: '/' | replace: '-', ' ' | replace: 'rom', 'ROM' | replace: 'dnd', 'Dungeons
+                   <i class="gradienteBase">{{ post.categories | join: '/' | replace: '-', ' ' | replace: 'rom', 'ROM' | replace: 'dnd', 'Dungeons
             &#38; Dragons'}}</i>
                     <p>{{ post.title }}</p>
                     <span>{{ post.resumo }}<br></span>

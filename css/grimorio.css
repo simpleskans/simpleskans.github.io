@@ -405,6 +405,20 @@
     .titulopostagem {
         margin: 0 !important;
         padding: 0 !important;
+        h1 {
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+        figure {
+            display: none !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            img {
+                display: none !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+        }
     }
 
     .grid-magias {
@@ -423,6 +437,7 @@
         font-size: 0.8rem;
         line-height: 0.88rem;
         border-bottom: 2px solid #d3b885;
+        border-radius: 0;
 
         .magia-nome {
             color: #6f1f11 !important;

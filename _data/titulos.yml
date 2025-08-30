@@ -1,0 +1,17 @@
+dnd:
+    default: "Dungeons & Dragons"
+    e5: "D&D 5e"
+    e55: "D&D 2024"
+    e3: "D&D 3e"
+
+smash-legends:
+    default: "Smash Legends"
+    slw: "Webtoon"
+    slsp: "Passe Smash"
+    sln: "Smash Legends Novel"
+
+jogos:
+    default: "Jogos"
+    gba: "GBA"
+    nes: "NES"
+    pc: "PC"

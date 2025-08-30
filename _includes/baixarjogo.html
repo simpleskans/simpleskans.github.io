@@ -1,0 +1,30 @@
+<h2 class="secaotitulo" id="downloads"><i class="bi bi-cloud-arrow-down-fill"></i> Downloads</h2>
+
+<section class="downloads">
+    {% for item in page.downloads %} {% case item.tipo %} {% when "steam" %}
+    <iframe src="{{ item.url }}" frameborder="0" width="100%" height="190"> </iframe>
+
+    {% when "mediafire" %}
+    <a href="{{ item.url }}" id="mediafireD" class="botaodownload" target="_blank">
+        <img src="/img/svg/mediafire.svg" alt="Logo Mediafire" /> Mediafire
+    </a>
+
+    {% when "gdrive" %}
+    <a href="{{ item.url }}" id="gdriveD" class="botaodownload" target="_blank">
+        <img src="/img/svg/gdrive.svg" alt="Logo Google Drive" /> Google Drive
+    </a>
+
+    {% when "dropbox" %}
+    <a href="{{ item.url }}" id="dropboxD" class="botaodownload" target="_blank">
+        <img src="/img/svg/dropbox.svg" alt="Logo Dropbox" /> Dropbox
+    </a>
+
+    {% when "generico" %}
+    <a href="{{ item.url }}" class="botaodownload" target="_blank"> {{ item.texto }} </a>
+
+    {% when "leitura" %}
+    <a href="{{ item.url }}" class="botaodownload leronline">
+        <img src="/img/svg/leronline.svg" alt="Icone Ler Online" /> Ler Online - {{ item.texto }}
+    </a>
+    {% endcase %} {% endfor %}
+</section>

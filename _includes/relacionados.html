@@ -1,0 +1,6 @@
+<h2 class="secaotitulo" id="links-relacionados"><i class="bi bi-link-45deg"></i> Links relacionados</h2>
+<div class="linksrelacionados">
+    {% for link in page.relacionados %}
+      <a target="_blank" href="{{ link.url }}">{{ link.texto }}</a>
+    {% endfor %}
+</div>

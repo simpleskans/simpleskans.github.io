@@ -3,30 +3,37 @@ layout: padrao
 title: Posts
 descricao: Lista com todas as postagens da Simple Skans!
 permalink: /posts/
-capa: 'img/logoColorido.png'
+capa: "img/logoColorido.png"
 csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
 ---
 
+<script src="/js/filtroposts.js"></script>
 <div class="categoriatitulo">
     <p>Todas as postagens da</p>
     <h1>Simple Skans</h1>
 </div>
-<div class="lista">
-    <ul>
-        {% for post in site.posts %}
-        <li>
-            <a class="capitulolink" href="{{ post.url }}" title="{{ post.title }}">
-                <span class="imagemcapitulo" style="background-image:  url({{ post.capa }});"></span>
-                <div class="capitulotexto">
-                    <i class="gradienteBase"
-                        >{{ post.categories | join: '/' | replace: '-', ' ' | replace: 'rom', 'ROM' | replace: 'dnd',
-                        'Dungeons &#38; Dragons'}}</i
-                    >
-                    <p>{{ post.title }}</p>
-                    <span>{{ post.resumo }}<br /></span>
-                </div>
-            </a>
-        </li>
+<div class="gridbase">
+    <div class="filtros">
+        <button class="filtro-btn active" data-categoria="todos">Todos ({{ site.posts | size }})</button>
+
+        {% assign categorias_fixas = "dnd,smash-legends,jogos" | split: "," %} {% for categoria in categorias_fixas %}
+        {% assign category_name = categoria | replace: '-', ' ' | replace: 'dnd', 'Dungeons & Dragons' %} {% assign
+        post_count = site.posts | where_exp: "post", "post.categories contains categoria" | size %}
+        <button class="filtro-btn" data-categoria="{{ categoria }}">{{ category_name }} ({{ post_count }})</button>
         {% endfor %}
-    </ul>
+    </div>
+
+    <div class="lista">
+        <ul>
+            {% for post in site.posts %}
+            <li class="post-item {{ post.categories | join: ' ' }}">
+                {% assign category_name = post.categories | first %} {% if category_name == 'dnd' %} {% assign
+                formatted_category = 'Dungeons & Dragons' %} {% elsif category_name == 'smash-legends' %} {% assign
+                formatted_category = 'Smash Legends' %} {% elsif category_name == 'jogos' %} {% assign
+                formatted_category = 'Jogos' %} {% else %} {% assign formatted_category = category_name | replace: '-',
+                ' ' %} {% endif %} {% include capitulolink.html post=post subtexto=formatted_category %}
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
 </div>

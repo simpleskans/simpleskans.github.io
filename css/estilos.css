@@ -13,27 +13,27 @@
 }
 
 h1 {
-    font-size: calc(2rem);
+    font-size: 2rem;
 }
 
 h2 {
-    font-size: calc(1.75rem);
+    font-size: 1.75rem;
 }
 
 h3 {
-    font-size: calc(1.6rem);
+    font-size: 1.6rem;
 }
 
 h4 {
-    font-size: calc(1.45rem);
+    font-size: 1.45rem;
 }
 
 h5 {
-    font-size: calc(1.3rem);
+    font-size: 1.3rem;
 }
 
 h6 {
-    font-size: calc(1.15rem);
+    font-size: 1.15rem;
 }
 
 * {
@@ -44,6 +44,7 @@ body {
     font-family: "SUSE", system-ui;
     background: var(--corfundo);
     color: #e3e6e8;
+    min-height: 100vh;
 }
 
 a {
@@ -78,10 +79,10 @@ header {
     padding-inline: var(--espacamentocorpo);
 }
 
-.gcse-searchbox-only {
-    position: absolute;
-    top: 0;
-    left: 0;
+.gridbase {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 1.25rem;
 }
 
 .barraTopo {
@@ -137,48 +138,15 @@ header {
     cursor: pointer;
 }
 
-/* ===== MOBILE ===== */
-@media (max-width: 56.8rem) {
-    .hamburger {
-        display: block;
-    }
-
-    .menuTopo {
-        display: none; /* escondido por padrão */
-        flex-direction: column;
-        position: absolute;
-        top: 5rem;
-        right: 0;
-        width: 100%;
-        background: #c13a5a;
-        background: -webkit-linear-gradient(left, #c13a5aff 32%, #99012aff 100%);
-        background: -o-linear-gradient(left, #c13a5aff 32%, #99012aff 100%);
-        background: linear-gradient(to right, #c13a5aff 32%, #99012aff 100%);
-        z-index: 1000; /* garante que fica acima do conteúdo */
-    }
-
-    .menuTopo.open {
-        display: flex; /* aparece ao abrir */
-    }
-
-    .menuTopo li {
-        padding: 0;
-        width: 100%;
-    }
-
-    .menuTopo a {
-        display: block;
-        padding: 0.75rem 1.5rem;
-        text-align: right;
-    }
-}
-
 /*Separador de conteudo*/
 
 .separador {
-    height: 3rem;
+    height: 2rem;
 }
 
+.separadorlargo {
+    height: 5rem;
+}
 /*caixa de conteudo*/
 
 .conteudo {
@@ -238,54 +206,25 @@ header {
     grid-area: 1 / 1 / 3 / 2;
 }
 
-@media (max-width: 66.5rem) {
-    .destaques {
-        grid-template-columns: 1fr 1fr;
-        aspect-ratio: initial;
-        max-width: 100%;
-    }
-
-    .destaques > .postlink:nth-child(1) {
-        grid-area: 1 / 1 / 2 / 3;
-        aspect-ratio: 5/2;
-    }
-
-    .destaques > .postlink {
-        aspect-ratio: 3/2;
-    }
-}
-
-@media (max-width: 35rem) {
-    .destaques {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .destaques > .postlink:nth-child(1) {
-        aspect-ratio: 3/2;
-    }
-
-    .destaques > .postlink {
-        aspect-ratio: 3/1.7;
-        width: 100%;
-    }
-}
-
 /*Outros posts*/
 
 .categorias {
     border: 2px var(--corprincipal) solid;
     border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 1rem;
 }
 
 .secaotitulo {
     background: var(--gradiente);
     padding-left: 0.5rem;
     border-radius: 10px;
+    margin: 1rem 0;
 }
 
-section > .secaotitulo {
+.categorias .secaotitulo {
     border-radius: 0;
+    margin: 0 0 1rem;
 }
 
 .vertudo {
@@ -294,12 +233,16 @@ section > .secaotitulo {
     width: fit-content;
     padding: 1rem;
     font-weight: 700;
-    margin: 0 0 0 auto;
-    border-radius: 0 0 10px 10px;
+    margin: 1rem 0 0 auto;
+    border-radius: 10px;
 }
 
 .vertudo::after {
     content: " ➜";
+}
+
+.vertudo:hover {
+    background: var(--corsecundaria);
 }
 
 /*lista categorias*/
@@ -330,20 +273,6 @@ section > .secaotitulo {
 
 /*Rodapé*/
 
-.imagemrodape {
-    height: calc(10rem + 15vw);
-    background-image: url(/img/rodape.jpeg);
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: cover;
-    margin-bottom: -14rem;
-}
-
-.escurecerrodape {
-    height: 100%;
-    background: linear-gradient(180deg, #0d0f12ff 0%, #0d0f123b 35%, #0d0f1200 100%);
-}
-
 footer {
     display: flex;
     align-items: center;
@@ -351,7 +280,7 @@ footer {
     z-index: 3;
     padding-inline: var(--espacamentocorpo);
     height: 14rem;
-    background: linear-gradient(180deg, #22222200 0%, #222222ff 100%);
+    background: var(--gradiente);
 }
 
 .rodapetexto {
@@ -404,65 +333,48 @@ footer {
 }
 
 .capitulolink {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    gap: 1rem;
-    padding: 1rem 0;
-    border-bottom: 2px solid var(--corprincipal);
-    height: 100%;
+    display: block;
 }
 
 .capitulolink .imagemcapitulo {
     width: 100%;
+    display: block;
     overflow: hidden;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     border: 2px solid var(--corprincipal);
-    aspect-ratio: 1/1;
-
+    aspect-ratio: 16/9;
     border-radius: 10px;
 }
 
 .capitulolink p {
     font-weight: 700;
-    display: block;
+    display: -webkit-box; /* Necessário para o line-clamp */
+    -webkit-line-clamp: 2; /* Número máximo de linhas */
+    -webkit-box-orient: vertical; /* Orientação vertical */
+    overflow: hidden; /* Esconde o excesso */
+    text-overflow: ellipsis;
     font-size: 1.2rem;
-    align-content: center;
 }
 
 .capitulotexto i {
-    padding: 0.1rem;
     display: block;
     text-transform: capitalize;
-    text-align: center;
     font-style: normal;
-    border-radius: 10px;
+    padding: 0.25rem 0;
+    border-bottom: 2px solid var(--corprincipal);
 }
 
-@media (min-width: 59.9rem) {
-    .lista ul {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
+.lista ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem 1rem;
+}
 
-    .capitulolink p {
-        font-size: 1.4rem;
-        align-content: flex-start;
-    }
-
-    .capitulotexto {
-        padding-right: 0.5rem;
-    }
-
-    .lista ul li:nth-of-type(even) {
-        .capitulolink {
-            padding-left: 0.5rem;
-        }
-        .capitulotexto {
-            padding-right: 0;
-        }
-    }
+.capitulolink p {
+    font-size: 1.4rem;
+    align-content: flex-start;
 }
 
 #disqus_thread {
@@ -485,9 +397,121 @@ footer {
     max-width: 90%;
     max-height: 90%;
     border: 4px solid var(--corprincipal);
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: #fff;
 }
 #img-modal.closeable {
     cursor: pointer;
+}
+
+.outrosposts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.outrosposts > a {
+    font-weight: 700;
+    margin-top: 1rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.outrosposts > a:hover {
+    text-decoration: underline;
+}
+
+.outrosposts > a > figure {
+    width: 100%;
+    aspect-ratio: 2/1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 66.5rem) {
+    .destaques {
+        grid-template-columns: 1fr 1fr;
+        aspect-ratio: initial;
+        max-width: 100%;
+    }
+
+    .destaques > .postlink:nth-child(1) {
+        grid-area: 1 / 1 / 2 / 3;
+        aspect-ratio: 5/2;
+    }
+
+    .destaques > .postlink {
+        aspect-ratio: 3/2;
+    }
+
+    .lista ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gridbase {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .outrosposts {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 56.8rem) {
+    .hamburger {
+        display: block;
+    }
+
+    .menuTopo {
+        display: none; /* escondido por padrão */
+        flex-direction: column;
+        position: absolute;
+        top: 5rem;
+        right: 0;
+        width: 100%;
+        background: #c13a5a;
+        background: -webkit-linear-gradient(left, #c13a5aff 32%, #99012aff 100%);
+        background: -o-linear-gradient(left, #c13a5aff 32%, #99012aff 100%);
+        background: linear-gradient(to right, #c13a5aff 32%, #99012aff 100%);
+        z-index: 1000; /* garante que fica acima do conteúdo */
+    }
+
+    .menuTopo.open {
+        display: flex; /* aparece ao abrir */
+    }
+
+    .menuTopo li {
+        padding: 0;
+        width: 100%;
+    }
+
+    .menuTopo a {
+        display: block;
+        padding: 0.75rem 1.5rem;
+        text-align: right;
+    }
+}
+
+@media (max-width: 35rem) {
+    .destaques {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .destaques > .postlink:nth-child(1) {
+        aspect-ratio: 3/2;
+    }
+
+    .destaques > .postlink {
+        aspect-ratio: 3/1.7;
+        width: 100%;
+    }
 }

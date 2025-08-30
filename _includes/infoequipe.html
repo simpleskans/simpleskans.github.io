@@ -1,0 +1,11 @@
+<h3 class="secaotitulo" id="informacao-da-equipe"><i class="bi bi-person-vcard-fill"></i> Equipe</h3>
+<section class="info livro">
+    <div class="tabelainfo">
+        <div class="divTable">
+            {% for c in page.equipe %}
+            <div class="cell cell-head">{{ c.nome }}</div>
+            <div class="cell">{{ c.funcao }}</div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

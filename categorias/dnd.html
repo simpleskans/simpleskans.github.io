@@ -1,16 +1,16 @@
 ---
 layout: padrao
-title: 'Dungeons &#38; Dragons'
-descricao: 'Lista de projetos de Dungeons &#38; Dragons da Simple Skans!'
+title: "Dungeons &#38; Dragons"
+descricao: "Lista de projetos de Dungeons &#38; Dragons da Simple Skans!"
 permalink: /dnd/
-capa: 'img/logoColorido.png'
+capa: "img/logoColorido.png"
 csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
 ---
 
 {% assign current_cat = page.url | split: "/" | last %}
 <div class="categoriatitulo">
-    <p>Todas as postagens na categoria</p>
-    <h1>{{ current_cat | replace: '-', ' ' | replace: 'rom', 'ROM' | replace: 'dnd', 'Dungeons &#38; Dragons'}}</h1>
+    <p>Todas as traduções e projetos de</p>
+    <h1>Dungeons &amp; Dragons</h1>
 </div>
 <section class="categorias">
     <h2 class="secaotitulo"><i class="bi bi-tags-fill"></i> Acesso Rápido</h2>
@@ -54,59 +54,30 @@ csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
     </ul>
 </section>
 
-<div class="separador"></div>
-<div class="lado-a-lado">
-    <div class="corpo" style="display: block">
-        <div class="ladoE">
-            <h3 id="webtoons" class="secaotitulo"><i class="bi bi-dice-5"></i> 5ª Edição - Recentes</h3>
-            <nav class="lista">
-                <ul>
-                    {% assign c = site.tags.e5 | slice: 0, 4 %} {% for post in c %}
-                    <li>
-                        <a class="capitulolink" href="{{ post.url }}" title="{{ post.title }}">
-                            <span class="imagemcapitulo" style="background-image:  url({{ post.capa }});"></span>
-                            <div class="capitulotexto">
-                                <i class="gradienteBase"
-                                    >{{ post.categories | join: '/' | replace: '-', ' ' | replace: 'rom', 'ROM' |
-                                    replace: 'dnd', 'Dungeons &#38; Dragons'}}</i
-                                >
-                                <p>{{ post.title }}</p>
-                                <span>{{ post.resumo }}<br /></span>
-                            </div>
-                        </a>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </nav>
-            <a href="/dnd/5e/" class="acessarcategoria">Ver Tudo <i class="bi bi-arrow-right"></i></a>
-            <div class="separador"></div>
-        </div>
+<div>
+    <div>
+        <h3 id="dnd5e" class="secaotitulo"><i class="bi bi-dice-5"></i> 5ª Edição - Recentes</h3>
+        <nav class="lista">
+            <ul>
+                {% assign posts_slice = site.tags.e5 | slice: 0, 6 %} {% for post in posts_slice %} {% assign subtexto
+                = post.autorL %} {% include capitulolink.html post=post subtexto=subtexto %} {% endfor %}
+            </ul>
+        </nav>
+        <div class="separador"></div>
+        <a href="/dnd/5e/" class="vertudo">Ver Tudo</a>
     </div>
+</div>
 
-    <div class="corpo" style="display: block">
-        <div class="ladoE">
-            <h3 id="pass" class="secaotitulo"><i class="bi bi-dice-5"></i> 2024 - Recentes</h3>
-            <nav class="lista">
-                <ul>
-                    {% assign c = site.tags.e55 | slice: 0, 4 %} {% for post in c %}
-                    <li>
-                        <a class="capitulolink" href="{{ post.url }}" title="{{ post.title }}">
-                            <span class="imagemcapitulo" style="background-image:  url({{ post.capa }});"></span>
-                            <div class="capitulotexto">
-                                <i class="gradienteBase"
-                                    >{{ post.categories | join: '/' | replace: '-', ' ' | replace: 'rom', 'ROM' |
-                                    replace: 'dnd', 'Dungeons &#38; Dragons'}}</i
-                                >
-                                <p>{{ post.title }}</p>
-                                <span>{{ post.resumo }}<br /></span>
-                            </div>
-                        </a>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </nav>
-            <a href="/dnd/2024/" class="acessarcategoria">Ver Tudo <i class="bi bi-arrow-right"></i></a>
-            <div class="separador"></div>
-        </div>
+<div>
+    <div>
+        <h3 id="pass" class="secaotitulo"><i class="bi bi-dice-5"></i> 2024 - Recentes</h3>
+        <nav class="lista">
+            <ul>
+                {% assign posts_slice = site.tags.e55 | slice: 0, 6 %} {% for post in posts_slice %} {% assign subtexto
+                = post.autorL %} {% include capitulolink.html post=post subtexto=subtexto %} {% endfor %}
+            </ul>
+        </nav>
+        <div class="separador"></div>
+        <a href="/dnd/2024/" class="vertudo">Ver Tudo</a>
     </div>
 </div>

@@ -1,4 +1,4 @@
-.topowebtoon > figure {
+.capapostagem {
     position: absolute;
     top: 5rem;
     left: 0;
@@ -12,7 +12,7 @@
     flex-grow: 0;
 }
 
-.topowebtoon > figure > img {
+.capapostagem > img {
     display: block;
     object-fit: cover;
     width: 100%;
@@ -20,14 +20,19 @@
     opacity: 1;
 }
 
-.topowebtoon h1 {
-    font-size: calc(1.7rem + 1vw);
-    padding-top: 18rem;
+.titulopostagem {
+    padding: 5rem 0;
 }
 
-.corpo {
+.titulopostagem h1 {
+    font-size: calc(1.7rem + 1vw);
+    padding-top: 14rem;
+}
+
+.gridbaseinvertido {
     display: grid;
     grid-template-columns: 3fr 1fr;
+    gap: 1rem;
 }
 
 .menulateralrapido {
@@ -42,11 +47,7 @@
     margin-top: 0.5rem;
 }
 
-.galeriawebtoon {
-    margin: -2rem 0;
-}
-
-.galeriawebtoon > figure {
+.galeriawebtoon p img {
     margin: 2rem 0 2rem;
 }
 
@@ -71,11 +72,13 @@
     border-radius: 10px;
 }
 
-.quote {
-    margin: 1rem 0 0 1rem;
+.noveltexto ul {
+    margin: 0 0 0 1rem;
     display: block;
     font-variant: small-caps;
     font-weight: 700;
+    list-style: none;
+    padding-left: 0;
 }
 
 @media (max-width: 41.5rem) {
@@ -88,29 +91,6 @@
     }
 }
 
-.outros {
-    padding-left: 2.5rem;
-}
-
-.outrosposts > a {
-    font-weight: 700;
-    margin-top: 1rem;
-    display: block;
-}
-
-.outrosposts > a:hover {
-    text-decoration: underline;
-}
-
-.outrosposts > a > figure {
-    width: 100%;
-    aspect-ratio: 2/1;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    border-radius: 10px;
-    overflow: hidden;
-}
 
 @media (max-width: 41.5rem) {
     .lateralcaps > h6,
@@ -124,12 +104,9 @@
 }
 
 @media (max-width: 59.9rem) {
-    .corpo2 {
-        display: block;
-    }
-
-    .outros {
-        padding: 0;
+    .gridbaseinvertido {
+        display: flex;
+        flex-wrap: wrap;
     }
 
     .lateralcaps {
@@ -140,15 +117,7 @@
         font-size: calc(1rem + 1vw);
     }
 
-    .outrosposts {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
-    }
 
-    .outrosposts > a {
-        width: 100%;
-    }
 }
 
 .localpostagem {
@@ -175,14 +144,31 @@
 
 .novelimagem {
     width: 100%;
+    margin-top: 1rem;
+    border-radius: 10px;
 }
 
-.fraseinicial {
+.noveltexto p:first-of-type {
     font-size: 1.3rem;
     font-style: italic;
     padding: 2rem 0;
     border-bottom: 2px solid var(--corprincipal);
     margin-bottom: 1rem;
+}
+
+.noveltexto p:first-of-type + p {
+    &::first-line {
+        font-variant: small-caps;
+        font-weight: 500;
+    }
+
+    &::first-letter {
+        font-weight: bold;
+        float: left;
+        font-size: 5rem;
+        line-height: 4.5rem;
+        padding: 0 0.5rem 0 0;
+    }
 }
 
 .noveltexto hr {

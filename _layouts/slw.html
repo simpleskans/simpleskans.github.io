@@ -1,0 +1,23 @@
+---
+layout: padrao
+---
+
+<article>
+    {% include titulopost.html post=post %}
+
+    <div>
+        <div class="gridbaseinvertido">
+            <div class="texto">
+                {% include capapostagem.html post=post %} {% include capnav.html %}
+
+                <section class="galeriawebtoon">{{ content }}</section>
+                <div class="separador"></div>
+                {% include capnav.html %}
+                <div class="separador"></div>
+            </div>
+
+            <div>{% include outrossmash.html %}</div>
+        </div>
+        {% include comentarios.html post=post %}
+    </div>
+</article>

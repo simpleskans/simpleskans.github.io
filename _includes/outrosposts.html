@@ -1,0 +1,9 @@
+<h6 class="secaotitulo">Outros Posts</h6>
+<nav class="outrosposts">
+    {% assign outros = site.posts | where_exp: "p", "p.url != page.url" %} {% for post in outros limit:6 %}
+    <a href="{{ post.url }}">
+        <figure style="background-image: url(/img/postcapa/{{ post.capa }}.jpg)"></figure>
+        {{ post.title }}
+    </a>
+    {% endfor %}
+</nav>

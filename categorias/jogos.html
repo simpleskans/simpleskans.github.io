@@ -1,79 +1,37 @@
 ---
 layout: padrao
-title: 'Jogos'
-descricao: 'Lista de projetos de Localização de Jogos da Simple Skans!'
+title: "Jogos"
+descricao: "Lista de projetos de Localização de Jogos da Simple Skans!"
 permalink: /jogos/
-capa: 'img/logoColorido.png'
+capa: "img/logoColorido.png"
 csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
 ---
 
-{% assign current_cat = page.url | split: "/" | last %}
+<script src="/js/filtroposts.js"></script>
 <div class="categoriatitulo">
-    <p>Todas as postagens na categoria</p>
-    <h1>{{ current_cat | replace: '-', ' ' | replace: 'rom', 'ROM' | replace: 'dnd', 'Dungeons &#38; Dragons'}}</h1>
+    <p>Todas as traduções de</p>
+    <h1>Jogos</h1>
 </div>
-<div class="corpo">
-    <div class="ladoE">
-        <nav class="postagensquadro">
-            {% assign c = site.categories[current_cat] | slice: 0, 7 %} {% for post in c %}
-            <a
-                class="postlink"
-                style="background-image:  url({{ post.capa }});"
-                href="{{ post.url }}"
-                title="{{ post.title }}">
-                <span>{{ post.tags | join: '/' | replace: '-', ' ' | replace: 'gba', 'GBA' | replace: 'nes', 'NES' }}</span>
-                <div>
-                    <span>{{ post.title }}</span>
-                    <p>{{ post.resumo }}</p>
-                </div>
-            </a>
+<div class="gridbase">
+    <div class="filtros">
+        <button class="filtro-btn active" data-categoria="todos">Todos ({{ site.categories.jogos | size }})</button>
 
-            {% endfor %}
-        </nav>
-        <div class="separador"></div>
-        <div class="lista">
-            <ul>
-                {% for post in site.categories[current_cat] %} {% unless post == site.categories[current_cat][0] or post
-                == site.categories[current_cat][1] or post == site.categories[current_cat][2] or post ==
-                site.categories[current_cat][3] or post == site.categories[current_cat][4] or post ==
-                site.categories[current_cat][5] or post == site.categories[current_cat][6] %}
-                <li>
-                    <a class="capitulolink" href="{{ post.url }}" title="{{ post.title }}">
-                        <span class="imagemcapitulo" style="background-image:  url({{ post.capa }});"></span>
-                        <div class="capitulotexto">
-                            <i
-                                >{{ post.autorL }}</i
-                            >
-                            <p>{{ post.title }}</p>
-                            <span>{{ post.resumo }}<br /></span>
-                        </div>
-                    </a>
-                </li>
-                {% endunless %} {% endfor %}
-            </ul>
-        </div>
+        {% assign tags_da_categoria = site.categories.jogos | map: 'tags' | join: ',' | split: ',' | uniq %}
+        {% for tag in tags_da_categoria %}
+            {% assign formatted_tag = tag | replace: '-', ' ' | replace: 'gba', 'GBA' | replace: 'nes', 'NES'| replace: 'pc', 'PC' %}
+            {% assign post_count = site.categories.jogos | where_exp: "post", "post.tags contains tag" | size %}
+            <button class="filtro-btn" data-categoria="{{ tag }}">{{ formatted_tag }} ({{ post_count }})</button>
+        {% endfor %}
     </div>
-    <div class="ladoD">
-        <nav class="listatags">
-            <h3>Traduções por Sistema</h3>
-            <ul>
-                <li>
-                    <details open>
-                        <summary>NES ({{ site.tags.nes | size }})</summary>
-                        {% assign alfabetica = site.tags.nes | sort_natural %} {% for post in alfabetica %}
-                        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                        {% endfor %}
-                    </details>
-                </li>
-                <li>
-                    <details open>
-                        <summary>GBA ({{ site.tags.gba | size }})</summary>
-                        {% assign alfabetica = site.tags.gba | sort_natural %} {% for post in alfabetica %}
-                        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                        {% endfor %}
-                    </details>
-                </li>
-            </ul>
-        </nav>
+
+    <div class="lista">
+        <ul>
+            {% for post in site.categories.jogos %}
+            <li class="post-item {{ post.tags | join: ' ' }}">
+                {% assign subtexto = post.tags | join: '/' | replace: '-', ' ' | replace: 'gba', 'GBA' | replace: 'nes', 'NES'| replace: 'pc', 'PC' %}
+                {% include capitulolink.html post=post subtexto=subtexto %}
+            </li>
+            {% endfor %}
+        </ul>
     </div>
 </div>

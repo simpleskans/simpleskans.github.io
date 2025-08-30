@@ -1,10 +1,10 @@
 .titulopostagem {
-    padding: 5rem 0;
+    padding: 3rem 0;
 }
 
 .titulopostagem h1 {
     font-size: calc(1.7rem + 1vw);
-    padding-top: 14rem;
+    padding-top: 16rem;
 }
 
 .texto figure {
@@ -90,20 +90,91 @@ p img {
     margin: 0.5rem 0;
 }
 
-.texto .galeria {
-    width: 100%;
+#toc {
+    position: sticky;
+    top: 6rem;
+    height: fit-content;
+    background: var(--corsecundaria);
+    overflow-y: auto;
+    max-height: calc(100svh - 6rem);
+    overflow-x: hidden;
+}
+
+/*#toc *{}*/
+
+#toc ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+}
+#toc li {
+    width: 100%;
+}
+#toc a {
+    text-decoration: none;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    display: flex;
     justify-content: space-between;
-    margin: 1rem 0;
+    align-items: center;
+}
+#toc a.active {
+    font-weight: bold;
+    background-color: var(--corprincipal);
+}
+
+/* Sublistas (H3–H6) colapsadas por padrão */
+#toc .sublist {
+    display: none !important;
+}
+
+#toc .sublist a {
+    padding-left: 2rem;
+}
+
+#toc .sublist.open {
+    display: block !important;
+}
+
+#toc .sublist-indicator {
+    transition: transform 0.2s ease;
+}
+
+#toc a.active .sublist-indicator,
+#toc a.open-sublist .sublist-indicator {
+    transform: rotate(90deg);
+}
+
+.titulomenu {
+    font-size: 1.1rem;
+    border-bottom: 1px solid #ccc;
+    font-weight: bold;
+}
+
+/* Compensar header fixo de 6rem quando rolar pra um heading */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    scroll-margin-top: 6rem;
+    text-align: left;
+}
+
+.texto .galeria {
+    display: grid;
     gap: 1rem;
 }
 
 .texto .galeria > figure {
-    flex: 1;
-    min-width: 40%;
-    border-radius: 10px;
-    overflow: hidden;
+   width: 100%;
+}
+
+.texto .galeria > figure img {
+    border-radius: 10px 10px 0 0;
 }
 
 .texto .galeria figure figcaption {
@@ -111,29 +182,50 @@ p img {
     text-align: center;
     padding: 0.25rem;
     font-style: italic;
+    border-radius: 0 0 10px 10px;
+}
+
+.coluna-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.coluna-2 {
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .secaotitulo:has(+ section) {
     border-radius: 10px 10px 0 0;
+    margin-bottom: 0;
 }
 
 .menulateralrapido {
     position: sticky;
-    top: 10rem;
+    top: 6rem;
+
+    aside {
+        border-radius: 10px;
+        overflow: hidden;
+    }
 }
 
-.menulateralrapido > ul {
+.menulateralrapido ul {
     list-style: none;
-    font-weight: 700;
-    padding-left: 2.5rem;
+    padding-left: 0;
 }
 
-.menulateralrapido ul li {
-    margin-bottom: 1rem;
+.menulateralrapido ul li a {
+    display: block;
+    padding: 0.5rem;
+    cursor: pointer;
+
+    &:hover {
+        background: var(--corsecundaria);
+    }
 }
 
 .redeslateral {
-    padding-left: 2.5rem;
+    padding: 0.5rem;
+    border-radius: 10px;
 }
 
 #share_aside {
@@ -186,21 +278,43 @@ p img {
         margin: 0 0 1rem;
     }
 
-    .menulateralrapido > ul {
+    .menulateralrapido aside {
+        background: var(--corfundo);
+        border-radius: 0;
+    }
+
+    .menulateralrapido aside::before {
+        content: "Pular para:";
+        display: block;
+        padding: 0.5rem;
+        border-radius: 10px 10px 0 0;
+        font-weight: bold;
+        background: var(--gradiente);
+    }
+
+    .menulateralrapido aside ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 1rem;
+        border: 2px solid var(--corprincipal);
+        padding: 1rem;
+    }
+
+    .menulateralrapido li {
+        background: var(--corprincipal);
+        border-radius: 10px;
+        flex-grow: 1;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    .menulateralrapido li:first-of-type {
         display: none;
     }
 
     .redeslateral {
-        padding-left: 0;
-    }
-
-    #share_aside {
-        display: block;
-    }
-
-    .texto .galeria > figure {
-        min-width: calc(50% - 1rem);
-        margin-top: 1rem;
+        text-align: center;
     }
 }
 
@@ -212,7 +326,7 @@ p img {
 
 .cell {
     flex-grow: 3;
-    padding: 0.3rem;
+    padding: 0 0.5rem;
     width: 65%;
     border: 1px var(--corprincipal) solid;
     display: flex;
@@ -220,14 +334,19 @@ p img {
 }
 
 .cell-head {
-    width: 35%;
-    background: var(--corprincipal);
+    width: 30%;
+    background: var(--corsecundaria);
+    padding: 0 0.5rem;
     color: var(--cortexto);
     font-weight: 700;
     border: none;
     border-top: 1px var(--cortexto) solid;
-    justify-content: end;
-    text-align: right;
+    justify-content: center;
+    text-align: center;
+}
+
+.breakline .cell {
+    word-break: break-word;
 }
 
 @media (max-width: 59.9rem) {
@@ -248,8 +367,7 @@ p img {
 }
 
 .botaodownload {
-    white-space: nowrap;
-    flex: 1;
+    flex-grow: 1;
     background: var(--corprincipal);
     padding: 1rem;
     display: flex;
@@ -257,6 +375,7 @@ p img {
     justify-content: center;
     font-weight: 700;
     border-radius: 10px;
+    text-align: center;
 }
 
 #mediafireD {
@@ -294,36 +413,7 @@ p img {
     border-radius: 10px;
 }
 
-.outros {
-    padding-left: 2.5rem;
-}
-
-.outrosposts > a {
-    font-weight: 700;
-    margin-top: 1rem;
-    display: block;
-}
-
-.outrosposts > a:hover {
-    text-decoration: underline;
-}
-
-.outrosposts > a > figure {
-    width: 100%;
-    aspect-ratio: 2/1;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
 @media (max-width: 59.9rem) {
-    .texto .galeria > figure {
-        width: calc(33% - 1rem);
-        margin-top: 1rem;
-    }
-
     .downloads {
         display: block;
         padding: 1rem 1rem 0;
@@ -334,26 +424,12 @@ p img {
         margin-bottom: 1rem;
     }
 
-    .corpo2 {
-        display: block;
-    }
-
     .outros {
         padding: 0;
     }
 
     .outros h6 {
         font-size: calc(1rem + 1vw);
-    }
-
-    .outrosposts {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
-    }
-
-    .outrosposts > a {
-        width: 100%;
     }
 
     .livro > figure,
@@ -364,6 +440,10 @@ p img {
     .livro {
         display: block;
         width: 100%;
+    }
+
+    #share_aside {
+        justify-content: center;
     }
 }
 

@@ -1,0 +1,27 @@
+---
+layout: padrao
+---
+
+<article>
+    {% include titulopost.html post=post %}
+
+    <div class="gridbase">
+        <div>{% include menulateral.html post=post %}</div>
+        <div>
+            <div class="texto">
+                {% include capapostagem.html post=post %} {{ content }} {% include galeria.html post=post %}
+                <div class="separador"></div>
+            </div>
+            {% include infoequipe.html post=post %}
+            {% include infojogo.html post=post %}
+            {% include inforom.html post=post %}
+            <div class="separador"></div>
+            {% include baixarjogo.html post=post %}
+            <div class="separador"></div>
+            {% include relacionados.html post=post %}
+            <div class="separador"></div>
+            <div>{% include outrosposts.html post=post %}</div>
+            <div>{% include comentarios.html post=post %}</div>
+        </div>
+    </div>
+</article>

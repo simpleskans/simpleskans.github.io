@@ -7,45 +7,26 @@ capa: 'img/logoColorido.png'
 csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
 ---
 
+<script src="/js/filtroposts.js"></script>
 <div class="categoriatitulo">
-    <p>Todas as postagens de</p>
+    <p>Todas as traduções de</p>
     <h1>Dungeons &#38; Dragons 2024</h1>
 </div>
-<div class="corpo" style="display: block">
-    <div class="ladoE">
-       
-       <h2 class="secaotitulo"><i class="bi bi-person-fill-up"></i> Filtrar por Nível:</h2>
-        <div class="level-filters">
-            <label class="filter-option">
-                <input type="radio" name="level-filter" value="todos" checked />
-                <span>Todos</span>
-            </label>
-            {% for i in (1..20) %}
-            <label class="filter-option">
-                <input type="radio" name="level-filter" value="lvl{{i}}" />
-                <span>{{i}}º&nbsp;Nível</span>
-            </label>
+<div class="gridbase">
+    <div class="filtros">
+        <button class="filtro-btn active" data-categoria="todos">Todos</button>
+        {% for i in (1..20) %}
+        <button class="filtro-btn" data-categoria="lvl{{i}}">{{i}}º Nível</button>
+        {% endfor %}
+    </div>
+
+    <div class="lista">
+        <ul>
+            {% for post in site.tags.e55 %}
+            <li class="post-item {{ post.tags | join: ' ' }}">
+                {% assign subtexto = post.autorL %} {% include capitulolink.html post=post subtexto=subtexto %}
+            </li>
             {% endfor %}
-        </div>
-
-        <!-- Lista de posts (modificada) -->
-        <div class="lista">
-            <ul id="posts-container">
-                {% for post in site.tags.e55 %}
-                <li class="post-item" data-tags="{{ post.tags | join: ',' }}">
-                    <a class="capitulolink" href="{{ post.url }}" title="{{ post.title }}">
-                        <span class="imagemcapitulo" style="background-image: url({{ post.capa }});"></span>
-                        <div class="capitulotexto">
-                            <i class="gradienteBase">{{ post.autorL }}</i>
-                            <p>{{ post.title }}</p>
-                            <span>{{ post.resumo }}<br /></span>
-                        </div>
-                    </a>
-                </li>
-                {% endfor %}
-            </ul>
-        </div>
-
-        <script src="/js/filtro.js"></script>
+        </ul>
     </div>
 </div>

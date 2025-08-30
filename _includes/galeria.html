@@ -1,0 +1,12 @@
+{% if page.galeria %}
+<h3 class="secaotitulo" id="galeria"><i class="bi bi-images"></i> Galeria</h3>
+<div class="galeria {% if page.galeria.size >= 6 %} coluna-3 {% else %} coluna-2 {% endif %}">
+ 
+  {% for item in page.galeria %}
+  <figure>
+    <img src="{{ item.img }}" alt="{{ item.legenda }}" class="zoom-img" />
+    <figcaption class="gradienteBase">{{ item.legenda }}</figcaption>
+  </figure>
+  {% endfor %}
+</div>
+{% endif %}

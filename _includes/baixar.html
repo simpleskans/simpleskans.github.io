@@ -1,0 +1,19 @@
+<h2 class="secaotitulo" id="downloads"><i class="bi bi-cloud-arrow-down-fill"></i> Downloads</h2>
+<section class="downloads">
+
+  <!-- Sempre gera o Google Drive -->
+  <a href="{{ page.gdrive }}" class="botaodownload" id="gdriveD" target="_blank">
+    <img src="/img/svg/gdrive.svg" alt="Logo Google Drive" /> Google Drive
+  </a>
+
+  <!-- Gera os Ler Online apenas se a página da biblioteca existir -->
+{% for c in page.idt %}
+  {% assign biblio = site.pages | where: "idt", c | first %}
+  {% if biblio %}
+    <a href="{{ biblio.url }}" class="botaodownload leronline">
+      <img src="/img/svg/leronline.svg" alt="Icone Ler Online" /> Ler Online - {{ biblio.title }}
+    </a>
+  {% endif %}
+{% endfor %}
+
+</section>

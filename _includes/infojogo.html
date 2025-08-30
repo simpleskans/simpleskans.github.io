@@ -1,0 +1,22 @@
+<h3 class="secaotitulo" id="informacao-do-jogo"><i class="bi bi-controller"></i> Informações do Jogo</h3>
+<section class="info livro">
+    <div class="tabelainfo">
+        <div class="divTable">
+            <div class="cell cell-head">Título</div>
+            <div class="cell">{{ page.title }}</div>
+            {% if page.tags %}
+            <div class="cell cell-head">Plataforma</div>
+            <div class="cell">{{ page.plataforma }}</div>
+            {% endif %} {% if page.desenvolvedora %}
+            <div class="cell cell-head">Desenvolvedora</div>
+            <div class="cell">{{ page.desenvolvedora }}</div>
+            {% endif %} {% if page.genero %}
+            <div class="cell cell-head">Gênero</div>
+            <div class="cell">{{ page.genero }}</div>
+            {% endif %} {% if page.lancamento %}
+            <div class="cell cell-head">Lançamento</div>
+            <div class="cell">{{ page.lancamento }}</div>
+            {% endif %}
+        </div>
+    </div>
+</section>

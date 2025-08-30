@@ -1,0 +1,5 @@
+<div class="linksrelacionados">
+  {% for link in include.links %}
+    <a target="_blank" href="{{ link.url }}">{{ link.nome }}</a>
+  {% endfor %}
+</div>

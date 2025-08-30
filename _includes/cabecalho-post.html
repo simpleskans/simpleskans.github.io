@@ -1,0 +1,14 @@
+<div class="titulopostagem">
+  <h1>{{ include.page.titulo }}</h1>
+  <span class="resumo">{{ include.page.resumo }}</span>
+  <div class="localpostagem">
+    <i class="bi bi-tags-fill"></i>
+    {% for categoria in include.page.categories %}
+      <a href="/{{ categoria }}" class="categoriapost">
+        {{ site.data.traducoes.categorias[categoria] | default: categoria }}
+      </a>{% unless forloop.last %}, {% endunless %}
+    {% endfor %}
+    <br />
+    <i class="bi bi-clock-fill"></i> {{ page.date | date: "%d/%m/%Y" }}
+  </div>
+</div>

@@ -1,34 +1,23 @@
 ---
 layout: padrao
 title: Home
-descricao: 'Simple Skans! Levando o português ao Brasileiro!'
-capa: '/img/logoColorido.png'
+descricao: "Simple Skans! Levando o português ao Brasileiro!"
+capa: "/img/logoColorido.png"
 ---
 
 <h1 class="ocultar">Simple Skans! Levando o português ao Brasileiro!</h1>
 <h2 class="ocultar">Destaques</h2>
 <section class="destaques">
-    {% assign c = site.posts | slice: 0, 1 %} {% for post in c %}
+    {% for post in site.posts limit:3 %}
     <a
-        class="postlink ultimopost"
-        style="background-image:  url({{ post.capa }});"
+        class="postlink {% if forloop.first %}ultimopost{% endif %}"
+        style="background-image: url({{ post.capa }});"
         href="{{ post.url }}"
         title="{{ post.title }}">
-        <span
-            >{{ post.categories | join: '/' | replace: '-', ' ' | replace: 'rom', 'ROM' | replace: 'dnd', 'Dungeons
-            &#38; Dragons'}}</span
-        >
-        <div>
-            <span>{{ post.title }}</span>
-            <p>{{ post.resumo }}</p>
-        </div>
-    </a>
-    {% endfor %} {% assign c = site.posts | slice: 1, 2 %} {% for post in c %}
-    <a class="postlink" style="background-image:  url({{ post.capa }});" href="{{ post.url }}" title="{{ post.title }}">
-        <span
-            >{{ post.categories | join: '/' | replace: '-', ' ' | replace: 'rom', 'ROM' | replace: 'dnd', 'Dungeons
-            &#38; Dragons'}}</span
-        >
+        <span>
+            {% assign category_name = post.categories | first %} {% if category_name == 'dnd' %} Dungeons &amp; Dragons
+            {% else %} {{ category_name | replace: '-', ' ' }} {% endif %}
+        </span>
         <div>
             <span>{{ post.title }}</span>
             <p>{{ post.resumo }}</p>
@@ -37,28 +26,25 @@ capa: '/img/logoColorido.png'
     {% endfor %}
 </section>
 
-<div class="separador"></div>
-
 <section class="lista">
     <h2 class="secaotitulo"><i class="bi bi-file-post"></i> Mais Postagens</h2>
     <ul>
-        {% assign c = site.posts | slice: 3, 20 %} {% for post in c %}
-        <li>
-            <a class="capitulolink" href="{{ post.url }}" title="{{ post.title }}">
-                <span class="imagemcapitulo" style="background-image:  url({{ post.capa }});"></span>
-                <div class="capitulotexto">
-                   <i class="gradienteBase">{{ post.categories | join: '/' | replace: '-', ' ' | replace: 'rom', 'ROM' | replace: 'dnd', 'Dungeons
-            &#38; Dragons'}}</i>
-                    <p>{{ post.title }}</p>
-                    <span>{{ post.resumo }}<br></span>
-                    
-                </div>
-            </a>
-        </li>
+        {% assign posts_slice = site.posts | slice: 3, 18 %}
+        {% for post in posts_slice %}
+            {% assign category_name = post.categories | first %}
+            {% if category_name == 'dnd' %}
+                {% assign formatted_category = 'Dungeons & Dragons' %}
+            {% elsif category_name == 'smash-legends' %}
+                {% assign formatted_category = 'Smash Legends' %}
+            {% elsif category_name == 'jogos' %}
+                {% assign formatted_category = 'Jogos' %}
+            {% else %}
+                {% assign formatted_category = category_name | replace: '-', ' ' %}
+            {% endif %}
+            <li>{% include capitulolink.html post=post subtexto=formatted_category %}</li>
         {% endfor %}
     </ul>
 </section>
 <a href="/posts/" class="vertudo">Ver Tudo</a>
 
 <div class="separador"></div>
-

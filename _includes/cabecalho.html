@@ -1,154 +1,141 @@
-<!doctype html>
-<html lang="pt-BR">
-    <head>
-        <title>
-  {% if page.title %}
-    {{ page.title }}
-    {% comment %} Lógica para D&D {% endcomment %}
-    {% if page.categories contains 'dnd' %}
-      PT-BR |
-      {% if page.tags contains 'e5' %}D&D 5e
-      {% elsif page.tags contains 'e55' %}D&D 2024
-      {% elsif page.tags contains 'e3' %}D&D 3e
-      {% else %}D&D{% endif %}
-
-    {% comment %} Lógica para Smash Legends {% endcomment %}
-    {% elsif page.categories contains 'smash-legends' %}
-      |
-      {% if page.tags contains 'slw' %}Smash Legends
-      {% elsif page.tags contains 'slsp' %}Passe Smash
-      {% elsif page.tags contains 'sln' %}Smash Legends Novel
-      {% else %}Smash Legends{% endif %}
-      {% if page.numero %} Capítulo {{ page.numero }} PT-BR{% endif %}
-
-    {% comment %} Lógica para Jogos {% endcomment %}
-    {% elsif page.categories contains 'jogos' %}
-      PT-BR |
-      {% if page.tags contains 'gba' %}GBA
-      {% elsif page.tags contains 'nes' %}NES
-      {% elsif page.tags contains 'pc' %}PC
-      {% else %}Jogos{% endif %}
-
-    {% comment %} Padrão para todas as outras páginas {% endcomment %}
+<title>
+    {% if page.title %} 
+        {{ page.title }} 
+        {% assign category_data = site.data.titulos[page.categories.first] %} 
+        {% if category_data %} 
+            PT-BR | 
+            {% assign tag_text = category_data[page.tags.first] | default: category_data.default %} 
+            {{ tag_text }} 
+        {% endif %} 
+        {% if page.numero %} 
+            {% if page.categories contains 'smash-legends' %} 
+                Capítulo {{ page.numero }} 
+            {% endif %} 
+        {% endif %} 
+        {% if page.url contains '/biblioteca/' %} 
+            | Ler Online 
+        {% endif %} 
+        | Simple Skans 
+    {% else %} 
+        Simple Skans 
     {% endif %}
-    | Simple Skans
-  {% else %}
-    Simple Skans
-  {% endif %}
 </title>
-        <meta name="description" content="{{ page.resumo }} PT-BR | {{ page.descricao }}" />
-        <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+<meta name="description" content="{{ page.resumo }} PT-BR | {{ page.descricao }}" />
+<link rel="canonical" href="{{ site.url }}{{ page.url }}" />
 
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-C6Q368P6MR"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag("js", new Date());
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-C6Q368P6MR"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-            gtag("config", "G-C6Q368P6MR");
-        </script>
+    gtag("config", "G-C6Q368P6MR");
+</script>
 
-        <!-- Clarity tag  -->
-        <script type="text/javascript">
-            (function (c, l, a, r, i, t, y) {
-                c[a] =
-                    c[a] ||
-                    function () {
-                        (c[a].q = c[a].q || []).push(arguments);
-                    };
-                t = l.createElement(r);
-                t.async = 1;
-                t.src = "https://www.clarity.ms/tag/" + i;
-                y = l.getElementsByTagName(r)[0];
-                y.parentNode.insertBefore(t, y);
-            })(window, document, "clarity", "script", "lqt7soyxw2");
-        </script>
-        <!-- Facebook Meta Tags -->
-        <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="{% if page.title %} {{ page.title }}{% if page.categories contains 'dnd' %} PT-BR | {% if page.tags contains 'e5' %}D&D 5e{% elsif page.tags contains 'e55' %}D&D 2024 {% elsif page.tags contains 'e3' %}D&D 3e {% else %}D&D{% endif %} {% elsif page.categories contains 'smash-legends' %} | {% if page.tags contains 'slw' %}Smash Legends{% elsif page.tags contains 'slsp' %}Passe Smash {% elsif page.tags contains 'sln' %}Smash Legends Novel {% else %}Smash Legends{% endif %} {% if page.numero %}Capítulo {{ page.numero }} PT-BR{% endif %} {% elsif page.categories contains 'jogos' %} PT-BR | {% if page.tags contains 'gba' %}GBA{% elsif page.tags contains 'nes' %}NES{% elsif page.tags contains 'PC' %}PC{% else %}Jogos{% endif %} {% endif %}| Simple Skans {% else %} Simple Skans {% endif %}" />
-        <meta property="og:description" content="{{ page.descricao }}" />
-        <meta property="og:image" content="{{ site.url }}{{ page.capa }}" />
+<!-- Clarity tag  -->
+<script type="text/javascript">
+    (function (c, l, a, r, i, t, y) {
+        c[a] =
+            c[a] ||
+            function () {
+                (c[a].q = c[a].q || []).push(arguments);
+            };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "lqt7soyxw2");
+</script>
+<!-- Facebook Meta Tags -->
+<meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+<meta property="og:type" content="website" />
+<meta
+    property="og:title"
+    content="{% if page.title %} {{ page.title }} {% assign category_data = site.data.titulos[page.categories.first] %} {% if
+    category_data %} PT-BR | {% assign tag_text = category_data[page.tags.first] | default: category_data.default %} {{
+    tag_text }} {% endif %} {% if page.numero %} {% if page.categories contains 'smash-legends' %} Capítulo {{
+    page.numero }} {% endif %} {% endif %} | Simple Skans {% else %} Simple Skans {% endif %}" />
+<meta property="og:description" content="{{ page.descricao }}" />
+<meta property="og:image" content="{{ site.url }}/img/postcapa/{{ page.capa }}.jpg" />
 
-        <!-- Twitter Meta Tags -->
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="simpleskans.com.br" />
-        <meta property="twitter:url" content="{{ site.url }}{{ page.url }}" />
-        <meta name="twitter:title" content="{% if page.title %} {{ page.title }}{% if page.categories contains 'dnd' %} PT-BR | {% if page.tags contains 'e5' %}D&D 5e{% elsif page.tags contains 'e55' %}D&D 2024 {% elsif page.tags contains 'e3' %}D&D 3e {% else %}D&D{% endif %} {% elsif page.categories contains 'smash-legends' %} | {% if page.tags contains 'slw' %}Smash Legends{% elsif page.tags contains 'slsp' %}Passe Smash {% elsif page.tags contains 'sln' %}Smash Legends Novel {% else %}Smash Legends{% endif %} {% if page.numero %}Capítulo {{ page.numero }} PT-BR{% endif %} {% elsif page.categories contains 'jogos' %} PT-BR | {% if page.tags contains 'gba' %}GBA{% elsif page.tags contains 'nes' %}NES{% elsif page.tags contains 'PC' %}PC{% else %}Jogos{% endif %} {% endif %}| Simple Skans {% else %} Simple Skans {% endif %}" />
-        <meta name="twitter:description" content="{{ page.descricao }}" />
-        <meta name="twitter:image" content="{{ site.url }}{{ page.capa }}" />
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:domain" content="simpleskans.com.br" />
+<meta property="twitter:url" content="{{ site.url }}{{ page.url }}" />
+<meta
+    name="twitter:title"
+    content="{% if page.title %} {{ page.title }} {% assign category_data = site.data.titulos[page.categories.first] %} {% if
+    category_data %} PT-BR | {% assign tag_text = category_data[page.tags.first] | default: category_data.default %} {{
+    tag_text }} {% endif %} {% if page.numero %} {% if page.categories contains 'smash-legends' %} Capítulo {{
+    page.numero }} {% endif %} {% endif %} | Simple Skans {% else %} Simple Skans {% endif %}" />
+<meta name="twitter:description" content="{{ page.descricao }}" />
+<meta name="twitter:image" content="{{ site.url }}/img/postcapa/{{ page.capa }}.jpg" />
 
-        <!--Favicon tags-->
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="manifest" href="/site.webmanifest" />
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#c13a5a" />
-        <meta name="msapplication-TileColor" content="#c13a5a" />
-        <meta name="theme-color" content="#c13a5a" />
-        
-        <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "BlogPosting",
-          "mainEntityOfPage": {
+<!--Favicon tags-->
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#c13a5a" />
+<meta name="msapplication-TileColor" content="#c13a5a" />
+<meta name="theme-color" content="#c13a5a" />
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "{{ site.url }}{{ page.url }}"
-          },
-          "headline": "{{ page.title }}",
-          "description": "{{ page.descricao }}",
-          "image": "{{ site.url }}{{ page.capa }}",
-          "author": {
+        },
+        "headline": "{{ page.title }}",
+        "description": "{{ page.descricao }}",
+        "image": "{{ site.url }}/img/postcapa/{{ page.capa }}.jpg",
+        "author": {
             "@type": "Person",
             "name": "KryFi",
             "url": "https://simpleskans.com.br/sobre/"
-          },
-          "publisher": {
+        },
+        "publisher": {
             "@type": "Organization",
             "name": "Simple Skans",
             "logo": {
-              "@type": "ImageObject",
-              "url": "https://simpleskans.com.br/img/logoColorido.png"
+                "@type": "ImageObject",
+                "url": "https://simpleskans.com.br/img/logoColorido.png"
             }
-          },
-          "datePublished": "{{ page.date }}"
-        }
-        </script>
+        },
+        "datePublished": "{{ page.date }}"
+    }
+</script>
 
-        <!--Head tags-->
+<!--Head tags-->
 
-        <link rel="stylesheet" href="/css/reset.css" />
-        <link rel="stylesheet" href="/css/estilos.css" />
-        {{page.csscustomizado}} {{page.jscustomizado}}
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta charset="UTF-8" />
-        <meta name="author" content="KryFi" />
-    </head>
-    <body>
-        <header class="gradienteBase">
-  <nav class="barraTopo">
-    <div class="logo">
-      <a href="{{site.url}}">
-        <img src="/img/logo.webp" alt="Home" />
-      </a>
-    </div>
+<link rel="stylesheet" href="/css/reset.css" />
+<link rel="stylesheet" href="/css/estilos.css" />
+{% if page.layout == "dnd" %}
+  <link rel="stylesheet" href="/css/post.css" />
+{% endif %}
+{% if page.layout == "jogo" %}
+  <link rel="stylesheet" href="/css/post.css" />
+{% endif %}
+{% if page.layout == "rom" %}
+  <link rel="stylesheet" href="/css/post.css" />
+{% endif %}
+{% if page.layout == "slw" %}
+  <link rel="stylesheet" href="/css/webtoon.css" />
+{% endif %}
+{% if page.layout == "sln" %}
+  <link rel="stylesheet" href="/css/webtoon.css" />
+{% endif %}
+{% if page.layout == "livro" %}
+    <link rel="stylesheet" href="/css/biblioteca.css" />
+{% endif %}
 
-    <button class="hamburger" aria-label="Abrir menu">
-      <i class="bi bi-list"></i>
-    </button>
-
-    <ul class="menuTopo">
-      <li><a href="/posts/">Posts</a></li>
-      <li><a href="/dnd/">D&amp;D</a></li>
-      <li><a href="/smash-legends/">Smash Legends</a></li>
-      <li><a href="/jogos/">Jogos</a></li>
-      <li><a href="/sobre/">Sobre</a></li>
-    </ul>
-  </nav>
-</header>
-
-        <div class="separador"></div>
-        <main class="conteudo">
+{{page.csscustomizado}} {{page.jscustomizado}}
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8" />
+<meta name="author" content="KryFi" />

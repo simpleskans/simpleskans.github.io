@@ -1,0 +1,20 @@
+<h3 class="secaotitulo" id="informacao-da-rom"><i class="bi bi-info-circle-fill"></i> Informações da ROM</h3>
+<section class="info livro">
+    <div class="tabelainfo">
+        <div class="divTable breakline">
+            {% if page.rom %}
+            <div class="cell cell-head">ROM</div>
+            <div class="cell">{{ page.rom }}</div>
+            {% endif %} {% if page.crc32 %}
+            <div class="cell cell-head">CRC32</div>
+            <div class="cell">{{ page.crc32 }}</div>
+            {% endif %} {% if page.md5 %}
+            <div class="cell cell-head">MD5</div>
+            <div class="cell">{{ page.md5 }}</div>
+            {% endif %} {% if page.sha1 %}
+            <div class="cell cell-head">SHA-1</div>
+            <div class="cell">{{ page.sha1 }}</div>
+            {% endif %}
+        </div>
+    </div>
+</section>

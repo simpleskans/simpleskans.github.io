@@ -1,109 +1,69 @@
 ---
 layout: padrao
-title: 'Smash Legends'
-descricao: 'Lista de traduções de Smash Legends da Simple Skans!'
+title: "Smash Legends"
+descricao: "Lista de traduções de Smash Legends da Simple Skans!"
 permalink: /smash-legends/
-capa: '/img/postcapa/sll.png'
+capa: "/img/postcapa/sll.png"
 csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
 ---
 
 {% assign current_cat = page.url | split: "/" | last %}
 <div class="categoriatitulo">
     <p>Todas as webtoons e novels traduzidas de</p>
-    <h1>{{ current_cat | replace: '-', ' ' | replace: 'rom', 'ROM' | replace: 'dnd', 'Dungeons &#38; Dragons'}}</h1>
+    <h1>Smash Legends</h1>
 </div>
 <section class="categorias">
-    <h2 class="secaotitulo"><i class="bi bi-tags-fill"></i> Sub-Categorias</h2>
+    <h2 class="secaotitulo"><i class="bi bi-tags-fill"></i> Acesso Rápido</h2>
     <ul class="listacategorias">
         <li>
-            <a href="/smash-legends/slw/" class="gradienteBase"
-                >Webtoons/HQs</a
-            >
+            <a href="/smash-legends/slw/" class="gradienteBase">Webtoons/HQs</a>
         </li>
         <li>
-            <a href="/smash-legends/slsp/" class="gradienteBase"
-                >Passes Smash</a
-            >
+            <a href="/smash-legends/slsp/" class="gradienteBase">Passes Smash</a>
         </li>
         <li>
-            <a href="/smash-legends/sln/" class="gradienteBase"
-                >Novels</a
-            >
+            <a href="/smash-legends/sln/" class="gradienteBase">Novels</a>
         </li>
     </ul>
 </section>
-<div class="separador"></div>
-<div class="corpo"  style="display: block">
-    <div class="ladoE">
-       <h3 id="webtoons" class="secaotitulo"><i class="bi bi-journal-richtext"></i> Webtoons</h3>
-        <nav class="postagensquadro">
-            {% assign c = site.tags.slw | slice: 0, 2 %} {% for post in c %}
-            <a
-                class="postlink"
-                style="background-image:  url({{ post.capa }});"
-                href="{{ post.url }}"
-                title="{{ post.title }}">
-                <span>{{ post.autorL }}</span>
-                <div>
-                    <span>{{ post.title }}</span>
-                    <p>{{ post.resumo }}</p>
-                </div>
-            </a>
-
-            {% endfor %}
+<div>
+    <div>
+        <h3 id="webtoons" class="secaotitulo"><i class="bi bi-journal-richtext"></i> Webtoons</h3>
+        <nav class="lista">
+            <ul>
+                {% assign posts_slice = site.tags.slw | slice: 0, 6 %} {% for post in posts_slice %} {% assign subtexto
+                = post.autorL %} {% include capitulolink.html post=post subtexto=subtexto %} {% endfor %}
+            </ul>
         </nav>
-        <a href="/smash-legends/slw/" class="acessarcategoria">Ver Tudo <i class="bi bi-arrow-right"></i></a>
+        <a href="/smash-legends/slw/" class="vertudo">Ver Tudo</a>
         <div class="separador"></div>
     </div>
-    
 </div>
 
-<div class="corpo"  style="display: block">
-    <div class="ladoE">
-       <h3 id="pass" class="secaotitulo"><i class="bi bi-journal"></i> Passe Smash</h3>
-        <nav class="postagensquadro">
-            {% assign c = site.tags.slsp | slice: 0, 2 %} {% for post in c %}
-            <a
-                class="postlink"
-                style="background-image:  url({{ post.capa }});"
-                href="{{ post.url }}"
-                title="{{ post.title }}">
-                <span>{{ post.autorL }}</span>
-                <div>
-                    <span>{{ post.title }}</span>
-                    <p>{{ post.resumo }}</p>
-                </div>
-            </a>
-
-            {% endfor %}
+<div>
+    <div>
+        <h3 id="pass" class="secaotitulo"><i class="bi bi-journal"></i> Passe Smash</h3>
+        <nav class="lista">
+            <ul>
+                {% assign posts_slice = site.tags.slsp | slice: 0, 6 %} {% for post in posts_slice %} {% assign subtexto
+                = post.autorL %} {% include capitulolink.html post=post subtexto=subtexto %} {% endfor %}
+            </ul>
         </nav>
-        <a href="/smash-legends/slsp/" class="acessarcategoria">Ver Tudo <i class="bi bi-arrow-right"></i></a>
+        <a href="/smash-legends/slsp/" class="vertudo">Ver Tudo</a>
         <div class="separador"></div>
     </div>
-    
 </div>
 
-<div class="corpo" style="display: block">
-    <div class="ladoE">
-       <h3 id="novels" class="secaotitulo"><i class="bi bi-journal-text"></i> Novels</h3>
-        <nav class="postagensquadro">
-            {% assign c = site.tags.sln | slice: 0, 2 %} {% for post in c %}
-            <a
-                class="postlink"
-                style="background-image:  url({{ post.capa }});"
-                href="{{ post.url }}"
-                title="{{ post.title }}">
-                <span>{{ post.autorL }}</span>
-                <div>
-                    <span>{{ post.title }}</span>
-                    <p>{{ post.resumo }}</p>
-                </div>
-            </a>
-
-            {% endfor %}
+<div>
+    <div>
+        <h3 id="novels" class="secaotitulo"><i class="bi bi-journal-text"></i> Novels</h3>
+        <nav class="lista">
+            <ul>
+                {% assign posts_slice = site.tags.sln | slice: 0, 6 %} {% for post in posts_slice %} {% assign subtexto
+                = post.autorL %} {% include capitulolink.html post=post subtexto=subtexto %} {% endfor %}
+            </ul>
         </nav>
-        <a href="/smash-legends/sln/" class="acessarcategoria">Ver Tudo <i class="bi bi-arrow-right"></i></a>
+        <a href="/smash-legends/sln/" class="vertudo">Ver Tudo</a>
         <div class="separador"></div>
     </div>
-    
 </div>

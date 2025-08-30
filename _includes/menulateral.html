@@ -1,0 +1,31 @@
+<nav class="menulateralrapido">
+    <aside class="gradienteBase">
+        <ul>
+            <li><a href="#titulo">{{ page.title }}</a></li>
+        </ul>
+    </aside>
+    <div class="separador"></div>
+    <div class="redeslateral gradienteBase">
+        <p>Compartilhe o post:</p>
+        {% include compartilhar.html %}
+    </div>
+</nav>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const menu = document.querySelector(".menulateralrapido ul");
+  if (!menu) return;
+
+  // pega todos os títulos que têm ID
+  const secoes = document.querySelectorAll(".secaotitulo[id]");
+
+  secoes.forEach(secao => {
+    const li = document.createElement("li");
+    const a = document.createElement("a");
+    a.href = "#" + secao.id;
+    a.textContent = secao.textContent.trim();
+    li.appendChild(a);
+    menu.appendChild(li);
+  });
+});
+</script>

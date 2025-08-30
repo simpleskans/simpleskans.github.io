@@ -1,0 +1,11 @@
+<section class="downloads">
+  <a href="https://drive.google.com/file/d/{{ include.ids }}/view?usp=sharing" class="botaodownload" target="_blank">
+    <img src="/img/svg/gdrive.svg" alt="Logo Google Drive" /> Google Drive
+  </a>
+
+  {% for ler in include.ler_online %}
+  <a href="/biblioteca/{{ ler }}" class="botaodownload leronline">
+    <img src="/img/svg/leronline.svg" alt="Icone Ler Online" /> Ler Online - {{ ler }}
+  </a>
+  {% endfor %}
+</section>

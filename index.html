@@ -11,7 +11,7 @@ capa: "/img/logoColorido.png"
     {% for post in site.posts limit:3 %}
     <a
         class="postlink {% if forloop.first %}ultimopost{% endif %}"
-        style="background-image: url({{ post.capa }});"
+        style="background-image: url(/img/postcapa/{{ post.capa }}.jpg);"
         href="{{ post.url }}"
         title="{{ post.title }}">
         <span>

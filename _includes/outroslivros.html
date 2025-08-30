@@ -1,9 +1,12 @@
 <h6 class="secaotitulo">Outros Livros</h6>
 <nav class="outrosposts">
-   {% assign outros = site.pages | where_exp: "p", "p.path contains 'livros/' and p.url != page.url" %} {% for post in outros limit:6 %}
-    <a href="{{ post.url }}">
-        <figure style="background-image: url(/img/capalivreto/{{ post.capa }}.jpg)"></figure>
-        {{ post.title }}
-    </a>
-    {% endfor %}
+{% assign lista = site.pages | where_exp: "p", "p.path contains 'livros/'" %}
+{% assign outros = lista | where_exp: "p", "p.url != page.url" %}
+
+{% for post in outros limit:6 %}
+  <a href="{{ post.url }}">
+      <figure style="background-image: url(/img/capalivreto/{{ post.capa }}.jpg)"></figure>
+      {{ post.title }}
+  </a>
+{% endfor %}
 </nav>

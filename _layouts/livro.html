@@ -5,42 +5,17 @@ layout: padrao
 <div>
     <div class="topolivro">
         <figure>
-            <img src="/img/postcapa/{{ page.capa}}.jpg" alt="Capa de {{ page.title }}" style="object-position: center 65%" />
+            <img
+                src="/img/postcapa/{{ page.capa}}.jpg"
+                alt="Capa de {{ page.title }}"
+                style="object-position: center {{ page.poscapa }}%" />
         </figure>
         <h1 id="tituloaventura">{{ page.title }}</h1>
     </div>
     <div class="corpo">
         <aside id="toc"></aside>
-        <article id="content">
-            {{ content }}
-            <h2 id="cr-ditos">Créditos</h2>
-            <div class="creditos">
-                {% if page.creditos.original %}
-                <div class="original">
-                    <span class="creditostitulo">{{ page.creditos.original.titulo }}</span>
-                    <hr />
-                    <ul>
-                        {% for p in page.creditos.original.pessoas %}
-                        <li>
-                            <strong>{{ p.funcao }}:</strong> {{ p.nome }} {% if p.descricao %}<br />{{ p.descricao }}{%
-                            endif %}
-                        </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-                {% endif %} {% if page.creditos.ptbr %}
-                <div class="ptbr">
-                    <span class="creditostitulo">{{ page.creditos.ptbr.titulo }}</span>
-                    <hr />
-                    <ul>
-                        {% for p in page.creditos.ptbr.pessoas %}
-                        <li><strong>{{ p.funcao }}:</strong> {{ p.nome }}</li>
-                        {% endfor %}
-                    </ul>
-                </div>
-                {% endif %}
-            </div>
-        </article>
+        <article id="content">{{ content }}</article>
+        <button id="toc-toggle" aria-label="Abrir menu">☰ ÍNDICE</button>
     </div>
     <div>
         {% include baixarlivro.html %}

@@ -26,8 +26,7 @@ capa: "/img/logoColorido.png"
     {% endfor %}
 </section>
 
-<section class="lista">
-    <h2 class="secaotitulo"><i class="bi bi-file-post"></i> Mais Postagens</h2>
+<section class="lista" style="margin-top: 1rem;">
     <ul>
         {% assign posts_slice = site.posts | slice: 3, 18 %}
         {% for post in posts_slice %}

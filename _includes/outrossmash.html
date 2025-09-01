@@ -1,6 +1,6 @@
 <h6 class="secaotitulo" id="outrosposts">Outros Capítulos</h6>
 <nav class="outrosposts">
-    {% assign outros = site.tags[page.tags.first] | where_exp: "p", "p.url != page.url" %} {% for post in outros limit:12 %}
+    {% assign outros = site.tags[page.tags.first] | where_exp: "p", "p.url != page.url" %} {% for post in outros limit:6 %}
     <a href="{{ post.url }}">
         <figure style="background-image: url(/img/postcapa/{{ post.capa }}.jpg)"></figure>
         {{ post.numero }}. {{ post.title }}

@@ -49,6 +49,13 @@
 
 .galeriawebtoon p img {
     margin: 2rem 0 2rem;
+    border-radius: 10px;
+}
+
+.galeriawebtoon {
+    padding: 0 8rem;
+    margin: 2rem 0 2rem;
+    border-radius: 10px;
 }
 
 .navegarcaps {

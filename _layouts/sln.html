@@ -6,19 +6,17 @@ layout: padrao
     {% include titulopost.html post=post %}
 
     <div>
-        <div class="gridbaseinvertido">
-            <div class="texto">
-                {% include capapostagem.html post=post %} {% include capnav.html %}
-                <section class="noveltexto">
-                    <img src="/img/postcapa/{{ page.capa }}.jpg" alt="" class="novelimagem zoom-img" />{{ content }}
-                </section>
-                <div class="separador"></div>
-                {% include capnav.html %}
-                <div class="separador"></div>
-            </div>
-
-            <div>{% include outrossmash.html %}</div>
+        <div class="texto">
+            {% include capapostagem.html post=post %} {% include capnav.html %}
+            <section class="noveltexto">
+                <img src="/img/postcapa/{{ page.capa }}.jpg" alt="" class="novelimagem zoom-img" />{{ content }}
+            </section>
+            <div class="separador"></div>
+            {% include capnav.html %}
+            <div class="separador"></div>
         </div>
+
+        <div>{% include outrossmash.html %}</div>
         {% include comentarios.html post=post %}
     </div>
 </article>

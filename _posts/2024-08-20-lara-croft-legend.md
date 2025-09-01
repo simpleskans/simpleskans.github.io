@@ -1,222 +1,64 @@
 ---
-layout: padrao
+layout: rom
 title: "Lara Croft Tomb Raider: Legend"
 descricao: "Tradução de Lara Croft Tomb Raider: Legend para PT-BR! by Simple Skans"
 categories: jogos
 tags: gba
 permalink: /:categories/:title
-resumo: Game Boy Advance
-capa: "https://imgur.com/oR9BVry.jpeg"
-csscustomizado: <link rel="stylesheet" href="/css/post.css" />
+resumo: "Game Boy Advance"
+capa: lctrl
+
+# --- Informação do Jogo ---
+original: "Lara Croft Tomb Raider: Legend"
+plataforma: "Gameboy Advance"
+desenvolvedora: "Human Soft"
+genero: "Ação-aventura"
+lancamento: "14 de novembro de 2006"
+
+# --- Galeria ---
+galeria:
+  - img: "https://imgur.com/UkwRFeI.gif"
+    legenda: ""
+  - img: "https://imgur.com/Kaj0sim.gif"
+    legenda: ""
+  - img: "https://imgur.com/meGPhQm.gif"
+    legenda: ""
+
+# --- Equipe ---
+equipe:
+  - nome: "Breno"
+    funcao: "Ferramentas de Textos, Tradução, ROM Hacking e Edição Gráfica"
+  - nome: "Denim"
+    funcao: "Descompressor/Compressor Gráfico e ROM Hacking"
+
+# --- Informação da ROM ---
+rom: "2569 - Lara Croft Tomb Raider - Legend (USA) (En,Fr,De,Es,It).gba"
+crc32: "5a3dfb37"
+md5: "2f3f8e8d7874528acac3b7b89ccf98dd"
+sha1: "d808e041537afc49885232f9f1afa3aff5f8e512"
+
+# --- Downloads ---
+downloads:
+  - tipo: mediafire
+    url: "https://www.mediafire.com/file/2eoqg0o93iawv6u/Lara+Croft+Tomb+Raider+Legend+v1.0+PT-BR.zip/file"
+
+# --- Links Relacionados ---
+relacionados:
+  - url: "https://pt.wikipedia.org/wiki/Tomb_Raider:_Legend"
+    texto: "Página da Wikipédia"
+  - url: "https://www.romhacking.net.br/index.php?topic=2825.0"
+    texto: "Publicação da Tradução no FURT"
+  - url: "https://gamefaqs.gamespot.com/gba/932712-lara-croft-tomb-raider-legend"
+    texto: "Gamefaqs do Jogo"
 ---
+**Lara Croft Tomb Raider: Legend** é uma adaptação portátil do jogo de ação e aventura protagonizado pela famosa arqueóloga Lara Croft. Lançado em 2006, a versão de GBA oferece uma experiência adaptada aos recursos limitados do console, com gráficos 2D e jogabilidade em plataforma.
 
-<article>
-    <div class="titulopostagem">
-        <h1 id="secao1">{{ page.title }}</h1>
-        <span>{{ page.resumo }}</span>
+É o sétimo título principal da série Tomb Raider e o primeiro reboot da franquia que reimagina as origens da protagonista Lara Croft.
 
-        <div class="localpostagem">
-            <i class="bi bi-tags-fill"></i>
-            {% assign c = page.categories %} {% for a in c %}
-            <a href="{{ site.url }}/{{ a }}/" class="categoriapost"
-                >{{ a | replace: '-', ' ' | replace: 'rom', 'ROM' | replace: 'dnd', 'Dungeons &#38; Dragons' }} </a
-            ><span>, </span>
-            {% endfor %}
-            <br />
-            <i class="bi bi-clock-fill"></i> {{ page.date | date: "%d/%m/%Y"}}
-        </div>
-    </div>
+Legend detalha a busca de Croft pela mítica espada Excalibur, correndo pelo mundo contra sua ex-amiga Amanda Evert.
 
-    <div class="corpo">
-        <div class="ladoE">
-            <div class="texto">
-                <figure class="capapostagem">
-                    <img src="{{ page.capa }}" alt="Imagem de Capa de {{ page.title }}" class="zoom-img" />
-                </figure>
-                <p>
-                    Lara Croft Tomb Raider: Legend é uma adaptação portátil do jogo de ação e aventura protagonizado
-                    pela famosa arqueóloga Lara Croft. Lançado em 2006, a versão de GBA oferece uma experiência adaptada
-                    aos recursos limitados do console, com gráficos 2D e jogabilidade em plataforma.
-                </p>
-                <p>
-                    É o sétimo título principal da série Tomb Raider e o primeiro reboot da franquia que reimagina as
-                    origens da protagonista Lara Croft.
-                </p>
-                <p>
-                    Legend detalha a busca de Croft pela mítica espada Excalibur, correndo pelo mundo contra sua
-                    ex-amiga Amanda Evert.
-                </p>
-                <div class="galeria">
-                    <figure>
-                        <img src="https://imgur.com/UkwRFeI.gif" alt="Tela de Título" class="zoom-img" />
-                        <figcaption></figcaption>
-                    </figure>
-                    <figure>
-                        <img src="https://imgur.com/meGPhQm.gif" alt="Tela de Regras" class="zoom-img" />
-                        <figcaption></figcaption>
-                    </figure>
-                    <figure>
-                        <img src="https://imgur.com/Kaj0sim.gif" alt="Tela de Nomeação de Jogadores" class="zoom-img" />
-                        <figcaption></figcaption>
-                    </figure>
-                    <figure>
-                        <img src="https://imgur.com/y4RqIA6.gif" alt="Tela Inicial da Partida" class="zoom-img" />
-                        <figcaption></figcaption>
-                    </figure>
-                </div>
-                <p><b>Sobre a tradução</b></p>
-                <p>by: Breno</p>
-                <p>
-                    Meu interesse em traduzir este jogo começou alguns anos atrás, quando comecei no romhacking, ele foi
-                    minha primeira experiência com ponteiros relativos, porém, ficou de lado por conta dos outros
-                    projetos, só recentemente comecei a traduzir de fato e ainda bem (em 2020 eu iria sofrer para fazer
-                    no HEX kk). Espero que gostem!
-                </p>
-            </div>
-            <h2 class="secaotitulo" id="secao2"><i class="bi bi-controller"></i> Informações do Jogo</h2>
-            <section class="info livro">
-                <div class="tabelainfo">
-                    <div class="divTable">
-                        <div class="cell cell-head">Título Original</div>
-                        <div class="cell"><strong>Lara Croft Tomb Raider: Legend</strong></div>
+**Sobre a tradução**
 
-                        <div class="cell cell-head">Plataforma</div>
-                        <div class="cell">Gameboy Advance</div>
+by: Breno
 
-                        <div class="cell cell-head">Desenvolvedora</div>
-                        <div class="cell">Human Soft</div>
-
-                        <div class="cell cell-head">Gênero</div>
-                        <div class="cell">Ação-aventura</div>
-
-                        <div class="cell cell-head">Lançamento</div>
-                        <div class="cell">14/11/2006</div>
-                    </div>
-                </div>
-            </section>
-            <div class="separador"></div>
-
-            <h3 class="secaotitulo" id="secao3"><i class="bi bi-person-vcard-fill"></i> Equipe</h3>
-            <section class="equipe livro">
-                <div class="tabelainfo">
-                    <div class="divTable">
-                        <div class="cell cell-head">Breno</div>
-                        <div class="cell">Ferramentas de Textos, Tradução, Romhacking e Edição Gráfica</div>
-
-                        <div class="cell cell-head">Denim</div>
-                        <div class="cell">Descompressor/Compressor Gráfico e Romhacking</div>
-                    </div>
-                </div>
-            </section>
-
-            <div class="separador"></div>
-
-            <h3 class="secaotitulo" id="secao4"><i class="bi bi-info-circle-fill"></i> Informações da ROM</h3>
-            <section class="rom livro">
-                <div class="tabelainfo">
-                    <div class="divTable">
-                        <div class="cell cell-head">ROM</div>
-                        <div class="cell">2569 - Lara Croft Tomb Raider - Legend (USA) (En,Fr,De,Es,It).gba</div>
-
-                        <div class="cell cell-head">CRC32</div>
-                        <div class="cell">5a3dfb37</div>
-
-                        <div class="cell cell-head">MD5</div>
-                        <div class="cell">2f3f8e8d7874528acac3b7b89ccf98dd</div>
-
-                        <div class="cell cell-head">SHA-1</div>
-                        <div class="cell">d808e041537afc49885232f9f1afa3aff5f8e512</div>
-                    </div>
-                </div>
-            </section>
-            <div class="separador"></div>
-
-            <h3 class="secaotitulo" id="secao5"><i class="bi bi-cloud-arrow-down-fill"></i> Downloads</h3>
-
-            <section class="downloads">
-                <a
-                    href="https://www.mediafire.com/file/2eoqg0o93iawv6u/Lara+Croft+Tomb+Raider+Legend+v1.0+PT-BR.zip/file"
-                    target="_blank"
-                    class="botaodownload"
-                    id="mediafireD"
-                    ><img src="/img/svg/mediafire.svg" alt="Logo Mediafire" /> Mediafire</a
-                >
-            </section>
-            <div class="separador"></div>
-            <h4 class="secaotitulo" id="secao6"><i class="bi bi-link-45deg"></i> Links relacionados</h4>
-            <div class="linksrelacionados">
-                <a target="_blank" href="https://www.romhacking.net.br/index.php?topic=2825.0"
-                    >Publicação da Tradução no FURT</a
-                >
-
-                <a target="_blank" href="https://gamefaqs.gamespot.com/gba/932712-lara-croft-tomb-raider-legend"
-                    >Gamefaqs do Jogo</a
-                >
-            </div>
-        </div>
-        <div class="lateral">
-            <nav class="menulateralrapido">
-                <ul>
-                    <li><a href="#secao1">{{ page.title }}</a></li>
-                    <li><a href="#secao2">Informações do Jogo</a></li>
-                    <li><a href="#secao3">Equipe</a></li>
-                    <li><a href="#secao4">Informações da ROM</a></li>
-                    <li><a href="#secao5">Downloads</a></li>
-                    <li><a href="#secao6">Links Relacionados</a></li>
-                    <li><a href="#secao7">Comentários</a></li>
-                </ul>
-                <div class="separador"></div>
-                <div class="redeslateral">
-                    <p>Compartilhe o post:</p>
-                    {% include compartilhar.html %}
-                </div>
-            </nav>
-        </div>
-    </div>
-</article>
-<div class="corpo corpo2">
-    <div>
-        <div class="separador"></div>
-
-        <section class="comentarios">
-            <h5 class="secaotitulo" id="secao7"><i class="bi bi-chat-dots-fill"></i> Comentários</h5>
-            <div id="disqus_thread"></div>
-            <script>
-                /**
-                 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-
-                var disqus_config = function () {
-                    this.page.url = "{{ site.url }}{{ page.url }}"; // Replace PAGE_URL with your page's canonical URL variable
-                    this.page.identifier = "{{ page.url }}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-                };
-                (function () {
-                    // DON'T EDIT BELOW THIS LINE
-                    var d = document,
-                        s = d.createElement("script");
-                    s.src = "https://simple-skans.disqus.com/embed.js";
-                    s.setAttribute("data-timestamp", +new Date());
-                    (d.head || d.body).appendChild(s);
-                })();
-            </script>
-            <noscript
-                >Please enable JavaScript to view the
-                <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript
-            >
-        </section>
-    </div>
-
-    <div class="outros">
-        <div class="separador"></div>
-        <h6>Outros Posts</h6>
-        <nav class="outrosposts">
-            {% assign c = site.posts | slice: 0, 8 %} {% for post in c %} {% unless post.title == page.title %}
-            <a href="{{ post.url }}">
-                <figure style="background-image: url({{ post.capa }})"></figure>
-                {{ post.title }}
-            </a>
-
-            {% endunless %} {% endfor %}
-        </nav>
-    </div>
-</div>
+Meu interesse em traduzir este jogo começou alguns anos atrás, quando comecei no romhacking, ele foi minha primeira experiência com ponteiros relativos, porém, ficou de lado por conta dos outros projetos, só recentemente comecei a traduzir de fato e ainda bem (em 2020 eu iria sofrer para fazer no HEX kk). Espero que gostem!

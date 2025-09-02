@@ -138,6 +138,10 @@
         padding: 0 0.5rem;
         background-color: var(--corprincipal);
     }
+    
+    table {
+        margin: 0 auto 0.5rem;
+    }
 
     table tr td {
         color: #000;
@@ -287,6 +291,7 @@
 
     dl {
         padding-left: 1em;
+        margin-bottom: 0.5rem;
 
         dt {
             display: inline;

@@ -7,6 +7,8 @@ categories: jogos
 tags: nes
 permalink: /:categories/:title
 capa: tetsudouou
+poscapa: 30
+idt: MJ01
 
 # --- Informação do Jogo ---
 original: "Tetsudou-ou: Famicom Board Game"
@@ -57,7 +59,10 @@ downloads:
     texto: "ROMHacking.net"
   - tipo: generico
     url: "https://www.mediafire.com/file/34a56sl9hjh9y90/Tetsudou-ou_Manual.pdf/file"
-    texto: "Manual de Instruções"
+    texto: "Manual de Instruções (PDF)"
+  - tipo: leitura
+    url: "/biblioteca/MJ01"
+    texto: "Manual de Instruções (Online)"
 
 # --- Links Relacionados ---
 relacionados:

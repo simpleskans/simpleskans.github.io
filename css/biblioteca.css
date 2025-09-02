@@ -284,18 +284,41 @@
     img {
         margin: 1rem auto;
     }
+
+    dl {
+        padding-left: 1em;
+
+        dt {
+            display: inline;
+            margin-right: 5px;
+            margin-left: -1em;
+        }
+
+        dd {
+            display: inline;
+            margin-left: 0;
+            text-indent: 0;
+        }
+
+        dd::after {
+            content: "\A"; /* quebra de linha */
+            white-space: pre;
+        }
+    }
 }
 
 .flud {
     float: right;
-    margin: 0 0 1rem 1rem !important;
+    margin: 0 0 0 1rem !important;
     max-width: 50%;
+    display: inline;
 }
 
 .flue {
     float: left;
-    margin: 0 1rem 1rem 0 !important;
+    margin: 0 1rem 0 0 !important;
     max-width: 50%;
+    display: inline;
 }
 
 .creditos {
@@ -328,9 +351,6 @@
 .outros {
     padding-left: 2.5rem;
 }
-
-
-
 
 .downloads {
     display: flex;

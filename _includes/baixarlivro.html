@@ -3,7 +3,7 @@
 
 {% for p in site.posts %}
   {% if p.idt contains page.idt %}
-    <a href="{{ p.url }}" class="botaodownload" id="gdriveD">
+    <a href="{{ p.url }}#downloads" class="botaodownload" id="gdriveD">
         <img src="/img/svg/gdrive.svg" alt="Logo Google Drive" /> Baixar PDF
     </a>
   {% endif %}

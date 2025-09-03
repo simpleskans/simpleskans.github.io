@@ -8,8 +8,8 @@
 
     // H1 externo
     const h1Extra = document.getElementById("tituloaventura");
-    // headers dentro do article
-    const contentHeaders = content ? content.querySelectorAll("h2,h3,h4,h5,h6") : [];
+    // headers dentro do article (ignora h5/h6)
+    const contentHeaders = content ? content.querySelectorAll("h2,h3,h4") : [];
 
     // combina H1 externo com os headers do article
     const headers = [];
@@ -19,8 +19,9 @@
     const ulRoot = document.createElement("ul");
     toc.appendChild(ulRoot);
 
-    const map = new Map(); // id do heading -> { link, subUl?, parentKey?, li, hasIndicator }
-    let lastTopKey = null;
+    const map = new Map(); // id -> { link, subUl?, parentKey?, li, hasIndicator }
+    let lastH2Key = null;
+    let lastH3Key = null;
 
     headers.forEach((h, i) => {
       const level = parseInt(h.tagName[1], 10);
@@ -28,6 +29,7 @@
       h.id = id;
 
       if (level <= 2) {
+        // ==== H1 (extra) ou H2: item principal ====
         const li = document.createElement("li");
         const a = document.createElement("a");
         a.textContent = h.textContent;
@@ -44,17 +46,54 @@
         ulRoot.appendChild(li);
 
         map.set(id, { link: a, subUl, li, hasIndicator: false });
-        lastTopKey = id;
+        lastH2Key = id;
+        lastH3Key = null;
 
         a.addEventListener("click", (e) => {
           e.preventDefault();
           openOnly(subUl);
-          scrollToSection(h); // scroll instantâneo
+          scrollToSection(h);
           setActiveLink(id);
         });
-      } else {
-        if (!lastTopKey) return;
-        const parent = map.get(lastTopKey);
+      } else if (level === 3) {
+        // ==== H3: dentro do último H2 ====
+        if (!lastH2Key) return;
+        const parent = map.get(lastH2Key);
+        if (!parent) return;
+
+        const subLi = document.createElement("li");
+        const a = document.createElement("a");
+        a.textContent = h.textContent;
+        a.href = `#${id}`;
+        subLi.appendChild(a);
+
+        const subUl = document.createElement("ul");
+        subUl.className = "sublist";
+        subLi.appendChild(subUl);
+
+        parent.subUl.appendChild(subLi);
+
+        if (!parent.hasIndicator) {
+          const indicator = document.createElement("span");
+          indicator.className = "sublist-indicator";
+          indicator.textContent = "❯";
+          parent.link.appendChild(indicator);
+          parent.hasIndicator = true;
+        }
+
+        a.addEventListener("click", (e) => {
+          e.preventDefault();
+          openOnly(subUl);
+          scrollToSection(h);
+          setActiveLink(id);
+        });
+
+        map.set(id, { link: a, subUl, parentKey: lastH2Key, li: subLi, hasIndicator: false });
+        lastH3Key = id;
+      } else if (level === 4) {
+        // ==== H4: dentro do último H3 ====
+        if (!lastH3Key) return;
+        const parent = map.get(lastH3Key);
         if (!parent) return;
 
         const subLi = document.createElement("li");
@@ -75,24 +114,25 @@
         a.addEventListener("click", (e) => {
           e.preventDefault();
           openOnly(parent.subUl);
-          scrollToSection(h); // scroll instantâneo
+          scrollToSection(h);
           setActiveLink(id);
         });
 
-        map.set(id, { link: a, parentKey: lastTopKey });
+        map.set(id, { link: a, parentKey: lastH3Key });
       }
+      // H5 e H6 são ignorados
     });
 
-    // Depois de construir todos os links do TOC
+    // Fecha TOC no mobile ao clicar em um link
     document.querySelectorAll("#toc a").forEach((a) => {
       a.addEventListener("click", () => {
         const toc = document.getElementById("toc");
         const tocToggle = document.getElementById("toc-toggle");
 
         if (toc.classList.contains("mobile-aberto")) {
-          toc.classList.remove("mobile-aberto"); // fecha menu
-          document.body.classList.remove("no-scroll"); // desbloqueia scroll atrás
-          tocToggle.classList.remove("open"); // seta volta para hambúrguer
+          toc.classList.remove("mobile-aberto");
+          document.body.classList.remove("no-scroll");
+          tocToggle.classList.remove("open");
         }
       });
     });
@@ -122,11 +162,17 @@
 
       if (node.link) node.link.classList.add("active");
 
-      if (node.parentKey) {
-        const parent = map.get(node.parentKey);
+      // abre todos os pais recursivamente
+      let current = node;
+      while (current?.parentKey) {
+        const parent = map.get(current.parentKey);
         if (parent?.subUl) parent.subUl.classList.add("open");
         if (parent?.link) parent.link.classList.add("open-sublist");
-      } else if (node.subUl) {
+        current = parent;
+      }
+
+      // se o próprio tem subUl (ex.: H2 com H3 dentro)
+      if (node.subUl) {
         node.subUl.classList.add("open");
         if (node.link) node.link.classList.add("open-sublist");
       }
@@ -135,7 +181,7 @@
     // função para scroll instantâneo
     function scrollToSection(target) {
       const y = target.getBoundingClientRect().top + window.pageYOffset - HEADER_OFFSET_PX;
-      window.scrollTo(0, y); // scroll instantâneo
+      window.scrollTo(0, y);
     }
 
     const allHeaders = headers;
@@ -153,7 +199,7 @@
       if (!currentId && allHeaders.length) currentId = allHeaders[0].id;
       if (!currentId) return;
 
-      // remove classes ativas e seta girada
+      // limpa classes
       document.querySelectorAll("#toc a").forEach((a) => {
         a.classList.remove("active");
         a.classList.remove("open-sublist");
@@ -165,11 +211,17 @@
 
       if (node.link) node.link.classList.add("active");
 
-      if (node.parentKey) {
-        const parent = map.get(node.parentKey);
+      // abre todos os pais recursivamente
+      let current = node;
+      while (current?.parentKey) {
+        const parent = map.get(current.parentKey);
         if (parent?.subUl) parent.subUl.classList.add("open");
         if (parent?.link) parent.link.classList.add("open-sublist");
-      } else if (node.subUl) {
+        current = parent;
+      }
+
+      // se o próprio tem subUl
+      if (node.subUl) {
         node.subUl.classList.add("open");
         if (node.link) node.link.classList.add("open-sublist");
       }

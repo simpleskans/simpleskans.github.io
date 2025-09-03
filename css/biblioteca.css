@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Shadows Into Light';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/shadowsintolight/v19/UqyNK9UOIntux_czAvDQx_ZcHqZXBNQzdcD5.woff2) format('woff2');
+}
+
 .topolivro > figure {
     position: absolute;
     top: 5rem;
@@ -52,9 +60,11 @@
     display: flex;
     flex-direction: column;
 }
+
 #toc li {
     width: 100%;
 }
+
 #toc a {
     text-decoration: none;
     color: #fff;
@@ -63,26 +73,43 @@
     justify-content: space-between;
     align-items: center;
 }
+
 #toc a.active {
     font-weight: bold;
     background-color: var(--corprincipal);
 }
 
-/* Sublistas (H3–H6) colapsadas por padrão */
+/* Sublistas fechadas por padrão */
 #toc .sublist {
     display: none !important;
-}
-
-#toc .sublist a {
-    padding-left: 2rem;
+    margin: 0;
+    padding: 0;
 }
 
 #toc .sublist.open {
     display: block !important;
 }
 
+/* --- Indentação por nível --- */
+/* H2 (nível raiz) */
+#toc > ul > li > a {
+    padding-left: 1rem;
+}
+
+/* H3 (dentro de H2) */
+#toc .sublist > li > a {
+    padding-left: 2rem;
+}
+
+/* H4 (dentro de H3) */
+#toc .sublist .sublist > li > a {
+    padding-left: 3rem;
+}
+
+/* Indicador (seta ❯) */
 #toc .sublist-indicator {
     transition: transform 0.2s ease;
+    margin-left: auto; /* empurra a seta para a direita */
 }
 
 #toc a.active .sublist-indicator,
@@ -138,9 +165,10 @@
         padding: 0 0.5rem;
         background-color: var(--corprincipal);
     }
-    
+
     table {
         margin: 0 auto 0.5rem;
+        width: 100%;
     }
 
     table tr td {
@@ -282,6 +310,56 @@
             bottom: -13px;
             right: -0.1px;
             transform: scaleY(-1);
+        }
+    }
+
+    .citar {
+        p {
+            font-style: italic;
+            line-height: 1.8;
+
+            &:first-child::first-line {
+                font-size: 1.2rem;
+                font-style: normal;
+                font-variant: small-caps;
+            }
+        }
+
+        .citado {
+            display: block;
+            font-style: normal;
+            line-height: 1rem;
+            text-align: right;
+
+            &::before {
+                margin-right: 0.2em;
+                content: "—";
+            }
+        }
+    }
+
+    > hr {
+        margin: 1rem 0;
+    }
+
+    .papel {
+        background: linear-gradient(
+                to bottom,
+                rgba(13, 15, 18, 0) 0%,
+                rgba(13, 15, 18, 0) 90%,
+                rgba(13, 15, 18, 1) 100%
+            ),
+            url("https://i.imgur.com/6fu5jet.png");
+        background-size: 100%;
+        padding: 15px 3rem 2.7rem;
+        margin: 1rem 0;
+
+        p {
+            font-family: "Shadows Into Light";
+            font-size: 1.4rem;
+            line-height: 2.3rem;
+            font-style: italic;
+            color: var(--corfundo);
         }
     }
 

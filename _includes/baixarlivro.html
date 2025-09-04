@@ -1,13 +1,15 @@
-<h2 class="secaotitulo" id="downloads"><i class="bi bi-cloud-arrow-down-fill"></i> Downloads</h2>
+<h2 class="secaotitulo" id="downloads"><i class="bi bi-plus"></i> Mais</h2>
 <section class="downloads">
 
 {% for p in site.posts %}
   {% if p.idt contains page.idt %}
-    <a href="{{ p.url }}#downloads" class="botaodownload" id="gdriveD">
-        <img src="/img/svg/gdrive.svg" alt="Logo Google Drive" /> Baixar PDF
+    <a href="{{ p.url }}#downloads" class="botaodownload">
+        <img src="/img/svg/leronline.svg" alt="Baixar PDF" /> Baixar PDF
     </a>
   {% endif %}
 {% endfor %}
-
+    <a href="/biblioteca/" class="botaodownload">
+        <img src="/img/svg/voltar.svg" alt="Voltar" /> Voltar à Biblioteca
+    </a>
 
 </section>

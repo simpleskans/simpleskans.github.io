@@ -448,7 +448,7 @@
 .botaodownload {
     white-space: pre-line;
     flex-grow: 1;
-    background: var(--corprincipal);
+    background: #233847;
     padding: 1rem;
     display: flex;
     align-items: center;
@@ -457,9 +457,6 @@
     border-radius: 10px;
 }
 
-#gdriveD {
-    background: #2ea250;
-}
 
 .botaodownload > img {
     height: 1.5rem;

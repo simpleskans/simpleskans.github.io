@@ -9,7 +9,7 @@
     --corsecundaria: #99012aff;
     --corfundo: #0d0f12;
     --cortexto: #e3e6e8;
-    --gradiente: linear-gradient(to right, #c13a5aff 32%, #99012aff 100%);
+    --gradiente: linear-gradient(to right, #c13a5a, #b72f4e, #ad2342, #a31536, #99012a);
 }
 
 h1 {
@@ -147,6 +147,7 @@ header {
 .separadorlargo {
     height: 5rem;
 }
+
 /*caixa de conteudo*/
 
 .conteudo {
@@ -168,7 +169,8 @@ header {
     color: var(--cortexto);
     border: 2px solid var(--corprincipal);
     border-radius: 10px;
-    overflow: hidden; /* garante que o conteúdo e o background respeitem o border-radius */
+    overflow: hidden;
+    /* garante que o conteúdo e o background respeitem o border-radius */
 }
 
 .postlink > span {
@@ -350,10 +352,14 @@ footer {
 
 .capitulolink p {
     font-weight: 700;
-    display: -webkit-box; /* Necessário para o line-clamp */
-    -webkit-line-clamp: 2; /* Número máximo de linhas */
-    -webkit-box-orient: vertical; /* Orientação vertical */
-    overflow: hidden; /* Esconde o excesso */
+    display: -webkit-box;
+    /* Necessário para o line-clamp */
+    -webkit-line-clamp: 2;
+    /* Número máximo de linhas */
+    -webkit-box-orient: vertical;
+    /* Orientação vertical */
+    overflow: hidden;
+    /* Esconde o excesso */
     text-overflow: ellipsis;
     font-size: 1.2rem;
 }
@@ -393,6 +399,7 @@ footer {
     justify-content: center;
     align-items: center;
 }
+
 #img-modal img {
     max-width: 90%;
     max-height: 90%;
@@ -400,6 +407,7 @@ footer {
     border-radius: 10px;
     background-color: #fff;
 }
+
 #img-modal.closeable {
     cursor: pointer;
 }
@@ -471,7 +479,8 @@ footer {
     }
 
     .menuTopo {
-        display: none; /* escondido por padrão */
+        display: none;
+        /* escondido por padrão */
         flex-direction: column;
         position: absolute;
         top: 5rem;
@@ -481,11 +490,13 @@ footer {
         background: -webkit-linear-gradient(left, #c13a5aff 32%, #99012aff 100%);
         background: -o-linear-gradient(left, #c13a5aff 32%, #99012aff 100%);
         background: linear-gradient(to right, #c13a5aff 32%, #99012aff 100%);
-        z-index: 1000; /* garante que fica acima do conteúdo */
+        z-index: 1000;
+        /* garante que fica acima do conteúdo */
     }
 
     .menuTopo.open {
-        display: flex; /* aparece ao abrir */
+        display: flex;
+        /* aparece ao abrir */
     }
 
     .menuTopo li {

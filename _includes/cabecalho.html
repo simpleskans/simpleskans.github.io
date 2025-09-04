@@ -23,6 +23,16 @@
 <meta name="description" content="{{ page.resumo }} PT-BR | {{ page.descricao }}" />
 <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
 
+<script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<script>
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(async function(OneSignal) {
+    await OneSignal.init({
+      appId: "1f621037-8ad6-405d-9f7b-4ed9c024cf41",
+    });
+  });
+</script>
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-C6Q368P6MR"></script>
 <script>

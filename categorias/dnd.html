@@ -3,7 +3,8 @@ layout: padrao
 title: "Dungeons &#38; Dragons"
 descricao: "Lista de projetos de Dungeons &#38; Dragons da Simple Skans!"
 permalink: /dnd/
-capa: "logoColorido"
+capa: "dnd"
+poscapa: 80
 csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
 ---
 
@@ -12,6 +13,9 @@ csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
     <p>Todas as traduções e projetos de</p>
     <h1>Dungeons &amp; Dragons</h1>
 </div>
+<figure class="imagemcapa">
+    <img src="/img/postcapa/{{ page.capa }}.jpg" alt="" class="capasll" style="object-position: center {{ page.poscapa }}%" />
+</figure>
 <section class="categorias">
     <h2 class="secaotitulo"><i class="bi bi-tags-fill"></i> Acesso Rápido</h2>
     <nav class="listagrimorios">
@@ -59,8 +63,8 @@ csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
         <h3 id="dnd5e" class="secaotitulo"><i class="bi bi-dice-5"></i> 5ª Edição - Recentes</h3>
         <nav class="lista">
             <ul>
-                {% assign posts_slice = site.tags.e5 | slice: 0, 6 %} {% for post in posts_slice %} {% assign subtexto
-                = post.autorL %} {% include capitulolink.html post=post subtexto=subtexto %} {% endfor %}
+                {% assign posts_slice = site.tags.e5 | slice: 0, 6 %} {% for post in posts_slice %} {% assign subtexto =
+                post.autorL %} {% include capitulolink.html post=post subtexto=subtexto %} {% endfor %}
             </ul>
         </nav>
         <div class="separador"></div>

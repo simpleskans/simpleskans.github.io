@@ -3,7 +3,8 @@ layout: padrao
 title: Posts
 descricao: Lista com todas as postagens da Simple Skans!
 permalink: /posts/
-capa: "logoColorido"
+capa: geral
+poscapa: 50
 csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
 ---
 
@@ -12,6 +13,9 @@ csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
     <p>Todas as postagens da</p>
     <h1>Simple Skans</h1>
 </div>
+<figure class="imagemcapa">
+    <img src="/img/postcapa/{{ page.capa }}.jpg" alt="" class="capasll" style="object-position: center {{ page.poscapa }}%" />
+</figure>
 <div class="gridbase">
     <div class="filtros">
         <button class="filtro-btn active" data-categoria="todos">Todos ({{ site.posts | size }})</button>

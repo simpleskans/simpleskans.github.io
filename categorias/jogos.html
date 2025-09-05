@@ -3,7 +3,8 @@ layout: padrao
 title: "Jogos"
 descricao: "Lista de projetos de Localização de Jogos da Simple Skans!"
 permalink: /jogos/
-capa: "logoColorido"
+capa: jogo
+poscapa: 50
 csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
 ---
 
@@ -12,15 +13,22 @@ csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
     <p>Todas as traduções de</p>
     <h1>Jogos</h1>
 </div>
+<figure class="imagemcapa">
+    <img
+        src="/img/postcapa/{{ page.capa }}.jpg"
+        alt=""
+        class="capasll"
+        style="object-position: center {{ page.poscapa }}%" />
+</figure>
 <div class="gridbase">
     <div class="filtros">
         <button class="filtro-btn active" data-categoria="todos">Todos ({{ site.categories.jogos | size }})</button>
 
-        {% assign tags_da_categoria = site.categories.jogos | map: 'tags' | join: ',' | split: ',' | uniq %}
-        {% for tag in tags_da_categoria %}
-            {% assign formatted_tag = tag | replace: '-', ' ' | replace: 'gba', 'GBA' | replace: 'nes', 'NES'| replace: 'pc', 'PC' %}
-            {% assign post_count = site.categories.jogos | where_exp: "post", "post.tags contains tag" | size %}
-            <button class="filtro-btn" data-categoria="{{ tag }}">{{ formatted_tag }} ({{ post_count }})</button>
+        {% assign tags_da_categoria = site.categories.jogos | map: 'tags' | join: ',' | split: ',' | uniq %} {% for tag
+        in tags_da_categoria %} {% assign formatted_tag = tag | replace: '-', ' ' | replace: 'gba', 'GBA' | replace:
+        'nes', 'NES'| replace: 'pc', 'PC' %} {% assign post_count = site.categories.jogos | where_exp: "post",
+        "post.tags contains tag" | size %}
+        <button class="filtro-btn" data-categoria="{{ tag }}">{{ formatted_tag }} ({{ post_count }})</button>
         {% endfor %}
     </div>
 
@@ -28,8 +36,8 @@ csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
         <ul>
             {% for post in site.categories.jogos %}
             <li class="post-item {{ post.tags | join: ' ' }}">
-                {% assign subtexto = post.tags | join: '/' | replace: '-', ' ' | replace: 'gba', 'GBA' | replace: 'nes', 'NES'| replace: 'pc', 'PC' %}
-                {% include capitulolink.html post=post subtexto=subtexto %}
+                {% assign subtexto = post.tags | join: '/' | replace: '-', ' ' | replace: 'gba', 'GBA' | replace: 'nes',
+                'NES'| replace: 'pc', 'PC' %} {% include capitulolink.html post=post subtexto=subtexto %}
             </li>
             {% endfor %}
         </ul>

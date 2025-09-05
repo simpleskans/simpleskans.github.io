@@ -4,7 +4,8 @@ title: 'Smash Legends | Webtoons'
 descricao: 'Lista de traduções de Webtoons de Smash Legends da Simple Skans!'
 permalink: /smash-legends/slw/
 capa: sll
-csscustomizado: <link rel="stylesheet" href="/css/listacapitulos.css" />
+poscapa: 22
+csscustomizado: '<link rel="stylesheet" href="/css/categoria.css" />'
 ---
 
 <div class="categoriatitulo">
@@ -12,17 +13,16 @@ csscustomizado: <link rel="stylesheet" href="/css/listacapitulos.css" />
 </div>
 <div class="corpo" style="display: block">
     <figure class="imagemcapa">
-        <img src="/img/postcapa/sll.jpg" alt="" class="capasll" />
-        <figcaption class="gradienteBase"><h2>Lista de Capítulos</h2></figcaption>
+        <img src="/img/postcapa/sll.jpg" alt="" class="capasll" style="object-position: center {{ page.poscapa }}%"/>
     </figure>
-    <div class="separador"></div>
+    <h2 class="secaotitulo gradienteBase"><i class="bi bi-list-ol"></i> Lista de Capítulos</h2>
     <nav class="lista">
         <ul>
              {% assign c = site.tags.slw %} {% for post in c reversed %}
 
             <li>
                 <a class="capitulolink" href="{{ post.url }}">
-                    <span class="imagemcapitulo" style="background-image:  url({{ post.capa }});"></span>
+                    <span class="imagemcapitulo" style="background-image:  url(/img/postcapa/{{ post.capa }}.jpg);"></span>
                     <p>{{ post.numero }}. {{ post.title }}</p>
                 </a>
             </li>

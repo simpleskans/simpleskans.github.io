@@ -265,6 +265,8 @@ header {
 
 .listacategorias > li > a {
     display: block;
+    height: 100%;
+    white-space: nowrap;
     padding: 0.5rem;
     font-weight: 700;
     text-transform: capitalize;
@@ -471,9 +473,7 @@ footer {
     .outrosposts {
         grid-template-columns: repeat(2, 1fr);
     }
-}
 
-@media (max-width: 56.8rem) {
     .hamburger {
         display: block;
     }

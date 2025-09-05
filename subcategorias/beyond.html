@@ -3,7 +3,8 @@ layout: padrao
 title: "Traduções Beyond"
 descricao: "Lista de projetos de Traduções Beyond da Simple Skans!"
 permalink: /dnd/beyond/
-capa: "logoColorido"
+capa: dnd
+poscapa: 80
 csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
 ---
 
@@ -13,6 +14,13 @@ csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
     <h1>Traduções Beyond</h1>
     <p>Em ordem de ID</p>
 </div>
+<figure class="imagemcapa">
+    <img
+        src="/img/postcapa/{{ page.capa }}.jpg"
+        alt=""
+        class="capasll"
+        style="object-position: center {{ page.poscapa }}%" />
+</figure>
 <div class="gridbase">
     <div class="filtros">
         <button class="filtro-btn active" data-categoria="todos">Todos</button>

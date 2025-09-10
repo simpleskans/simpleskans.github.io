@@ -21,7 +21,7 @@ autorL: "Jan Young/Ryu Ho Sung"
 ---
 
 ![Página 1](https://i.imgur.com/0CCoczu.png)
-![Página de Créditos](https://i.imgur.com/8LZimVx)
+![Página de Créditos](https://i.imgur.com/kHnsYpU.jpeg)
 ![Página 2](https://i.imgur.com/LzLcfwz.png)
 ![Página 3](https://i.imgur.com/DSzal67.png)
 ![Página 4](https://i.imgur.com/yU0ld50.png)

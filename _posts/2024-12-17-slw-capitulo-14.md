@@ -12,7 +12,7 @@ poscapa: 69.47
 numero: 14
 ---
 ![Página 1](https://i.imgur.com/OL5X33I.png)
-![Página de Créditos](https://i.imgur.com/etS5IpN.png)
+![Página de Créditos](https://i.imgur.com/HhADuKq.png)
 ![Página 2](https://i.imgur.com/qbuk5TC.png)
 ![Página 3](https://i.imgur.com/B1c42NO.png)
 ![Página 4](https://i.imgur.com/RnIir5E.png)

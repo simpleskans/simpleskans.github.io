@@ -88,6 +88,11 @@
     padding-left: 0;
 }
 
+.noveltexto img {
+    width: 100%;
+    border-radius: 10px;
+}
+
 @media (max-width: 41.5rem) {
     .corpo {
         display: block;
@@ -100,6 +105,7 @@
 
 
 @media (max-width: 41.5rem) {
+
     .lateralcaps > h6,
     .lateralcaps > nav {
         display: none;
@@ -124,9 +130,9 @@
         font-size: calc(1rem + 1vw);
     }
 
-.galeriawebtoon {  
-padding: 0;
-}
+    .galeriawebtoon {
+        padding: 0;
+    }
 
 
 }

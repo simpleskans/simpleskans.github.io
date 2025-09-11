@@ -13,7 +13,7 @@ autorL: "James Haeck"
 
 # Imagens
 capa: "mmm"
-poscapa: 50
+poscapa: 22
 
 # Identificadores para Ler Online
 idt:

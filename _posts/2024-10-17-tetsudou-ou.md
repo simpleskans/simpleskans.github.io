@@ -61,7 +61,7 @@ downloads:
     url: "https://www.mediafire.com/file/34a56sl9hjh9y90/Tetsudou-ou_Manual.pdf/file"
     texto: "Manual de Instruções (PDF)"
   - tipo: leitura
-    url: "/biblioteca/MJ01"
+    url: "/biblioteca/mj01"
     texto: "Manual de Instruções (Online)"
 
 # --- Links Relacionados ---

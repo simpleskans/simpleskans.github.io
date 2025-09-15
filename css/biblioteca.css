@@ -149,6 +149,15 @@
         border-bottom: 1px solid var(--corprincipal);
         margin-bottom: 1rem;
     }
+    
+    a {
+        color: var(--corprincipal);
+        text-decoration: underline;
+        
+        &:hover {
+            color: var(--corsecundaria);
+        }
+    }
 
     p + p,
     ul + p,

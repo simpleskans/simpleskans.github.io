@@ -161,11 +161,16 @@ document.addEventListener("DOMContentLoaded", function () {
         const options = Array.from(select.options);
         const valoresUnicos = new Set();
 
-        // Remove duplicatas e espaços
+        // Garante que sempre vai existir a opção "todas"
+        let opcaoTodas = options.find((opt) => opt.value.trim() === "");
+        if (!opcaoTodas) {
+            opcaoTodas = new Option("Classes", "");
+        }
+
+        // Remove duplicadas (menos a opção vazia)
         for (let i = options.length - 1; i >= 0; i--) {
             const value = options[i].value.trim();
-            if (value === "") continue;
-
+            if (value === "") continue; // mantém a opção "Classes"
             if (valoresUnicos.has(value)) {
                 select.remove(i);
             } else {
@@ -175,13 +180,18 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
 
-        // Ordena alfabeticamente
-        const [firstOpt, ...restOpts] = Array.from(select.options);
-        const sorted = restOpts.sort((a, b) => a.text.localeCompare(b.text, "pt-BR"));
+        // Ordena alfabeticamente (sem a opção vazia)
+        const sorted = Array.from(select.options)
+            .filter((opt) => opt.value.trim() !== "")
+            .sort((a, b) => a.text.localeCompare(b.text, "pt-BR"));
 
+        // Reconstrói o select do zero
         select.innerHTML = "";
-        select.add(firstOpt);
+        select.add(opcaoTodas);
         sorted.forEach((opt) => select.add(opt));
+
+        // 🔒 Garante reset inicial SEMPRE
+        select.value = "";
     }
 
     // ============= OBSERVADOR DE SCROLL =============
@@ -191,8 +201,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (entries[0].isIntersecting && !carregando) {
                     carregarMagias();
                 }
-            },
-            {
+            }, {
                 rootMargin: "100px",
                 threshold: 0.1
             }

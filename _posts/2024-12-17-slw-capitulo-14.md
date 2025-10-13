@@ -1,7 +1,7 @@
 ---
 layout: slw
 title: "A Sinceridade da Bruxa do Mar"
-descricao: 'Tradução do Capítulo 12 da Webtoon/HQ de Smash Legends para português'
+descricao: 'Tradução do Capítulo 14 da Webtoon/HQ de Smash Legends para português'
 categories: smash-legends
 tags: slw octavia
 permalink: /:categories/:title

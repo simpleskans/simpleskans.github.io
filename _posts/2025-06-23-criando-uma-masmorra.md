@@ -3,7 +3,7 @@ layout: dnd
 title: "Criando uma Masmorra com o Baralho de Muito Mais Coisas"
 original: "Let's Build a Dungeon with the Deck of Many Things"
 descricao: "Tradução do suplemento Let's Build a Dungeon with the Deck of Many Things para português do Brasil, suplemento de D&D 5e"
-resumo: "Let's Build a Halloween One-Shot | D&D 5e"
+resumo: "Let's Build a Dungeon with the Deck of Many Things | D&D 5e"
 permalink: /:categories/:title
 
 # Metadados

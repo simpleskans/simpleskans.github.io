@@ -1,6 +1,6 @@
 ---
 layout: dnd
-title: "Criando uma One-Shot de Dia das Bruxas"
+title: "Criando uma One-Shot de Dia das Bruxas usando o Livro do Mestre 2024"
 original: "Let's Build a Halloween One-Shot"
 descricao: "Tradução do suplemento Let's Build a Halloween One-Shot para português do Brasil, suplemento de D&D 2024"
 resumo: "Let's Build a Halloween One-Shot | D&D 2024"

@@ -13,7 +13,7 @@ autorL: "Mike Bernier, Michael Galvis"
 
 # Imagens
 capa: "ndv"
-poscapa: 20
+poscapa: 27
 
 # Identificadores para Ler Online
 idt:
@@ -26,39 +26,22 @@ gdrive: "https://drive.google.com/file/d/1V7tJOOyqYCNqhm0ulZWSD15ww4X1-m8-/view?
 relacionados:
   - url: "https://www.dndbeyond.com/posts/465-encounter-of-the-week-april-showers-and-foul"
     texto: "Página da aventura Don't Say Vecna no D&D Beyond (em inglês)"
+  - url: "https://simpleskans.com.br/dnd/5e/o-dossie-de-vecna"
+    texto: "Página do suplemento O Dossiê de Vecna traduzido"
 ---
 
-**Onde o Conhecimento Atrai o Mal** — Algumas verdades deveriam permanecer enterradas. _Não Diga Vecna_ é um compilado
-mortal que une lore profundo e uma aventura de terror de alto nível, ideal para sessões únicas ou como clímax de
-campanhas cósmicas. O conteúdo gira em torno do temível arquilich Vecna, com regras expandidas, artefatos icônicos,
-estatísticas devastadoras e uma aventura ambientada em Limbo, onde os estudiosos ousaram aprender demais... e pagaram
-caro.
-
----
-
-**Premissa da Aventura:**  
-Ao investigar o desaparecimento da Torre Cientia, os personagens — todos no 20º nível — descobrem que três estudiosos
-foram arrastados ao plano do Limbo por Vecna, após se aprofundarem em segredos proibidos. A torre agora flutua, isolada
-por tentáculos mágicos, e abriga armadilhas letais, ecos psíquicos de sofrimento, e um portal selado que leva ao próprio
-Vecna. Os jogadores devem explorar os aposentos distorcidos, recuperar as três chaves que revelam o santuário do
-arquilich e enfrentar sua fúria — tudo isso sem pronunciar seu nome. Falar "Vecna" ativa uma maldição psíquica
-crescente, dificultando ainda mais a missão.
+## A Torre Cientia no Limbo — O Nome que Não Deve Ser Pronunciado
+Há segredos que não foram feitos para serem descobertos. Quando três estudiosos ousaram investigar os mistérios de Vecna, atraíram a ira do arquiliche e foram condenados a um destino pior que a morte. Sua torre foi arrancada do Plano Material e lançada ao Limbo, transformando-se em um labirinto de horrores, onde cada sala guarda cicatrizes de sua queda e cada palavra dita pode selar o destino dos aventureiros.
 
 ---
 
-**Ganchos para Aventuras Futuras:**
+### Premissa da Aventura
+Os personagens são veteranos enviados para investigar o desaparecimento da Torre Cientia, agora perdida no caos do Limbo. Ao adentrar suas muralhas, descobrem que os restos dos estudiosos Kalene, Aden e Brin foram corrompidos em chaves vivas para abrir o Portal Cruel, um portão que conduz diretamente ao santuário de Vecna. A cada passo, eles enfrentam armadilhas, maldições e criaturas deformadas pelo poder do Rei Imortal, enquanto a própria torre se reconstrói e resiste às tentativas de destruição.
 
--   A maldição de nome proibido pode se espalhar para outros planos, obrigando silêncio absoluto quando se trata de
-    certos vilões.
--   O _Livro da Escuridão Vil_ pode corromper um dos personagens, servindo como foco de futuras campanhas sombrias e
-    guerras entre clérigos e liches.
--   Fragmentos da torre podem conter rituais de necromancia ou pistas sobre outros artefatos perdidos, como a Espada de
-    Kas.
--   Vecna, mesmo derrotado, sempre retorna. Ele pode renascer em um novo corpo, surgindo como antagonista recorrente —
-    ou como patrono perverso de um vilão inesperado.
+No coração da aventura, os heróis devem decidir até onde estão dispostos a ir para recuperar os segredos proibidos e enfrentar Vecna em seu covil. O arquiliche, adornado em mantos púrpura e couraça dourada, aguarda com poder suficiente para destruir até os mais preparados. A batalha final não é apenas contra um inimigo, mas contra a tentação de aceitar sua promessa de eternidade. Derrotá-lo é possível, mas nunca definitivo — pois Vecna sempre retorna, e sua sombra se estende por todo o multiverso.
 
 ---
 
-_“Não diga o nome. Não escreva o nome. Cada sílaba dele... chama algo que nunca deveria ouvir você.”_
+_“Um silêncio pode esconder segredos… mas não o eco de um nome que devora a própria alma.”_
 
-Vai enfrentar Vecna — ou se tornar mais uma nota apagada em seu livro de horrores?
+Vai desafiar Vecna e arriscar tudo na Torre Cientia — ou recuar e deixar que o Rei Imortal continue a escrever sua história em sangue e sombras?

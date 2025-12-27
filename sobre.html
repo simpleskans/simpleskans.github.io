@@ -14,10 +14,10 @@ equipe:
     cargo: "Tradutor e Revisor"
     img: "/img/parceiros/Talude.jpg"
   - nome: "IrisBlinx"
-    cargo: "Tradutora e Redrawer de Smash Legends"
+    cargo: "Tradutora e Redrawer de Smash Legends / Líder da Determination"
     img: "/img/parceiros/IrisBlinx.png"
   - nome: "Amoraisw"
-    cargo: "Tradutora de Smash Legends"
+    cargo: "Tradutora e Redrawer de Smash Legends / Líder da Determination"
     img: "/img/parceiros/Amora.png"
 
 ex_membros:
@@ -48,24 +48,7 @@ ex_membros:
   - nome: "Anonimus"
     cargo: "Revisor"
     img: "/img/parceiros/anonimus.png"
-
-party:
-  - nome: "Sasha"
-    cargo: "Jogado por: KryFi"
-    img: "/img/parceiros/Sasha.jpg"
-  - nome: "Raava"
-    cargo: "Jogado por: Raava"
-    img: "/img/parceiros/Raava.jpg"
-  - nome: "Carlos Jobim"
-    cargo: "Jogado por: Miminho"
-    img: "/img/parceiros/Carlos.jpg"
-  - nome: "Alon"
-    cargo: "Jogado por: MeioKilo"
-    img: "/img/parceiros/Alon.jpg"
-  - nome: "Randal"
-    cargo: "Jogado por: Yan"
-    img: "/img/parceiros/Randal.jpg"
-
+    
 agradecimentos:
   - nome: "Faren"
     cargo: "Administrador e Redator da Artíficio RPG"
@@ -114,6 +97,9 @@ parceiros:
   - nome: "ㄴZerøㄱ"
     img: "/img/parceiros/zero.gif"
     link: "https://discord.com/invite/9eEesduHNF"
+  - nome: "Determination"
+    img: "/img/parceiros/dtt.jpg"
+    link: ""
   - nome: "Domínios da Morte"
     img: "/img/parceiros/DoD.png"
     link: "#"
@@ -170,20 +156,6 @@ parceiros:
 <h2 class="secaotitulo"><i class="bi bi-emoji-laughing-fill"></i> Agradecimentos Especiais</h2>
 <section class="equipe agradecimentos">
     {% for membro in page.agradecimentos %}
-    <div class="membro gradienteBase">
-        <figure><img src="{{ membro.img }}" alt="Foto de Perfil de {{ membro.nome }}" /></figure>
-        <div class="membroinfo">
-            <span class="nome">{{ membro.nome }}</span>
-            <span class="cargo">{{ membro.cargo }}</span>
-        </div>
-    </div>
-    {% endfor %}
-</section>
-
-<div class="separador"></div>
-<h2 class="secaotitulo"><i class="bi bi-dice-5"></i> Party Mais Marcante</h2>
-<section class="equipe agradecimentos">
-    {% for membro in page.party %}
     <div class="membro gradienteBase">
         <figure><img src="{{ membro.img }}" alt="Foto de Perfil de {{ membro.nome }}" /></figure>
         <div class="membroinfo">

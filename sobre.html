@@ -99,7 +99,7 @@ parceiros:
     link: "https://discord.com/invite/9eEesduHNF"
   - nome: "Determination"
     img: "/img/parceiros/dtt.jpg"
-    link: ""
+    link: "https://www.youtube.com/@SynopDubs"
   - nome: "Domínios da Morte"
     img: "/img/parceiros/DoD.png"
     link: "#"
@@ -109,9 +109,6 @@ parceiros:
   - nome: "Taihen's Hextinkers"
     img: "/img/parceiros/hextinkers.png"
     link: "https://hextinkers.org/"
-  - nome: "Baile de Taverna"
-    img: "/img/parceiros/bdt.jpeg"
-    link: "https://linktr.ee/Bailedetaverna"
   - nome: "Biblioteca Dungeons &amp; Dragons"
     img: "/img/parceiros/bibliotecadnd.jpg"
     link: "#"
@@ -152,6 +149,18 @@ parceiros:
     {% endfor %}
 </section>
 
+
+<div class="separador"></div>
+<h2 class="secaotitulo"><i class="bi bi-people-fill"></i> Parceiros</h2>
+<section class="parceiros">
+    {% for parceiro in page.parceiros %}
+    <a href="{{ parceiro.link }}" class="membroparceiro gradienteBase">
+        <figure><img src="{{ parceiro.img }}" alt="Logo de {{ parceiro.nome }}" /></figure>
+        <span>{{ parceiro.nome }}</span>
+    </a>
+    {% endfor %}
+</section>
+
 <div class="separador"></div>
 <h2 class="secaotitulo"><i class="bi bi-emoji-laughing-fill"></i> Agradecimentos Especiais</h2>
 <section class="equipe agradecimentos">
@@ -166,13 +175,3 @@ parceiros:
     {% endfor %}
 </section>
 
-<div class="separador"></div>
-<h2 class="secaotitulo"><i class="bi bi-people-fill"></i> Parceiros</h2>
-<section class="parceiros">
-    {% for parceiro in page.parceiros %}
-    <a href="{{ parceiro.link }}" class="membroparceiro gradienteBase">
-        <figure><img src="{{ parceiro.img }}" alt="Logo de {{ parceiro.nome }}" /></figure>
-        <span>{{ parceiro.nome }}</span>
-    </a>
-    {% endfor %}
-</section>

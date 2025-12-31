@@ -28,20 +28,23 @@ relacionados:
     texto: "Página do suplemento Let's Build a Halloween One-Shot no D&D Beyond (em inglês)"
 ---
 
-**O Medo Mora ao Lado** Nem sempre o terror vem de terras distantes. Às vezes, ele se instala na casa abandonada no fim
-da rua. Em Riacho das Cinzas, uma vila pacata, o desaparecimento de moradores e sinais macabros despertam rumores de
-maldição. Mas a verdade é ainda mais sombria: um culto de Bhaal, deus do assassinato, prepara um ritual sangrento na
-véspera da lua da colheita.
+## O Medo Mora ao Lado
+
+Nem sempre o terror vem de terras distantes. Às vezes, ele se instala na casa abandonada no fim da rua. Em Riacho das
+Cinzas, uma vila pacata, o desaparecimento de moradores e sinais macabros despertam rumores de maldição. Mas a verdade é
+ainda mais sombria: um culto de Bhaal, deus do assassinato, prepara um ritual sangrento na véspera da lua da colheita.
 
 ---
 
-**Premissa da Aventura:** Os personagens são chamados pela prefeita Rowan para investigar uma mansão abandonada nos
-arredores da vila. O pastor local desapareceu durante suas rondas noturnas, e quando os moradores foram verificar,
-encontraram ovelhas mortas e devoradas por ratos. O ferreiro e o taberneiro enviados em busca de pistas também não
-retornaram, aumentando o clima de medo e urgência.<br>Dentro da mansão, os heróis descobrem que um culto dedicado a
-Bhaal se instalou no local, preparando um ritual sombrio para sacrificar os cativos e obter poder em troca. O ambiente é
-hostil e traiçoeiro: armadilhas, espíritos inquietos e cultistas armados aguardam os aventureiros em cada andar,
-culminando no porão onde os moradores estão aprisionados e o ritual está prestes a começar.
+### Premissa da Aventura
+
+Os personagens são chamados pela prefeita Rowan para investigar uma mansão abandonada nos arredores da vila. O pastor
+local desapareceu durante suas rondas noturnas, e quando os moradores foram verificar, encontraram ovelhas mortas e
+devoradas por ratos. O ferreiro e o taberneiro enviados em busca de pistas também não retornaram, aumentando o clima de
+medo e urgência.<br>Dentro da mansão, os heróis descobrem que um culto dedicado a Bhaal se instalou no local, preparando
+um ritual sombrio para sacrificar os cativos e obter poder em troca. O ambiente é hostil e traiçoeiro: armadilhas,
+espíritos inquietos e cultistas armados aguardam os aventureiros em cada andar, culminando no porão onde os moradores
+estão aprisionados e o ritual está prestes a começar.
 
 ---
 

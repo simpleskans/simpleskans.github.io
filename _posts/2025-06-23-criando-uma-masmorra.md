@@ -30,14 +30,29 @@ relacionados:
     texto: "YOUTUBE - How To Build An Adventure with The Deck of Many Things | D&D (Vídeo em inglês)"
 ---
 
-**O Olhar que Aprisiona** — Erguida sobre um pináculo de rocha açoitado por ondas violentas, a Fortaleza Salão do Corvo já foi um bastião militar respeitado. Agora, distorcida pela influência alienígena de um Observador, tornou-se um labirinto impossível, onde corredores mudam de forma e cada sala guarda ecos petrificados de uma batalha perdida. É nesse cenário que os heróis devem enfrentar não apenas a criatura, mas também o destino cruel de sua amiga Thora Arruinadragão.
+## O Olhar que Aprisiona
+
+Erguida sobre um pináculo de rocha açoitado por ondas violentas, a Fortaleza Salão do Corvo já foi um bastião militar
+respeitado. Agora, distorcida pela influência alienígena de um Observador, tornou-se um labirinto impossível, onde
+corredores mudam de forma e cada sala guarda ecos petrificados de uma batalha perdida. É nesse cenário que os heróis
+devem enfrentar não apenas a criatura, mas também o destino cruel de sua amiga Thora Arruinadragão.
 
 ---
 
-**Premissa da Aventura** — Os personagens são enviados para investigar o súbito silêncio da fortaleza de Thora, uma guerreira poderosa e aliada próxima. Ao chegar, encontram mercenários petrificados e sinais de que algo terrível tomou o lugar. A fortaleza, agora distorcida pelo Reino Distante, desafia a lógica e aprisiona todos que ousam entrar. O Observador revela que Thora foi infectada por um girino illitíde e insiste que sua transformação em devoradora de mentes é necessária para um ritual capaz de revelar a localização do Cérebro Ancião.<br>A missão se torna um dilema moral: salvar Thora e tentar interromper a ceramorfose, permitir o sacrifício em nome de um bem maior ou enfrentar a tragédia de derrotar a própria amiga transformada. Cada escolha carrega consequências profundas, e a fortaleza em ruínas, tomada por gosmas corrosivas e armadilhas, é o palco onde honra, amizade e sobrevivência se entrelaçam em um destino incerto.
+### Premissa da Aventura
+
+Os personagens são enviados para investigar o súbito silêncio da fortaleza de Thora, uma guerreira poderosa e aliada
+próxima. Ao chegar, encontram mercenários petrificados e sinais de que algo terrível tomou o lugar. A fortaleza, agora
+distorcida pelo Reino Distante, desafia a lógica e aprisiona todos que ousam entrar. O Observador revela que Thora foi
+infectada por um girino illitíde e insiste que sua transformação em devoradora de mentes é necessária para um ritual
+capaz de revelar a localização do Cérebro Ancião.<br>A missão se torna um dilema moral: salvar Thora e tentar
+interromper a ceramorfose, permitir o sacrifício em nome de um bem maior ou enfrentar a tragédia de derrotar a própria
+amiga transformada. Cada escolha carrega consequências profundas, e a fortaleza em ruínas, tomada por gosmas corrosivas
+e armadilhas, é o palco onde honra, amizade e sobrevivência se entrelaçam em um destino incerto.
 
 ---
 
 _“Uma fortaleza pode proteger aliados… mas não segredos que se infiltram na mente como veneno invisível.”_
 
-Vai desafiar o Observador e lutar pelo futuro de Thora — ou aceitar que o sacrifício é o preço para deter um mal ainda maior?
+Vai desafiar o Observador e lutar pelo futuro de Thora — ou aceitar que o sacrifício é o preço para deter um mal ainda
+maior?

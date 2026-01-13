@@ -1,0 +1,20 @@
+---
+layout: padrao
+---
+
+<article>
+    {% include titulopost.html post=post %}
+
+    <div class="gridbase">
+        <div>{% include menulateral.html post=post %}</div>
+        <div>
+            <div class="texto">
+                {{ content }} {% include redireciona.html %}
+                <div class="separador"></div>
+            </div>
+            <div class="separador"></div>
+            <div>{% include outrosposts.html post=post %}</div>
+            <div>{% include comentarios.html post=post %}</div>
+        </div>
+    </div>
+</article>

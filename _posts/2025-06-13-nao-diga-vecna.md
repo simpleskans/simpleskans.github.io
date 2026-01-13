@@ -5,6 +5,7 @@ original: "Don't Say Vecna"
 descricao: "Tradução de Don't Say Vecna para português, trazendo a aventura para a comunidade brasileira."
 resumo: "Don't Say Vecna | D&D 5e"
 permalink: /:categories/:title
+published: false
 
 # Metadados
 categories: dnd beyond

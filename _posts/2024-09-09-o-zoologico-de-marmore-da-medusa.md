@@ -5,6 +5,7 @@ original: "Medusa’s Marble Menagerie"
 descricao: "Tradução da aventura Medusa’s Marble Menagerie para português do Brasil, uma aventura de D&D 5e"
 resumo: "Medusa’s Marble Menagerie | D&D 5e"
 permalink: /:categories/:title
+published: false
 # Metadados
 categories: dnd beyond
 tags: lvl7 e5

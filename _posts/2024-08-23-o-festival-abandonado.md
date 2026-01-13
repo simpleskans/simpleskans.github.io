@@ -5,6 +5,7 @@ original: "The Abandoned Festival"
 descricao: "Descubra um encontro emocionante de Dungeons & Dragons chamado \"O Festival Abandonado\", perfeito para adicionar à sua campanha."
 resumo: "The Abandoned Festival | D&D 5e"
 permalink: /:categories/:title
+published: false
 
 # Metadados
 categories: dnd beyond

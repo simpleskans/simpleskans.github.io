@@ -5,6 +5,7 @@ original: "Sea Trolls in the Net"
 descricao: "Tradução da aventura Sea Trolls in the Net para português do Brasil, aventuras de D&D 5e"
 resumo: "Sea Trolls in the Net | D&D 5e"
 permalink: /:categories/:title
+published: false
 
 # Metadados
 categories: dnd beyond

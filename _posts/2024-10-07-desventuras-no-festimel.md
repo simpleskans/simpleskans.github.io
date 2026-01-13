@@ -5,6 +5,7 @@ original: "Honeyfest Hagglers & Spring Sickness"
 descricao: "Tradução das aventuras Honeyfest Hagglers e Spring Sickness April Fool’s Gold para português do Brasil, aventuras de D&D 5e"
 resumo: "Honeyfest Hagglers & Spring Sickness | D&D 5e"
 permalink: /:categories/:title
+published: false
 
 # Metadados
 categories: dnd beyond

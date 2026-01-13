@@ -1,10 +1,31 @@
 .titulopostagem {
-    padding: 3rem 0;
+    padding: 1rem 0 3rem;
 }
 
 .titulopostagem h1 {
     font-size: calc(1.7rem + 1vw);
-    padding-top: 16rem;
+    padding-top: 1rem;
+}
+
+.titulopostagem .capapostagem {
+    height: 18rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border-radius: 10px;
+}
+
+.titulopostagem .capapostagem img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    object-position: center 50%;
 }
 
 .texto figure {
@@ -17,7 +38,7 @@
     grid-template-columns: 3fr 1fr;
 }
 
-.capapostagem + p {
+.texto p:first-child {
     text-indent: 0;
 
     &::first-line {
@@ -57,29 +78,6 @@
 .corpo h5,
 .corpo h6 {
     font-size: 1.3rem !important;
-}
-
-.texto .capapostagem {
-    position: absolute;
-    top: 5rem;
-    left: 0;
-    height: 18rem;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    flex-shrink: 0;
-    flex-grow: 0;
-}
-
-.texto .capapostagem img {
-    display: block;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    opacity: 1;
-    object-position: center 50%;
 }
 
 p img {
@@ -170,7 +168,7 @@ h6 {
 }
 
 .texto .galeria > figure {
-   width: 100%;
+    width: 100%;
 }
 
 .texto .galeria > figure img {
@@ -184,6 +182,42 @@ h6 {
     padding: 0.25rem;
     font-style: italic;
     border-radius: 0 0 10px 10px;
+}
+
+.dnddiv {
+    display: flex;
+    border: 2px var(--corprincipal) solid;
+    padding: 1rem 0.5rem;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    a {
+        flex: 1;
+        border-radius: 10px;
+        overflow: hidden;
+        align-self: flex-start;
+    }
+
+    figure {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 1;
+        width: 100%;
+
+        img {
+            margin: auto;
+            width: 100%;
+        }
+
+        figcaption {
+            text-align: center;
+            font-weight: 700;
+            padding: 0.5rem;
+        }
+    }
 }
 
 .coluna-3 {

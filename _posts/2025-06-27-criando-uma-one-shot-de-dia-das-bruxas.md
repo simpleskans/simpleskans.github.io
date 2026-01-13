@@ -5,6 +5,7 @@ original: "Let's Build a Halloween One-Shot"
 descricao: "Tradução do suplemento Let's Build a Halloween One-Shot para português do Brasil, suplemento de D&D 2024"
 resumo: "Let's Build a Halloween One-Shot | D&D 2024"
 permalink: /:categories/:title
+published: false
 
 # Metadados
 categories: dnd beyond

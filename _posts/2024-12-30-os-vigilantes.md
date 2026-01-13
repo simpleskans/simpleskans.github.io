@@ -5,6 +5,7 @@ original: "The Watchers"
 descricao: "Tradução da aventura The Watchers para português do Brasil, aventura de D&D 5e"
 resumo: "The Watchers | D&D 5e"
 permalink: /:categories/:title
+published: false
 
 # Metadados
 categories: dnd beyond

@@ -5,6 +5,7 @@ original: "The Hungry Xorn"
 descricao: "Tradução da aventura The Hungry Xorn para português do Brasil!"
 resumo: "The Hungry Xorn | D&D 5e"
 permalink: /:categories/:title
+published: false
 
 # Metadados
 categories: dnd beyond

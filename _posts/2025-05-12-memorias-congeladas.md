@@ -5,6 +5,7 @@ original: "Frozen Memories"
 descricao: "Tradução da aventura Frozen Memories para português do Brasil!"
 resumo: "Frozen Memories | D&D 5e"
 permalink: /:categories/:title
+published: false
 
 # Metadados
 categories: dnd beyond

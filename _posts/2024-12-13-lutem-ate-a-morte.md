@@ -5,6 +5,7 @@ original: "Fight to the Death"
 descricao: "Tradução da aventura Fight to the Death para português do Brasil, aventura de D&D 5e"
 resumo: "Fight to the Death | D&D 5e"
 permalink: /:categories/:title
+published: false
 
 # Metadados
 categories: dnd beyond

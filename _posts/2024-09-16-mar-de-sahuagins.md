@@ -5,6 +5,7 @@ original: "Sharkfin Shipwreck & Coral Colosseum"
 descricao: "Tradução das aventuras Sharkfin Shipwreck e Coral Colosseum para português do Brasil, aventuras de D&D 5e."
 resumo: "Sharkfin Shipwreck & Coral Colosseum | D&D 5e"
 permalink: /:categories/:title
+published: false
 
 # Metadados
 categories: dnd beyond

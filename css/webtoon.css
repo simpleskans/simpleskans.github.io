@@ -1,7 +1,13 @@
-.capapostagem {
-    position: absolute;
-    top: 5rem;
-    left: 0;
+.titulopostagem {
+    padding: 1rem 0 3rem;
+}
+
+.titulopostagem h1 {
+    font-size: calc(1.7rem + 1vw);
+    padding-top: 1rem;
+}
+
+.titulopostagem .capapostagem {
     height: 18rem;
     overflow: hidden;
     display: flex;
@@ -10,23 +16,16 @@
     align-items: center;
     flex-shrink: 0;
     flex-grow: 0;
+    border-radius: 10px;
 }
 
-.capapostagem > img {
+.titulopostagem .capapostagem img {
     display: block;
     object-fit: cover;
     width: 100%;
-    height: 18rem;
+    height: 100%;
     opacity: 1;
-}
-
-.titulopostagem {
-    padding: 5rem 0;
-}
-
-.titulopostagem h1 {
-    font-size: calc(1.7rem + 1vw);
-    padding-top: 14rem;
+    object-position: center 50%;
 }
 
 .gridbaseinvertido {

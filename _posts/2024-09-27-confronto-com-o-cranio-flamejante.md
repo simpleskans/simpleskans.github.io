@@ -5,6 +5,7 @@ original: "Flameskull Faceoff"
 descricao: "Tradução da aventura Flameskull Faceoff para português do Brasil, aventuras de D&D 5e."
 resumo: "Flameskull Faceoff | D&D 5e"
 permalink: /:categories/:title
+published: false
 
 # Metadados
 categories: dnd beyond

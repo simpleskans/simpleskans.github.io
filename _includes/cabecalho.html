@@ -126,24 +126,14 @@
 
 <link rel="stylesheet" href="/css/reset.css" />
 <link rel="stylesheet" href="/css/estilos.css" />
-{% if page.layout == "dnd" %}
-  <link rel="stylesheet" href="/css/post.css" />
-{% endif %}
-{% if page.layout == "jogo" %}
-  <link rel="stylesheet" href="/css/post.css" />
-{% endif %}
-{% if page.layout == "rom" %}
-  <link rel="stylesheet" href="/css/post.css" />
-{% endif %}
-{% if page.layout == "slw" %}
-  <link rel="stylesheet" href="/css/webtoon.css" />
-{% endif %}
-{% if page.layout == "sln" %}
-  <link rel="stylesheet" href="/css/webtoon.css" />
-{% endif %}
-{% if page.layout == "livro" %}
+{% case page.layout %}
+  {% when "dnd","jogo","rom","dnddiv" %}
+    <link rel="stylesheet" href="/css/post.css" />
+  {% when "slw","sln" %}
+    <link rel="stylesheet" href="/css/webtoon.css" />
+  {% when "livro" %}
     <link rel="stylesheet" href="/css/biblioteca.css" />
-{% endif %}
+{% endcase %}
 
 {{page.csscustomizado}} {{page.jscustomizado}}
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />

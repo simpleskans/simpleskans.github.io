@@ -5,6 +5,7 @@ original: "Strahd Must Die (Tonight!, Again, IN THE SPACE!)"
 descricao: "Descubra três aventuras one-shot emocionantes para Halloween baseadas na campanha “A Maldição de Strahd” de Dungeons & Dragons."
 resumo: "Strahd Must Die | D&D 5e"
 permalink: /:categories/:title
+published: false
 
 # Metadados
 categories: dnd beyond

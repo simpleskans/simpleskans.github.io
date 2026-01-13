@@ -5,6 +5,7 @@ original: "April Fool’s Gold"
 descricao: "Tradução da aventura April Fool’s Gold para português do Brasil, aventuras de D&D 5e."
 resumo: "April Fool’s Gold | D&D 5e"
 permalink: /:categories/:title
+published: false
 
 # Metadados
 categories: dnd beyond

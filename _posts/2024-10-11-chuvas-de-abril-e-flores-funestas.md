@@ -5,6 +5,7 @@ original: "April Showers and Foul Flowers"
 descricao: "Tradução da aventura April Showers and Foul Flowers para português do Brasil, aventuras de D&D 5e"
 resumo: "April Showers and Foul Flowers | D&D 5e"
 permalink: /:categories/:title
+published: false
 
 # Metadados
 categories: dnd beyond

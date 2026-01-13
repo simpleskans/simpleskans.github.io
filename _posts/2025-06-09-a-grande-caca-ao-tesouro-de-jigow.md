@@ -5,6 +5,7 @@ original: "The Great Jigow Scavenger Hunt!"
 descricao: "Tradução da aventura The Great Jigow Scavenger Hunt! para português do Brasil!"
 resumo: "The Great Jigow Scavenger Hunt! | D&D 5e"
 permalink: /:categories/:title
+published: false
 
 # Metadados
 categories: dnd beyond

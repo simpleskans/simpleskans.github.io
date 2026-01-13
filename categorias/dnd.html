@@ -10,12 +10,13 @@ csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
 
 {% assign current_cat = page.url | split: "/" | last %}
 <div class="categoriatitulo">
+    <figure class="imagemcapa">
+        <img src="/img/postcapa/{{ page.capa }}.jpg" alt="" class="capasll" />
+    </figure>
     <p>Todas as traduções e projetos de</p>
     <h1>Dungeons &amp; Dragons</h1>
 </div>
-<figure class="imagemcapa">
-    <img src="/img/postcapa/{{ page.capa }}.jpg" alt="" class="capasll" style="object-position: center {{ page.poscapa }}%" />
-</figure>
+
 <section class="categorias">
     <h2 class="secaotitulo"><i class="bi bi-tags-fill"></i> Acesso Rápido</h2>
     <nav class="listagrimorios">

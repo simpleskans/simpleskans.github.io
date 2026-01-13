@@ -5,6 +5,7 @@ original: "Let's Build a One-Shot With Adventure Atlas: The Mortuary!"
 descricao: "Tradução do suplemento Let's Build a One-Shot With Adventure Atlas: The Mortuary! para português do Brasil, suplemento de D&D 5e"
 resumo: "Let's Build a One-Shot With Adventure Atlas: The Mortuary! | D&D 5e"
 permalink: /:categories/:title
+published: false
 
 # Metadados
 categories: dnd beyond

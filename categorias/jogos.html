@@ -10,16 +10,13 @@ csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
 
 <script src="/js/filtroposts.js"></script>
 <div class="categoriatitulo">
+    <figure class="imagemcapa">
+        <img src="/img/postcapa/{{ page.capa }}.jpg" alt="" class="capasll" />
+    </figure>
     <p>Todas as traduções de</p>
     <h1>Jogos</h1>
 </div>
-<figure class="imagemcapa">
-    <img
-        src="/img/postcapa/{{ page.capa }}.jpg"
-        alt=""
-        class="capasll"
-        style="object-position: center {{ page.poscapa }}%" />
-</figure>
+
 <div class="gridbase">
     <div class="filtros">
         <button class="filtro-btn active" data-categoria="todos">Todos ({{ site.categories.jogos | size }})</button>

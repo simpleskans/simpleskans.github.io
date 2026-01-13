@@ -5,6 +5,7 @@ original: "Journey to the Feywild"
 descricao: "Tradução da aventura Journey to the Feywild para português do Brasil!"
 resumo: "Journey to the Feywild | D&D 5e"
 permalink: /:categories/:title
+published: false
 
 # Metadados
 categories: dnd beyond

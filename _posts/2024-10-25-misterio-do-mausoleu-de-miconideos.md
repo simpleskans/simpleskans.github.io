@@ -5,6 +5,7 @@ original: "Mystery of the Myconid Mausoleum"
 descricao: "Tradução da aventura Mystery of the Myconid Mausoleum para português do Brasil, aventuras de D&D 5e"
 resumo: "Mystery of the Myconid Mausoleum | D&D 5e"
 permalink: /:categories/:title
+published: false
 
 # Metadados
 categories: dnd beyond

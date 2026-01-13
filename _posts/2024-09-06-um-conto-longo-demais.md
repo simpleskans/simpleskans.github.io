@@ -5,6 +5,7 @@ original: "A Tale Too Far"
 descricao: "Tradução da aventura A Tale Too Far para português do Brasil!"
 resumo: "A Tale Too Far | D&D 5e"
 permalink: /:categories/:title
+published: false
 
 # Metadados
 categories: dnd beyond

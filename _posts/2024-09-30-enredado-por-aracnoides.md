@@ -5,6 +5,7 @@ original: "Ensnared by Ettercaps"
 descricao: "Tradução da aventura Ensnared by Ettercaps para português do Brasil, aventuras de D&D 5e."
 resumo: "Ensnared by Ettercaps | D&D 5e"
 permalink: /:categories/:title
+published: false
 
 # Metadados
 categories: dnd beyond

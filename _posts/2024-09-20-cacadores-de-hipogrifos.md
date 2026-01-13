@@ -5,6 +5,7 @@ original: "Hippogriff Hunters"
 descricao: "Tradução da aventura Hippogriff Hunters para português do Brasil, aventuras de D&D 5e."
 resumo: "Hippogriff Hunters | D&D 5e"
 permalink: /:categories/:title
+published: false
 
 # Metadados
 categories: dnd beyond

@@ -5,6 +5,7 @@ original: "The Dying Unicorn"
 descricao: "Tradução da aventura The Dying Unicorn para português do Brasil!"
 resumo: "The Dying Unicorn | D&D 5e"
 permalink: /:categories/:title
+published: false
 
 # Metadados
 categories: dnd beyond

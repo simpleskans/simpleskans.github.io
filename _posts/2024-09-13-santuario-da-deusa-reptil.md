@@ -5,6 +5,7 @@ original: "Sanctum of the Reptile God"
 descricao: "Tradução da aventura Sanctum of the Reptile God para português do Brasil, uma aventura de D&D 5e."
 resumo: "Sanctum of the Reptile God | D&D 5e"
 permalink:  /:categories/:title
+published: false
 
 # Metadados
 categories: dnd beyond

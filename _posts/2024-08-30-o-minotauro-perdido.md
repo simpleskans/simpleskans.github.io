@@ -5,6 +5,7 @@ original: "The Lost Minotaur"
 descricao: "Tradução da aventura The Lost Minotaur para português do Brasil!"
 resumo: "The Lost Minotaur | D&D 5e"
 permalink: /:categories/:title
+published: false
 
 # Metadados
 categories: dnd beyond

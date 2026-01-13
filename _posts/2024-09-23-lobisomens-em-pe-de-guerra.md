@@ -5,6 +5,7 @@ original: "Werewolves on the Warpath"
 descricao: "Tradução da aventura Werewolves on the Warpath para português do Brasil, aventuras de D&D 5e."
 resumo: "Werewolves on the Warpath | D&D 5e"
 permalink: /:categories/:title
+published: false
 
 # Metadados
 categories: dnd beyond

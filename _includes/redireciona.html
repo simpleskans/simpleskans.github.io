@@ -1,0 +1,12 @@
+<h2 class="secaotitulo" id="informacoes-da-aventura"><i class="bi bi-info-circle-fill"></i> Acessar aventuras</h2>
+
+<p>Este compilado foi dividido nas seguintes aventuras:</p>
+
+<div class="dnddiv">
+  {% for item in page.redireciona %}
+    <a href="{{ item.url }}">
+      <figure><img src="{{ item.img }}" alt="Link para {{ item.texto }}"><figcaption class="gradienteBase">{{ item.texto }}</figcaption></figure>
+      
+    </a>
+  {% endfor %}
+</div>

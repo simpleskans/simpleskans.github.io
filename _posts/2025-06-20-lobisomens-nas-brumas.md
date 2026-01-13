@@ -5,6 +5,7 @@ original: "Turn These 4 Curse of Strahd Chapters Into a Halloween One-Shot"
 descricao: "Tradução do suplemento Turn These 4 Curse of Strahd Chapters Into a Halloween One-Shot para português do Brasil, suplemento de D&D 5e"
 resumo: "Turn These 4 Curse of Strahd Chapters Into a Halloween One-Shot | D&D 5e"
 permalink: /:categories/:title
+published: false
 
 # Metadados
 categories: dnd beyond

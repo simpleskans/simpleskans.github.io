@@ -1,4 +1,11 @@
 <div class="titulopostagem">
+    <figure class="capapostagem">
+        <img
+            src="/img/postcapa/{{ page.capa }}.jpg"
+            alt="Imagem de Capa de {{ page.title }}"
+            class="zoom-img"
+            style="object-position: center {{ page.poscapa }}%" />
+    </figure>
     <h1 id="titulo">{{ page.title }}</h1>
     <span>{{ page.resumo }}</span>
 </div>

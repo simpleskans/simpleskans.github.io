@@ -10,17 +10,18 @@ csscustomizado: <link rel="stylesheet" href="/css/categoria.css" />
 
 <script src="/js/filtroposts.js"></script>
 <div class="categoriatitulo">
+    <figure class="imagemcapa">
+        <img
+            src="/img/postcapa/{{ page.capa }}.jpg"
+            alt=""
+            class="capasll"
+            style="object-position: center {{ page.poscapa }}%" />
+    </figure>
     <p>Todas as postagens de</p>
     <h1>Traduções Beyond</h1>
     <p>Em ordem de ID</p>
 </div>
-<figure class="imagemcapa">
-    <img
-        src="/img/postcapa/{{ page.capa }}.jpg"
-        alt=""
-        class="capasll"
-        style="object-position: center {{ page.poscapa }}%" />
-</figure>
+
 <div class="gridbase">
     <div class="filtros">
         <button class="filtro-btn active" data-categoria="todos">Todos</button>

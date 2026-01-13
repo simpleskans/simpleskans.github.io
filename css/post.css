@@ -440,6 +440,7 @@ h6 {
 }
 
 .linksrelacionados a {
+    text-align: center;
     flex: 1;
     min-width: 10rem;
     background: var(--gradiente);

@@ -24,8 +24,8 @@ redireciona:
    img: "/img/capalivreto/ldb.jpg"
    texto: "A Laia do Banderhob" 
  - url: "/dnd/beyond/cuidado-com-a-cilada-do-draider" 
-   img: "/img/capalivreto/ccd.jpg" 
-   texto: "Cuidado com a Cilada do Draider"
+   img: "/img/capalivreto/cad.jpg" 
+   texto: "Cuidado com a Armadilha do Draider"
 
 ---
 

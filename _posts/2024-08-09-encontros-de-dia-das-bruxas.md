@@ -5,7 +5,6 @@ original: "Halloween Encounters (The Haunted Cornfield, The Banderhobb Coven, Be
 descricao: "Tradução de The Haunted Cornfield, The Banderhobb Coven e Beware the Driders' Snare para português, três aventuras para D&D 5e."
 resumo: "Halloween Encounters | D&D 5e"
 permalink: /:categories/:title
-published: false
 
 # Metadados
 categories: dnd beyond

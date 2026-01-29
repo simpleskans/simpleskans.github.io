@@ -1,6 +1,6 @@
 ---
 layout: slw
-title: "[S8] Bem Vindos ao Show da Lanterna"
+title: "[S8] Boas Vindas ao Show da Lanterna"
 descricao: 'Tradução do Capítulo 07 do Smash Pass de Smash Legends para português'
 categories: smash-legends
 tags: slsp jacko

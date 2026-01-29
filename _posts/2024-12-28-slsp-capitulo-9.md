@@ -1,6 +1,6 @@
 ---
 layout: slw
-title: "[S10] Essa Parede é de Arrasar"
+title: "[S10] Esse Muro é DEMAIS!"
 descricao: 'Tradução do Capítulo 09 do Smash Pass de Smash Legends para português'
 categories: smash-legends
 tags: slsp goldie peter

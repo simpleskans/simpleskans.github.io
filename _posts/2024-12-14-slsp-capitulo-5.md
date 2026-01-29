@@ -1,6 +1,6 @@
 ---
 layout: slw
-title: "[S6] Um Sonho de Noites de Hora Extra"
+title: "[S6] Sonhos de Uma Hora Extra de Verão"
 descricao: 'Tradução do Capítulo 05 do Smash Pass de Smash Legends para português'
 categories: smash-legends
 tags: slsp robin

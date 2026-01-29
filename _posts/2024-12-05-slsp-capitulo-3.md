@@ -1,6 +1,6 @@
 ---
 layout: slw
-title: "[S4] A Chegada do Amanhecer"
+title: "[S4] Raiar Iminente"
 descricao: 'Tradução do Capítulo 03 do Smash Pass de Smash Legends para português'
 categories: smash-legends
 tags: slsp nui

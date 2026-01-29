@@ -1,6 +1,6 @@
 ---
 layout: slw
-title: "[S3] Encrenqueiros, Saiam!"
+title: "[S3] Fora, Encrenqueiros!"
 descricao: 'Tradução do Capítulo 02 do Smash Pass de Smash Legends para português'
 categories: smash-legends
 tags: slsp flare

@@ -1,6 +1,6 @@
 ---
 layout: slw
-title: "[S2] Enfrente a Escuridão"
+title: "[S2] Enfrente as Trevas"
 descricao: 'Tradução do Capítulo 01 do Smash Pass de Smash Legends para português'
 categories: smash-legends
 tags: slsp neve rainha-bruxa chapeuzinho

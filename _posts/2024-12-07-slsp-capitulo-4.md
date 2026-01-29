@@ -1,6 +1,6 @@
 ---
 layout: slw
-title: "[S5] Ruas de Lobos"
+title: "[S5] Ruas Lupinas"
 descricao: 'Tradução do Capítulo 04 do Smash Pass de Smash Legends para português'
 categories: smash-legends
 tags: slsp lobato

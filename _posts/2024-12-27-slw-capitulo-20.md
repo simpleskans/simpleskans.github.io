@@ -20,7 +20,7 @@ poscapa: 42.67
 autorL: "Jan Young/Ryu Ho Sung"
 ---
 
-![Página 1](https://i.imgur.com/FgGfaO9.png)
+![Página 1](https://i.imgur.com/P6sWXoO.png)
 ![Página de Créditos](https://i.imgur.com/jkXAOrw.png)
 ![Página 2](https://i.imgur.com/YvCx0QK.png)
 ![Página 3](https://i.imgur.com/7l458ON.png)

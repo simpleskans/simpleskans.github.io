@@ -11,5 +11,5 @@ autorL: 'Season 10'
 poscapa: 25
 numero: 9
 ---
-![Página 1](https://i.imgur.com/DiekAK8.png)
+![Página 1](https://i.imgur.com/7a2VJG3.png)
 ![Página 2](https://i.imgur.com/ByVKpcV.png)

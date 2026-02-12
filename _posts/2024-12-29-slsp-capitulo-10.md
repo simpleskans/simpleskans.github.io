@@ -9,7 +9,7 @@ resumo: 'Capítulo 10 | Smash Pass'
 capa: slsp10
 autorL: 'Season 11'
 poscapa: 23
-numero: 9
+numero: 10
 ---
 ![Página 1](https://i.imgur.com/mA84nkh.png)
 ![Página 2](https://i.imgur.com/BkAYv56.png)

@@ -12,8 +12,9 @@ sitemap_exclude: yes
   <!-- Páginas estáticas -->
   {% for page in site.pages %}
     {% unless page.sitemap.exclude == true or page.url contains '.xml' 
-            or page.url contains '404' or page.url contains '/teste'
-            or page.url contains '/admin' or page.url contains '/private' %}
+        or page.url contains '404' or page.url contains '/teste'
+        or page.url contains '/admin' or page.url contains '/private'
+        or page.url contains '/biblioteca' %}
     <url>
       <loc>{{ site.url }}{{ page.url | remove: 'index.html' }}</loc>
       <lastmod>{% if page.last_modified %}{{ page.last_modified | date: "%Y-%m-%d" }}{% elsif page.date %}{{ page.date | date: "%Y-%m-%d" }}{% else %}{{ site.time | date: "%Y-%m-%d" }}{% endif %}</lastmod>
@@ -39,7 +40,7 @@ sitemap_exclude: yes
   {% for collection in site.collections %}
     {% unless collection.label == 'posts' %}
       {% for item in site[collection.label] %}
-        {% unless item.sitemap.exclude == true %}
+        {% unless item.sitemap.exclude == true or item.url contains '/biblioteca' %}
         <url>
           <loc>{{ site.url }}{{ item.url | remove: 'index.html' }}</loc>
           <lastmod>{% if item.last_modified %}{{ item.last_modified | date: "%Y-%m-%d" }}{% elsif item.date %}{{ item.date | date: "%Y-%m-%d" }}{% else %}{{ site.time | date: "%Y-%m-%d" }}{% endif %}</lastmod>

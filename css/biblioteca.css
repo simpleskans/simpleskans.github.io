@@ -1,15 +1,12 @@
 @font-face {
-  font-family: 'Shadows Into Light';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/shadowsintolight/v19/UqyNK9UOIntux_czAvDQx_ZcHqZXBNQzdcD5.woff2) format('woff2');
+    font-family: "Shadows Into Light";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/shadowsintolight/v19/UqyNK9UOIntux_czAvDQx_ZcHqZXBNQzdcD5.woff2) format("woff2");
 }
 
 .topolivro > figure {
-    position: absolute;
-    top: 5rem;
-    left: 0;
     height: 18rem;
     overflow: hidden;
     display: flex;
@@ -18,6 +15,7 @@
     align-items: center;
     flex-shrink: 0;
     flex-grow: 0;
+    border-radius: 10px;
 }
 
 .topolivro > figure > img {
@@ -26,11 +24,12 @@
     width: 100%;
     height: 100%;
     opacity: 1;
+    object-position: center 50%;
 }
 
 .topolivro h1 {
     font-size: calc(1.7rem + 1vw);
-    padding-top: 18rem !important;
+    padding-top: 1rem;
 }
 
 .topolivro + .categoriatitulo {
@@ -51,6 +50,7 @@
     overflow-y: auto;
     max-height: calc(100svh - 6rem);
     overflow-x: hidden;
+    border-radius: 10px;
 }
 
 #toc ul {
@@ -109,7 +109,8 @@
 /* Indicador (seta ❯) */
 #toc .sublist-indicator {
     transition: transform 0.2s ease;
-    margin-left: auto; /* empurra a seta para a direita */
+    margin-left: auto;
+    /* empurra a seta para a direita */
 }
 
 #toc a.active .sublist-indicator,
@@ -149,11 +150,11 @@
         border-bottom: 1px solid var(--corprincipal);
         margin-bottom: 1rem;
     }
-    
+
     a {
         color: var(--corprincipal);
         text-decoration: underline;
-        
+
         &:hover {
             color: var(--corsecundaria);
         }
@@ -178,6 +179,8 @@
     table {
         margin: 0 auto 0.5rem;
         width: 100%;
+        border-radius: 10px;
+        overflow: hidden;
     }
 
     table tr td {
@@ -352,12 +355,10 @@
     }
 
     .papel {
-        background: linear-gradient(
-                to bottom,
+        background: linear-gradient(to bottom,
                 rgba(13, 15, 18, 0) 0%,
                 rgba(13, 15, 18, 0) 90%,
-                rgba(13, 15, 18, 1) 100%
-            ),
+                rgba(13, 15, 18, 1) 100%),
             url("https://i.imgur.com/6fu5jet.png");
         background-size: 100%;
         padding: 15px 3rem 2.7rem;
@@ -371,12 +372,12 @@
             color: var(--corfundo);
         }
     }
-    
+
     .item {
         border: 2px solid var(--corprincipal);
         padding: 0 0.5rem;
         border-radius: 10px;
-        
+
         p:first-of-type {
             text-indent: 0;
         }
@@ -384,6 +385,7 @@
 
     img {
         margin: 1rem auto;
+        border-radius: 10px;
     }
 
     dl {
@@ -403,7 +405,8 @@
         }
 
         dd::after {
-            content: "\A"; /* quebra de linha */
+            content: "\A";
+            /* quebra de linha */
             white-space: pre;
         }
     }
@@ -476,7 +479,6 @@
     border-radius: 10px;
 }
 
-
 .botaodownload > img {
     height: 1.5rem;
     display: inline;
@@ -509,6 +511,7 @@
 }
 
 @media (max-width: 41.5rem) {
+
     .lateralcaps > h6,
     .lateralcaps > nav {
         display: none;
@@ -532,6 +535,7 @@
 
     .creditos {
         display: block;
+
         div {
             margin-bottom: 1rem;
         }
@@ -543,6 +547,7 @@
 }
 
 @media (max-width: 59.9rem) {
+
     .corpo,
     .corpo2 {
         display: block;
@@ -574,7 +579,8 @@
     }
 
     #toc.mobile-aberto {
-        transform: translateX(0); /* aparece */
+        transform: translateX(0);
+        /* aparece */
     }
 
     #toc-toggle {
@@ -590,6 +596,7 @@
         font-size: 1.5rem;
         cursor: pointer;
         transition: transform 0.3s ease;
+        border-radius: 10px;
     }
 
     body.no-scroll {

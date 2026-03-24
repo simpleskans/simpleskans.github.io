@@ -1,28 +1,11 @@
 <title>
-    {% if page.title %} 
-        {{ page.title }} 
-        {% assign category_data = site.data.titulos[page.categories.first] %} 
-        {% if category_data %} 
-            PT-BR | 
-            {% assign tag_text = category_data[page.tags.first] | default: category_data.default %} 
-            {{ tag_text }} 
-        {% endif %} 
-        {% if page.numero %} 
-            {% if page.categories contains 'smash-legends' %} 
-                Capítulo {{ page.numero }} 
-            {% endif %} 
-        {% endif %} 
-        {% if page.url contains '/biblioteca/' %} 
-            | Ler Online 
-        {% endif %} 
-        | Simple Skans 
-    {% else %} 
-        Simple Skans 
-    {% endif %}
+    {% if page.title %} {{ page.title }} {% assign category_data = site.data.titulos[page.categories.first] %} {% if category_data %} PT-BR | {% assign tag_text = category_data[page.tags.first] | default: category_data.default %} {{ tag_text }} {% endif %} {% if page.numero %} {% if page.categories contains 'smash-legends' %} Capítulo {{ page.numero }} {% endif %} {% endif %} {% if page.url contains '/biblioteca/' %} | Ler Online {% endif %} | Simple Skans {% else %} Simple Skans {% endif %}
 </title>
 <meta name="description" content="{{ page.resumo }} PT-BR | {{ page.descricao }}" />
 <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
-
+{% if page.noindex %}
+<meta name="robots" content="noindex, nofollow">
+{% endif %}
 <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
 <script>
   window.OneSignalDeferred = window.OneSignalDeferred || [];

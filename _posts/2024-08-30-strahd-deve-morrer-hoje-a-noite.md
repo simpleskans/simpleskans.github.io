@@ -1,6 +1,6 @@
 ---
 layout: dnd
-title: "Strahd Deve Morrer"
+title: "Strahd Deve Morrer Hoje à Noite!"
 original: "Strahd Must Die Tonight!"
 descricao: "Tradução de Strahd Must Die Tonight! para português do Brasil"
 resumo: "Strahd Must Die Tonight! | D&D 5e"

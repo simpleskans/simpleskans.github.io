@@ -29,11 +29,6 @@
 
 .topolivro h1 {
     font-size: calc(1.7rem + 1vw);
-    padding-top: 1rem;
-}
-
-.topolivro + .categoriatitulo {
-    padding-top: 18rem !important;
 }
 
 .corpo {

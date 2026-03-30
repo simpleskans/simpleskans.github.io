@@ -24,8 +24,10 @@ gdrive: "https://drive.google.com/open?id=1-8Z3asPyL1lIEY0SRh3EO7ttmkma9mss&usp=
 
 # Links relacionados
 relacionados:
-  - url: "/dnd/beyond/o-coliseu-de-coral"
+  - url: "/dnd/beyond/coliseu-de-coral"
     texto: "Página da segunda aventura de Fantasmas de Manguessal: O Coliseu de Coral"
+  - url: "/dnd/beyond/misterio-do-mausoleu-dos-miconideos"
+    texto: "Página da terceira aventura de Fantasmas de Manguessal: Mistério do Mausoléu dos Miconídeos"
   - url: "https://www.dndbeyond.com/posts/441-encounter-of-the-week-sharkfin-shipwreck"
     texto: "Página da aventura original Sharkfin Shipwreck no D&D Beyond (em inglês)"
 ---

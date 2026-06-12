@@ -58,9 +58,7 @@ b {
 
 .gradienteBase {
     background: #c13a5a;
-    background: -webkit-linear-gradient(left, #c13a5aff 32%, #99012aff 100%);
-    background: -o-linear-gradient(left, #c13a5aff 32%, #99012aff 100%);
-    background: linear-gradient(to right, #c13a5aff 32%, #99012aff 100%);
+    background: var(--gradiente);
 }
 
 .ocultar {
@@ -486,10 +484,7 @@ footer {
         top: 5rem;
         right: 0;
         width: 100%;
-        background: #c13a5a;
-        background: -webkit-linear-gradient(left, #c13a5aff 32%, #99012aff 100%);
-        background: -o-linear-gradient(left, #c13a5aff 32%, #99012aff 100%);
-        background: linear-gradient(to right, #c13a5aff 32%, #99012aff 100%);
+        background: var(--gradiente);
         z-index: 1000;
         /* garante que fica acima do conteúdo */
     }
